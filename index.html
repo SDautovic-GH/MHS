@@ -1296,7 +1296,7 @@ function getTargetGameDay() {
 
 function scrollToCurrentOrNextGame(smooth = true) {
   const targetCard = document.getElementById('target-game-card');
-  if (!targetCard) return;
+  if (!targetCard || typeof targetCard.getBoundingClientRect !== 'function') return;
 
   const header = (document.querySelector && document.querySelector('header')) || null;
   const filterBar = (document.querySelector && document.querySelector('.filter-bar')) || null;
@@ -1428,6 +1428,7 @@ function renderDailyView() {
 }
 
 function populateSportsView() {
+  const target = getTargetGameDay();
   const filterBySport = (sportName) => 
     events.filter(e => e.sport === sportName).sort((a, b) => a.date.localeCompare(b.date));
 
@@ -1445,7 +1446,15 @@ function populateSportsView() {
     const list = filterBySport(s.name);
     const container = document.getElementById(s.id);
     const countEl = document.getElementById(s.countId);
-    if (container) container.innerHTML = list.map(renderCard).join('');
+    if (container) {
+      container.innerHTML = list.map(item => {
+        const isTarget = item.date === target.date;
+        const targetBadge = isTarget
+          ? (target.isToday ? '<span class="gameday-pill today">🔥 TODAY</span>' : '<span class="gameday-pill next">NEXT GAME</span>')
+          : '';
+        return renderCard(item, targetBadge, isTarget);
+      }).join('');
+    }
     if (countEl) countEl.textContent = `${list.length} games`;
   });
 }
@@ -1546,7 +1555,12 @@ function renderStandingsView() {
   }).join('');
 }
 
-function switchTab(view) {
+function switchTab(view, updateHistory = true) {
+  const validViews = ['calendar', 'sports', 'standings'];
+  if (!validViews.includes(view)) {
+    view = 'calendar';
+  }
+
   document.querySelectorAll('.tab-button').forEach(b => {
     b.classList.remove('active');
     b.setAttribute('aria-selected', 'false');
@@ -1557,6 +1571,9 @@ function switchTab(view) {
     const tab = document.getElementById('tab-calendar');
     if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
     document.getElementById('calendar-view').classList.add('active');
+    if (updateHistory) {
+      setTimeout(() => scrollToCurrentOrNextGame(true), 120);
+    }
   } else if (view === 'sports') {
     const tab = document.getElementById('tab-sports');
     if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
@@ -1567,6 +1584,28 @@ function switchTab(view) {
     document.getElementById('standings-view').classList.add('active');
     renderStandingsView();
   }
+
+  SafeStorage.setItem('mhs_active_tab', view);
+  if (updateHistory && typeof history !== 'undefined' && history.replaceState) {
+    try {
+      history.replaceState(null, '', '#' + view);
+    } catch (e) {}
+  }
+}
+
+function getInitialTab() {
+  const hash = (typeof window !== 'undefined' && window.location && window.location.hash)
+    ? window.location.hash.replace('#', '').toLowerCase()
+    : '';
+  const validViews = ['calendar', 'sports', 'standings'];
+  if (validViews.includes(hash)) {
+    return hash;
+  }
+  const saved = SafeStorage.getItem('mhs_active_tab');
+  if (validViews.includes(saved)) {
+    return saved;
+  }
+  return 'calendar';
 }
 
 // ==========================================
@@ -1604,16 +1643,32 @@ populateSportsView();
 renderStandingsView();
 loadDynamicScoresAndStandings();
 
-// Auto-land on current day or next game day on page load
-if (typeof history !== 'undefined' && 'scrollRestoration' in history) {
-  try { history.scrollRestoration = 'manual'; } catch (e) {}
+// Maintain active tab selection on refresh or load
+const initialTab = getInitialTab();
+switchTab(initialTab, false);
+
+// If on Date Schedule, auto-land on current day or next game day
+if (initialTab === 'calendar') {
+  if (typeof history !== 'undefined' && 'scrollRestoration' in history) {
+    try { history.scrollRestoration = 'manual'; } catch (e) {}
+  }
+  window.addEventListener('load', () => {
+    setTimeout(() => scrollToCurrentOrNextGame(false), 50);
+    setTimeout(() => scrollToCurrentOrNextGame(true), 250);
+  });
+  setTimeout(() => scrollToCurrentOrNextGame(false), 80);
+  setTimeout(() => scrollToCurrentOrNextGame(true), 350);
 }
-window.addEventListener('load', () => {
-  setTimeout(() => scrollToCurrentOrNextGame(false), 50);
-  setTimeout(() => scrollToCurrentOrNextGame(true), 250);
-});
-setTimeout(() => scrollToCurrentOrNextGame(false), 80);
-setTimeout(() => scrollToCurrentOrNextGame(true), 350);
+
+// Support browser back/forward history navigation
+if (typeof window !== 'undefined') {
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash ? window.location.hash.replace('#', '').toLowerCase() : '';
+    if (['calendar', 'sports', 'standings'].includes(hash)) {
+      switchTab(hash, false);
+    }
+  });
+}
 
 </script>
 </body>
