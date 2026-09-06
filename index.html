@@ -2332,6 +2332,188 @@
       color: var(--text-muted);
       margin: 0;
     }
+
+    /* Scores View & Apple Sports Match Cards */
+    .scores-feed-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .score-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 1rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .score-card:hover {
+      border-color: var(--border-highlight);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+    .score-card-win {
+      border-color: rgba(16, 185, 129, 0.4);
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.08);
+    }
+    .score-card-loss {
+      border-color: rgba(239, 68, 68, 0.25);
+    }
+    .score-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .score-sport-info {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      min-width: 0;
+    }
+    .score-sport-icon {
+      font-size: 1.1rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .score-sport-name {
+      font-size: 0.825rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .score-home-away-tag {
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      letter-spacing: 0.03em;
+      flex-shrink: 0;
+    }
+    .score-home-away-tag.home {
+      background-color: var(--home-bg);
+      color: var(--home-text);
+      border: 1px solid var(--home-border);
+    }
+    .score-home-away-tag.away {
+      background-color: var(--away-bg);
+      color: var(--away-text);
+      border: 1px solid var(--away-border);
+    }
+    .score-status-badge {
+      font-size: 0.725rem;
+      font-weight: 800;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+    .score-status-badge.win {
+      background-color: rgba(16, 185, 129, 0.18);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+    .score-status-badge.loss {
+      background-color: rgba(239, 68, 68, 0.18);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.35);
+    }
+    .score-status-badge.tie {
+      background-color: rgba(245, 158, 11, 0.18);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+    .score-status-badge.final {
+      background-color: var(--bg-surface-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+    }
+    .score-card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .score-team-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.4rem 0.55rem;
+      border-radius: 8px;
+      transition: background-color 0.15s ease;
+    }
+    .score-team-row.winner {
+      background-color: rgba(16, 185, 129, 0.09);
+      font-weight: 700;
+    }
+    .score-team-info {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      min-width: 0;
+    }
+    .score-team-badge {
+      background-color: var(--accent-red);
+      color: #ffffff;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .score-opp-badge {
+      background-color: var(--bg-surface-elevated);
+      color: var(--text-muted);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .score-team-name {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .score-team-num {
+      font-size: 1.15rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      color: var(--text-secondary);
+      margin-left: 0.5rem;
+    }
+    .score-team-row.winner .score-team-num {
+      color: var(--text-primary);
+    }
+    .score-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0.55rem;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .score-footer-venue a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+    .score-footer-venue a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -2361,6 +2543,10 @@
         <button class="tab-button active" id="tab-calendar" onclick="switchTab('calendar')" role="tab" aria-selected="true">
           <span>📅</span>
           <span>Schedule</span>
+        </button>
+        <button class="tab-button" id="tab-scores" onclick="switchTab('scores')" role="tab" aria-selected="false">
+          <span>🏁</span>
+          <span>Scores</span>
         </button>
         <button class="tab-button" id="tab-standings" onclick="switchTab('standings')" role="tab" aria-selected="false">
           <span>🏆</span>
@@ -2444,6 +2630,27 @@
     </div>
 
     <div class="grid" id="daily-grid"></div>
+  </main>
+
+  <main id="scores-view" class="view-panel" role="tabpanel" aria-labelledby="tab-scores">
+    <!-- Apple Sports Segmented Selector Bar for Scores -->
+    <div class="apple-sports-bar" id="scores-apple-bar">
+      <!-- Sport Picker Trigger -->
+      <button class="apple-picker-btn" id="scores-sport-picker-btn" onclick="openScoresSportSheet()" aria-label="Select scores sport" aria-haspopup="dialog">
+        <div class="picker-btn-content">
+          <span class="picker-btn-icon" id="scores-picker-sport-icon">🌟</span>
+          <span class="picker-btn-text" id="scores-picker-sport-title">Sports</span>
+        </div>
+        <span class="picker-btn-chevron">▾</span>
+      </button>
+
+      <!-- Results Count Badge -->
+      <div class="standings-league-badge" id="scores-count-badge">
+        <span class="sync-status-dot"></span>
+        <span id="scores-count-text">Fall 2026 Results</span>
+      </div>
+    </div>
+    <div class="scores-feed-container" id="scores-container"></div>
   </main>
 
   <main id="standings-view" class="view-panel" role="tabpanel" aria-labelledby="tab-standings">
@@ -2953,18 +3160,6 @@
           <span class="sheet-opt-check">✓</span>
         </div>
       </button>
-      <button class="apple-sheet-option" data-loc="past" onclick="selectLocOption('past')">
-        <div class="sheet-opt-left">
-          <span class="sheet-opt-icon">🏁</span>
-          <div class="sheet-opt-info">
-            <span class="sheet-opt-title">Past Games &amp; Scores</span>
-            <span class="sheet-opt-subtitle">Final scores &amp; completed matches</span>
-          </div>
-        </div>
-        <div class="sheet-opt-right">
-          <span class="sheet-opt-check">✓</span>
-        </div>
-      </button>
       <button class="apple-sheet-option" data-loc="fnl" onclick="selectLocOption('fnl')">
         <div class="sheet-opt-left">
           <span class="sheet-opt-icon">🌙</span>
@@ -2978,6 +3173,18 @@
         </div>
       </button>
     </div>
+  </div>
+</div>
+
+<!-- Apple-Style Bottom Sheet: Scores Sport Picker -->
+<div class="apple-sheet-backdrop" id="sheet-scores-sport-backdrop" onclick="if(event.target===this)closeAllSheets()">
+  <div class="apple-sheet" role="dialog" aria-modal="true" aria-labelledby="scores-sport-sheet-title">
+    <div class="apple-sheet-handle-bar"><div class="apple-sheet-handle"></div></div>
+    <div class="apple-sheet-header">
+      <h3 class="apple-sheet-title" id="scores-sport-sheet-title">Filter Scores by Sport</h3>
+      <button class="apple-sheet-close" onclick="closeAllSheets()" aria-label="Close sport picker">✕</button>
+    </div>
+    <div class="apple-sheet-body" id="scores-sport-sheet-list"></div>
   </div>
 </div>
 
@@ -3745,10 +3952,9 @@ const SPORT_META = {
 };
 
 const LOC_FILTER_OPTIONS = {
-  'all': { name: 'Location', sheetTitle: 'All Games', icon: '📍', subtitle: 'Home and away matchups' },
+  'all': { name: 'Location', sheetTitle: 'All Locations', icon: '📍', subtitle: 'Home and away matchups' },
   'home': { name: 'Home Only', sheetTitle: 'Home Games Only', icon: '🏠', subtitle: 'Melrose local stadiums & courts' },
   'away': { name: 'Away Only', sheetTitle: 'Away Games Only', icon: '🚌', subtitle: 'Traveling opponent venues' },
-  'past': { name: 'Past Scores', sheetTitle: 'Past Games & Scores', icon: '🏁', subtitle: 'Final scores & completed matches' },
   'fnl': { name: 'Fri & Wknd', sheetTitle: 'Fri Night & Weekend', icon: '🌙', subtitle: 'Friday night lights & weekend games' }
 };
 
@@ -4179,8 +4385,203 @@ function renderStandingsView() {
   }).join('');
 }
 
+// ==========================================
+// Scores View & Apple Sports Match Results Feed
+// ==========================================
+let activeScoresSport = 'all';
+
+function renderScoresSportSheetList() {
+  const listEl = document.getElementById('scores-sport-sheet-list');
+  if (!listEl) return;
+
+  const todayStr = getTodayEasternString();
+  const allCompleted = events.filter(e => e.result || e.mhsScore !== undefined || e.date < todayStr);
+
+  listEl.innerHTML = ALL_SPORTS_LIST.map(s => {
+    const isSelected = activeScoresSport === s.key;
+    const count = s.key === 'all'
+      ? allCompleted.length
+      : allCompleted.filter(e => e.sport === s.sheetTitle || e.sport === s.name).length;
+
+    return `
+      <button class="apple-sheet-option ${isSelected ? 'active' : ''}" onclick="selectScoresSport('${s.key.replace(/'/g, "\\'")}')">
+        <div class="sheet-opt-left">
+          <span class="sheet-opt-icon">${s.icon}</span>
+          <div class="sheet-opt-info">
+            <span class="sheet-opt-title">${s.sheetTitle}</span>
+            <span class="sheet-opt-subtitle">${count} completed ${count === 1 ? 'game' : 'games'}</span>
+          </div>
+        </div>
+        <div class="sheet-opt-right">
+          ${isSelected ? '<span class="sheet-opt-check">✓</span>' : ''}
+        </div>
+      </button>
+    `;
+  }).join('');
+}
+
+function openScoresSportSheet() {
+  closeAllSheets();
+  renderScoresSportSheetList();
+  const backdrop = document.getElementById('sheet-scores-sport-backdrop');
+  if (backdrop) backdrop.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function selectScoresSport(sportKey) {
+  setScoresSport(sportKey);
+  closeAllSheets();
+}
+
+function setScoresSport(sport) {
+  activeScoresSport = sport;
+
+  const found = ALL_SPORTS_LIST.find(s => s.key === sport) || ALL_SPORTS_LIST[0];
+  const iconEl = document.getElementById('scores-picker-sport-icon');
+  const titleEl = document.getElementById('scores-picker-sport-title');
+
+  if (iconEl) iconEl.textContent = found.icon;
+  if (titleEl) titleEl.textContent = sport === 'all' ? 'Sports' : found.name;
+
+  renderScoresView();
+  if (typeof updateNextGameTicker === 'function') {
+    updateNextGameTicker();
+  }
+}
+
+function renderScoresView() {
+  const container = document.getElementById('scores-container');
+  const countBadgeText = document.getElementById('scores-count-text');
+  if (!container) return;
+
+  const todayStr = getTodayEasternString();
+  let completed = events.filter(e => e.result || e.mhsScore !== undefined || e.date < todayStr);
+
+  if (activeScoresSport !== 'all') {
+    const sportObj = ALL_SPORTS_LIST.find(s => s.key === activeScoresSport);
+    const targetTitle = sportObj ? sportObj.sheetTitle : activeScoresSport;
+    completed = completed.filter(e => e.sport === targetTitle || e.sport === activeScoresSport);
+  }
+
+  // Reverse chronological: newest completed matches first
+  completed.sort((a, b) => b.date.localeCompare(a.date));
+
+  if (countBadgeText) {
+    countBadgeText.textContent = `${completed.length} Completed ${completed.length === 1 ? 'Game' : 'Games'}`;
+  }
+
+  if (completed.length === 0) {
+    const sportName = activeScoresSport === 'all' ? 'Varsity' : activeScoresSport;
+    container.innerHTML = `
+      <div class="empty-state" style="grid-column: 1 / -1; padding: 3rem 1rem; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏁</div>
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">No Completed Games Yet</h3>
+        <p style="color: var(--text-secondary); font-size: 0.875rem; max-width: 440px; margin: 0 auto 1.25rem;">
+          No varsity matches have been completed for ${sportName} yet. Upcoming matchups can be found on the full schedule.
+        </p>
+        <button class="jump-today-btn" onclick="switchTab('calendar')" style="margin: 0 auto;">
+          <span>📅 View Schedule</span>
+        </button>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = completed.map(item => {
+    const sportInfo = (typeof SPORT_META !== 'undefined' && SPORT_META[item.sport]) || { icon: '🏅', name: item.sport };
+    const dateFormatted = formatScoresDate(item.date);
+    
+    const hasScore = (item.mhsScore !== undefined && item.oppScore !== undefined);
+    const mhsScoreNum = hasScore ? Number(item.mhsScore) : null;
+    const oppScoreNum = hasScore ? Number(item.oppScore) : null;
+
+    let result = (item.result || '').toUpperCase();
+    if (!result && hasScore) {
+      if (mhsScoreNum > oppScoreNum) result = 'WIN';
+      else if (mhsScoreNum < oppScoreNum) result = 'LOSS';
+      else result = 'TIE';
+    }
+
+    const isWin = result === 'WIN';
+    const isLoss = result === 'LOSS';
+    const isTie = result === 'TIE';
+
+    let statusBadgeHtml = '';
+    if (isWin) {
+      statusBadgeHtml = `<span class="score-status-badge win">WIN</span>`;
+    } else if (isLoss) {
+      statusBadgeHtml = `<span class="score-status-badge loss">LOSS</span>`;
+    } else if (isTie) {
+      statusBadgeHtml = `<span class="score-status-badge tie">TIE</span>`;
+    } else {
+      statusBadgeHtml = `<span class="score-status-badge final">FINAL</span>`;
+    }
+
+    const cardClass = isWin ? 'score-card score-card-win' : (isLoss ? 'score-card score-card-loss' : 'score-card');
+    const mhsRowWinner = isWin || (hasScore && mhsScoreNum > oppScoreNum);
+    const oppRowWinner = isLoss || (hasScore && oppScoreNum > mhsScoreNum);
+
+    const mhsDisplay = hasScore ? item.mhsScore : '--';
+    const oppDisplay = hasScore ? item.oppScore : '--';
+
+    const mapQuery = encodeURIComponent(`${item.venue} Massachusetts`);
+    const mapUrl = `https://maps.apple.com/?q=${mapQuery}`;
+
+    return `
+      <article class="${cardClass}">
+        <div class="score-card-header">
+          <div class="score-sport-info">
+            <span class="score-sport-icon">${sportInfo.icon}</span>
+            <span class="score-sport-name">${item.sport}</span>
+            <span class="score-home-away-tag ${item.isHome ? 'home' : 'away'}">${item.isHome ? 'HOME' : 'AWAY'}</span>
+          </div>
+          ${statusBadgeHtml}
+        </div>
+
+        <div class="score-card-body">
+          <div class="score-team-row ${mhsRowWinner ? 'winner' : ''}">
+            <div class="score-team-info">
+              <span class="score-team-badge">MHS</span>
+              <span class="score-team-name">Melrose High</span>
+            </div>
+            <span class="score-team-num">${mhsDisplay}</span>
+          </div>
+          <div class="score-team-row ${oppRowWinner ? 'winner' : ''}">
+            <div class="score-team-info">
+              <span class="score-opp-badge">OPP</span>
+              <span class="score-team-name">${item.opp}</span>
+            </div>
+            <span class="score-team-num">${oppDisplay}</span>
+          </div>
+        </div>
+
+        <div class="score-card-footer">
+          <span class="score-footer-date">📅 ${dateFormatted}</span>
+          <span class="score-footer-venue"><a href="${mapUrl}" target="_blank" rel="noopener">📍 ${item.venue} ↗</a></span>
+        </div>
+      </article>
+    `;
+  }).join('');
+}
+
+function formatScoresDate(dateStr) {
+  try {
+    const parts = dateStr.split('-');
+    if (parts.length === 3) {
+      const year = parseInt(parts[0], 10);
+      const month = parseInt(parts[1], 10) - 1;
+      const day = parseInt(parts[2], 10);
+      const d = new Date(year, month, day);
+      const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      return `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}`;
+    }
+  } catch (e) {}
+  return dateStr;
+}
+
 function switchTab(view, updateHistory = true) {
-  const validViews = ['calendar', 'standings'];
+  const validViews = ['calendar', 'scores', 'standings'];
   if (!validViews.includes(view)) {
     view = 'calendar';
   }
@@ -4201,6 +4602,12 @@ function switchTab(view, updateHistory = true) {
     const tab = document.getElementById('tab-calendar');
     if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
     document.getElementById('calendar-view').classList.add('active');
+  } else if (view === 'scores') {
+    const tab = document.getElementById('tab-scores');
+    if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
+    const panel = document.getElementById('scores-view');
+    if (panel) panel.classList.add('active');
+    renderScoresView();
   } else if (view === 'standings') {
     const tab = document.getElementById('tab-standings');
     if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
@@ -4224,7 +4631,7 @@ function getInitialTab() {
   const hash = (typeof window !== 'undefined' && window.location && window.location.hash)
     ? window.location.hash.replace('#', '').toLowerCase()
     : '';
-  const validViews = ['calendar', 'standings'];
+  const validViews = ['calendar', 'scores', 'standings'];
   if (validViews.includes(hash)) {
     return hash;
   }
@@ -4247,6 +4654,7 @@ async function loadDynamicScoresAndStandings() {
         applyScores(scoresJson.scores);
         renderDailyView();
         populateSportsView();
+        renderScoresView();
       }
     }
   } catch (e) {}
@@ -4310,6 +4718,8 @@ function startNextGameCountdown() {
     let filterSport = 'all';
     if (currentTab === 'standings') {
       filterSport = activeStandingsSport;
+    } else if (currentTab === 'scores') {
+      filterSport = activeScoresSport;
     } else {
       filterSport = currentSelectedSport;
     }
@@ -4408,6 +4818,7 @@ function startNextGameCountdown() {
 syncHeaderHeight();
 updateThemeUI();
 renderDailyView();
+renderScoresView();
 renderStandingsView();
 loadDynamicScoresAndStandings();
 startNextGameCountdown();
@@ -4427,7 +4838,7 @@ if (typeof window !== 'undefined') {
 if (typeof window !== 'undefined') {
   window.addEventListener('hashchange', () => {
     const hash = window.location.hash ? window.location.hash.replace('#', '').toLowerCase() : '';
-    if (['calendar', 'standings'].includes(hash)) {
+    if (['calendar', 'scores', 'standings'].includes(hash)) {
       switchTab(hash, false);
     }
   });
