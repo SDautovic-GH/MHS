@@ -2919,8 +2919,17 @@
   </div>
 
   <main id="calendar-view" class="view-panel active" role="tabpanel" aria-labelledby="tab-calendar">
-    <!-- Apple Sports Control Bar: Location & Search -->
+    <!-- Apple Sports Segmented Selector Bar (Dropdowns for Sports & Location) -->
     <div class="apple-sports-bar" id="apple-sports-bar">
+      <!-- Sport Picker Trigger -->
+      <button class="apple-picker-btn" id="sport-picker-btn" onclick="openSportSheet()" aria-label="Select sport" aria-haspopup="dialog">
+        <div class="picker-btn-content">
+          <span class="picker-btn-icon" id="picker-sport-icon">🌟</span>
+          <span class="picker-btn-text" id="picker-sport-title">Sports</span>
+        </div>
+        <span class="picker-btn-chevron">▾</span>
+      </button>
+
       <!-- Location / Filter Trigger -->
       <button class="apple-picker-btn" id="loc-picker-btn" onclick="openLocSheet()" aria-label="Select location filter" aria-haspopup="dialog">
         <div class="picker-btn-content">
@@ -2945,13 +2954,10 @@
       </div>
     </div>
 
-    <!-- Apple "My Sports" Quick-Pill Ribbon (1-tap sport switching) -->
-    <div class="my-sports-ribbon-wrapper" id="calendar-sport-ribbon"></div>
-
     <!-- Apple-Style Schedule Scope Segmented Control: Today vs All Upcoming -->
     <div class="schedule-scope-toggle-bar" id="schedule-scope-bar" role="tablist" aria-label="Schedule view scope">
       <button class="schedule-scope-btn is-today active" id="scope-btn-today" onclick="setScheduleScope('today')" role="tab" aria-selected="true">
-        <span>🔴 Today's Games</span>
+        <span>📆 Today's Games</span>
         <span class="scope-count-badge" id="scope-today-count">0</span>
       </button>
       <button class="schedule-scope-btn" id="scope-btn-upcoming" onclick="setScheduleScope('upcoming')" role="tab" aria-selected="false">
@@ -2972,33 +2978,45 @@
   </main>
 
   <main id="scores-view" class="view-panel" role="tabpanel" aria-labelledby="tab-scores">
-    <!-- Apple Sports Header Bar for Scores -->
+    <!-- Apple Sports Segmented Selector Bar for Scores -->
     <div class="apple-sports-bar" id="scores-apple-bar">
+      <!-- Sport Picker Trigger -->
+      <button class="apple-picker-btn" id="scores-sport-picker-btn" onclick="openScoresSportSheet()" aria-label="Select scores sport" aria-haspopup="dialog">
+        <div class="picker-btn-content">
+          <span class="picker-btn-icon" id="scores-picker-sport-icon">🌟</span>
+          <span class="picker-btn-text" id="scores-picker-sport-title">Sports</span>
+        </div>
+        <span class="picker-btn-chevron">▾</span>
+      </button>
+
       <!-- Results Count Badge -->
-      <div class="standings-league-badge" id="scores-count-badge" style="flex: 1; justify-content: flex-start; padding: 0.5rem 0.85rem;">
+      <div class="standings-league-badge" id="scores-count-badge">
         <span class="sync-status-dot"></span>
         <span id="scores-count-text">Fall 2026 Results</span>
       </div>
     </div>
 
-    <!-- Apple "My Sports" Quick-Pill Ribbon for Scores -->
-    <div class="my-sports-ribbon-wrapper" id="scores-sport-ribbon"></div>
-
     <div class="scores-feed-container" id="scores-container"></div>
   </main>
 
   <main id="standings-view" class="view-panel" role="tabpanel" aria-labelledby="tab-standings">
-    <!-- Apple Sports Header Bar for Standings -->
+    <!-- Apple Sports Segmented Selector Bar for Standings -->
     <div class="apple-sports-bar" id="standings-apple-bar">
+      <!-- Sport Picker Trigger -->
+      <button class="apple-picker-btn" id="standings-sport-picker-btn" onclick="openStandingsSportSheet()" aria-label="Select standings sport" aria-haspopup="dialog">
+        <div class="picker-btn-content">
+          <span class="picker-btn-icon" id="standings-picker-sport-icon">🌟</span>
+          <span class="picker-btn-text" id="standings-picker-sport-title">Sports</span>
+        </div>
+        <span class="picker-btn-chevron">▾</span>
+      </button>
+
       <!-- League Status Badge -->
-      <div class="standings-league-badge" id="standings-sync-badge" style="flex: 1; justify-content: flex-start; padding: 0.5rem 0.85rem;">
+      <div class="standings-league-badge" id="standings-sync-badge">
         <span class="sync-status-dot"></span>
-        <span id="standings-sync-text">Middlesex League (Freedom Division)</span>
+        <span id="standings-sync-text">Middlesex League</span>
       </div>
     </div>
-
-    <!-- Apple "My Sports" Quick-Pill Ribbon for Standings -->
-    <div class="my-sports-ribbon-wrapper" id="standings-sport-ribbon"></div>
 
     <div id="standings-container"></div>
   </main>
@@ -4825,7 +4843,7 @@ function renderDailyView() {
           firstTargetAssigned = true;
         }
         targetBadge = target.isToday
-          ? `<span class="gameday-pill today">🔴 TODAY</span>`
+          ? `<span class="gameday-pill today">📆 TODAY</span>`
           : `<span class="gameday-pill next">NEXT GAME</span>`;
       }
 
