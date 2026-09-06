@@ -2,8 +2,10 @@ name: Update MHS Scores & Standings
 
 on:
   schedule:
-    # Run at 02:00 UTC (10:00 PM EDT) and 14:00 UTC (10:00 AM EDT) daily
-    - cron: '0 2,14 * * *'
+    # Run every hour during peak post-game completion windows:
+    # 4 PM - 11 PM EDT (20:00 - 03:00 UTC) daily
+    # Plus mid-day weekends (12 PM & 2 PM EDT / 16:00 & 18:00 UTC) and 9 AM EDT morning check
+    - cron: '0 0,1,2,3,13,16,18,20,21,22,23 * * *'
   workflow_dispatch:
 
 permissions:
