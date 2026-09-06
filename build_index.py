@@ -258,6 +258,73 @@ css_additions = """
       background-color: var(--bg-surface-elevated);
       color: var(--text-muted);
     }
+
+    /* Mobile Responsiveness Improvements */
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    @media (max-width: 640px) {
+      .nav-tabs {
+        width: 100%;
+        display: flex;
+      }
+      .tab-button {
+        flex: 1;
+        text-align: center;
+        padding: 0.45rem 0.25rem;
+        font-size: 0.775rem;
+      }
+      .standings-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.65rem;
+        padding: 0.75rem;
+      }
+      #standings-sport-filters {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.35rem;
+        width: 100%;
+      }
+      #standings-sport-filters .filter-pill {
+        width: 100%;
+        text-align: center;
+        padding: 0.45rem 0.2rem;
+        font-size: 0.725rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .sync-status-indicator {
+        justify-content: flex-end;
+      }
+      .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+      }
+      .filter-divider {
+        display: none;
+      }
+      .standings-card {
+        margin-bottom: 1.25rem;
+      }
+      .standings-card-header {
+        padding: 0.75rem 1rem;
+      }
+      .standings-table th, .standings-table td {
+        padding: 0.65rem 0.6rem;
+        font-size: 0.8rem;
+      }
+    }
 """
 
 content = orig
