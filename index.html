@@ -260,6 +260,16 @@
       min-width: 0;
       flex-shrink: 0;
       white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+    .header-brand:hover {
+      opacity: 0.88;
+    }
+    .header-brand:active {
+      transform: scale(0.98);
     }
 
     .brand-badge {
@@ -1779,7 +1789,7 @@
 <header class="app-header">
   <div class="header-inner">
     <div class="header-brand-row">
-      <div class="header-brand">
+      <div class="header-brand" onclick="scrollToTop()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')scrollToTop()" title="Scroll to top of schedule">
         <span class="brand-badge">MHS</span>
         <div class="header-titles">
           <h1>Melrose High Athletics</h1>
@@ -1862,6 +1872,7 @@
         <button class="filter-pill active" data-loc="all" onclick="setLocFilter('all')">All</button>
         <button class="filter-pill" data-loc="home" onclick="setLocFilter('home')">Home</button>
         <button class="filter-pill" data-loc="away" onclick="setLocFilter('away')">Away</button>
+        <button class="filter-pill" data-loc="past" onclick="setLocFilter('past')">🏁 Past &amp; Scores</button>
         <button class="filter-pill" data-loc="fnl" onclick="setLocFilter('fnl')">🌙 Night &amp; Weekend</button>
       </div>
       <button class="jump-today-btn" id="jump-today-btn" onclick="scrollToCurrentOrNextGame(true)" title="Jump to today or next game day">
@@ -2421,6 +2432,19 @@ function scrollToCurrentOrNextGame(smooth = true) {
   }
 }
 
+function scrollToTop() {
+  const currentTab = SafeStorage.getItem('mhs_active_tab') || 'calendar';
+  if (currentTab !== 'calendar') {
+    switchTab('calendar', false);
+  }
+  if (typeof window.scrollTo === 'function') {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+}
+
 // ==========================================
 // Mascot Lookup & Venue Helpers
 // ==========================================
@@ -2768,6 +2792,10 @@ function renderDailyView() {
   const filtered = sorted.filter(item => {
     if (activeLocFilter === 'home' && !item.isHome) return false;
     if (activeLocFilter === 'away' && item.isHome) return false;
+    if (activeLocFilter === 'past') {
+      const todayStr = getTodayEasternString();
+      if (item.date >= todayStr && !(item.result || item.mhsScore !== undefined)) return false;
+    }
     if (activeLocFilter === 'fnl') {
       const d = new Date(item.date + 'T12:00:00');
       const day = d.getDay(); // 0 = Sun, 5 = Fri, 6 = Sat
@@ -3057,6 +3085,17 @@ function switchTab(view, updateHistory = true) {
   const validViews = ['calendar', 'sports', 'standings'];
   if (!validViews.includes(view)) {
     view = 'calendar';
+  }
+
+  const currentTab = SafeStorage.getItem('mhs_active_tab') || 'calendar';
+  if (view === 'calendar' && currentTab === 'calendar' && updateHistory) {
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if (scrollY > 150) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      scrollToCurrentOrNextGame(true);
+    }
+    return;
   }
 
   document.querySelectorAll('.tab-button').forEach(b => {
