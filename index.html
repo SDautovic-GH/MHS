@@ -1755,29 +1755,36 @@
         align-items: center;
         width: 100%;
         gap: 0.4rem;
+        min-width: 0;
       }
       .header-brand {
-        flex-shrink: 0;
+        flex: 1;
         min-width: 0;
-        gap: 0.65rem;
+        gap: 0.6rem;
+        overflow: hidden;
       }
       .brand-badge {
         width: 44px;
         height: 44px;
         font-size: 1.05rem;
         border-radius: 11px;
+        flex-shrink: 0;
       }
       .header-titles {
         min-width: 0;
-        white-space: nowrap;
+        overflow: hidden;
       }
       .header-titles h1 {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .header-season {
-        font-size: 0.78rem;
+        font-size: 0.75rem;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .header-actions {
         display: flex;
@@ -1786,15 +1793,22 @@
         flex-shrink: 0;
       }
       .header-link-btn {
-        padding: 0.35rem 0.5rem;
-        font-size: 0.725rem;
+        padding: 0.35rem 0.45rem;
+        font-size: 0.75rem;
         border-radius: 8px;
         gap: 0.25rem;
+        flex-shrink: 0;
       }
       .theme-toggle-btn {
-        padding: 0.35rem 0.5rem;
+        padding: 0.35rem 0.45rem;
         border-radius: 8px;
-        font-size: 0.75rem;
+        font-size: 0.85rem;
+        min-width: 32px;
+        height: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
       }
       .btn-text-full {
         display: none;
@@ -1960,9 +1974,6 @@
       }
       .header-season {
         font-size: 0.72rem;
-      }
-      .btn-text-short {
-        display: none;
       }
       .header-link-btn {
         padding: 0.35rem 0.45rem;
@@ -2293,7 +2304,6 @@
         <button class="header-link-btn" onclick="openVenueModal()" title="Melrose Athletic Venues &amp; Parking" aria-label="Venues &amp; Parking">
           <span>📍</span>
           <span class="btn-text-full">Venues</span>
-          <span class="btn-text-short">Venues</span>
         </button>
         <a id="popout-btn" class="popout-btn" href="#" target="_blank" rel="noopener" style="display:none;" title="Open in dedicated Safari tab for full standalone app">
           <span>Open App ↗</span>
