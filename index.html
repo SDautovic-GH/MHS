@@ -189,10 +189,10 @@
       line-height: 1.5;
       min-height: 100vh;
       min-height: -webkit-fill-available;
-      padding-top: max(1.25rem, env(safe-area-inset-top));
-      padding-bottom: max(2rem, env(safe-area-inset-bottom));
-      padding-left: max(1.25rem, env(safe-area-inset-left));
-      padding-right: max(1.25rem, env(safe-area-inset-right));
+      padding-top: 0;
+      padding-bottom: max(3.5rem, env(safe-area-inset-bottom) + 1.5rem);
+      padding-left: 0;
+      padding-right: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       transition: background-color 0.2s ease, color 0.2s ease;
@@ -203,42 +203,101 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
     }
 
-    header {
-      margin-bottom: 1.75rem;
+    /* Sticky Frosted App Header */
+    .app-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background-color: rgba(11, 15, 25, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-subtle);
-      padding-bottom: 1.25rem;
+      padding-top: max(0.6rem, env(safe-area-inset-top));
+      padding-bottom: 0.6rem;
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+      margin-bottom: 1.25rem;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+    :root[data-theme="light"] .app-header {
+      background-color: rgba(248, 250, 252, 0.92);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 1.25rem;
+      gap: 1rem;
     }
 
-    .header-title h1 {
-      font-size: 1.75rem;
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      color: var(--text-primary);
+    .header-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
     }
-    
-    .header-title p {
-      font-size: 0.875rem;
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #dc2626, #991b1b);
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      box-shadow: 0 2px 8px rgba(220, 38, 38, 0.35);
+      flex-shrink: 0;
+    }
+
+    .header-titles h1 {
+      font-size: 1.125rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .header-season {
+      font-size: 0.75rem;
       color: var(--text-secondary);
-      margin-top: 0.25rem;
+      font-weight: 500;
+      display: block;
+      line-height: 1.2;
     }
 
     .header-controls {
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      flex-wrap: wrap;
+    }
+
+    .nav-tabs-wrapper {
+      display: flex;
+      align-items: center;
     }
 
     .nav-tabs {
-      display: flex;
-      background-color: var(--bg-surface);
+      display: inline-flex;
+      background-color: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
       border-radius: 10px;
       padding: 0.25rem;
@@ -249,13 +308,18 @@
       background: none;
       border: none;
       color: var(--text-secondary);
-      padding: 0.5rem 1rem;
-      font-size: 0.875rem;
+      padding: 0.45rem 0.95rem;
+      font-size: 0.825rem;
       font-weight: 600;
       border-radius: 7px;
       cursor: pointer;
       transition: all 0.15s ease;
       white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .tab-button:hover {
@@ -268,21 +332,28 @@
       box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
     }
 
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
     .theme-toggle-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.45rem;
+      gap: 0.4rem;
       background-color: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       border-radius: 10px;
-      padding: 0.5rem 0.85rem;
-      font-size: 0.85rem;
+      padding: 0.45rem 0.75rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
       transition: all 0.15s ease;
       user-select: none;
       -webkit-user-select: none;
+      white-space: nowrap;
     }
 
     .theme-toggle-btn:hover {
@@ -302,8 +373,8 @@
       background-color: var(--bg-surface-elevated);
       border: 1px solid var(--border-highlight);
       border-radius: 10px;
-      padding: 0.5rem 0.8rem;
-      font-size: 0.8rem;
+      padding: 0.45rem 0.7rem;
+      font-size: 0.775rem;
       font-weight: 600;
       color: var(--accent-cyan);
       text-decoration: none;
@@ -319,6 +390,229 @@
 
     .popout-btn:active {
       transform: scale(0.96);
+    }
+
+    /* Sport Selector Panel on "By Sport" Tab */
+    .sport-picker-panel {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 0.95rem 1.15rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .sport-picker-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .sport-select-control {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .sport-select-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .custom-select-box {
+      position: relative;
+      flex: 1;
+      max-width: 360px;
+    }
+
+    .sport-select-input {
+      width: 100%;
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-highlight);
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 0.5rem 2.25rem 0.5rem 0.85rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .sport-select-input:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+    }
+
+    .select-arrow-icon {
+      position: absolute;
+      right: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .sport-counter-badge {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* Quick Sport Chips Scroller */
+    .sport-chips-strip {
+      display: flex;
+      gap: 0.4rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-top: 0.75rem;
+      margin-top: 0.75rem;
+      border-top: 1px solid var(--border-subtle);
+      scrollbar-width: none;
+    }
+
+    .sport-chips-strip::-webkit-scrollbar {
+      display: none;
+    }
+
+    .sport-chip-btn {
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 0.775rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      user-select: none;
+      -webkit-user-select: none;
+      flex-shrink: 0;
+    }
+
+    .sport-chip-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--border-highlight);
+    }
+
+    .sport-chip-btn.active {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+      border-color: var(--accent-blue);
+      box-shadow: 0 2px 6px rgba(59, 130, 246, 0.3);
+    }
+
+    /* Featured Sport Summary Banner */
+    .sport-summary-banner {
+      background: linear-gradient(135deg, var(--bg-surface-elevated), var(--bg-surface));
+      border: 1px solid var(--border-highlight);
+      border-radius: 12px;
+      padding: 0.85rem 1.15rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .sport-summary-banner-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .sport-summary-icon {
+      font-size: 1.85rem;
+      line-height: 1;
+    }
+
+    .sport-summary-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .sport-summary-meta {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-top: 0.15rem;
+    }
+
+    .sport-summary-banner-right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .sport-next-game-pill {
+      background-color: rgba(59, 130, 246, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.775rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Floating Quick-Action Button ("📍 Next Game") */
+    .floating-jump-btn {
+      position: fixed;
+      bottom: max(1.5rem, env(safe-area-inset-bottom) + 0.75rem);
+      right: max(1.25rem, env(safe-area-inset-right));
+      z-index: 999;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.55rem 1rem;
+      border-radius: 30px;
+      font-size: 0.825rem;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .floating-jump-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.55), 0 3px 6px rgba(0, 0, 0, 0.25);
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+    }
+
+    .floating-jump-btn:active {
+      transform: translateY(1px) scale(0.97);
+    }
+
+    .fab-icon {
+      font-size: 0.95rem;
+    }
+
+    .fab-text {
+      letter-spacing: 0.01em;
     }
 
     /* Filter & Search Bar */
@@ -546,12 +840,21 @@
     }
 
     @media (max-width: 640px) {
-      header {
+      .app-header {
+        padding-top: max(0.5rem, env(safe-area-inset-top));
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.85rem;
+      }
+      .header-inner {
         flex-direction: column;
         align-items: stretch;
+        gap: 0.5rem;
       }
-      .header-controls {
+      .header-brand-row {
         justify-content: space-between;
+        width: 100%;
+      }
+      .nav-tabs-wrapper {
         width: 100%;
       }
       .nav-tabs {
@@ -560,9 +863,22 @@
       }
       .tab-button {
         flex: 1;
+        justify-content: center;
         text-align: center;
-        padding: 0.45rem 0.25rem;
-        font-size: 0.775rem;
+        padding: 0.45rem 0.2rem;
+        font-size: 0.75rem;
+        gap: 0.25rem;
+      }
+      .sport-picker-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .sport-select-control {
+        width: 100%;
+        min-width: 0;
+      }
+      .custom-select-box {
+        max-width: none;
       }
       .grid {
         grid-template-columns: 1fr;
@@ -908,28 +1224,46 @@
 </head>
 <body>
 
-<div class="container">
-  <header>
-    <div class="header-title">
-      <h1>Melrose High Fall Varsity 2026</h1>
-      <p>Official Athletic Schedule &amp; Match Matrix</p>
-    </div>
-    <div class="header-controls">
-      <a id="popout-btn" class="popout-btn" href="#" target="_blank" rel="noopener" style="display:none;" title="Open in dedicated Safari tab for full standalone app">
-        <span>Open App ↗</span>
-      </a>
-      <div class="nav-tabs" role="tablist">
-        <button class="tab-button active" id="tab-calendar" onclick="switchTab('calendar')" role="tab" aria-selected="true">Date Schedule</button>
-        <button class="tab-button" id="tab-sports" onclick="switchTab('sports')" role="tab" aria-selected="false">By Sport</button>
-        <button class="tab-button" id="tab-standings" onclick="switchTab('standings')" role="tab" aria-selected="false">🏆 Standings</button>
+<header class="app-header">
+  <div class="header-inner">
+    <div class="header-brand-row">
+      <div class="header-brand">
+        <span class="brand-badge">MHS</span>
+        <div class="header-titles">
+          <h1>Melrose High Athletics</h1>
+          <span class="header-season">Fall Varsity 2026</span>
+        </div>
       </div>
-      <button id="theme-toggle" class="theme-toggle-btn" onclick="cycleTheme()" aria-label="Toggle Theme" title="Theme Toggle">
-        <span id="theme-icon">💻</span>
-        <span id="theme-text">Auto</span>
-      </button>
+      <div class="header-actions">
+        <a id="popout-btn" class="popout-btn" href="#" target="_blank" rel="noopener" style="display:none;" title="Open in dedicated Safari tab for full standalone app">
+          <span>Open App ↗</span>
+        </a>
+        <button id="theme-toggle" class="theme-toggle-btn" onclick="cycleTheme()" aria-label="Toggle Theme" title="Theme Toggle">
+          <span id="theme-icon">💻</span>
+          <span id="theme-text">Auto</span>
+        </button>
+      </div>
     </div>
-  </header>
+    <div class="nav-tabs-wrapper">
+      <div class="nav-tabs" role="tablist">
+        <button class="tab-button active" id="tab-calendar" onclick="switchTab('calendar')" role="tab" aria-selected="true">
+          <span>📅</span>
+          <span>Schedule</span>
+        </button>
+        <button class="tab-button" id="tab-sports" onclick="switchTab('sports')" role="tab" aria-selected="false">
+          <span>⚽</span>
+          <span>By Sport</span>
+        </button>
+        <button class="tab-button" id="tab-standings" onclick="switchTab('standings')" role="tab" aria-selected="false">
+          <span>🏆</span>
+          <span>Standings</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
 
+<div class="container">
   <main id="calendar-view" class="view-panel active" role="tabpanel" aria-labelledby="tab-calendar">
     <div class="filter-bar">
       <div class="search-box">
@@ -951,47 +1285,108 @@
   </main>
 
   <main id="sports-view" class="view-panel" role="tabpanel" aria-labelledby="tab-sports">
-    <div class="section-title">
-      <span>Girls' Volleyball <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: MVMMS)</small></span>
-      <span class="section-count" id="count-vball"></span>
-    </div>
-    <div class="grid" id="sport-vball"></div>
+    <!-- Fast Sport Selector Panel -->
+    <div class="sport-picker-panel">
+      <div class="sport-picker-row">
+        <div class="sport-select-control">
+          <label for="sport-dropdown" class="sport-select-label">Sport:</label>
+          <div class="custom-select-box">
+            <select id="sport-dropdown" class="sport-select-input" onchange="selectSport(this.value)" aria-label="Select a sport">
+              <option value="all">🌟 All Sports (Show All 96 Games)</option>
+              <option value="fball">🏈 Football (9 Games)</option>
+              <option value="bsoc">⚽ Boys' Soccer (16 Games)</option>
+              <option value="gsoc">⚽ Girls' Soccer (17 Games)</option>
+              <option value="vball">🏐 Girls' Volleyball (20 Games)</option>
+              <option value="fhockey">🏑 Field Hockey (15 Games)</option>
+              <option value="xc">🏃 Cross Country (9 Meets)</option>
+              <option value="golf">⛳ Golf (11 Matches)</option>
+            </select>
+            <span class="select-arrow-icon">▾</span>
+          </div>
+        </div>
+        <span class="sport-counter-badge" id="selected-sport-counter">Showing all 96 games across 7 sports</span>
+      </div>
 
-    <div class="section-title">
-      <span>Boys' Soccer <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks &amp; Knoll)</small></span>
-      <span class="section-count" id="count-bsoc"></span>
+      <!-- Quick Sport Chips Scroller -->
+      <div class="sport-chips-strip" role="tablist" aria-label="Quick Sport Selection">
+        <button class="sport-chip-btn active" data-sport="all" onclick="selectSport('all')">All</button>
+        <button class="sport-chip-btn" data-sport="fball" onclick="selectSport('fball')">🏈 Football</button>
+        <button class="sport-chip-btn" data-sport="bsoc" onclick="selectSport('bsoc')">⚽ Boys Soccer</button>
+        <button class="sport-chip-btn" data-sport="gsoc" onclick="selectSport('gsoc')">⚽ Girls Soccer</button>
+        <button class="sport-chip-btn" data-sport="vball" onclick="selectSport('vball')">🏐 Volleyball</button>
+        <button class="sport-chip-btn" data-sport="fhockey" onclick="selectSport('fhockey')">🏑 Field Hockey</button>
+        <button class="sport-chip-btn" data-sport="xc" onclick="selectSport('xc')">🏃 XC</button>
+        <button class="sport-chip-btn" data-sport="golf" onclick="selectSport('golf')">⛳ Golf</button>
+      </div>
     </div>
-    <div class="grid" id="sport-bsoc"></div>
 
-    <div class="section-title">
-      <span>Girls' Soccer <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
-      <span class="section-count" id="count-gsoc"></span>
+    <!-- Featured Sport Summary Banner -->
+    <div id="sport-banner" class="sport-summary-banner" style="display:none;">
+      <div class="sport-summary-banner-left">
+        <span class="sport-summary-icon" id="banner-sport-icon">🏈</span>
+        <div>
+          <h2 class="sport-summary-title" id="banner-sport-title">Football</h2>
+          <div class="sport-summary-meta" id="banner-sport-meta">Home: Fred Green Field</div>
+        </div>
+      </div>
+      <div class="sport-summary-banner-right" id="banner-sport-next"></div>
     </div>
-    <div class="grid" id="sport-gsoc"></div>
 
-    <div class="section-title">
-      <span>Football <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Fred Green Field)</small></span>
-      <span class="section-count" id="count-fball"></span>
+    <div class="sport-section-block" id="sec-vball" data-sport="vball">
+      <div class="section-title">
+        <span>Girls' Volleyball <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: MVMMS)</small></span>
+        <span class="section-count" id="count-vball"></span>
+      </div>
+      <div class="grid" id="sport-vball"></div>
     </div>
-    <div class="grid" id="sport-fball"></div>
 
-    <div class="section-title">
-      <span>Field Hockey <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
-      <span class="section-count" id="count-fhockey"></span>
+    <div class="sport-section-block" id="sec-bsoc" data-sport="bsoc">
+      <div class="section-title">
+        <span>Boys' Soccer <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks &amp; Knoll)</small></span>
+        <span class="section-count" id="count-bsoc"></span>
+      </div>
+      <div class="grid" id="sport-bsoc"></div>
     </div>
-    <div class="grid" id="sport-fhockey"></div>
 
-    <div class="section-title">
-      <span>Cross Country — Boys &amp; Girls <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
-      <span class="section-count" id="count-xc"></span>
+    <div class="sport-section-block" id="sec-gsoc" data-sport="gsoc">
+      <div class="section-title">
+        <span>Girls' Soccer <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
+        <span class="section-count" id="count-gsoc"></span>
+      </div>
+      <div class="grid" id="sport-gsoc"></div>
     </div>
-    <div class="grid" id="sport-xc"></div>
 
-    <div class="section-title">
-      <span>Golf <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Bellevue Golf Club)</small></span>
-      <span class="section-count" id="count-golf"></span>
+    <div class="sport-section-block" id="sec-fball" data-sport="fball">
+      <div class="section-title">
+        <span>Football <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Fred Green Field)</small></span>
+        <span class="section-count" id="count-fball"></span>
+      </div>
+      <div class="grid" id="sport-fball"></div>
     </div>
-    <div class="grid" id="sport-golf"></div>
+
+    <div class="sport-section-block" id="sec-fhockey" data-sport="fhockey">
+      <div class="section-title">
+        <span>Field Hockey <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
+        <span class="section-count" id="count-fhockey"></span>
+      </div>
+      <div class="grid" id="sport-fhockey"></div>
+    </div>
+
+    <div class="sport-section-block" id="sec-xc" data-sport="xc">
+      <div class="section-title">
+        <span>Cross Country — Boys &amp; Girls <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
+        <span class="section-count" id="count-xc"></span>
+      </div>
+      <div class="grid" id="sport-xc"></div>
+    </div>
+
+    <div class="sport-section-block" id="sec-golf" data-sport="golf">
+      <div class="section-title">
+        <span>Golf <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Bellevue Golf Club)</small></span>
+        <span class="section-count" id="count-golf"></span>
+      </div>
+      <div class="grid" id="sport-golf"></div>
+    </div>
   </main>
 
   <main id="standings-view" class="view-panel" role="tabpanel" aria-labelledby="tab-standings">
@@ -1012,6 +1407,12 @@
     <div id="standings-container"></div>
   </main>
 </div>
+
+<!-- Floating Quick-Action Button ("📍 Next Game") -->
+<button id="floating-jump-btn" class="floating-jump-btn" onclick="onFloatingJumpClick()" title="Jump to Today / Next Game" aria-label="Jump to Today or Next Game">
+  <span class="fab-icon">📍</span>
+  <span class="fab-text" id="fab-text">Next Game</span>
+</button>
 
 <script>
 // Complete Varsity Athletic Schedule Data (Pristine 96 games of Fall 2026)
@@ -1406,6 +1807,10 @@ function renderDailyView() {
     if (jumpBtnText) {
       jumpBtnText.textContent = target.isToday ? "Today's Games" : "Next Game";
     }
+    const fabLabel = document.getElementById('fab-text');
+    if (fabLabel) {
+      fabLabel.textContent = target.isToday ? "Today's Games" : "Next Game";
+    }
 
     container.innerHTML = filtered.map(item => {
       const isTarget = item.date === target.date;
@@ -1424,6 +1829,97 @@ function renderDailyView() {
 
       return renderCard(item, targetBadge, isTarget, targetCardId);
     }).join('');
+  }
+}
+
+// Sport Metadata & Focused Selector Logic
+const SPORT_META = {
+  all: { name: "All Sports", icon: "🌟", venue: "All MHS Venues", countId: null },
+  fball: { name: "Football", icon: "🏈", venue: "Fred Green Field", countId: "count-fball", gridId: "sport-fball" },
+  bsoc: { name: "Boys' Soccer", icon: "⚽", venue: "Pine Banks & Knoll", countId: "count-bsoc", gridId: "sport-bsoc" },
+  gsoc: { name: "Girls' Soccer", icon: "⚽", venue: "Pine Banks", countId: "count-gsoc", gridId: "sport-gsoc" },
+  vball: { name: "Girls' Volleyball", icon: "🏐", venue: "MVMMS", countId: "count-vball", gridId: "sport-vball" },
+  fhockey: { name: "Field Hockey", icon: "🏑", venue: "Pine Banks", countId: "count-fhockey", gridId: "sport-fhockey" },
+  xc: { name: "Cross Country", icon: "🏃", venue: "Pine Banks", countId: "count-xc", gridId: "sport-xc" },
+  golf: { name: "Golf", icon: "⛳", venue: "Bellevue Golf Club", countId: "count-golf", gridId: "sport-golf" }
+};
+
+let currentSelectedSport = 'all';
+
+function selectSport(sportKey) {
+  if (!SPORT_META[sportKey]) sportKey = 'all';
+  currentSelectedSport = sportKey;
+
+  // Sync Dropdown
+  const dropdown = document.getElementById('sport-dropdown');
+  if (dropdown && dropdown.value !== sportKey) dropdown.value = sportKey;
+
+  // Sync Chips
+  document.querySelectorAll('.sport-chip-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-sport') === sportKey);
+  });
+
+  // Toggle Sport Sections
+  const sections = document.querySelectorAll('.sport-section-block');
+  sections.forEach(sec => {
+    const secKey = sec.getAttribute('data-sport');
+    if (sportKey === 'all' || secKey === sportKey) {
+      sec.style.display = 'block';
+    } else {
+      sec.style.display = 'none';
+    }
+  });
+
+  // Update Counter Badge & Banner
+  const counterEl = document.getElementById('selected-sport-counter');
+  const bannerEl = document.getElementById('sport-banner');
+
+  if (sportKey === 'all') {
+    if (counterEl) counterEl.textContent = 'Showing all 96 games across 7 sports';
+    if (bannerEl) bannerEl.style.display = 'none';
+  } else {
+    const meta = SPORT_META[sportKey];
+    const sportEvents = events.filter(e => e.sport === meta.name).sort((a, b) => a.date.localeCompare(b.date));
+    if (counterEl) counterEl.textContent = `Showing ${sportEvents.length} games`;
+
+    if (bannerEl) {
+      bannerEl.style.display = 'flex';
+      const iconEl = document.getElementById('banner-sport-icon');
+      const titleEl = document.getElementById('banner-sport-title');
+      const metaEl = document.getElementById('banner-sport-meta');
+      const nextEl = document.getElementById('banner-sport-next');
+
+      if (iconEl) iconEl.textContent = meta.icon;
+      if (titleEl) titleEl.textContent = meta.name;
+      if (metaEl) metaEl.innerHTML = `📍 Home Venue: <strong>${meta.venue}</strong> &bull; 📅 <strong>${sportEvents.length} Games</strong>`;
+
+      // Find next upcoming or today game for this specific sport
+      const todayStr = getTodayEasternString();
+      const nextGame = sportEvents.find(e => e.date >= todayStr) || sportEvents[sportEvents.length - 1];
+      if (nextEl && nextGame) {
+        const isToday = nextGame.date === todayStr;
+        const badgeLabel = isToday ? '🔥 TODAY' : 'NEXT GAME';
+        const badgeClass = isToday ? 'today' : 'next';
+        nextEl.innerHTML = `
+          <div class="sport-next-game-pill">
+            <span class="gameday-pill ${badgeClass}">${badgeLabel}</span>
+            <span>${formatDateShort(nextGame.date)} ${nextGame.isHome ? 'vs.' : '@'} ${nextGame.opp} (${nextGame.time})</span>
+          </div>
+        `;
+      }
+    }
+  }
+
+  SafeStorage.setItem('mhs_selected_sport', sportKey);
+}
+
+function onFloatingJumpClick() {
+  const currentTab = SafeStorage.getItem('mhs_active_tab') || 'calendar';
+  if (currentTab !== 'calendar') {
+    switchTab('calendar', true);
+    setTimeout(() => scrollToCurrentOrNextGame(true), 120);
+  } else {
+    scrollToCurrentOrNextGame(true);
   }
 }
 
@@ -1457,6 +1953,10 @@ function populateSportsView() {
     }
     if (countEl) countEl.textContent = `${list.length} games`;
   });
+
+  // Restore saved sport filter or default to 'all'
+  const savedSport = SafeStorage.getItem('mhs_selected_sport') || 'all';
+  selectSport(savedSport);
 }
 
 // ==========================================
