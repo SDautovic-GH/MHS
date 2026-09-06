@@ -846,6 +846,64 @@
       color: var(--text-muted);
     }
 
+    /* Jump to Today / Next Game Day Styles */
+    .jump-today-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--accent-blue);
+      color: var(--accent-cyan);
+      font-size: 0.775rem;
+      font-weight: 700;
+      padding: 0.38rem 0.75rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .jump-today-btn:hover {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+    }
+    .jump-today-btn:active {
+      transform: scale(0.96);
+    }
+
+    .card-header-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .gameday-pill {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.45rem;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+    }
+    .gameday-pill.today {
+      background-color: rgba(239, 68, 68, 0.18);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.35);
+    }
+    .gameday-pill.next {
+      background-color: rgba(59, 130, 246, 0.18);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.35);
+    }
+    .card.is-target-day {
+      border-color: rgba(59, 130, 246, 0.5);
+      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.18);
+    }
   </style>
 </head>
 <body>
@@ -883,6 +941,10 @@
         <button class="filter-pill" data-loc="home" onclick="setLocFilter('home')">Home Only</button>
         <button class="filter-pill" data-loc="away" onclick="setLocFilter('away')">Away Only</button>
       </div>
+      <button class="jump-today-btn" id="jump-today-btn" onclick="scrollToCurrentOrNextGame(true)" title="Jump to today or next game day">
+        <span>📍</span>
+        <span id="jump-today-text">Next Game</span>
+      </button>
       <span class="count-indicator" id="filter-count">Showing 96 games</span>
     </div>
     <div class="grid" id="daily-grid"></div>
@@ -1205,7 +1267,53 @@ function formatDate(isoStr) {
   return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
 }
 
-function renderCard(item) {
+function formatDateShort(isoStr) {
+  const parts = isoStr.split('-');
+  const d = new Date(parts[0], parts[1] - 1, parts[2]);
+  return d.toLocaleDateString('en-US', { weekday: 'short', month: 'numeric', day: 'numeric' });
+}
+
+// Calculate Today or Next Game Day
+function getTargetGameDay() {
+  const now = new Date();
+  const y = now.getFullYear();
+  const m = String(now.getMonth() + 1).padStart(2, '0');
+  const d = String(now.getDate()).padStart(2, '0');
+  const todayStr = `${y}-${m}-${d}`;
+
+  const allDates = [...new Set(events.map(e => e.date))].sort();
+  if (allDates.includes(todayStr)) {
+    return { date: todayStr, isToday: true, label: "Today's Games" };
+  }
+
+  const nextDate = allDates.find(dt => dt >= todayStr);
+  if (nextDate) {
+    return { date: nextDate, isToday: false, label: "Next Game (" + formatDateShort(nextDate) + ")" };
+  }
+
+  return { date: allDates[allDates.length - 1], isToday: false, label: "Latest Game" };
+}
+
+function scrollToCurrentOrNextGame(smooth = true) {
+  const targetCard = document.getElementById('target-game-card');
+  if (!targetCard) return;
+
+  const header = (document.querySelector && document.querySelector('header')) || null;
+  const filterBar = (document.querySelector && document.querySelector('.filter-bar')) || null;
+  const headerOffset = (header ? header.offsetHeight : 60) + (filterBar ? filterBar.offsetHeight : 50) + 15;
+
+  const rect = targetCard.getBoundingClientRect();
+  const targetY = (window.pageYOffset || 0) + rect.top - headerOffset;
+
+  if (typeof window.scrollTo === 'function') {
+    window.scrollTo({
+      top: Math.max(0, targetY),
+      behavior: smooth ? 'smooth' : 'auto'
+    });
+  }
+}
+
+function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '') {
   const locClass = item.isHome ? 'home' : 'away';
   const locLabel = item.isHome ? 'HOME' : 'AWAY';
   const prefix = item.isHome ? 'vs.' : '@';
@@ -1226,9 +1334,12 @@ function renderCard(item) {
   }
 
   return `
-    <div class="card ${item.result ? 'has-score' : ''}">
+    <div class="card ${item.result ? 'has-score' : ''} ${isTarget ? 'is-target-day' : ''}" ${targetCardId}>
       <div class="card-header">
-        <span class="date-label">${formatDate(item.date)}</span>
+        <div class="card-header-left">
+          <span class="date-label">${formatDate(item.date)}</span>
+          ${targetBadge}
+        </div>
         <span class="sport-tag ${getSportClass(item.sport)}">${item.sport}</span>
       </div>
       <div class="matchup">${prefix} ${item.opp}</div>
@@ -1288,7 +1399,31 @@ function renderDailyView() {
       </div>
     `;
   } else {
-    container.innerHTML = filtered.map(renderCard).join('');
+    const target = getTargetGameDay();
+    let firstTargetAssigned = false;
+
+    const jumpBtnText = document.getElementById('jump-today-text');
+    if (jumpBtnText) {
+      jumpBtnText.textContent = target.isToday ? "Today's Games" : "Next Game";
+    }
+
+    container.innerHTML = filtered.map(item => {
+      const isTarget = item.date === target.date;
+      let targetCardId = '';
+      let targetBadge = '';
+
+      if (isTarget) {
+        if (!firstTargetAssigned) {
+          targetCardId = 'id="target-game-card"';
+          firstTargetAssigned = true;
+        }
+        targetBadge = target.isToday
+          ? `<span class="gameday-pill today">🔥 TODAY</span>`
+          : `<span class="gameday-pill next">NEXT GAME</span>`;
+      }
+
+      return renderCard(item, targetBadge, isTarget, targetCardId);
+    }).join('');
   }
 }
 
@@ -1468,6 +1603,17 @@ renderDailyView();
 populateSportsView();
 renderStandingsView();
 loadDynamicScoresAndStandings();
+
+// Auto-land on current day or next game day on page load
+if (typeof history !== 'undefined' && 'scrollRestoration' in history) {
+  try { history.scrollRestoration = 'manual'; } catch (e) {}
+}
+window.addEventListener('load', () => {
+  setTimeout(() => scrollToCurrentOrNextGame(false), 50);
+  setTimeout(() => scrollToCurrentOrNextGame(true), 250);
+});
+setTimeout(() => scrollToCurrentOrNextGame(false), 80);
+setTimeout(() => scrollToCurrentOrNextGame(true), 350);
 
 </script>
 </body>
