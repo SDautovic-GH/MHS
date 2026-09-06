@@ -2951,7 +2951,7 @@
     <!-- Apple-Style Schedule Scope Segmented Control: Today vs All Upcoming -->
     <div class="schedule-scope-toggle-bar" id="schedule-scope-bar" role="tablist" aria-label="Schedule view scope">
       <button class="schedule-scope-btn is-today active" id="scope-btn-today" onclick="setScheduleScope('today')" role="tab" aria-selected="true">
-        <span>🔥 Today's Games</span>
+        <span>🔴 Today's Games</span>
         <span class="scope-count-badge" id="scope-today-count">0</span>
       </button>
       <button class="schedule-scope-btn" id="scope-btn-upcoming" onclick="setScheduleScope('upcoming')" role="tab" aria-selected="false">
@@ -4825,7 +4825,7 @@ function renderDailyView() {
           firstTargetAssigned = true;
         }
         targetBadge = target.isToday
-          ? `<span class="gameday-pill today">🔥 TODAY</span>`
+          ? `<span class="gameday-pill today">🔴 TODAY</span>`
           : `<span class="gameday-pill next">NEXT GAME</span>`;
       }
 
@@ -5419,7 +5419,7 @@ function startNextGameCountdown() {
 
     if (isLive) {
       if (badgeEl) {
-        badgeEl.textContent = '🔥 LIVE NOW';
+        badgeEl.textContent = '🔴 LIVE NOW';
         badgeEl.style.background = 'rgba(239, 68, 68, 0.25)';
       }
       if (cdDays) cdDays.textContent = '00';
