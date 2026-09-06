@@ -1,4 +1,16 @@
 {
-  "lastUpdated": "2026-09-06T13:57:30.136064",
-  "scores": {}
+  "lastUpdated": "2026-09-06T15:38:42.717503",
+  "scores": {
+    "Golf|2026-09-01": {
+      "sport": "Golf",
+      "date": "2026-09-01",
+      "opponent": "Watertown",
+      "mhsScore": 52.5,
+      "oppScore": 19.5,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    }
+  }
 }

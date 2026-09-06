@@ -42,6 +42,20 @@ SPORTS_CONFIG = {
     }
 }
 
+# ArbiterLive Team IDs for Melrose High School (Entity ID: 14381)
+# Official MIAA platform used by athletic directors for schedules and scores
+ARBITER_TEAMS = {
+    "Golf": "9009654",
+    "Football": "856419",
+    "Boys' Soccer": "5616965",
+    "Girls' Soccer": "5616968",
+    "Girls' Volleyball": "4044277",
+    "Field Hockey": "4285421",
+    "Boys' Cross Country": "7773306",
+    "Girls' Cross Country": "7928429",
+    "Girls' Swimming": "4332482"
+}
+
 def fetch_url(url, timeout=12):
     req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, context=CTX, timeout=timeout) as resp:
@@ -56,16 +70,91 @@ def extract_next_data(html):
             print(f"Error parsing JSON: {e}")
     return None
 
-def load_scheduled_keys():
-    """Load official 2026 schedule keys (sport|date) from index.html"""
-    scheduled = set()
+def load_scheduled_events():
+    """Load official 2026 schedule events (keyed by sport|date) from index.html"""
+    events = {}
     if os.path.exists("index.html"):
         with open("index.html", "r", encoding="utf-8") as f:
             content = f.read()
-        matches = re.findall(r'date:\s*"([^"]+)",\s*time:\s*"[^"]+",\s*sport:\s*"([^"]+)"', content)
-        for d, s in matches:
-            scheduled.add(f"{s}|{d}")
-    return scheduled
+        matches = re.findall(
+            r'date:\s*"([^"]+)",\s*time:\s*"[^"]+",\s*sport:\s*"([^"]+)",\s*opp:\s*"([^"]+)",\s*isHome:\s*(true|false)',
+            content
+        )
+        for d, s, opp, is_home in matches:
+            events[f"{s}|{d}"] = {
+                "sport": s,
+                "date": d,
+                "opponent": opp,
+                "isHome": is_home == "true"
+            }
+    return events
+
+def fetch_arbiter_scores(scheduled_events):
+    print("[*] Checking for completed game scores on ArbiterLive (MIAA)...")
+    months = {
+        'Jan':'01','Feb':'02','Mar':'03','Apr':'04','May':'05','Jun':'06',
+        'Jul':'07','Aug':'08','Sep':'09','Oct':'10','Nov':'11','Dec':'12'
+    }
+    arbiter_scores = {}
+    total_found = 0
+
+    for sport_label, team_id in ARBITER_TEAMS.items():
+        url = f"https://www.arbiterlive.com/Teams/Schedule/{team_id}?activeEntityId=14381"
+        try:
+            html = fetch_url(url, timeout=10)
+            rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
+            sport_found = 0
+            for r in rows:
+                tds = re.findall(r'<td[^>]*>(.*?)</td>', r, re.DOTALL)
+                if len(tds) < 5:
+                    continue
+                cleaned = [' '.join(re.sub(r'<[^>]+>', ' ', td).split()) for td in tds]
+                date_col = cleaned[0]
+                date_match = re.search(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})\b', date_col)
+                if not date_match:
+                    continue
+                m_str, d_str = date_match.group(1), date_match.group(2).zfill(2)
+                iso_date = f"2026-{months[m_str]}-{d_str}"
+                key = f"{sport_label}|{iso_date}"
+
+                if key not in scheduled_events:
+                    continue
+
+                res_col = ''
+                for col in cleaned[3:]:
+                    if re.search(r'\b[WLT]\s*[\d\.]+\s*-\s*[\d\.]+', col):
+                        res_col = col
+                        break
+
+                if res_col:
+                    m = re.search(r'\b([WLT])\s*([\d\.]+)\s*-\s*([\d\.]+)', res_col)
+                    if m:
+                        res_letter = m.group(1)
+                        mhs_score = float(m.group(2)) if '.' in m.group(2) else int(m.group(2))
+                        opp_score = float(m.group(3)) if '.' in m.group(3) else int(m.group(3))
+                        res_word = 'WIN' if res_letter == 'W' else ('LOSS' if res_letter == 'L' else 'TIE')
+                        ev = scheduled_events[key]
+                        arbiter_scores[key] = {
+                            "sport": sport_label,
+                            "date": iso_date,
+                            "opponent": ev["opponent"],
+                            "mhsScore": mhs_score,
+                            "oppScore": opp_score,
+                            "result": res_word,
+                            "status": "Final",
+                            "isHome": ev["isHome"],
+                            "source": "ArbiterLive"
+                        }
+                        sport_found += 1
+                        total_found += 1
+
+            if sport_found > 0:
+                print(f"  [+] {sport_label:18}: {sport_found} completed score(s)")
+        except Exception as e:
+            print(f"  [x] {sport_label:18}: ArbiterLive error ({e})")
+
+    print(f"[*] Total ArbiterLive scores retrieved: {total_found}")
+    return arbiter_scores
 
 def fetch_scores(scheduled_keys):
     print("[*] Checking for completed 2026 game scores on MaxPreps...")
@@ -209,10 +298,16 @@ def main():
     print(f"MHS 2026 Sports Data Sync - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 60)
 
-    scheduled_keys = load_scheduled_keys()
+    scheduled_events = load_scheduled_events()
+    scheduled_keys = set(scheduled_events.keys())
     print(f"[*] Loaded {len(scheduled_keys)} official 2026 varsity games")
 
-    scores = fetch_scores(scheduled_keys)
+    # Fetch from ArbiterLive (MIAA official hub - covers Golf, Cross Country, Swimming, and all varsity sports)
+    arbiter_scores = fetch_arbiter_scores(scheduled_events)
+
+    # Fetch from MaxPreps (Football, Volleyball, Soccer, Field Hockey)
+    maxpreps_scores = fetch_scores(scheduled_keys)
+
     existing_scores = {}
     if os.path.exists("scores.json"):
         try:
@@ -221,7 +316,10 @@ def main():
                 existing_scores = existing_data.get("scores", {})
         except Exception:
             pass
-    existing_scores.update(scores)
+
+    # Merge: existing manual scores, updated by ArbiterLive and MaxPreps
+    existing_scores.update(arbiter_scores)
+    existing_scores.update(maxpreps_scores)
     scores_payload = {
         "lastUpdated": datetime.now().isoformat(),
         "scores": existing_scores
