@@ -3991,11 +3991,14 @@ function renderSportSheetList() {
   const listEl = document.getElementById('sport-sheet-list');
   if (!listEl) return;
 
+  const todayStr = getTodayEasternString();
+  const upcomingEvents = events.filter(e => !e.result && e.mhsScore === undefined && e.date >= todayStr);
+
   listEl.innerHTML = ALL_SPORTS_LIST.map(s => {
     const isSelected = currentSelectedSport === s.key;
     const count = s.key === 'all'
-      ? events.length
-      : events.filter(e => e.sport === s.sheetTitle || e.sport === s.name).length;
+      ? upcomingEvents.length
+      : upcomingEvents.filter(e => (e.sport === s.sheetTitle || e.sport === s.name)).length;
 
     return `
       <button class="apple-sheet-option ${isSelected ? 'active' : ''}" onclick="selectSport('${s.key.replace(/'/g, "\\'")}')">
@@ -4115,17 +4118,18 @@ function onFilterChange() {
 function renderDailyView() {
   const searchEl = document.getElementById('schedule-search');
   const query = (searchEl && searchEl.value) ? searchEl.value.trim().toLowerCase() : '';
+  const todayStr = getTodayEasternString();
 
   const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
 
   const filtered = sorted.filter(item => {
+    // Strict Temporal Separation: Schedule displays strictly upcoming & active games
+    const isCompleted = Boolean(item.result || item.mhsScore !== undefined || item.date < todayStr);
+    if (isCompleted) return false;
+
     if (currentSelectedSport !== 'all' && item.sport !== currentSelectedSport) return false;
     if (activeLocFilter === 'home' && !item.isHome) return false;
     if (activeLocFilter === 'away' && item.isHome) return false;
-    if (activeLocFilter === 'past') {
-      const todayStr = getTodayEasternString();
-      if (item.date >= todayStr && !(item.result || item.mhsScore !== undefined)) return false;
-    }
     if (activeLocFilter === 'fnl') {
       const d = new Date(item.date + 'T12:00:00');
       const day = d.getDay(); // 0 = Sun, 5 = Fri, 6 = Sat
@@ -4135,7 +4139,7 @@ function renderDailyView() {
     }
 
     if (query) {
-      const matchText = `${item.sport} ${item.opp} ${item.venue} ${item.date} ${item.result || ''}`.toLowerCase();
+      const matchText = `${item.sport} ${item.opp} ${item.venue} ${item.date}`.toLowerCase();
       if (!matchText.includes(query)) return false;
     }
     return true;
@@ -4148,12 +4152,12 @@ function renderDailyView() {
   if (countEl) {
     const locDesc = activeLocFilter === 'all' ? '' : ` (${LOC_FILTER_OPTIONS[activeLocFilter].name})`;
     if (currentSelectedSport === 'all') {
-      countEl.textContent = `Showing ${filtered.length} games${locDesc}`;
+      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> upcoming games${locDesc}`;
       if (syncSportBtn) syncSportBtn.style.display = 'none';
     } else {
       const meta = SPORT_META[currentSelectedSport];
       const venueStr = meta ? ` &bull; 📍 ${meta.venue}` : '';
-      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> ${currentSelectedSport} games${locDesc}${venueStr}`;
+      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> upcoming ${currentSelectedSport} games${locDesc}${venueStr}`;
       if (syncSportBtn) {
         syncSportBtn.style.display = 'inline-flex';
         syncSportBtn.innerHTML = `<span>📅 Sync ${currentSelectedSport}</span>`;
@@ -4164,8 +4168,9 @@ function renderDailyView() {
   if (filtered.length === 0) {
     container.innerHTML = `
       <div class="empty-state">
-        <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem;">No games match your search</p>
-        <p style="font-size: 0.85rem;">Try adjusting your search query, sport, or location filter.</p>
+        <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem;">No upcoming games found</p>
+        <p style="font-size: 0.85rem; margin-bottom: 0.75rem;">Looking for past match results? Check the <a href="#scores" onclick="switchTab('scores')" style="color: var(--accent-blue); text-decoration: underline; font-weight: 600;">🏁 Scores tab</a>.</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">Or try adjusting your search query, sport, or location filter.</p>
       </div>
     `;
   } else {
