@@ -509,8 +509,9 @@
       gap: 0.4rem;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-      padding-top: 0.75rem;
-      margin-top: 0.75rem;
+      padding-top: 0.65rem;
+      padding-bottom: 0.2rem;
+      margin: 0;
       border-top: 1px solid var(--border-subtle);
       scrollbar-width: none;
     }
@@ -1154,21 +1155,28 @@
     /* Filter & Search Bar */
     .filter-bar {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
       gap: 0.75rem;
       margin-bottom: 1.5rem;
       background-color: var(--bg-surface);
       border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      padding: 0.75rem 1rem;
+      border-radius: 14px;
+      padding: 0.85rem 1rem;
     }
 
     .search-box {
-      flex: 1;
-      min-width: 220px;
+      width: 100%;
       position: relative;
+    }
+
+    .filter-pills-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid var(--border-subtle);
     }
 
     .search-input {
@@ -1868,10 +1876,6 @@
           <span>📅</span>
           <span>Schedule</span>
         </button>
-        <button class="tab-button" id="tab-sports" onclick="switchTab('sports')" role="tab" aria-selected="false">
-          <span>⚽</span>
-          <span>By Sport</span>
-        </button>
         <button class="tab-button" id="tab-standings" onclick="switchTab('standings')" role="tab" aria-selected="false">
           <span>🏆</span>
           <span>Standings</span>
@@ -1910,63 +1914,44 @@
 
   <main id="calendar-view" class="view-panel active" role="tabpanel" aria-labelledby="tab-calendar">
     <div class="filter-bar">
+      <!-- Search Input -->
       <div class="search-box">
         <span class="search-icon">🔍</span>
         <input type="text" id="schedule-search" class="search-input" placeholder="Search opponent, sport, or venue..." oninput="onFilterChange()" aria-label="Search schedule">
       </div>
-      <div class="filter-pills">
-        <button class="filter-pill active" data-loc="all" onclick="setLocFilter('all')">All</button>
-        <button class="filter-pill" data-loc="home" onclick="setLocFilter('home')">Home</button>
-        <button class="filter-pill" data-loc="away" onclick="setLocFilter('away')">Away</button>
-        <button class="filter-pill" data-loc="past" onclick="setLocFilter('past')">🏁 Past &amp; Scores</button>
-        <button class="filter-pill" data-loc="fnl" onclick="setLocFilter('fnl')">🌙 Night &amp; Weekend</button>
-      </div>
-      <button class="jump-today-btn" id="jump-today-btn" onclick="scrollToCurrentOrNextGame(true)" title="Jump to today or next game day">
-        <span>📍</span>
-        <span id="jump-today-text">Next Game</span>
-      </button>
-      <span class="count-indicator" id="filter-count">Showing 96 games</span>
-    </div>
-    <div class="grid" id="daily-grid"></div>
-  </main>
-
-  <main id="sports-view" class="view-panel" role="tabpanel" aria-labelledby="tab-sports">
-    <!-- Fast Sport Selector Panel -->
-    <div class="sport-picker-panel">
-      <div class="sport-picker-row">
-        <div class="sport-select-control">
-          <label for="sport-dropdown" class="sport-select-label">Sport:</label>
-          <div class="custom-select-box">
-            <select id="sport-dropdown" class="sport-select-input" onchange="selectSport(this.value)" aria-label="Select a sport">
-              <option value="all">🌟 All Sports (Show All 96 Games)</option>
-              <option value="fball">🏈 Football (9 Games)</option>
-              <option value="bsoc">⚽ Boys' Soccer (16 Games)</option>
-              <option value="gsoc">⚽ Girls' Soccer (17 Games)</option>
-              <option value="vball">🏐 Girls' Volleyball (20 Games)</option>
-              <option value="fhockey">🏑 Field Hockey (15 Games)</option>
-              <option value="xc">🏃 Cross Country (9 Meets)</option>
-              <option value="golf">⛳ Golf (11 Matches)</option>
-            </select>
-            <span class="select-arrow-icon">▾</span>
-          </div>
-        </div>
-        <span class="sport-counter-badge" id="selected-sport-counter">Showing all 96 games across 7 sports</span>
-      </div>
 
       <!-- Quick Sport Chips Scroller -->
-      <div class="sport-chips-strip" role="tablist" aria-label="Quick Sport Selection">
-        <button class="sport-chip-btn active" data-sport="all" onclick="selectSport('all')">All</button>
-        <button class="sport-chip-btn" data-sport="fball" onclick="selectSport('fball')">🏈 Football</button>
-        <button class="sport-chip-btn" data-sport="bsoc" onclick="selectSport('bsoc')">⚽ Boys Soccer</button>
-        <button class="sport-chip-btn" data-sport="gsoc" onclick="selectSport('gsoc')">⚽ Girls Soccer</button>
-        <button class="sport-chip-btn" data-sport="vball" onclick="selectSport('vball')">🏐 Volleyball</button>
-        <button class="sport-chip-btn" data-sport="fhockey" onclick="selectSport('fhockey')">🏑 Field Hockey</button>
-        <button class="sport-chip-btn" data-sport="xc" onclick="selectSport('xc')">🏃 XC</button>
-        <button class="sport-chip-btn" data-sport="golf" onclick="selectSport('golf')">⛳ Golf</button>
+      <div class="sport-chips-strip" role="tablist" aria-label="Filter by sport">
+        <button class="sport-chip-btn active" data-sport="all" onclick="selectSport('all')">🌟 All Sports</button>
+        <button class="sport-chip-btn" data-sport="Football" onclick="selectSport('Football')">🏈 Football</button>
+        <button class="sport-chip-btn" data-sport="Boys' Soccer" onclick="selectSport('Boys\' Soccer')">⚽ Boys Soccer</button>
+        <button class="sport-chip-btn" data-sport="Girls' Soccer" onclick="selectSport('Girls\' Soccer')">⚽ Girls Soccer</button>
+        <button class="sport-chip-btn" data-sport="Girls' Volleyball" onclick="selectSport('Girls\' Volleyball')">🏐 Volleyball</button>
+        <button class="sport-chip-btn" data-sport="Field Hockey" onclick="selectSport('Field Hockey')">🏑 Field Hockey</button>
+        <button class="sport-chip-btn" data-sport="Golf" onclick="selectSport('Golf')">⛳ Golf</button>
+        <button class="sport-chip-btn" data-sport="Boys' Cross Country" onclick="selectSport('Boys\' Cross Country')">🏃 Boys XC</button>
+        <button class="sport-chip-btn" data-sport="Girls' Cross Country" onclick="selectSport('Girls\' Cross Country')">🏃 Girls XC</button>
+        <button class="sport-chip-btn" data-sport="Girls' Swimming" onclick="selectSport('Girls\' Swimming')">🏊 Swim</button>
       </div>
+
+      <!-- Location & State Filter Pills Row -->
+      <div class="filter-pills-row">
+        <div class="filter-pills">
+          <button class="filter-pill active" data-loc="all" onclick="setLocFilter('all')">All Locations</button>
+          <button class="filter-pill" data-loc="home" onclick="setLocFilter('home')">🏠 Home</button>
+          <button class="filter-pill" data-loc="away" onclick="setLocFilter('away')">🚌 Away</button>
+          <button class="filter-pill" data-loc="past" onclick="setLocFilter('past')">🏁 Past &amp; Scores</button>
+          <button class="filter-pill" data-loc="fnl" onclick="setLocFilter('fnl')">🌙 Night &amp; Weekend</button>
+        </div>
+        <button class="jump-today-btn" id="jump-today-btn" onclick="scrollToCurrentOrNextGame(true)" title="Jump to today or next game day">
+          <span>📍</span>
+          <span id="jump-today-text">Next Game</span>
+        </button>
+      </div>
+      <span class="count-indicator" id="filter-count">Showing 96 games</span>
     </div>
 
-    <!-- Featured Sport Summary Banner -->
+    <!-- Featured Sport Summary Banner (Shows when a specific sport is selected) -->
     <div id="sport-banner" class="sport-summary-banner" style="display:none;">
       <div class="sport-summary-banner-left">
         <span class="sport-summary-icon" id="banner-sport-icon">🏈</span>
@@ -1978,66 +1963,12 @@
       <div class="sport-summary-banner-right" id="banner-sport-next"></div>
       <div class="sport-summary-banner-actions">
         <button class="sync-sport-ics-btn" id="sync-sport-btn" onclick="exportCurrentSportIcs()" title="Download schedule for this sport to your calendar">
-          <span>📅 Sync Season (.ics)</span>
+          <span>📅 Add to Calendar (.ics)</span>
         </button>
       </div>
     </div>
 
-    <div class="sport-section-block" id="sec-vball" data-sport="vball">
-      <div class="section-title">
-        <span>Girls' Volleyball <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: MVMMS)</small></span>
-        <span class="section-count" id="count-vball"></span>
-      </div>
-      <div class="grid" id="sport-vball"></div>
-    </div>
-
-    <div class="sport-section-block" id="sec-bsoc" data-sport="bsoc">
-      <div class="section-title">
-        <span>Boys' Soccer <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks &amp; Knoll)</small></span>
-        <span class="section-count" id="count-bsoc"></span>
-      </div>
-      <div class="grid" id="sport-bsoc"></div>
-    </div>
-
-    <div class="sport-section-block" id="sec-gsoc" data-sport="gsoc">
-      <div class="section-title">
-        <span>Girls' Soccer <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
-        <span class="section-count" id="count-gsoc"></span>
-      </div>
-      <div class="grid" id="sport-gsoc"></div>
-    </div>
-
-    <div class="sport-section-block" id="sec-fball" data-sport="fball">
-      <div class="section-title">
-        <span>Football <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Fred Green Field)</small></span>
-        <span class="section-count" id="count-fball"></span>
-      </div>
-      <div class="grid" id="sport-fball"></div>
-    </div>
-
-    <div class="sport-section-block" id="sec-fhockey" data-sport="fhockey">
-      <div class="section-title">
-        <span>Field Hockey <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
-        <span class="section-count" id="count-fhockey"></span>
-      </div>
-      <div class="grid" id="sport-fhockey"></div>
-    </div>
-
-    <div class="sport-section-block" id="sec-xc" data-sport="xc">
-      <div class="section-title">
-        <span>Cross Country — Boys &amp; Girls <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
-        <span class="section-count" id="count-xc"></span>
-      </div>
-      <div class="grid" id="sport-xc"></div>
-    </div>
-
-    <div class="sport-section-block" id="sec-golf" data-sport="golf">
-      <div class="section-title">
-        <span>Golf <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Bellevue Golf Club)</small></span>
-        <span class="section-count" id="count-golf"></span>
-      </div>
-      <div class="grid" id="sport-golf"></div>
-    </div>
+    <div class="grid" id="daily-grid"></div>
   </main>
 
   <main id="standings-view" class="view-panel" role="tabpanel" aria-labelledby="tab-standings">
@@ -3050,12 +2981,11 @@ function exportSingleGameIcs(sport, opp, date, time, venue, isHome) {
 }
 
 function exportCurrentSportIcs() {
-  const meta = SPORT_META[currentSelectedSport];
   let list = events;
   let filename = "Melrose_Athletics_Schedule_2026.ics";
-  if (currentSelectedSport !== 'all' && meta) {
-    list = events.filter(e => e.sport === meta.name);
-    filename = `Melrose_${meta.name.replace(/[^a-zA-Z]/g, '_')}_Schedule_2026.ics`;
+  if (currentSelectedSport !== 'all') {
+    list = events.filter(e => e.sport === currentSelectedSport);
+    filename = `Melrose_${currentSelectedSport.replace(/[^a-zA-Z]/g, '_')}_Schedule_2026.ics`;
   }
   const ics = createIcsContent(list);
   downloadIcsFile(filename, ics);
@@ -3211,6 +3141,7 @@ function renderDailyView() {
   const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
 
   const filtered = sorted.filter(item => {
+    if (currentSelectedSport !== 'all' && item.sport !== currentSelectedSport) return false;
     if (activeLocFilter === 'home' && !item.isHome) return false;
     if (activeLocFilter === 'away' && item.isHome) return false;
     if (activeLocFilter === 'past') {
@@ -3236,7 +3167,8 @@ function renderDailyView() {
   const countEl = document.getElementById('filter-count');
 
   if (countEl) {
-    countEl.textContent = `Showing ${filtered.length} of ${events.length} games`;
+    const sportLabel = currentSelectedSport === 'all' ? '' : `${currentSelectedSport} `;
+    countEl.textContent = `Showing ${filtered.length} ${sportLabel}games`;
   }
 
   if (filtered.length === 0) {
@@ -3279,57 +3211,38 @@ function renderDailyView() {
   }
 }
 
-// Sport Metadata & Focused Selector Logic
+// Sport Metadata & Unified Selector Logic
 const SPORT_META = {
-  all: { name: "All Sports", icon: "🌟", venue: "All MHS Venues", countId: null },
-  fball: { name: "Football", icon: "🏈", venue: "Fred Green Field", countId: "count-fball", gridId: "sport-fball" },
-  bsoc: { name: "Boys' Soccer", icon: "⚽", venue: "Pine Banks & Knoll", countId: "count-bsoc", gridId: "sport-bsoc" },
-  gsoc: { name: "Girls' Soccer", icon: "⚽", venue: "Pine Banks", countId: "count-gsoc", gridId: "sport-gsoc" },
-  vball: { name: "Girls' Volleyball", icon: "🏐", venue: "MVMMS", countId: "count-vball", gridId: "sport-vball" },
-  fhockey: { name: "Field Hockey", icon: "🏑", venue: "Pine Banks", countId: "count-fhockey", gridId: "sport-fhockey" },
-  xc: { name: "Cross Country", icon: "🏃", venue: "Pine Banks", countId: "count-xc", gridId: "sport-xc" },
-  golf: { name: "Golf", icon: "⛳", venue: "Bellevue Golf Club", countId: "count-golf", gridId: "sport-golf" }
+  "all": { name: "All Sports", icon: "🌟", venue: "All Melrose Facilities" },
+  "Football": { name: "Football", icon: "🏈", venue: "Fred Green Memorial Field" },
+  "Boys' Soccer": { name: "Boys' Soccer", icon: "⚽", venue: "Pine Banks & The Knoll" },
+  "Girls' Soccer": { name: "Girls' Soccer", icon: "⚽", venue: "Pine Banks & Fred Green Field" },
+  "Girls' Volleyball": { name: "Girls' Volleyball", icon: "🏐", venue: "MVMMS Middle School Gym" },
+  "Field Hockey": { name: "Field Hockey", icon: "🏑", venue: "Pine Banks Park" },
+  "Golf": { name: "Golf", icon: "⛳", venue: "Bellevue Golf Club" },
+  "Boys' Cross Country": { name: "Boys' Cross Country", icon: "🏃", venue: "Pine Banks Park" },
+  "Girls' Cross Country": { name: "Girls' Cross Country", icon: "🏃", venue: "Pine Banks Park" },
+  "Girls' Swimming": { name: "Girls' Swimming", icon: "🏊", venue: "MHS Athletic Center" }
 };
 
 let currentSelectedSport = 'all';
 
-function selectSport(sportKey) {
-  if (!SPORT_META[sportKey]) sportKey = 'all';
-  currentSelectedSport = sportKey;
+function selectSport(sportName) {
+  if (currentSelectedSport === sportName && sportName !== 'all') {
+    sportName = 'all';
+  }
+  currentSelectedSport = sportName;
 
-  // Sync Dropdown
-  const dropdown = document.getElementById('sport-dropdown');
-  if (dropdown && dropdown.value !== sportKey) dropdown.value = sportKey;
-
-  // Sync Chips
   document.querySelectorAll('.sport-chip-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-sport') === sportKey);
+    btn.classList.toggle('active', btn.getAttribute('data-sport') === sportName);
   });
 
-  // Toggle Sport Sections
-  const sections = document.querySelectorAll('.sport-section-block');
-  sections.forEach(sec => {
-    const secKey = sec.getAttribute('data-sport');
-    if (sportKey === 'all' || secKey === sportKey) {
-      sec.style.display = 'block';
-    } else {
-      sec.style.display = 'none';
-    }
-  });
-
-  // Update Counter Badge & Banner
-  const counterEl = document.getElementById('selected-sport-counter');
   const bannerEl = document.getElementById('sport-banner');
-
-  if (sportKey === 'all') {
-    if (counterEl) counterEl.textContent = 'Showing all 96 games across 7 sports';
+  if (sportName === 'all') {
     if (bannerEl) bannerEl.style.display = 'none';
   } else {
-    const meta = SPORT_META[sportKey];
-    const sportEvents = events.filter(e => e.sport === meta.name).sort((a, b) => a.date.localeCompare(b.date));
-    if (counterEl) counterEl.textContent = `Showing ${sportEvents.length} games`;
-
-    if (bannerEl) {
+    const meta = SPORT_META[sportName];
+    if (bannerEl && meta) {
       bannerEl.style.display = 'flex';
       const iconEl = document.getElementById('banner-sport-icon');
       const titleEl = document.getElementById('banner-sport-title');
@@ -3338,15 +3251,32 @@ function selectSport(sportKey) {
 
       if (iconEl) iconEl.textContent = meta.icon;
       if (titleEl) titleEl.textContent = meta.name;
-      if (metaEl) metaEl.innerHTML = `📍 Home Venue: <strong>${meta.venue}</strong> &bull; 📅 <strong>${sportEvents.length} Games</strong>`;
 
-      // Find next upcoming or today game for this specific sport
+      const sportEvents = events.filter(e => e.sport === sportName).sort((a, b) => a.date.localeCompare(b.date));
+      const homeCount = sportEvents.filter(e => e.isHome).length;
+      const awayCount = sportEvents.length - homeCount;
+
+      let wins = 0, losses = 0, ties = 0;
+      sportEvents.forEach(e => {
+        if (e.result) {
+          if (e.result.toUpperCase().startsWith('W')) wins++;
+          else if (e.result.toUpperCase().startsWith('L')) losses++;
+          else ties++;
+        }
+      });
+      const recordStr = (wins + losses + ties > 0) ? ` &bull; 🏆 Record: <strong>${wins}-${losses}${ties ? '-' + ties : ''}</strong>` : '';
+
+      if (metaEl) {
+        metaEl.innerHTML = `📍 Home: <strong>${meta.venue}</strong> &bull; 📅 <strong>${sportEvents.length} Matches</strong> (${homeCount} Home / ${awayCount} Away)${recordStr}`;
+      }
+
       const todayStr = getTodayEasternString();
       const nextGame = sportEvents.find(e => e.date >= todayStr) || sportEvents[sportEvents.length - 1];
       if (nextEl && nextGame) {
         const isToday = nextGame.date === todayStr;
-        const badgeLabel = isToday ? '🔥 TODAY' : 'NEXT GAME';
-        const badgeClass = isToday ? 'today' : 'next';
+        const isPast = nextGame.date < todayStr;
+        const badgeLabel = isToday ? '🔥 TODAY' : (isPast ? '🏁 RECENT' : 'NEXT GAME');
+        const badgeClass = isToday ? 'today' : (isPast ? 'recent' : 'next');
         nextEl.innerHTML = `
           <div class="sport-next-game-pill">
             <span class="gameday-pill ${badgeClass}">${badgeLabel}</span>
@@ -3357,7 +3287,7 @@ function selectSport(sportKey) {
     }
   }
 
-  SafeStorage.setItem('mhs_selected_sport', sportKey);
+  renderDailyView();
 }
 
 function onFloatingJumpClick() {
@@ -3368,42 +3298,6 @@ function onFloatingJumpClick() {
   } else {
     scrollToCurrentOrNextGame(true);
   }
-}
-
-function populateSportsView() {
-  const target = getTargetGameDay();
-  const filterBySport = (sportName) => 
-    events.filter(e => e.sport === sportName).sort((a, b) => a.date.localeCompare(b.date));
-
-  const sportsMap = [
-    { id: 'sport-vball', countId: 'count-vball', name: "Girls' Volleyball" },
-    { id: 'sport-bsoc', countId: 'count-bsoc', name: "Boys' Soccer" },
-    { id: 'sport-gsoc', countId: 'count-gsoc', name: "Girls' Soccer" },
-    { id: 'sport-fball', countId: 'count-fball', name: "Football" },
-    { id: 'sport-fhockey', countId: 'count-fhockey', name: "Field Hockey" },
-    { id: 'sport-xc', countId: 'count-xc', name: "Cross Country" },
-    { id: 'sport-golf', countId: 'count-golf', name: "Golf" }
-  ];
-
-  sportsMap.forEach(s => {
-    const list = filterBySport(s.name);
-    const container = document.getElementById(s.id);
-    const countEl = document.getElementById(s.countId);
-    if (container) {
-      container.innerHTML = list.map(item => {
-        const isTarget = item.date === target.date;
-        const targetBadge = isTarget
-          ? (target.isToday ? '<span class="gameday-pill today">🔥 TODAY</span>' : '<span class="gameday-pill next">NEXT GAME</span>')
-          : '';
-        return renderCard(item, targetBadge, isTarget);
-      }).join('');
-    }
-    if (countEl) countEl.textContent = `${list.length} games`;
-  });
-
-  // Restore saved sport filter or default to 'all'
-  const savedSport = SafeStorage.getItem('mhs_selected_sport') || 'all';
-  selectSport(savedSport);
 }
 
 // ==========================================
@@ -3503,7 +3397,7 @@ function renderStandingsView() {
 }
 
 function switchTab(view, updateHistory = true) {
-  const validViews = ['calendar', 'sports', 'standings'];
+  const validViews = ['calendar', 'standings'];
   if (!validViews.includes(view)) {
     view = 'calendar';
   }
@@ -3532,10 +3426,6 @@ function switchTab(view, updateHistory = true) {
     if (updateHistory) {
       setTimeout(() => scrollToCurrentOrNextGame(true), 120);
     }
-  } else if (view === 'sports') {
-    const tab = document.getElementById('tab-sports');
-    if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
-    document.getElementById('sports-view').classList.add('active');
   } else if (view === 'standings') {
     const tab = document.getElementById('tab-standings');
     if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
@@ -3555,7 +3445,7 @@ function getInitialTab() {
   const hash = (typeof window !== 'undefined' && window.location && window.location.hash)
     ? window.location.hash.replace('#', '').toLowerCase()
     : '';
-  const validViews = ['calendar', 'sports', 'standings'];
+  const validViews = ['calendar', 'standings'];
   if (validViews.includes(hash)) {
     return hash;
   }
@@ -3723,7 +3613,6 @@ function startNextGameCountdown() {
 syncHeaderHeight();
 updateThemeUI();
 renderDailyView();
-populateSportsView();
 renderStandingsView();
 loadDynamicScoresAndStandings();
 startNextGameCountdown();
