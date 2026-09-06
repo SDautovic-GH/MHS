@@ -248,6 +248,7 @@
       display: flex;
       align-items: center;
       gap: 0.85rem;
+      min-width: 0;
     }
 
     .header-brand {
@@ -256,6 +257,9 @@
       gap: 0.65rem;
       text-decoration: none;
       color: inherit;
+      min-width: 0;
+      flex-shrink: 0;
+      white-space: nowrap;
     }
 
     .brand-badge {
@@ -274,6 +278,11 @@
       flex-shrink: 0;
     }
 
+    .header-titles {
+      min-width: 0;
+      white-space: nowrap;
+    }
+
     .header-titles h1 {
       font-size: 1.125rem;
       font-weight: 800;
@@ -281,6 +290,7 @@
       color: var(--text-primary);
       line-height: 1.2;
       margin: 0;
+      white-space: nowrap;
     }
 
     .header-season {
@@ -289,6 +299,7 @@
       font-weight: 500;
       display: block;
       line-height: 1.2;
+      white-space: nowrap;
     }
 
     .header-controls {
@@ -753,58 +764,98 @@
       box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
     }
 
-    /* Card Action Row */
-    .card-action-row {
+    /* Streamlined, De-cluttered Card Footer & Quick Actions */
+    .card-footer-row {
       display: flex;
       align-items: center;
-      gap: 0.35rem;
-      margin-top: 0.65rem;
-      padding-top: 0.65rem;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
       border-top: 1px solid var(--border-subtle);
     }
-    .card-sub-action {
+
+    .venue-action-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      min-width: 0;
+      flex: 1;
+      transition: color 0.15s ease;
+      cursor: pointer;
+    }
+
+    .venue-action-link:hover {
+      color: var(--accent-blue);
+    }
+
+    .venue-action-link .venue-pin {
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .venue-action-link .venue-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .venue-action-link .venue-arrow {
+      font-size: 0.7rem;
+      opacity: 0.6;
+      flex-shrink: 0;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .venue-action-link:hover .venue-arrow {
+      opacity: 1;
+      transform: translate(1px, -1px);
+      color: var(--accent-blue);
+    }
+
+    .card-icon-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+
+    .card-mini-btn {
       background-color: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
       color: var(--text-secondary);
-      font-size: 0.725rem;
-      font-weight: 600;
-      padding: 0.28rem 0.45rem;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
       display: inline-flex;
       align-items: center;
-      gap: 0.25rem;
+      justify-content: center;
+      font-size: 0.75rem;
+      cursor: pointer;
       transition: all 0.15s ease;
       user-select: none;
       -webkit-user-select: none;
-      flex: 1;
-      justify-content: center;
-      white-space: nowrap;
+      padding: 0;
     }
-    .card-sub-action:hover {
+
+    .card-mini-btn:hover {
       background-color: var(--bg-surface);
       color: var(--text-primary);
       border-color: var(--accent-blue);
-    }
-    .card-sub-action:active {
-      transform: scale(0.97);
+      transform: translateY(-1px);
     }
 
-    .opp-mascot-img {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      object-fit: contain;
-      background-color: rgba(255, 255, 255, 0.08);
-      border: 1px solid var(--border-subtle);
-      flex-shrink: 0;
+    .card-mini-btn:active {
+      transform: scale(0.92);
     }
 
     .special-game-badge {
       font-size: 0.65rem;
       font-weight: 800;
-      padding: 0.18rem 0.45rem;
+      padding: 0.15rem 0.4rem;
       border-radius: 6px;
       letter-spacing: 0.04em;
       display: inline-flex;
@@ -865,6 +916,13 @@
     @keyframes pulse {
       0%, 100% { transform: scale(1); opacity: 1; }
       50% { transform: scale(1.3); opacity: 0.6; }
+    }
+
+    .btn-text-full {
+      display: inline;
+    }
+    .btn-text-short {
+      display: none;
     }
 
     /* Venue Modal Dialog */
@@ -1275,11 +1333,60 @@
       .header-inner {
         flex-direction: column;
         align-items: stretch;
-        gap: 0.5rem;
+        gap: 0.4rem;
       }
       .header-brand-row {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
+        gap: 0.35rem;
+      }
+      .header-brand {
+        flex-shrink: 0;
+        min-width: 0;
+        gap: 0.45rem;
+      }
+      .brand-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 0.75rem;
+        border-radius: 7px;
+      }
+      .header-titles {
+        min-width: 0;
+        white-space: nowrap;
+      }
+      .header-titles h1 {
+        font-size: 0.95rem;
+        white-space: nowrap;
+      }
+      .header-season {
+        font-size: 0.68rem;
+        white-space: nowrap;
+      }
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.28rem;
+        flex-shrink: 0;
+      }
+      .header-link-btn {
+        padding: 0.35rem 0.5rem;
+        font-size: 0.725rem;
+        border-radius: 8px;
+        gap: 0.25rem;
+      }
+      .theme-toggle-btn {
+        padding: 0.35rem 0.5rem;
+        border-radius: 8px;
+        font-size: 0.75rem;
+      }
+      .btn-text-full {
+        display: none;
+      }
+      .btn-text-short {
+        display: inline;
       }
       .nav-tabs-wrapper {
         width: 100%;
@@ -1351,6 +1458,19 @@
       .standings-table th, .standings-table td {
         padding: 0.65rem 0.6rem;
         font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .header-titles h1 {
+        font-size: 0.88rem;
+        white-space: nowrap;
+      }
+      .btn-text-short {
+        display: none;
+      }
+      .header-link-btn {
+        padding: 0.35rem 0.45rem;
       }
     }
 
@@ -1662,19 +1782,22 @@
         </div>
       </div>
       <div class="header-actions">
-        <a href="https://www.youtube.com/@MelroseCommunityTelevision/streams" target="_blank" rel="noopener" class="header-link-btn mmtv-btn" title="Watch Melrose sports livestreams on MMTV">
+        <a href="https://www.youtube.com/@MelroseCommunityTelevision/streams" target="_blank" rel="noopener" class="header-link-btn mmtv-btn" title="Watch Melrose sports livestreams on MMTV" aria-label="Watch Melrose sports livestreams on MMTV">
           <span class="live-pulse-dot"></span>
-          <span>Watch MMTV</span>
+          <span class="btn-text-full">Watch MMTV</span>
+          <span class="btn-text-short">MMTV</span>
         </a>
-        <button class="header-link-btn" onclick="openVenueModal()" title="Melrose Athletic Venues &amp; Parking">
-          <span>📍 Venues</span>
+        <button class="header-link-btn" onclick="openVenueModal()" title="Melrose Athletic Venues &amp; Parking" aria-label="Venues &amp; Parking">
+          <span>📍</span>
+          <span class="btn-text-full">Venues</span>
+          <span class="btn-text-short">Venues</span>
         </button>
         <a id="popout-btn" class="popout-btn" href="#" target="_blank" rel="noopener" style="display:none;" title="Open in dedicated Safari tab for full standalone app">
           <span>Open App ↗</span>
         </a>
         <button id="theme-toggle" class="theme-toggle-btn" onclick="cycleTheme()" aria-label="Toggle Theme" title="Theme Toggle">
           <span id="theme-icon">💻</span>
-          <span id="theme-text">Auto</span>
+          <span id="theme-text" class="btn-text-full">Auto</span>
         </button>
       </div>
     </div>
@@ -1900,9 +2023,9 @@
           <p class="venue-address">350 Lynn Fells Pkwy, Melrose, MA 02176</p>
           <p class="venue-tip">🚗 <strong>Parking:</strong> Melrose High School main lot, middle school complex, or legal on-street parking along Lynn Fells Pkwy.</p>
         </div>
-        <a href="https://www.google.com/maps/search/?api=1&query=Fred+Green+Memorial+Field+Melrose+MA" target="_blank" rel="noopener" class="venue-maps-btn">
+        <button onclick="openMapAddress('Fred Green Memorial Field, 350 Lynn Fells Pkwy, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to Fred Green Memorial Field">
           <span>Get Directions ↗</span>
-        </a>
+        </button>
       </div>
 
       <div class="venue-card">
@@ -1914,9 +2037,9 @@
           <p class="venue-address">Main St, Malden/Melrose, MA 02176</p>
           <p class="venue-tip">🚗 <strong>Parking:</strong> Main parking lot entered from Main St. Walking paths connect to both turf fields and trails.</p>
         </div>
-        <a href="https://www.google.com/maps/search/?api=1&query=Pine+Banks+Park+Main+St+Melrose+MA" target="_blank" rel="noopener" class="venue-maps-btn">
+        <button onclick="openMapAddress('Pine Banks Park, Main St, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to Pine Banks Park">
           <span>Get Directions ↗</span>
-        </a>
+        </button>
       </div>
 
       <div class="venue-card">
@@ -1928,9 +2051,9 @@
           <p class="venue-address">350 Lynn Fells Pkwy, Melrose, MA 02176</p>
           <p class="venue-tip">🚗 <strong>Parking:</strong> Middle school rear lot or high school campus lots. Gym entrance is on the east side of MVMMS.</p>
         </div>
-        <a href="https://www.google.com/maps/search/?api=1&query=Melrose+Veterans+Memorial+Middle+School+Melrose+MA" target="_blank" rel="noopener" class="venue-maps-btn">
+        <button onclick="openMapAddress('Melrose Veterans Memorial Middle School, 350 Lynn Fells Pkwy, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to MVMMS Gym">
           <span>Get Directions ↗</span>
-        </a>
+        </button>
       </div>
 
       <div class="venue-card">
@@ -1942,9 +2065,9 @@
           <p class="venue-address">Lynn Fells Pkwy (Opposite Melrose High), Melrose, MA 02176</p>
           <p class="venue-tip">🚗 <strong>Parking:</strong> Use Melrose High School main lots; cross safely at the pedestrian signal.</p>
         </div>
-        <a href="https://www.google.com/maps/search/?api=1&query=The+Knoll+Lynn+Fells+Pkwy+Melrose+MA" target="_blank" rel="noopener" class="venue-maps-btn">
+        <button onclick="openMapAddress('The Knoll, Lynn Fells Pkwy, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to The Knoll">
           <span>Get Directions ↗</span>
-        </a>
+        </button>
       </div>
 
       <div class="venue-card">
@@ -1956,9 +2079,9 @@
           <p class="venue-address">320 Porter St, Melrose, MA 02176</p>
           <p class="venue-tip">🚗 <strong>Parking:</strong> Clubhouse parking lot off Porter St. Please respect clubhouse rules and golf course etiquette.</p>
         </div>
-        <a href="https://www.google.com/maps/search/?api=1&query=Bellevue+Golf+Club+Melrose+MA" target="_blank" rel="noopener" class="venue-maps-btn">
+        <button onclick="openMapAddress('Bellevue Golf Club, 320 Porter St, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to Bellevue Golf Club">
           <span>Get Directions ↗</span>
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -2325,26 +2448,51 @@ function getOpponentMascot(opp) {
   return '';
 }
 
-function getDirectionsUrl(item) {
+function isAppleDevice() {
+  const ua = (typeof navigator !== 'undefined' && navigator.userAgent) ? navigator.userAgent : '';
+  return /iPhone|iPad|iPod|Macintosh/i.test(ua) && !window.MSStream;
+}
+
+function getVenueFullAddress(item) {
   if (item.isHome) {
     if (item.venue.includes('Fred Green')) {
-      return "https://www.google.com/maps/search/?api=1&query=Fred+Green+Memorial+Field+Melrose+MA";
+      return "Fred Green Memorial Field, 350 Lynn Fells Pkwy, Melrose, MA 02176";
     }
     if (item.venue.includes('Pine Banks')) {
-      return "https://www.google.com/maps/search/?api=1&query=Pine+Banks+Park+Main+St+Melrose+MA";
+      return "Pine Banks Park, Main St, Melrose, MA 02176";
     }
     if (item.venue.includes('MVMMS')) {
-      return "https://www.google.com/maps/search/?api=1&query=Melrose+Veterans+Memorial+Middle+School+Melrose+MA";
+      return "Melrose Veterans Memorial Middle School, 350 Lynn Fells Pkwy, Melrose, MA 02176";
     }
     if (item.venue.includes('Knoll')) {
-      return "https://www.google.com/maps/search/?api=1&query=The+Knoll+Lynn+Fells+Pkwy+Melrose+MA";
+      return "The Knoll, Lynn Fells Pkwy, Melrose, MA 02176";
     }
     if (item.venue.includes('Bellevue')) {
-      return "https://www.google.com/maps/search/?api=1&query=Bellevue+Golf+Club+Melrose+MA";
+      return "Bellevue Golf Club, 320 Porter St, Melrose, MA 02176";
     }
-    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.venue + ' Melrose MA')}`;
+    return `${item.venue}, Melrose, MA 02176`;
   }
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.opp + ' High School MA')}`;
+  return `${item.opp} High School, MA`;
+}
+
+function getDirectionsUrl(item) {
+  const address = getVenueFullAddress(item);
+  const encoded = encodeURIComponent(address);
+  if (isAppleDevice()) {
+    // Universal Apple Maps URL - triggers native Apple Maps app directly on iOS & Mac
+    return `https://maps.apple.com/?q=${encoded}&dirflg=d`;
+  }
+  // Universal Google Maps URL - triggers Google Maps on Android & Web
+  return `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+}
+
+function openMapAddress(addr) {
+  const encoded = encodeURIComponent(addr);
+  if (isAppleDevice()) {
+    window.location.href = `https://maps.apple.com/?q=${encoded}&dirflg=d`;
+  } else {
+    window.open(`https://www.google.com/maps/search/?api=1&query=${encoded}`, '_blank', 'noopener,noreferrer');
+  }
 }
 
 const escapeQuotes = (s) => (s || '').replace(/'/g, "\\'");
@@ -2485,6 +2633,27 @@ function shareGame(sport, opp, date, time, venue, isHome) {
   }
 }
 
+function getSportTagHtml(sport) {
+  switch (sport) {
+    case "Girls' Volleyball": 
+      return `<span class="sport-tag sport-vball" title="${sport}">🏐 Volleyball</span>`;
+    case "Boys' Soccer": 
+      return `<span class="sport-tag sport-bsoc" title="${sport}">⚽ Boys</span>`;
+    case "Girls' Soccer": 
+      return `<span class="sport-tag sport-gsoc" title="${sport}">⚽ Girls</span>`;
+    case "Football": 
+      return `<span class="sport-tag sport-fball" title="${sport}">🏈 Football</span>`;
+    case "Field Hockey": 
+      return `<span class="sport-tag sport-fhockey" title="${sport}">🏑 Field Hockey</span>`;
+    case "Cross Country": 
+      return `<span class="sport-tag sport-xc" title="${sport}">🏃 XC</span>`;
+    case "Golf": 
+      return `<span class="sport-tag sport-golf" title="${sport}">⛳ Golf</span>`;
+    default: 
+      return `<span class="sport-tag sport-other" title="${sport}">🏆 ${sport}</span>`;
+  }
+}
+
 function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '') {
   const locClass = item.isHome ? 'home' : 'away';
   const locLabel = item.isHome ? 'HOME' : 'AWAY';
@@ -2505,20 +2674,21 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
     `;
   }
 
-  // Mascot and Rivalry Badges
+  // Mascot Logo for opponent
   const mascotUrl = getOpponentMascot(item.opp);
   const mascotHtml = mascotUrl
-    ? `<img class="opp-mascot-img" src="${mascotUrl}" alt="${item.opp}" loading="lazy" onerror="this.style.display='none';">`
+    ? `<img class="school-mascot-img" src="${mascotUrl}" alt="${item.opp}" loading="lazy" style="width:20px;height:20px;border-radius:50%;margin-right:0.35rem;vertical-align:middle;display:inline-block;" onerror="this.style.display='none';">`
     : '';
 
+  // Only special badge is Thanksgiving (Rivalry badge removed per user feedback to keep cards clean)
   let specialBadgeHtml = '';
   if (item.date === "2026-11-26") {
     specialBadgeHtml = '<span class="special-game-badge thanksgiving">🦃 THANKSGIVING</span>';
-  } else if (['Wakefield', 'Stoneham', 'Reading', 'Winchester'].includes(item.opp)) {
-    specialBadgeHtml = '<span class="special-game-badge rivalry">⚔️ RIVALRY</span>';
   }
 
+  const isApple = isAppleDevice();
   const directionsUrl = getDirectionsUrl(item);
+  const targetAttr = isApple ? 'target="_self"' : 'target="_blank" rel="noopener"';
 
   return `
     <div class="card ${item.result ? 'has-score' : ''} ${isTarget ? 'is-target-day' : ''}" ${targetCardId}>
@@ -2528,10 +2698,10 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
           ${targetBadge}
           ${specialBadgeHtml}
         </div>
-        <span class="sport-tag ${getSportClass(item.sport)}">${item.sport}</span>
+        ${getSportTagHtml(item.sport)}
       </div>
       <div class="matchup">
-        <span style="color:var(--text-muted);">${prefix}</span>
+        <span style="color:var(--text-muted); font-weight:600; margin-right:0.25rem;">${prefix}</span>
         ${mascotHtml}
         <span>${item.opp}</span>
       </div>
@@ -2540,17 +2710,20 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
         <span>⏰ ${item.time}</span>
         <span class="location-badge ${locClass}">${locLabel}</span>
       </div>
-      <div class="venue-detail">${item.venue}</div>
-      <div class="card-action-row">
-        <a href="${directionsUrl}" target="_blank" rel="noopener" class="card-sub-action" title="Open Map Directions">
-          <span>🗺️ Map</span>
+      <div class="card-footer-row">
+        <a href="${directionsUrl}" class="venue-action-link" ${targetAttr} title="Open directions in Maps">
+          <span class="venue-pin">📍</span>
+          <span class="venue-name">${item.venue}</span>
+          <span class="venue-arrow">↗</span>
         </a>
-        <button class="card-sub-action" onclick="exportSingleGameIcs('${escapeQuotes(item.sport)}', '${escapeQuotes(item.opp)}', '${item.date}', '${item.time}', '${escapeQuotes(item.venue)}', ${item.isHome})" title="Add game to Calendar (.ics)">
-          <span>📅 Cal</span>
-        </button>
-        <button class="card-sub-action" onclick="shareGame('${escapeQuotes(item.sport)}', '${escapeQuotes(item.opp)}', '${item.date}', '${item.time}', '${escapeQuotes(item.venue)}', ${item.isHome})" title="Share game details">
-          <span>↗ Share</span>
-        </button>
+        <div class="card-icon-actions">
+          <button class="card-mini-btn" onclick="exportSingleGameIcs('${escapeQuotes(item.sport)}', '${escapeQuotes(item.opp)}', '${item.date}', '${item.time}', '${escapeQuotes(item.venue)}', ${item.isHome})" title="Add game to Calendar (.ics)" aria-label="Add to Calendar">
+            <span>📅</span>
+          </button>
+          <button class="card-mini-btn" onclick="shareGame('${escapeQuotes(item.sport)}', '${escapeQuotes(item.opp)}', '${item.date}', '${item.time}', '${escapeQuotes(item.venue)}', ${item.isHome})" title="Share game details" aria-label="Share">
+            <span>↗</span>
+          </button>
+        </div>
       </div>
     </div>
   `;
