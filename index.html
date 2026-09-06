@@ -2847,6 +2847,16 @@
       color: var(--text-muted);
       transition: all 0.15s ease;
     }
+    .apple-cal-icon-svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 4px;
+      overflow: hidden;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.22));
+    }
     .apple-cal-icon {
       width: 22px;
       height: 22px;
@@ -3113,7 +3123,12 @@
     <div class="nav-tabs-wrapper">
       <div class="nav-tabs" role="tablist">
         <button class="tab-button active" id="tab-calendar" onclick="switchTab('calendar')" role="tab" aria-selected="true">
-          <span>📅</span>
+          <svg class="apple-cal-icon-svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#ffffff" stroke="rgba(0,0,0,0.15)" stroke-width="0.75"/>
+            <path d="M 0.5 5 C 0.5 2.5 2.5 0.5 5 0.5 L 19 0.5 C 21.5 0.5 23.5 2.5 23.5 5 L 23.5 8 L 0.5 8 Z" fill="#ff3b30"/>
+            <text x="12" y="6.2" fill="#ffffff" font-size="4.8" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif" text-anchor="middle" letter-spacing="0.4">FALL</text>
+            <text x="12" y="19.2" fill="#1c1c1e" font-size="11.5" font-weight="850" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif" text-anchor="middle">26</text>
+          </svg>
           <span>Schedule</span>
         </button>
         <button class="tab-button" id="tab-scores" onclick="switchTab('scores')" role="tab" aria-selected="false">
@@ -3161,15 +3176,23 @@
     <!-- Apple-Style Schedule Scope Segmented Control: Today vs All Upcoming -->
     <div class="schedule-scope-toggle-bar" id="schedule-scope-bar" role="tablist" aria-label="Schedule view scope">
       <button class="schedule-scope-btn is-today active" id="scope-btn-today" onclick="setScheduleScope('today')" role="tab" aria-selected="true">
-        <span class="apple-cal-icon" aria-hidden="true">
-          <span class="cal-month" id="today-cal-month">SEP</span>
-          <span class="cal-day" id="today-cal-day">6</span>
-        </span>
+        <svg class="apple-cal-icon-svg" id="today-cal-svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#ffffff" stroke="rgba(0,0,0,0.15)" stroke-width="0.75"/>
+          <path d="M 0.5 5 C 0.5 2.5 2.5 0.5 5 0.5 L 19 0.5 C 21.5 0.5 23.5 2.5 23.5 5 L 23.5 8 L 0.5 8 Z" fill="#ff3b30"/>
+          <text id="today-cal-svg-month" x="12" y="6.2" fill="#ffffff" font-size="4.8" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif" text-anchor="middle" letter-spacing="0.4">SEP</text>
+          <text id="today-cal-svg-day" x="12" y="19.2" fill="#1c1c1e" font-size="11.5" font-weight="850" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif" text-anchor="middle">6</text>
+        </svg>
         <span>Today</span>
         <span class="scope-count-badge is-zero" id="scope-today-count">0</span>
       </button>
       <button class="schedule-scope-btn" id="scope-btn-upcoming" onclick="setScheduleScope('upcoming')" role="tab" aria-selected="false">
-        <span>📅 All Upcoming</span>
+        <svg class="apple-cal-icon-svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#ffffff" stroke="rgba(0,0,0,0.15)" stroke-width="0.75"/>
+          <path d="M 0.5 5 C 0.5 2.5 2.5 0.5 5 0.5 L 19 0.5 C 21.5 0.5 23.5 2.5 23.5 5 L 23.5 8 L 0.5 8 Z" fill="#ff3b30"/>
+          <text x="12" y="6.2" fill="#ffffff" font-size="4.8" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif" text-anchor="middle" letter-spacing="0.4">FALL</text>
+          <text x="12" y="19.2" fill="#1c1c1e" font-size="11.5" font-weight="850" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif" text-anchor="middle">26</text>
+        </svg>
+        <span>All Upcoming</span>
         <span class="scope-count-badge" id="scope-upcoming-count">96</span>
       </button>
     </div>
@@ -4574,10 +4597,16 @@ let scheduleScope = 'today'; // default to 'today'
 
 function updateTodayCalendarIcon() {
   const now = new Date();
+  const monthStr = now.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+  const dayStr = String(now.getDate());
+  const mSvg = document.getElementById('today-cal-svg-month');
+  const dSvg = document.getElementById('today-cal-svg-day');
+  if (mSvg) mSvg.textContent = monthStr;
+  if (dSvg) dSvg.textContent = dayStr;
   const mEl = document.getElementById('today-cal-month');
   const dEl = document.getElementById('today-cal-day');
-  if (mEl) mEl.textContent = now.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
-  if (dEl) dEl.textContent = now.getDate();
+  if (mEl) mEl.textContent = monthStr;
+  if (dEl) dEl.textContent = dayStr;
 }
 
 function setScheduleScope(scope) {
@@ -5046,8 +5075,14 @@ function renderDailyView() {
           <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">☀️</div>
           <p style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.35rem;">No Games Today</p>
           <p style="font-size: 0.925rem; color: var(--text-secondary); max-width: 440px; margin: 0 auto 1.25rem; line-height: 1.5;">${nextGameInfo}</p>
-          <button class="detail-action-btn primary" onclick="setScheduleScope('upcoming')" style="max-width: 250px; margin: 0 auto;">
-            <span>📅 View All Upcoming Games</span>
+          <button class="detail-action-btn primary" onclick="setScheduleScope('upcoming')" style="max-width: 250px; margin: 0 auto; display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;">
+            <svg class="apple-cal-icon-svg" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#ffffff" stroke="rgba(0,0,0,0.15)" stroke-width="0.75"/>
+              <path d="M 0.5 5 C 0.5 2.5 2.5 0.5 5 0.5 L 19 0.5 C 21.5 0.5 23.5 2.5 23.5 5 L 23.5 8 L 0.5 8 Z" fill="#ff3b30"/>
+              <text x="12" y="6.2" fill="#ffffff" font-size="4.8" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif" text-anchor="middle" letter-spacing="0.4">FALL</text>
+              <text x="12" y="19.2" fill="#1c1c1e" font-size="11.5" font-weight="850" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif" text-anchor="middle">26</text>
+            </svg>
+            <span>View All Upcoming Games</span>
           </button>
         </div>
       `;
@@ -5702,6 +5737,7 @@ function startNextGameCountdown() {
 // Initial Render
 syncHeaderHeight();
 updateThemeUI();
+updateTodayCalendarIcon();
 syncAllFilterButtons();
 renderMySportsRibbons();
 renderDailyView();
