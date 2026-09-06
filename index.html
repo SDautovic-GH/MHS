@@ -76,42 +76,42 @@
     :root {
       color-scheme: dark light;
 
-      /* Dark Theme (Default) */
-      --bg-canvas: #0b0f19;
-      --bg-surface: #131b2e;
-      --bg-surface-elevated: #1a243d;
-      --border-subtle: #233252;
-      --border-highlight: #2d416b;
+      /* Dark Theme (Default - Cupertino OLED Apple Sports) */
+      --bg-canvas: #000000;
+      --bg-surface: #161618;
+      --bg-surface-elevated: #222226;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-highlight: rgba(255, 255, 255, 0.16);
       
-      --text-primary: #f1f5f9;
-      --text-secondary: #94a3b8;
-      --text-muted: #64748b;
+      --text-primary: #f5f5f7;
+      --text-secondary: #a1a1a6;
+      --text-muted: #6e6e73;
       
-      --accent-blue: #3b82f6;
-      --accent-cyan: #06b6d4;
+      --accent-blue: #0071e3;
+      --accent-cyan: #2997ff;
       
-      --home-bg: rgba(16, 185, 129, 0.15);
-      --home-text: #34d399;
-      --home-border: rgba(16, 185, 129, 0.3);
+      --home-bg: rgba(48, 209, 88, 0.15);
+      --home-text: #30d158;
+      --home-border: rgba(48, 209, 88, 0.3);
       
-      --away-bg: rgba(59, 130, 246, 0.15);
-      --away-text: #60a5fa;
-      --away-border: rgba(59, 130, 246, 0.3);
+      --away-bg: rgba(10, 132, 255, 0.15);
+      --away-text: #64d2ff;
+      --away-border: rgba(10, 132, 255, 0.3);
 
-      --badge-vball: #8b5cf6;
-      --badge-bsoc: #0ea5e9;
-      --badge-gsoc: #ec4899;
-      --badge-fball: #f59e0b;
-      --badge-fhockey: #0d9488;
-      --badge-xc: #10b981;
-      --badge-golf: #6366f1;
+      --badge-vball: #bf5af2;
+      --badge-bsoc: #0a84ff;
+      --badge-gsoc: #ff375f;
+      --badge-fball: #ff9f0a;
+      --badge-fhockey: #30d158;
+      --badge-xc: #34c759;
+      --badge-golf: #5e5ce6;
       --badge-other: #64748b;
 
-      --search-bg: #131b2e;
-      --search-border: #233252;
-      --search-focus: #3b82f6;
-      --pill-inactive-bg: #1a243d;
-      --pill-inactive-text: #94a3b8;
+      --search-bg: #161618;
+      --search-border: rgba(255, 255, 255, 0.1);
+      --search-focus: #0071e3;
+      --pill-inactive-bg: #1c1c1e;
+      --pill-inactive-text: #a1a1a6;
     }
 
     /* Light Theme (Applied strictly when data-theme is 'light') */
@@ -2535,6 +2535,331 @@
     .score-footer-venue a:hover {
       text-decoration: underline;
     }
+
+    /* Apple Sports Interactive Spring Tap & Card Polish */
+    .card, .score-card {
+      cursor: pointer;
+      transition: transform 0.15s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .card:active, .score-card:active {
+      transform: scale(0.982) !important;
+    }
+
+    /* Apple "My Sports" Quick-Pill Ribbon */
+    .my-sports-ribbon-wrapper {
+      position: relative;
+      margin-bottom: 0.75rem;
+    }
+    .my-sports-ribbon {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      overflow-x: auto;
+      padding: 0.2rem 0.1rem 0.45rem;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .my-sports-ribbon::-webkit-scrollbar {
+      display: none;
+    }
+    .sport-ribbon-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      font-size: 0.825rem;
+      font-weight: 700;
+      white-space: nowrap;
+      border-radius: 20px;
+      border: 1px solid var(--border-subtle);
+      background-color: var(--bg-surface);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s cubic-bezier(0.32, 0.72, 0, 1);
+      user-select: none;
+      -webkit-user-select: none;
+      flex-shrink: 0;
+    }
+    .sport-ribbon-pill:hover {
+      color: var(--text-primary);
+      border-color: var(--border-highlight);
+      background-color: var(--bg-surface-elevated);
+    }
+    .sport-ribbon-pill:active {
+      transform: scale(0.95);
+    }
+    .sport-ribbon-pill.active {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+      border-color: var(--accent-blue);
+      box-shadow: 0 2px 10px rgba(0, 113, 227, 0.4);
+    }
+    .sport-ribbon-pill .pill-icon {
+      font-size: 0.95rem;
+      line-height: 1;
+    }
+
+    /* Apple Sports Day Strip Date Ribbon */
+    .apple-day-strip-wrapper {
+      margin-bottom: 1rem;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 0.5rem 0.65rem;
+    }
+    .apple-day-strip-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.35rem;
+      padding: 0 0.2rem;
+    }
+    .day-strip-title {
+      font-size: 0.725rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+    }
+    .day-strip-all-link {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-blue);
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .day-strip-all-link:hover {
+      text-decoration: underline;
+    }
+    .day-strip-scroll {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      overflow-x: auto;
+      padding: 0.2rem 0.1rem;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .day-strip-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .day-strip-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.45rem 0.6rem;
+      min-width: 52px;
+      border-radius: 10px;
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      cursor: pointer;
+      transition: all 0.15s cubic-bezier(0.32, 0.72, 0, 1);
+      flex-shrink: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .day-strip-item:hover {
+      border-color: var(--border-highlight);
+      transform: translateY(-1px);
+    }
+    .day-strip-item:active {
+      transform: scale(0.94);
+    }
+    .day-strip-item.active {
+      background-color: var(--accent-blue);
+      border-color: var(--accent-blue);
+      color: #ffffff !important;
+      box-shadow: 0 2px 8px rgba(0, 113, 227, 0.35);
+    }
+    .day-strip-item.is-today {
+      border-color: rgba(225, 29, 72, 0.5);
+    }
+    .day-strip-item.is-today .day-dow {
+      color: #f87171;
+    }
+    .day-strip-item.active .day-dow,
+    .day-strip-item.active .day-dom {
+      color: #ffffff !important;
+    }
+    .day-dow {
+      font-size: 0.625rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+    .day-dom {
+      font-size: 0.95rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      color: var(--text-primary);
+    }
+    .day-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--accent-cyan);
+      margin-top: 2px;
+    }
+
+    /* Apple Sports Game Detail Sheet Modal */
+    .game-detail-sheet {
+      max-width: 520px;
+    }
+    .game-detail-matchup-hero {
+      background: linear-gradient(180deg, var(--bg-surface-elevated) 0%, var(--bg-surface) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 1.25rem 1rem;
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 0.75rem;
+      text-align: center;
+    }
+    .detail-team-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .detail-team-crest {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background-color: var(--bg-surface);
+      border: 2px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+    .detail-team-crest.mhs {
+      background: linear-gradient(135deg, #e11d48, #9f1239);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .detail-team-name {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+    .detail-team-role {
+      font-size: 0.675rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+    .detail-score-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0 0.5rem;
+    }
+    .detail-score-digits {
+      font-size: 2.1rem;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .detail-vs-badge {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-muted);
+    }
+    .detail-info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
+      margin-bottom: 1.15rem;
+    }
+    .detail-info-card {
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .detail-info-left {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+    .detail-info-icon {
+      font-size: 1.2rem;
+    }
+    .detail-info-titles {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .detail-info-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+    .detail-info-value {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .detail-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .detail-action-btn {
+      flex: 1;
+      min-width: 140px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 12px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.15s cubic-bezier(0.32, 0.72, 0, 1);
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .detail-action-btn:active {
+      transform: scale(0.97);
+    }
+    .detail-action-btn.primary {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 113, 227, 0.35);
+    }
+    .detail-action-btn.secondary {
+      background-color: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--border-subtle);
+    }
+    .detail-action-btn.secondary:hover {
+      border-color: var(--border-highlight);
+    }
   </style>
 </head>
 <body>
@@ -2642,6 +2967,12 @@
       </div>
     </div>
 
+    <!-- Apple "My Sports" Quick-Pill Ribbon (1-tap sport switching) -->
+    <div class="my-sports-ribbon-wrapper" id="calendar-sport-ribbon"></div>
+
+    <!-- Apple Sports Day Strip (Horizontal Date Ribbon) -->
+    <div class="apple-day-strip-wrapper" id="calendar-day-strip"></div>
+
     <!-- Status Line -->
     <div class="apple-status-line" id="apple-status-line">
       <span class="apple-count-text" id="filter-count">Showing 96 games</span>
@@ -2671,6 +3002,10 @@
         <span id="scores-count-text">Fall 2026 Results</span>
       </div>
     </div>
+
+    <!-- Apple "My Sports" Quick-Pill Ribbon for Scores -->
+    <div class="my-sports-ribbon-wrapper" id="scores-sport-ribbon"></div>
+
     <div class="scores-feed-container" id="scores-container"></div>
   </main>
 
@@ -2692,6 +3027,10 @@
         <span id="standings-sync-text">Middlesex League</span>
       </div>
     </div>
+
+    <!-- Apple "My Sports" Quick-Pill Ribbon for Standings -->
+    <div class="my-sports-ribbon-wrapper" id="standings-sport-ribbon"></div>
+
     <div id="standings-container"></div>
   </main>
 </div>
@@ -3218,6 +3557,18 @@
       <button class="apple-sheet-close" onclick="closeAllSheets()" aria-label="Close sport picker">✕</button>
     </div>
     <div class="apple-sheet-body" id="standings-sport-sheet-list"></div>
+  </div>
+</div>
+
+<!-- Apple-Style Bottom Sheet: Interactive Game Detail Modal -->
+<div class="apple-sheet-backdrop" id="sheet-game-detail-backdrop" onclick="if(event.target===this)closeAllSheets()">
+  <div class="apple-sheet game-detail-sheet" role="dialog" aria-modal="true" aria-labelledby="game-detail-sport-tag">
+    <div class="apple-sheet-handle-bar"><div class="apple-sheet-handle"></div></div>
+    <div class="apple-sheet-header">
+      <div id="game-detail-header-badge"></div>
+      <button class="apple-sheet-close" onclick="closeAllSheets()" aria-label="Close game details">✕</button>
+    </div>
+    <div class="apple-sheet-body" id="game-detail-body"></div>
   </div>
 </div>
 
@@ -3909,7 +4260,7 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
   const targetAttr = isApple ? 'target="_self"' : 'target="_blank" rel="noopener"';
 
   return `
-    <div class="card ${item.result ? 'has-score' : ''} ${isTarget ? 'is-target-day' : ''}" ${targetCardId}>
+    <div class="card ${item.result ? 'has-score' : ''} ${isTarget ? 'is-target-day' : ''}" ${targetCardId} data-date="${item.date}" onclick="openGameDetailModal('${escapeQuotes(item.sport)}', '${item.date}', '${escapeQuotes(item.opp)}')" role="button" tabindex="0" title="Tap to view game details & directions">
       <div class="card-header">
         <div class="card-header-left">
           <span class="date-label">${formatDate(item.date)}</span>
@@ -3929,16 +4280,16 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
         <span class="location-badge ${locClass}">${locLabel}</span>
       </div>
       <div class="card-footer-row">
-        <a href="${directionsUrl}" class="venue-action-link" ${targetAttr} title="Open directions in Maps">
+        <a href="${directionsUrl}" class="venue-action-link" ${targetAttr} onclick="event.stopPropagation()" title="Open directions in Maps">
           <span class="venue-pin">📍</span>
           <span class="venue-name">${item.venue}</span>
           <span class="venue-arrow">↗</span>
         </a>
         <div class="card-icon-actions">
-          <button class="card-mini-btn" onclick="exportSingleGameIcs('${escapeQuotes(item.sport)}', '${escapeQuotes(item.opp)}', '${item.date}', '${item.time}', '${escapeQuotes(item.venue)}', ${item.isHome})" title="Add game to Calendar (.ics)" aria-label="Add to Calendar">
+          <button class="card-mini-btn" onclick="event.stopPropagation(); exportSingleGameIcs('${escapeQuotes(item.sport)}', '${escapeQuotes(item.opp)}', '${item.date}', '${item.time}', '${escapeQuotes(item.venue)}', ${item.isHome})" title="Add game to Calendar (.ics)" aria-label="Add to Calendar">
             <span>📅</span>
           </button>
-          <button class="card-mini-btn" onclick="shareGame('${escapeQuotes(item.sport)}', '${escapeQuotes(item.opp)}', '${item.date}', '${item.time}', '${escapeQuotes(item.venue)}', ${item.isHome})" title="Share game details" aria-label="Share">
+          <button class="card-mini-btn" onclick="event.stopPropagation(); shareGame('${escapeQuotes(item.sport)}', '${escapeQuotes(item.opp)}', '${item.date}', '${item.time}', '${escapeQuotes(item.venue)}', ${item.isHome})" title="Share game details" aria-label="Share">
             <span>↗</span>
           </button>
         </div>
@@ -3982,6 +4333,313 @@ const LOC_FILTER_OPTIONS = {
 let currentSelectedSport = 'all';
 let activeLocFilter = 'all'; // 'all' | 'home' | 'away' | 'past' | 'fnl'
 let isSearchDrawerOpen = false;
+let selectedDayStripDate = null;
+
+// ==========================================
+// Apple Sports "My Sports" Quick-Pill Ribbon
+// ==========================================
+function renderMySportsRibbons() {
+  const calRibbon = document.getElementById('calendar-sport-ribbon');
+  const scoresRibbon = document.getElementById('scores-sport-ribbon');
+  const standingsRibbon = document.getElementById('standings-sport-ribbon');
+
+  if (calRibbon) {
+    calRibbon.innerHTML = ALL_SPORTS_LIST.map(s => {
+      const isSel = currentSelectedSport === s.key;
+      return `
+        <button class="sport-ribbon-pill ${isSel ? 'active' : ''}" onclick="onRibbonPillClick('calendar', '${escapeQuotes(s.key)}')" aria-pressed="${isSel}">
+          <span>${s.icon}</span><span>${s.name}</span>
+        </button>
+      `;
+    }).join('');
+  }
+
+  if (scoresRibbon) {
+    scoresRibbon.innerHTML = ALL_SPORTS_LIST.map(s => {
+      const isSel = activeScoresSport === s.key;
+      return `
+        <button class="sport-ribbon-pill ${isSel ? 'active' : ''}" onclick="onRibbonPillClick('scores', '${escapeQuotes(s.key)}')" aria-pressed="${isSel}">
+          <span>${s.icon}</span><span>${s.name}</span>
+        </button>
+      `;
+    }).join('');
+  }
+
+  if (standingsRibbon && typeof STANDINGS_SPORTS_LIST !== 'undefined') {
+    standingsRibbon.innerHTML = STANDINGS_SPORTS_LIST.map(s => {
+      const isSel = activeStandingsSport === s.key;
+      return `
+        <button class="sport-ribbon-pill ${isSel ? 'active' : ''}" onclick="onRibbonPillClick('standings', '${escapeQuotes(s.key)}')" aria-pressed="${isSel}">
+          <span>${s.icon}</span><span>${s.name}</span>
+        </button>
+      `;
+    }).join('');
+  }
+}
+
+function onRibbonPillClick(viewName, sportKey) {
+  if (viewName === 'calendar') {
+    selectSport(sportKey);
+  } else if (viewName === 'scores') {
+    if (typeof selectScoresSport === 'function') {
+      selectScoresSport(sportKey);
+    } else {
+      setScoresSport(sportKey);
+    }
+  } else if (viewName === 'standings') {
+    if (typeof selectStandingsSport === 'function') {
+      selectStandingsSport(sportKey);
+    } else {
+      setStandingsSport(sportKey);
+    }
+  }
+  renderMySportsRibbons();
+}
+
+// ==========================================
+// Apple Sports Day Strip (Horizontal Date Ribbon)
+// ==========================================
+function renderDayStrip() {
+  const container = document.getElementById('calendar-day-strip');
+  if (!container) return;
+
+  const todayStr = getTodayEasternString();
+  const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
+
+  // Find upcoming dates matching current sport & location filters
+  const upcoming = sorted.filter(item => {
+    const isCompleted = Boolean(item.result || item.mhsScore !== undefined || item.date < todayStr);
+    if (isCompleted) return false;
+    if (currentSelectedSport !== 'all' && item.sport !== currentSelectedSport) return false;
+    if (activeLocFilter === 'home' && !item.isHome) return false;
+    if (activeLocFilter === 'away' && item.isHome) return false;
+    if (activeLocFilter === 'fnl') {
+      const d = new Date(item.date + 'T12:00:00');
+      const day = d.getDay();
+      const isFridayNight = (day === 5 && (item.time.includes('PM') && !item.time.startsWith('12:') && !item.time.startsWith('1:') && !item.time.startsWith('2:') && !item.time.startsWith('3:') && !item.time.startsWith('4:')));
+      const isWeekend = (day === 0 || day === 6);
+      if (!isFridayNight && !isWeekend) return false;
+    }
+    return true;
+  });
+
+  const distinctDates = Array.from(new Set(upcoming.map(e => e.date)));
+
+  if (distinctDates.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+
+  // Validate active selection still exists in filtered dates
+  if (selectedDayStripDate && !distinctDates.includes(selectedDayStripDate)) {
+    selectedDayStripDate = null;
+  }
+
+  const isAllActive = !selectedDayStripDate;
+  let html = `
+    <button class="day-strip-item ${isAllActive ? 'active' : ''}" onclick="selectDayStripDate(null)" aria-label="Show all dates">
+      <span class="day-dow">ALL</span>
+      <span class="day-dom">${distinctDates.length}d</span>
+      <span class="day-dot" style="${isAllActive ? 'background-color:#ffffff;' : 'opacity:0;'}"></span>
+    </button>
+  `;
+
+  distinctDates.forEach(dateStr => {
+    const isToday = dateStr === todayStr;
+    const isSelected = selectedDayStripDate === dateStr;
+    const parts = dateStr.split('-');
+    const monthIndex = parseInt(parts[1], 10) - 1;
+    const dayNum = parseInt(parts[2], 10);
+    const dateObj = new Date(parseInt(parts[0], 10), monthIndex, dayNum);
+    const dayName = isToday ? 'TODAY' : dateObj.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase();
+
+    html += `
+      <button class="day-strip-item ${isToday ? 'is-today' : ''} ${isSelected ? 'active' : ''}" onclick="selectDayStripDate('${dateStr}')" aria-label="${formatDate(dateStr)}">
+        <span class="day-dow">${dayName}</span>
+        <span class="day-dom">${dayNum}</span>
+        <span class="day-dot" style="${isSelected ? 'background-color:#ffffff;' : (isToday ? 'background-color:#f87171;' : '')}"></span>
+      </button>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
+function selectDayStripDate(dateStr) {
+  if (selectedDayStripDate === dateStr) {
+    selectedDayStripDate = null;
+  } else {
+    selectedDayStripDate = dateStr;
+  }
+  renderDailyView();
+
+  if (selectedDayStripDate) {
+    setTimeout(() => {
+      const targetCard = document.querySelector(`.card[data-date="${selectedDayStripDate}"]`);
+      if (targetCard) {
+        const headerEl = document.querySelector('.app-header');
+        const headerHeight = headerEl ? headerEl.offsetHeight : 140;
+        const rect = targetCard.getBoundingClientRect();
+        const topPos = window.pageYOffset + rect.top - headerHeight - 16;
+        window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
+      }
+    }, 60);
+  }
+}
+
+// ==========================================
+// Apple Sports Game Detail Sheet Modal
+// ==========================================
+window._currentDetailGame = null;
+
+function downloadDetailGameIcs() {
+  if (!window._currentDetailGame) return;
+  const g = window._currentDetailGame;
+  exportSingleGameIcs(g.sport, g.opp, g.date, g.time, g.venue, g.isHome);
+}
+
+function shareDetailGame() {
+  if (!window._currentDetailGame) return;
+  const g = window._currentDetailGame;
+  shareGame(g.sport, g.opp, g.date, g.time, g.venue, g.isHome);
+}
+
+function openGameDetailModal(sport, date, opp) {
+  closeAllSheets();
+  const item = events.find(e => e.sport === sport && e.date === date && e.opp === opp) ||
+               events.find(e => e.sport === sport && e.date === date) ||
+               { sport, date, opp, time: 'TBD', venue: 'TBD', isHome: true };
+
+  window._currentDetailGame = item;
+
+  const sportObj = ALL_SPORTS_LIST.find(s => s.sheetTitle === item.sport || s.name === item.sport) || { icon: '🏅', name: item.sport };
+  const mascotUrl = getOpponentMascot(item.opp);
+  const isHome = item.isHome;
+  const oppInitial = (item.opp || 'O').charAt(0).toUpperCase();
+  const directionsUrl = getDirectionsUrl(item);
+  const fullAddress = getVenueFullAddress(item);
+  const todayStr = getTodayEasternString();
+  const isCompleted = Boolean(item.result || item.mhsScore !== undefined || item.date < todayStr);
+
+  const headerBadge = document.getElementById('game-detail-header-badge');
+  if (headerBadge) {
+    headerBadge.innerHTML = `
+      <div style="display:flex; align-items:center; gap:0.45rem; flex-wrap:wrap;">
+        <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; padding:0.25rem 0.6rem; border-radius:20px; background:rgba(255, 255, 255, 0.08); color:var(--text-primary);">${sportObj.icon} ${item.sport}</span>
+        <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; padding:0.25rem 0.55rem; border-radius:20px; background:${isHome ? 'rgba(48, 209, 88, 0.18)' : 'rgba(10, 132, 255, 0.18)'}; color:${isHome ? '#30d158' : '#2997ff'};">${isHome ? '🏠 HOME' : '✈️ AWAY'}</span>
+        ${isCompleted ? '<span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; padding:0.25rem 0.55rem; border-radius:20px; background:rgba(245, 245, 247, 0.12); color:var(--text-muted);">FINAL</span>' : ''}
+      </div>
+    `;
+  }
+
+  const oppCrestHtml = mascotUrl 
+    ? `<img src="${mascotUrl}" alt="${item.opp} Mascot" style="width: 32px; height: 32px; object-fit: contain;" onerror="this.outerHTML='<span style=\\'font-weight: 900; color: var(--text-secondary);\\'>${oppInitial}</span>'">`
+    : `<span style="font-weight: 900; color: var(--text-secondary);">${oppInitial}</span>`;
+
+  let scoreOrVsHtml = '';
+  if (isCompleted && item.mhsScore !== undefined && item.oppScore !== undefined) {
+    const isWin = item.mhsScore > item.oppScore;
+    const isLoss = item.mhsScore < item.oppScore;
+    const resultPill = isWin 
+      ? '<span style="font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 12px; background: rgba(48, 209, 88, 0.2); color: #30d158;">WIN</span>'
+      : (isLoss ? '<span style="font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 12px; background: rgba(255, 69, 58, 0.2); color: #ff453a;">LOSS</span>'
+      : '<span style="font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 12px; background: rgba(255, 255, 255, 0.1); color: var(--text-muted);">TIE</span>');
+    
+    scoreOrVsHtml = `
+      <div class="detail-score-digits">${item.mhsScore} - ${item.oppScore}</div>
+      ${resultPill}
+    `;
+  } else if (item.result) {
+    scoreOrVsHtml = `
+      <div class="detail-score-digits" style="font-size: 1.35rem;">${item.result}</div>
+    `;
+  } else {
+    scoreOrVsHtml = `
+      <div class="detail-vs-badge">VS</div>
+      <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); margin-top: 0.2rem;">${item.time}</div>
+    `;
+  }
+
+  const isMmtvEligible = isHome && (item.sport === 'Football' || item.venue.includes('Fred Green') || item.sport === 'Boys\' Soccer' || item.sport === 'Girls\' Soccer');
+
+  const bodyEl = document.getElementById('game-detail-body');
+  if (bodyEl) {
+    bodyEl.innerHTML = `
+      <div class="game-detail-matchup-hero">
+        <div class="detail-team-col">
+          <div class="detail-team-crest mhs">M</div>
+          <div class="detail-team-name">Melrose</div>
+          <div class="detail-team-role">${isHome ? 'HOST' : 'VISITOR'}</div>
+        </div>
+        <div class="detail-score-col">
+          ${scoreOrVsHtml}
+        </div>
+        <div class="detail-team-col">
+          <div class="detail-team-crest">${oppCrestHtml}</div>
+          <div class="detail-team-name">${item.opp}</div>
+          <div class="detail-team-role">${isHome ? 'VISITOR' : 'HOST'}</div>
+        </div>
+      </div>
+
+      <div class="detail-info-grid">
+        <div class="detail-info-card">
+          <div class="detail-info-left">
+            <span class="detail-info-icon">📅</span>
+            <div class="detail-info-titles">
+              <span class="detail-info-title">Date & Scheduled Time</span>
+              <span class="detail-info-value">${formatDate(item.date)} &bull; ${item.time}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-info-card">
+          <div class="detail-info-left">
+            <span class="detail-info-icon">📍</span>
+            <div class="detail-info-titles">
+              <span class="detail-info-title">Facility & Directions</span>
+              <span class="detail-info-value">${item.venue}</span>
+              <span style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.1rem;">${fullAddress}</span>
+            </div>
+          </div>
+        </div>
+
+        ${isMmtvEligible ? `
+        <div class="detail-info-card">
+          <div class="detail-info-left">
+            <span class="detail-info-icon">📺</span>
+            <div class="detail-info-titles">
+              <span class="detail-info-title">Broadcast Coverage</span>
+              <span class="detail-info-value">Melrose MMTV Live Stream</span>
+              <span style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.1rem;">Live coverage available on MMTV YouTube channel for home matchups</span>
+            </div>
+          </div>
+        </div>` : ''}
+      </div>
+
+      <div class="detail-actions-row">
+        <a href="${directionsUrl}" target="_blank" rel="noopener noreferrer" class="detail-action-btn primary">
+          <span>📍</span><span>Get Directions</span>
+        </a>
+        <button class="detail-action-btn secondary" onclick="downloadDetailGameIcs()">
+          <span>📅</span><span>Add to Calendar</span>
+        </button>
+        <button class="detail-action-btn secondary" onclick="shareDetailGame()">
+          <span>↗</span><span>Share</span>
+        </button>
+        ${isMmtvEligible ? `
+        <a href="https://www.youtube.com/@MelroseMA-TV/streams" target="_blank" rel="noopener noreferrer" class="detail-action-btn secondary" style="flex-basis: 100%;">
+          <span>📺</span><span>Watch on MMTV Live</span>
+        </a>` : ''}
+      </div>
+    `;
+  }
+
+  const backdrop = document.getElementById('sheet-game-detail-backdrop');
+  if (backdrop) {
+    backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
 
 function openSportSheet() {
   closeAllSheets();
@@ -4059,6 +4717,7 @@ function updateLocSheetSelection() {
 
 function selectSport(sportKey) {
   currentSelectedSport = sportKey;
+  selectedDayStripDate = null;
 
   const found = ALL_SPORTS_LIST.find(s => s.key === sportKey) || ALL_SPORTS_LIST[0];
   const iconEl = document.getElementById('picker-sport-icon');
@@ -4068,6 +4727,7 @@ function selectSport(sportKey) {
   if (titleEl) titleEl.textContent = sportKey === 'all' ? 'Sports' : found.name;
 
   closeAllSheets();
+  renderMySportsRibbons();
   renderDailyView();
   if (typeof updateNextGameTicker === 'function') {
     updateNextGameTicker();
@@ -4081,6 +4741,7 @@ function selectLocOption(loc) {
 
 function setLocFilter(loc) {
   activeLocFilter = loc;
+  selectedDayStripDate = null;
 
   const opt = LOC_FILTER_OPTIONS[loc] || LOC_FILTER_OPTIONS['all'];
   const iconEl = document.getElementById('picker-loc-icon');
@@ -4159,6 +4820,8 @@ function renderDailyView() {
       if (!isFridayNight && !isWeekend) return false;
     }
 
+    if (selectedDayStripDate && item.date !== selectedDayStripDate) return false;
+
     if (query) {
       const matchText = `${item.sport} ${item.opp} ${item.venue} ${item.date}`.toLowerCase();
       if (!matchText.includes(query)) return false;
@@ -4172,13 +4835,14 @@ function renderDailyView() {
 
   if (countEl) {
     const locDesc = activeLocFilter === 'all' ? '' : ` (${LOC_FILTER_OPTIONS[activeLocFilter].name})`;
+    const dateDesc = selectedDayStripDate ? ` &bull; 📅 ${formatDate(selectedDayStripDate)}` : '';
     if (currentSelectedSport === 'all') {
-      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> upcoming games${locDesc}`;
+      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> upcoming games${locDesc}${dateDesc}`;
       if (syncSportBtn) syncSportBtn.style.display = 'none';
     } else {
       const meta = SPORT_META[currentSelectedSport];
       const venueStr = meta ? ` &bull; 📍 ${meta.venue}` : '';
-      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> upcoming ${currentSelectedSport} games${locDesc}${venueStr}`;
+      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> upcoming ${currentSelectedSport} games${locDesc}${dateDesc}${venueStr}`;
       if (syncSportBtn) {
         syncSportBtn.style.display = 'inline-flex';
         syncSportBtn.innerHTML = `<span>📅 Sync ${currentSelectedSport}</span>`;
@@ -4191,7 +4855,7 @@ function renderDailyView() {
       <div class="empty-state">
         <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem;">No upcoming games found</p>
         <p style="font-size: 0.85rem; margin-bottom: 0.75rem;">Looking for past match results? Check the <a href="#scores" onclick="switchTab('scores')" style="color: var(--accent-blue); text-decoration: underline; font-weight: 600;">🏁 Scores tab</a>.</p>
-        <p style="font-size: 0.8rem; color: var(--text-muted);">Or try adjusting your search query, sport, or location filter.</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">Or try adjusting your search query, sport, or date filter.</p>
       </div>
     `;
   } else {
@@ -4216,6 +4880,8 @@ function renderDailyView() {
       return renderCard(item, targetBadge, isTarget, targetCardId);
     }).join('');
   }
+
+  renderDayStrip();
 }
 
 let isFabInTopMode = false;
@@ -4322,6 +4988,7 @@ function setStandingsSport(sport) {
   if (iconEl) iconEl.textContent = found.icon;
   if (titleEl) titleEl.textContent = sport === 'all' ? 'Sports' : found.name;
 
+  renderMySportsRibbons();
   renderStandingsView();
   if (typeof updateNextGameTicker === 'function') {
     updateNextGameTicker();
@@ -4469,6 +5136,7 @@ function setScoresSport(sport) {
   if (iconEl) iconEl.textContent = found.icon;
   if (titleEl) titleEl.textContent = sport === 'all' ? 'Sports' : found.name;
 
+  renderMySportsRibbons();
   renderScoresView();
   if (typeof updateNextGameTicker === 'function') {
     updateNextGameTicker();
@@ -4554,7 +5222,7 @@ function renderScoresView() {
     const mapUrl = `https://maps.apple.com/?q=${mapQuery}`;
 
     return `
-      <article class="${cardClass}">
+      <article class="${cardClass}" data-date="${item.date}" onclick="openGameDetailModal('${escapeQuotes(item.sport)}', '${item.date}', '${escapeQuotes(item.opp)}')" role="button" tabindex="0" title="Tap to view game details & directions">
         <div class="score-card-header">
           <div class="score-sport-info">
             <span class="score-sport-icon">${sportInfo.icon}</span>
@@ -4583,7 +5251,7 @@ function renderScoresView() {
 
         <div class="score-card-footer">
           <span class="score-footer-date">📅 ${dateFormatted}</span>
-          <span class="score-footer-venue"><a href="${mapUrl}" target="_blank" rel="noopener">📍 ${item.venue} ↗</a></span>
+          <span class="score-footer-venue"><a href="${mapUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 ${item.venue} ↗</a></span>
         </div>
       </article>
     `;
@@ -4628,16 +5296,20 @@ function switchTab(view, updateHistory = true) {
     const tab = document.getElementById('tab-calendar');
     if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
     document.getElementById('calendar-view').classList.add('active');
+    renderMySportsRibbons();
+    renderDayStrip();
   } else if (view === 'scores') {
     const tab = document.getElementById('tab-scores');
     if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
     const panel = document.getElementById('scores-view');
     if (panel) panel.classList.add('active');
+    renderMySportsRibbons();
     renderScoresView();
   } else if (view === 'standings') {
     const tab = document.getElementById('tab-standings');
     if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
     document.getElementById('standings-view').classList.add('active');
+    renderMySportsRibbons();
     renderStandingsView();
   }
 
@@ -4843,9 +5515,11 @@ function startNextGameCountdown() {
 // Initial Render
 syncHeaderHeight();
 updateThemeUI();
+renderMySportsRibbons();
 renderDailyView();
 renderScoresView();
 renderStandingsView();
+renderDayStrip();
 loadDynamicScoresAndStandings();
 startNextGameCountdown();
 setTimeout(syncHeaderHeight, 100);
