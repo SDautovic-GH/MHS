@@ -970,18 +970,18 @@
       letter-spacing: 0.01em;
     }
 
-    /* Compact Live Next Game Countdown Ticker Banner */
+    /* Compact Live Next Game Countdown Ticker Banner (20% Enhanced Presence) */
     .next-game-ticker {
       background: linear-gradient(135deg, rgba(19, 27, 46, 0.95), rgba(15, 23, 42, 0.95));
       border: 1px solid var(--border-highlight);
-      border-radius: 12px;
-      padding: 0.45rem 0.8rem;
-      margin-bottom: 0.65rem;
+      border-radius: 14px;
+      padding: 0.6rem 0.95rem;
+      margin-bottom: 0.8rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 0.75rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      gap: 0.9rem;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
       position: relative;
       overflow: hidden;
       cursor: pointer;
@@ -989,7 +989,7 @@
     }
     .next-game-ticker:hover {
       border-color: var(--accent-blue);
-      box-shadow: 0 3px 14px rgba(37, 99, 235, 0.15);
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.18);
     }
     .next-game-ticker:active {
       transform: scale(0.995);
@@ -997,7 +997,7 @@
     :root[data-theme="light"] .next-game-ticker {
       background: linear-gradient(135deg, #ffffff, #f8fafc);
       border-color: #cbd5e1;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
     .next-game-ticker::before {
       content: '';
@@ -1005,20 +1005,20 @@
       left: 0;
       top: 0;
       bottom: 0;
-      width: 3.5px;
+      width: 4px;
       background: linear-gradient(to bottom, var(--accent-red), var(--accent-blue));
     }
     .ticker-left {
       display: flex;
       flex-direction: column;
-      gap: 0.15rem;
+      gap: 0.22rem;
       flex: 1;
       min-width: 0;
     }
     .ticker-header-row {
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.45rem;
       flex-wrap: nowrap;
       min-width: 0;
       overflow: hidden;
@@ -1027,10 +1027,10 @@
       background: rgba(239, 68, 68, 0.18);
       color: #f87171;
       border: 1px solid rgba(239, 68, 68, 0.35);
-      font-size: 0.6rem;
+      font-size: 0.685rem;
       font-weight: 800;
-      padding: 0.12rem 0.4rem;
-      border-radius: 5px;
+      padding: 0.16rem 0.48rem;
+      border-radius: 6px;
       letter-spacing: 0.03em;
       text-transform: uppercase;
       white-space: nowrap;
@@ -1038,68 +1038,68 @@
       line-height: 1.2;
     }
     .ticker-sport-tag {
-      font-size: 0.775rem;
+      font-size: 0.85rem;
       font-weight: 700;
       color: var(--accent-cyan);
       white-space: nowrap;
       flex-shrink: 0;
     }
     .ticker-matchup {
-      font-size: 0.875rem;
+      font-size: 1.02rem;
       font-weight: 800;
       color: var(--text-primary);
-      letter-spacing: -0.01em;
+      letter-spacing: -0.015em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       min-width: 0;
     }
     .ticker-details {
-      font-size: 0.75rem;
+      font-size: 0.825rem;
       color: var(--text-secondary);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      line-height: 1.2;
+      line-height: 1.25;
     }
     .ticker-right {
       display: flex;
       align-items: center;
-      gap: 0.45rem;
+      gap: 0.55rem;
       flex-shrink: 0;
     }
     .countdown-display {
       display: inline-flex;
       align-items: center;
-      gap: 0.2rem;
+      gap: 0.28rem;
       background-color: var(--bg-surface);
       border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 0.25rem 0.45rem;
+      border-radius: 10px;
+      padding: 0.32rem 0.55rem;
     }
     .cd-box {
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-width: 20px;
+      min-width: 24px;
     }
     .cd-val {
-      font-size: 0.9rem;
+      font-size: 1.05rem;
       font-weight: 800;
       line-height: 1;
       color: var(--accent-blue);
       font-variant-numeric: tabular-nums;
     }
     .cd-lbl {
-      font-size: 0.5rem;
+      font-size: 0.55rem;
       font-weight: 700;
       color: var(--text-muted);
       letter-spacing: 0.04em;
-      margin-top: 0.1rem;
+      margin-top: 0.12rem;
       line-height: 1;
     }
     .cd-colon {
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       font-weight: 800;
       color: var(--text-muted);
       line-height: 1;
@@ -1109,16 +1109,16 @@
       background-color: var(--accent-blue);
       color: #ffffff;
       border: none;
-      padding: 0.35rem 0.65rem;
-      font-size: 0.75rem;
+      padding: 0.42rem 0.75rem;
+      font-size: 0.825rem;
       font-weight: 700;
-      border-radius: 8px;
+      border-radius: 9px;
       cursor: pointer;
       transition: all 0.15s ease;
       white-space: nowrap;
       display: inline-flex;
       align-items: center;
-      gap: 0.25rem;
+      gap: 0.3rem;
     }
     .ticker-jump-btn:hover {
       background-color: #2563eb;
@@ -1874,42 +1874,42 @@
         height: 36px;
       }
       .next-game-ticker {
-        padding: 0.38rem 0.55rem;
-        margin-bottom: 0.5rem;
-        gap: 0.4rem;
-        border-radius: 10px;
+        padding: 0.48rem 0.65rem;
+        margin-bottom: 0.6rem;
+        gap: 0.45rem;
+        border-radius: 11px;
       }
       .ticker-header-row {
-        gap: 0.3rem;
+        gap: 0.35rem;
       }
       .ticker-pulse-badge {
-        font-size: 0.55rem;
-        padding: 0.1rem 0.32rem;
+        font-size: 0.625rem;
+        padding: 0.14rem 0.4rem;
       }
       .ticker-sport-tag {
-        font-size: 0.725rem;
+        font-size: 0.8rem;
       }
       .ticker-matchup {
-        font-size: 0.8rem;
+        font-size: 0.925rem;
       }
       .ticker-details {
-        font-size: 0.685rem;
+        font-size: 0.75rem;
       }
       .countdown-display {
-        padding: 0.2rem 0.35rem;
-        gap: 0.15rem;
+        padding: 0.26rem 0.42rem;
+        gap: 0.18rem;
       }
       .cd-box {
-        min-width: 17px;
+        min-width: 19px;
       }
       .cd-val {
-        font-size: 0.8rem;
+        font-size: 0.925rem;
       }
       .cd-lbl {
-        font-size: 0.45rem;
+        font-size: 0.48rem;
       }
       .cd-colon {
-        font-size: 0.68rem;
+        font-size: 0.75rem;
       }
       .jump-btn-text {
         display: none;
@@ -1918,8 +1918,8 @@
         display: inline;
       }
       .ticker-jump-btn {
-        padding: 0.3rem 0.45rem;
-        font-size: 0.75rem;
+        padding: 0.35rem 0.5rem;
+        font-size: 0.825rem;
       }
     }
 
