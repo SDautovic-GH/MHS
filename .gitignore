@@ -1,0 +1,9 @@
+*.exe
+*.doc
+*.docx
+*.zip
+*.log
+*.pdf
+.DS_Store
+Thumbs.db
+*.local

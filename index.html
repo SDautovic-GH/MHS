@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  
+  <!-- Apple & Standalone Web App Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Melrose Sports">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Melrose High Sports">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Dynamic Theme Color for Safari Chrome & Notch Bar -->
+  <meta name="theme-color" id="meta-theme-color" content="#0b0f19">
+
+  <title>2026 Melrose High Fall Varsity Sports Schedule</title>
+
+  <!-- Embedded Web App Manifest (Data URI for 100% self-contained file) -->
+  <link rel="manifest" href="data:application/manifest+json;utf-8,%7B%22name%22%3A%22Melrose%20High%20Fall%20Varsity%20Sports%20Schedule%22%2C%22short_name%22%3A%22Melrose%20Sports%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230b0f19%22%2C%22theme_color%22%3A%22%230b0f19%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%3Butf8%2C%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20512%20512'%3E%3Crect%20width%3D'512'%20height%3D'512'%20rx%3D'112'%20fill%3D'%230b0f19'%2F%3E%3Ccircle%20cx%3D'256'%20cy%3D'256'%20r%3D'190'%20fill%3D'none'%20stroke%3D'%233b82f6'%20stroke-width%3D'24'%2F%3E%3Cpath%20d%3D'M160%20370L256%20150l96%20220-46-2-50-120-50%20120z'%20fill%3D'%2338bdf8'%2F%3E%3Ccircle%20cx%3D'256'%20cy%3D'310'%20r%3D'24'%20fill%3D'%23f59e0b'%2F%3E%3C%2Fsvg%3E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%5D%7D">
+
+  <!-- Embedded Apple Touch Icon (Data URI) -->
+  <link rel="apple-touch-icon" href="data:image/svg+xml;utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3Crect%20width='512'%20height='512'%20rx='112'%20fill='%230b0f19'/%3E%3Ccircle%20cx='256'%20cy='256'%20r='190'%20fill='none'%20stroke='%233b82f6'%20stroke-width='24'/%3E%3Cpath%20d='M160%20370L256%20150l96%20220-46-2-50-120-50%20120z'%20fill='%2338bdf8'/%3E%3Ccircle%20cx='256'%20cy='310'%20r='24'%20fill='%23f59e0b'/%3E%3C/svg%3E">
+
+  <!-- Embedded Favicon (Data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%32%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='14'%20fill='%233b82f6'/%3E%3Cpath%20d='M10%2023L16%209l6%2014-3.5-.5L16%2015.5l-2.5%207z'%20fill='white'/%3E%3C/svg%3E">
+
+  <!-- Inline Anti-FOUC Theme Initialization with Google Drive Detection -->
+  <script>
+    (function() {
+      var isIframe = false;
+      try {
+        isIframe = (window.self !== window.top);
+      } catch (e) {
+        isIframe = true;
+      }
+
+      var host = (window.location && window.location.hostname) ? window.location.hostname : '';
+      var ref = document.referrer || '';
+      var isGoogleDrive = Boolean(isIframe || 
+        host.indexOf('googleusercontent.com') !== -1 ||
+        host.indexOf('drive.google.com') !== -1 ||
+        ref.indexOf('google.com') !== -1);
+
+      var saved = null;
+      try {
+        saved = localStorage.getItem('mhs_theme_preference');
+      } catch (e) {}
+
+      if (saved === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        if (isGoogleDrive) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var isLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+          if (isLight && !isDark) {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        }
+      }
+    })();
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark light;
+
+      /* Dark Theme (Default) */
+      --bg-canvas: #0b0f19;
+      --bg-surface: #131b2e;
+      --bg-surface-elevated: #1a243d;
+      --border-subtle: #233252;
+      --border-highlight: #2d416b;
+      
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      
+      --accent-blue: #3b82f6;
+      --accent-cyan: #06b6d4;
+      
+      --home-bg: rgba(16, 185, 129, 0.15);
+      --home-text: #34d399;
+      --home-border: rgba(16, 185, 129, 0.3);
+      
+      --away-bg: rgba(59, 130, 246, 0.15);
+      --away-text: #60a5fa;
+      --away-border: rgba(59, 130, 246, 0.3);
+
+      --badge-vball: #8b5cf6;
+      --badge-bsoc: #0ea5e9;
+      --badge-gsoc: #ec4899;
+      --badge-fball: #f59e0b;
+      --badge-fhockey: #0d9488;
+      --badge-xc: #10b981;
+      --badge-golf: #6366f1;
+      --badge-other: #64748b;
+
+      --search-bg: #131b2e;
+      --search-border: #233252;
+      --search-focus: #3b82f6;
+      --pill-inactive-bg: #1a243d;
+      --pill-inactive-text: #94a3b8;
+    }
+
+    /* Light Theme (Applied strictly when data-theme is 'light') */
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --bg-canvas: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #f1f5f9;
+      --border-subtle: #e2e8f0;
+      --border-highlight: #cbd5e1;
+      
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+
+      --home-bg: #ecfdf5;
+      --home-text: #059669;
+      --home-border: #a7f3d0;
+      
+      --away-bg: #eff6ff;
+      --away-text: #2563eb;
+      --away-border: #bfdbfe;
+
+      --search-bg: #ffffff;
+      --search-border: #cbd5e1;
+      --search-focus: #2563eb;
+      --pill-inactive-bg: #f1f5f9;
+      --pill-inactive-text: #64748b;
+    }
+
+    /* Explicit User Override: Dark */
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg-canvas: #0b0f19;
+      --bg-surface: #131b2e;
+      --bg-surface-elevated: #1a243d;
+      --border-subtle: #233252;
+      --border-highlight: #2d416b;
+      
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      
+      --home-bg: rgba(16, 185, 129, 0.15);
+      --home-text: #34d399;
+      --home-border: rgba(16, 185, 129, 0.3);
+      
+      --away-bg: rgba(59, 130, 246, 0.15);
+      --away-text: #60a5fa;
+      --away-border: rgba(59, 130, 246, 0.3);
+
+      --search-bg: #131b2e;
+      --search-border: #233252;
+      --search-focus: #3b82f6;
+      --pill-inactive-bg: #1a243d;
+      --pill-inactive-text: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      background-color: var(--bg-canvas);
+      min-height: 100%;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      line-height: 1.5;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      padding-top: max(1.25rem, env(safe-area-inset-top));
+      padding-bottom: max(2rem, env(safe-area-inset-bottom));
+      padding-left: max(1.25rem, env(safe-area-inset-left));
+      padding-right: max(1.25rem, env(safe-area-inset-right));
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .header-title h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+    }
+    
+    .header-title p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-top: 0.25rem;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-tabs {
+      display: flex;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 0.25rem;
+      gap: 0.25rem;
+    }
+
+    .tab-button {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .tab-button:hover {
+      color: var(--text-primary);
+    }
+
+    .tab-button.active {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+    }
+
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 0.5rem 0.85rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .theme-toggle-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--border-highlight);
+      background-color: var(--bg-surface-elevated);
+    }
+
+    .theme-toggle-btn:active {
+      transform: scale(0.96);
+    }
+
+    .popout-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-highlight);
+      border-radius: 10px;
+      padding: 0.5rem 0.8rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      text-decoration: none;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .popout-btn:hover {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+      border-color: var(--accent-blue);
+    }
+
+    .popout-btn:active {
+      transform: scale(0.96);
+    }
+
+    /* Filter & Search Bar */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 220px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      background-color: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+      font-size: 0.875rem;
+      color: var(--text-primary);
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--search-focus);
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .filter-pill {
+      background-color: var(--pill-inactive-bg);
+      border: 1px solid var(--border-subtle);
+      color: var(--pill-inactive-text);
+      font-size: 0.775rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .filter-pill:hover {
+      color: var(--text-primary);
+    }
+
+    .filter-pill.active {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+      border-color: var(--accent-blue);
+    }
+
+    .count-indicator {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+
+    .view-panel { display: none; }
+    .view-panel.active { display: block; }
+
+    /* Cards Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 1.15rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      border-color: var(--border-highlight);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.5rem;
+    }
+
+    .date-label {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+    }
+
+    .sport-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+      color: #fff;
+    }
+
+    .sport-vball { background-color: var(--badge-vball); }
+    .sport-bsoc { background-color: var(--badge-bsoc); }
+    .sport-gsoc { background-color: var(--badge-gsoc); }
+    .sport-fball { background-color: var(--badge-fball); }
+    .sport-fhockey { background-color: var(--badge-fhockey); }
+    .sport-xc { background-color: var(--badge-xc); }
+    .sport-golf { background-color: var(--badge-golf); }
+    .sport-other { background-color: var(--badge-other); }
+
+    .matchup {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--text-primary);
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .location-badge {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 0.725rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      letter-spacing: 0.04em;
+    }
+
+    .location-badge.home {
+      background-color: var(--home-bg);
+      color: var(--home-text);
+      border-color: var(--home-border);
+    }
+
+    .location-badge.away {
+      background-color: var(--away-bg);
+      color: var(--away-text);
+      border-color: var(--away-border);
+    }
+
+    .venue-detail {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: -0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .venue-detail::before {
+      content: "📍";
+      font-size: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 2rem 0 1rem 0;
+      padding-left: 0.65rem;
+      border-left: 4px solid var(--accent-blue);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .section-count {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-muted);
+      background-color: var(--bg-surface);
+      border: 1px dashed var(--border-subtle);
+      border-radius: 12px;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .header-controls {
+        justify-content: space-between;
+        width: 100%;
+      }
+      .nav-tabs {
+        flex: 1;
+      }
+      .tab-button {
+        flex: 1;
+        text-align: center;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="header-title">
+      <h1>Melrose High Fall Varsity 2026</h1>
+      <p>Official Athletic Schedule &amp; Match Matrix</p>
+    </div>
+    <div class="header-controls">
+      <a id="popout-btn" class="popout-btn" href="#" target="_blank" rel="noopener" style="display:none;" title="Open in dedicated Safari tab for full standalone app">
+        <span>Open App ↗</span>
+      </a>
+      <div class="nav-tabs" role="tablist">
+        <button class="tab-button active" id="tab-calendar" onclick="switchTab('calendar')" role="tab" aria-selected="true">Date Schedule</button>
+        <button class="tab-button" id="tab-sports" onclick="switchTab('sports')" role="tab" aria-selected="false">By Sport</button>
+      </div>
+      <button id="theme-toggle" class="theme-toggle-btn" onclick="cycleTheme()" aria-label="Toggle Theme" title="Theme Toggle">
+        <span id="theme-icon">💻</span>
+        <span id="theme-text">Auto</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="calendar-view" class="view-panel active" role="tabpanel" aria-labelledby="tab-calendar">
+    <div class="filter-bar">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="schedule-search" class="search-input" placeholder="Search opponent, sport, or venue..." oninput="onFilterChange()" aria-label="Search schedule">
+      </div>
+      <div class="filter-pills">
+        <button class="filter-pill active" data-loc="all" onclick="setLocFilter('all')">All</button>
+        <button class="filter-pill" data-loc="home" onclick="setLocFilter('home')">Home Only</button>
+        <button class="filter-pill" data-loc="away" onclick="setLocFilter('away')">Away Only</button>
+      </div>
+      <span class="count-indicator" id="filter-count">Showing 96 games</span>
+    </div>
+    <div class="grid" id="daily-grid"></div>
+  </main>
+
+  <main id="sports-view" class="view-panel" role="tabpanel" aria-labelledby="tab-sports">
+    <div class="section-title">
+      <span>Girls' Volleyball <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: MVMMS)</small></span>
+      <span class="section-count" id="count-vball"></span>
+    </div>
+    <div class="grid" id="sport-vball"></div>
+
+    <div class="section-title">
+      <span>Boys' Soccer <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks &amp; Knoll)</small></span>
+      <span class="section-count" id="count-bsoc"></span>
+    </div>
+    <div class="grid" id="sport-bsoc"></div>
+
+    <div class="section-title">
+      <span>Girls' Soccer <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
+      <span class="section-count" id="count-gsoc"></span>
+    </div>
+    <div class="grid" id="sport-gsoc"></div>
+
+    <div class="section-title">
+      <span>Football <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Fred Green Field)</small></span>
+      <span class="section-count" id="count-fball"></span>
+    </div>
+    <div class="grid" id="sport-fball"></div>
+
+    <div class="section-title">
+      <span>Field Hockey <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
+      <span class="section-count" id="count-fhockey"></span>
+    </div>
+    <div class="grid" id="sport-fhockey"></div>
+
+    <div class="section-title">
+      <span>Cross Country — Boys &amp; Girls <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Pine Banks)</small></span>
+      <span class="section-count" id="count-xc"></span>
+    </div>
+    <div class="grid" id="sport-xc"></div>
+
+    <div class="section-title">
+      <span>Golf <small style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">(Home: Bellevue Golf Club)</small></span>
+      <span class="section-count" id="count-golf"></span>
+    </div>
+    <div class="grid" id="sport-golf"></div>
+  </main>
+</div>
+
+<script>
+// Complete Varsity Athletic Schedule Data
+const events = [
+  // FOOTBALL
+  { date: "2026-09-10", time: "7:00 PM", sport: "Football", opp: "Reading", isHome: true, venue: "Fred Green Field" },
+  { date: "2026-09-18", time: "7:00 PM", sport: "Football", opp: "Danvers", isHome: true, venue: "Fred Green Field" },
+  { date: "2026-09-25", time: "7:00 PM", sport: "Football", opp: "Swampscott", isHome: false, venue: "Swampscott" },
+  { date: "2026-10-02", time: "7:00 PM", sport: "Football", opp: "Winchester", isHome: true, venue: "Fred Green Field" },
+  { date: "2026-10-09", time: "6:00 PM", sport: "Football", opp: "Burlington", isHome: false, venue: "Burlington" },
+  { date: "2026-10-16", time: "7:00 PM", sport: "Football", opp: "Watertown", isHome: false, venue: "Watertown" },
+  { date: "2026-10-23", time: "7:00 PM", sport: "Football", opp: "Wilmington", isHome: true, venue: "Fred Green Field" },
+  { date: "2026-10-30", time: "6:30 PM", sport: "Football", opp: "Stoneham", isHome: false, venue: "Stoneham" },
+  { date: "2026-11-26", time: "10:15 AM", sport: "Football", opp: "Wakefield", isHome: true, venue: "Fred Green Field" },
+
+  // BOYS SOCCER
+  { date: "2026-09-09", time: "4:15 PM", sport: "Boys' Soccer", opp: "Reading", isHome: true, venue: "Pine Banks" },
+  { date: "2026-09-15", time: "4:15 PM", sport: "Boys' Soccer", opp: "Burlington", isHome: false, venue: "Burlington" },
+  { date: "2026-09-21", time: "4:30 PM", sport: "Boys' Soccer", opp: "Clinton", isHome: false, venue: "Clinton" },
+  { date: "2026-09-23", time: "4:15 PM", sport: "Boys' Soccer", opp: "Winchester", isHome: false, venue: "Winchester" },
+  { date: "2026-09-29", time: "4:15 PM", sport: "Boys' Soccer", opp: "Lexington", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-01", time: "4:15 PM", sport: "Boys' Soccer", opp: "Wilmington", isHome: true, venue: "Knoll" },
+  { date: "2026-10-05", time: "4:30 PM", sport: "Boys' Soccer", opp: "Arlington", isHome: false, venue: "Arlington" },
+  { date: "2026-10-07", time: "4:15 PM", sport: "Boys' Soccer", opp: "Stoneham", isHome: true, venue: "Knoll" },
+  { date: "2026-10-09", time: "6:00 PM", sport: "Boys' Soccer", opp: "Somerville", isHome: true, venue: "Fred Green Field" },
+  { date: "2026-10-14", time: "6:30 PM", sport: "Boys' Soccer", opp: "Watertown", isHome: false, venue: "Watertown" },
+  { date: "2026-10-17", time: "10:00 AM", sport: "Boys' Soccer", opp: "Beverly", isHome: false, venue: "Beverly" },
+  { date: "2026-10-19", time: "4:15 PM", sport: "Boys' Soccer", opp: "Greater Lawrence", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-21", time: "6:00 PM", sport: "Boys' Soccer", opp: "Belmont", isHome: false, venue: "Belmont" },
+  { date: "2026-10-24", time: "10:00 AM", sport: "Boys' Soccer", opp: "Excel Academy", isHome: true, venue: "Fred Green Field" },
+  { date: "2026-10-27", time: "4:15 PM", sport: "Boys' Soccer", opp: "Wakefield", isHome: true, venue: "Knoll" },
+  { date: "2026-10-29", time: "5:00 PM", sport: "Boys' Soccer", opp: "Methuen", isHome: false, venue: "Methuen" },
+
+  // GIRLS SOCCER
+  { date: "2026-09-09", time: "4:15 PM", sport: "Girls' Soccer", opp: "Reading", isHome: false, venue: "Reading" },
+  { date: "2026-09-14", time: "4:15 PM", sport: "Girls' Soccer", opp: "Burlington", isHome: false, venue: "Burlington" },
+  { date: "2026-09-19", time: "10:00 AM", sport: "Girls' Soccer", opp: "Peabody", isHome: true, venue: "Fred Green Field" },
+  { date: "2026-09-23", time: "4:15 PM", sport: "Girls' Soccer", opp: "Winchester", isHome: true, venue: "Pine Banks" },
+  { date: "2026-09-25", time: "5:30 PM", sport: "Girls' Soccer", opp: "Danvers", isHome: false, venue: "Danvers" },
+  { date: "2026-09-29", time: "4:15 PM", sport: "Girls' Soccer", opp: "Lexington", isHome: false, venue: "Lexington" },
+  { date: "2026-10-01", time: "4:15 PM", sport: "Girls' Soccer", opp: "Wilmington", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-05", time: "4:15 PM", sport: "Girls' Soccer", opp: "Arlington", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-07", time: "4:15 PM", sport: "Girls' Soccer", opp: "Stoneham", isHome: false, venue: "Stoneham" },
+  { date: "2026-10-09", time: "4:15 PM", sport: "Girls' Soccer", opp: "Marblehead", isHome: true, venue: "Fred Green Field" },
+  { date: "2026-10-12", time: "4:30 PM", sport: "Girls' Soccer", opp: "Woburn", isHome: false, venue: "Woburn" },
+  { date: "2026-10-14", time: "4:30 PM", sport: "Girls' Soccer", opp: "Watertown", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-17", time: "11:00 AM", sport: "Girls' Soccer", opp: "Bishop Feehan", isHome: false, venue: "Bishop Feehan" },
+  { date: "2026-10-21", time: "4:15 PM", sport: "Girls' Soccer", opp: "Belmont", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-24", time: "11:00 AM", sport: "Girls' Soccer", opp: "Tewksbury", isHome: false, venue: "Tewksbury" },
+  { date: "2026-10-27", time: "4:15 PM", sport: "Girls' Soccer", opp: "Wakefield", isHome: false, venue: "Wakefield" },
+  { date: "2026-10-30", time: "4:30 PM", sport: "Girls' Soccer", opp: "Beverly", isHome: false, venue: "Beverly" },
+
+  // GIRLS VOLLEYBALL
+  { date: "2026-09-08", time: "5:45 PM", sport: "Girls' Volleyball", opp: "Reading", isHome: false, venue: "Reading" },
+  { date: "2026-09-10", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Burlington", isHome: false, venue: "Burlington" },
+  { date: "2026-09-14", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Winchester", isHome: true, venue: "MVMMS" },
+  { date: "2026-09-16", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Ipswich", isHome: false, venue: "Ipswich" },
+  { date: "2026-09-18", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Lexington", isHome: true, venue: "MVMMS" },
+  { date: "2026-09-22", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Wilmington", isHome: true, venue: "MVMMS" },
+  { date: "2026-09-24", time: "5:00 PM", sport: "Girls' Volleyball", opp: "Lynn Classical", isHome: true, venue: "MVMMS" },
+  { date: "2026-09-28", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Arlington", isHome: true, venue: "MVMMS" },
+  { date: "2026-09-30", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Newburyport", isHome: false, venue: "Newburyport" },
+  { date: "2026-10-02", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Stoneham", isHome: true, venue: "MVMMS" },
+  { date: "2026-10-06", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Woburn", isHome: false, venue: "Woburn" },
+  { date: "2026-10-09", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Arlington Catholic", isHome: true, venue: "MVMMS" },
+  { date: "2026-10-13", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Watertown", isHome: false, venue: "Watertown" },
+  { date: "2026-10-15", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Belmont", isHome: true, venue: "MVMMS" },
+  { date: "2026-10-17", time: "1:30 PM", sport: "Girls' Volleyball", opp: "Duxbury", isHome: false, venue: "Duxbury" },
+  { date: "2026-10-20", time: "6:30 PM", sport: "Girls' Volleyball", opp: "Wakefield", isHome: true, venue: "MVMMS" },
+  { date: "2026-10-23", time: "5:30 PM", sport: "Girls' Volleyball", opp: "Marblehead", isHome: true, venue: "MVMMS" },
+  { date: "2026-10-26", time: "5:30 PM", sport: "Girls' Volleyball", opp: "TBA", isHome: true, venue: "MVMMS" },
+  { date: "2026-10-28", time: "5:30 PM", sport: "Girls' Volleyball", opp: "TBA", isHome: true, venue: "MVMMS" },
+  { date: "2026-10-30", time: "5:00 PM", sport: "Girls' Volleyball", opp: "Methuen", isHome: false, venue: "Methuen" },
+
+  // FIELD HOCKEY
+  { date: "2026-09-08", time: "4:00 PM", sport: "Field Hockey", opp: "Reading", isHome: false, venue: "Reading" },
+  { date: "2026-09-10", time: "4:15 PM", sport: "Field Hockey", opp: "Burlington", isHome: false, venue: "Burlington" },
+  { date: "2026-09-14", time: "4:15 PM", sport: "Field Hockey", opp: "Winchester", isHome: true, venue: "Pine Banks" },
+  { date: "2026-09-18", time: "4:15 PM", sport: "Field Hockey", opp: "Lexington", isHome: false, venue: "Lexington" },
+  { date: "2026-09-22", time: "4:15 PM", sport: "Field Hockey", opp: "Wilmington", isHome: true, venue: "Pine Banks" },
+  { date: "2026-09-28", time: "4:15 PM", sport: "Field Hockey", opp: "Arlington", isHome: true, venue: "Pine Banks" },
+  { date: "2026-09-29", time: "4:30 PM", sport: "Field Hockey", opp: "Beverly", isHome: false, venue: "Beverly" },
+  { date: "2026-10-02", time: "4:15 PM", sport: "Field Hockey", opp: "Stoneham", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-06", time: "4:00 PM", sport: "Field Hockey", opp: "Woburn", isHome: false, venue: "Woburn" },
+  { date: "2026-10-08", time: "4:30 PM", sport: "Field Hockey", opp: "Weston", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-09", time: "6:00 PM", sport: "Field Hockey", opp: "Stoneham", isHome: false, venue: "Stoneham" },
+  { date: "2026-10-12", time: "10:00 AM", sport: "Field Hockey", opp: "Watertown", isHome: false, venue: "Watertown" },
+  { date: "2026-10-13", time: "4:15 PM", sport: "Field Hockey", opp: "Woburn", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-15", time: "4:15 PM", sport: "Field Hockey", opp: "Belmont", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-20", time: "4:15 PM", sport: "Field Hockey", opp: "Wakefield", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-22", time: "4:15 PM", sport: "Field Hockey", opp: "Reading", isHome: true, venue: "Pine Banks" },
+
+  // CROSS COUNTRY
+  { date: "2026-09-15", time: "4:00 PM", sport: "Cross Country", opp: "Arlington", isHome: false, venue: "Arlington" },
+  { date: "2026-09-22", time: "4:15 PM", sport: "Cross Country", opp: "Watertown", isHome: true, venue: "Pine Banks" },
+  { date: "2026-09-29", time: "4:00 PM", sport: "Cross Country", opp: "Stoneham", isHome: false, venue: "Stoneham" },
+  { date: "2026-10-06", time: "4:00 PM", sport: "Cross Country", opp: "Wilmington", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-13", time: "4:00 PM", sport: "Cross Country", opp: "Burlington", isHome: false, venue: "Burlington" },
+  { date: "2026-10-20", time: "4:15 PM", sport: "Cross Country", opp: "Wakefield", isHome: true, venue: "Pine Banks" },
+  { date: "2026-10-26", time: "2:00 PM", sport: "Cross Country", opp: "TBA", isHome: true, venue: "Pine Banks" },
+
+  // GOLF
+  { date: "2026-08-31", time: "3:30 PM", sport: "Golf", opp: "Wakefield", isHome: true, venue: "Bellevue Golf Club" },
+  { date: "2026-09-01", time: "10:00 AM", sport: "Golf", opp: "Watertown", isHome: true, venue: "Bellevue Golf Club" },
+  { date: "2026-09-03", time: "3:30 PM", sport: "Golf", opp: "Woburn", isHome: true, venue: "Bellevue Golf Club" },
+  { date: "2026-09-18", time: "3:30 PM", sport: "Golf", opp: "Burlington", isHome: false, venue: "Burlington" },
+  { date: "2026-09-22", time: "3:30 PM", sport: "Golf", opp: "Arlington", isHome: true, venue: "Bellevue Golf Club" },
+  { date: "2026-09-24", time: "3:30 PM", sport: "Golf", opp: "Belmont", isHome: true, venue: "Bellevue Golf Club" },
+  { date: "2026-09-28", time: "3:30 PM", sport: "Golf", opp: "Stoneham", isHome: false, venue: "Stoneham" },
+  { date: "2026-09-29", time: "3:30 PM", sport: "Golf", opp: "Wilmington", isHome: true, venue: "Bellevue Golf Club" },
+  { date: "2026-09-30", time: "3:45 PM", sport: "Golf", opp: "Lexington", isHome: false, venue: "Lexington" },
+  { date: "2026-10-01", time: "8:00 AM", sport: "Golf", opp: "TBA", isHome: true, venue: "Bellevue Golf Club" },
+  { date: "2026-10-06", time: "3:30 PM", sport: "Golf", opp: "Reading", isHome: false, venue: "Reading" }
+];
+
+// ==========================================
+// Theme & Safari / Google Drive Robustness
+// ==========================================
+const inIframe = (function() {
+  try {
+    return window.self !== window.top;
+  } catch (e) {
+    return true;
+  }
+})();
+
+const host = (window.location && window.location.hostname) ? window.location.hostname : '';
+const ref = document.referrer || '';
+const isGoogleDriveContext = Boolean(inIframe || 
+  host.indexOf('googleusercontent.com') !== -1 ||
+  host.indexOf('drive.google.com') !== -1 ||
+  ref.indexOf('google.com') !== -1);
+
+// Show the pop-out standalone link if viewed inside an iframe
+if (inIframe) {
+  const popoutEl = document.getElementById('popout-btn');
+  if (popoutEl) {
+    popoutEl.style.display = 'inline-flex';
+    popoutEl.href = window.location.href;
+  }
+}
+
+const SafeStorage = {
+  getItem: function(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (e) {
+      return null;
+    }
+  },
+  setItem: function(key, val) {
+    try {
+      localStorage.setItem(key, val);
+    } catch (e) {
+      // Gracefully no-op in sandboxed iframes (e.g., Google Drive)
+    }
+  }
+};
+
+let currentThemeMode = SafeStorage.getItem('mhs_theme_preference') || 'auto'; // 'auto' | 'light' | 'dark'
+const systemDarkQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+function updateThemeUI() {
+  const root = document.documentElement;
+  const iconEl = document.getElementById('theme-icon');
+  const textEl = document.getElementById('theme-text');
+  const btnEl = document.getElementById('theme-toggle');
+  const metaThemeColor = document.getElementById('meta-theme-color');
+
+  let effectiveIsDark;
+
+  if (currentThemeMode === 'dark') {
+    root.setAttribute('data-theme', 'dark');
+    effectiveIsDark = true;
+    if (iconEl) iconEl.textContent = '🌙';
+    if (textEl) textEl.textContent = 'Dark';
+    if (btnEl) btnEl.title = 'Theme: Dark (Click to change)';
+  } else if (currentThemeMode === 'light') {
+    root.setAttribute('data-theme', 'light');
+    effectiveIsDark = false;
+    if (iconEl) iconEl.textContent = '☀️';
+    if (textEl) textEl.textContent = 'Light';
+    if (btnEl) btnEl.title = 'Theme: Light (Click to change)';
+  } else {
+    // Auto Mode:
+    if (isGoogleDriveContext) {
+      // Inside Google Drive's iframe, Safari WebKit reports light mode (Bug #284973).
+      // Keep dark mode to maintain the OS theme preference and native app aesthetic.
+      root.setAttribute('data-theme', 'dark');
+      effectiveIsDark = true;
+      if (iconEl) iconEl.textContent = '💻';
+      if (textEl) textEl.textContent = 'Auto (Dark)';
+      if (btnEl) btnEl.title = 'Theme: Auto (Google Drive mode: Dark)';
+    } else {
+      effectiveIsDark = systemDarkQuery ? systemDarkQuery.matches : true;
+      root.setAttribute('data-theme', effectiveIsDark ? 'dark' : 'light');
+      if (iconEl) iconEl.textContent = '💻';
+      if (textEl) textEl.textContent = 'Auto';
+      if (btnEl) btnEl.title = 'Theme: Auto (Matches OS: ' + (effectiveIsDark ? 'Dark' : 'Light') + ')';
+    }
+  }
+
+  // Update dynamic Safari theme-color meta tag for address & notch bar
+  const color = effectiveIsDark ? '#0b0f19' : '#f8fafc';
+  if (metaThemeColor) {
+    metaThemeColor.setAttribute('content', color);
+  }
+}
+
+function cycleTheme() {
+  if (currentThemeMode === 'auto') {
+    currentThemeMode = 'dark';
+  } else if (currentThemeMode === 'dark') {
+    currentThemeMode = 'light';
+  } else {
+    currentThemeMode = 'auto';
+  }
+  SafeStorage.setItem('mhs_theme_preference', currentThemeMode);
+  updateThemeUI();
+}
+
+// Listen for dynamic OS theme changes in top-level Safari windows
+if (systemDarkQuery && systemDarkQuery.addEventListener) {
+  systemDarkQuery.addEventListener('change', () => {
+    if (currentThemeMode === 'auto' && !isGoogleDriveContext) {
+      updateThemeUI();
+    }
+  });
+} else if (systemDarkQuery && systemDarkQuery.addListener) {
+  systemDarkQuery.addListener(() => {
+    if (currentThemeMode === 'auto' && !isGoogleDriveContext) {
+      updateThemeUI();
+    }
+  });
+}
+
+// ==========================================
+// Card Rendering & Filters
+// ==========================================
+function getSportClass(sport) {
+  switch (sport) {
+    case "Girls' Volleyball": return "sport-vball";
+    case "Boys' Soccer": return "sport-bsoc";
+    case "Girls' Soccer": return "sport-gsoc";
+    case "Football": return "sport-fball";
+    case "Field Hockey": return "sport-fhockey";
+    case "Cross Country": return "sport-xc";
+    case "Golf": return "sport-golf";
+    default: return "sport-other";
+  }
+}
+
+function formatDate(isoStr) {
+  const parts = isoStr.split('-');
+  const d = new Date(parts[0], parts[1] - 1, parts[2]);
+  return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+}
+
+function renderCard(item) {
+  const locClass = item.isHome ? 'home' : 'away';
+  const locLabel = item.isHome ? 'HOME' : 'AWAY';
+  const prefix = item.isHome ? 'vs.' : '@';
+  
+  return `
+    <div class="card">
+      <div class="card-header">
+        <span class="date-label">${formatDate(item.date)}</span>
+        <span class="sport-tag ${getSportClass(item.sport)}">${item.sport}</span>
+      </div>
+      <div class="matchup">${prefix} ${item.opp}</div>
+      <div class="meta-row">
+        <span>⏰ ${item.time}</span>
+        <span class="location-badge ${locClass}">${locLabel}</span>
+      </div>
+      <div class="venue-detail">${item.venue}</div>
+    </div>
+  `;
+}
+
+let activeLocFilter = 'all'; // 'all' | 'home' | 'away'
+
+function setLocFilter(loc) {
+  activeLocFilter = loc;
+  document.querySelectorAll('.filter-pill').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-loc') === loc);
+  });
+  renderDailyView();
+}
+
+function onFilterChange() {
+  renderDailyView();
+}
+
+function renderDailyView() {
+  const searchEl = document.getElementById('schedule-search');
+  const query = searchEl ? searchEl.value.trim().toLowerCase() : '';
+
+  const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
+
+  const filtered = sorted.filter(item => {
+    if (activeLocFilter === 'home' && !item.isHome) return false;
+    if (activeLocFilter === 'away' && item.isHome) return false;
+
+    if (query) {
+      const matchText = `${item.sport} ${item.opp} ${item.venue} ${item.date}`.toLowerCase();
+      if (!matchText.includes(query)) return false;
+    }
+    return true;
+  });
+
+  const container = document.getElementById('daily-grid');
+  const countEl = document.getElementById('filter-count');
+
+  if (countEl) {
+    countEl.textContent = `Showing ${filtered.length} of ${events.length} games`;
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem;">No games match your search</p>
+        <p style="font-size: 0.85rem;">Try adjusting your search query or location filter.</p>
+      </div>
+    `;
+  } else {
+    container.innerHTML = filtered.map(renderCard).join('');
+  }
+}
+
+function populateSportsView() {
+  const filterBySport = (sportName) => 
+    events.filter(e => e.sport === sportName).sort((a, b) => a.date.localeCompare(b.date));
+
+  const sportsMap = [
+    { id: 'sport-vball', countId: 'count-vball', name: "Girls' Volleyball" },
+    { id: 'sport-bsoc', countId: 'count-bsoc', name: "Boys' Soccer" },
+    { id: 'sport-gsoc', countId: 'count-gsoc', name: "Girls' Soccer" },
+    { id: 'sport-fball', countId: 'count-fball', name: "Football" },
+    { id: 'sport-fhockey', countId: 'count-fhockey', name: "Field Hockey" },
+    { id: 'sport-xc', countId: 'count-xc', name: "Cross Country" },
+    { id: 'sport-golf', countId: 'count-golf', name: "Golf" }
+  ];
+
+  sportsMap.forEach(s => {
+    const list = filterBySport(s.name);
+    const container = document.getElementById(s.id);
+    const countEl = document.getElementById(s.countId);
+    if (container) container.innerHTML = list.map(renderCard).join('');
+    if (countEl) countEl.textContent = `${list.length} games`;
+  });
+}
+
+function switchTab(view) {
+  document.querySelectorAll('.tab-button').forEach(b => {
+    b.classList.remove('active');
+    b.setAttribute('aria-selected', 'false');
+  });
+  document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
+
+  if (view === 'calendar') {
+    const tab = document.getElementById('tab-calendar');
+    if (tab) {
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+    }
+    document.getElementById('calendar-view').classList.add('active');
+  } else {
+    const tab = document.getElementById('tab-sports');
+    if (tab) {
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+    }
+    document.getElementById('sports-view').classList.add('active');
+  }
+}
+
+// Initial Render
+updateThemeUI();
+renderDailyView();
+populateSportsView();
+</script>
+</body>
+</html>
