@@ -242,16 +242,16 @@
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.25rem;
+      flex-direction: column;
+      gap: 0.55rem;
     }
 
-    .header-brand-row {
+    .header-top-row {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       gap: 1rem;
-      min-width: 0;
+      width: 100%;
     }
 
     .header-brand {
@@ -279,9 +279,9 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 13px;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
       background: linear-gradient(135deg, #dc2626, #991b1b);
       color: #ffffff;
       font-size: 1.15rem;
@@ -297,7 +297,7 @@
     }
 
     .header-titles h1 {
-      font-size: 1.45rem;
+      font-size: 1.4rem;
       font-weight: 850;
       letter-spacing: -0.025em;
       color: var(--text-primary);
@@ -307,7 +307,7 @@
     }
 
     .header-season {
-      font-size: 0.85rem;
+      font-size: 0.825rem;
       color: var(--text-secondary);
       font-weight: 600;
       display: block;
@@ -315,15 +315,79 @@
       white-space: nowrap;
     }
 
-    .header-controls {
+    .header-actions {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.5rem;
     }
 
+    /* Global Filter Bar (Sport + Location + Search) */
+    .header-global-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .header-global-bar .apple-picker-btn {
+      flex: 1;
+      min-width: 0;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.45rem 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .header-global-bar .apple-picker-btn:hover {
+      border-color: var(--border-highlight);
+      background-color: var(--bg-surface-elevated);
+    }
+
+    .header-global-bar .apple-picker-btn:active {
+      transform: scale(0.97);
+    }
+
+    .header-global-bar .apple-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-size: 0.95rem;
+    }
+
+    .header-global-bar .apple-icon-btn:hover,
+    .header-global-bar .apple-icon-btn.active {
+      border-color: var(--border-highlight);
+      background-color: var(--bg-surface-elevated);
+    }
+
+    /* Section Navigation Tabs (Enlarged) */
     .nav-tabs-wrapper {
       display: flex;
       align-items: center;
+      justify-content: center;
+      width: 100%;
     }
 
     .nav-tabs {
@@ -333,9 +397,13 @@
       border-radius: 12px;
       padding: 0.35rem;
       gap: 0.35rem;
+      width: 100%;
+      max-width: 620px;
     }
 
     .tab-button {
+      flex: 1;
+      justify-content: center;
       background: none;
       border: none;
       color: var(--text-secondary);
@@ -1754,7 +1822,7 @@
         align-items: stretch;
         gap: 0.5rem;
       }
-      .header-brand-row {
+      .header-top-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1769,8 +1837,8 @@
         overflow: hidden;
       }
       .brand-badge {
-        width: 44px;
-        height: 44px;
+        width: 42px;
+        height: 42px;
         font-size: 1.05rem;
         border-radius: 11px;
         flex-shrink: 0;
@@ -1790,6 +1858,23 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+      }
+      .header-global-bar {
+        width: 100%;
+        gap: 0.35rem;
+      }
+      .header-global-bar .apple-picker-btn {
+        padding: 0.42rem 0.55rem;
+        font-size: 0.8rem;
+      }
+      .nav-tabs {
+        max-width: 100%;
+        padding: 0.25rem;
+      }
+      .tab-button {
+        padding: 0.52rem 0.4rem;
+        font-size: 1.02rem;
+        gap: 0.35rem;
       }
       .header-actions {
         display: flex;
@@ -2684,8 +2769,8 @@
       transition: all 0.15s ease;
     }
     .apple-cal-icon {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       background: #ffffff;
       border-radius: 5px;
       display: inline-flex;
@@ -2694,17 +2779,19 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
       flex-shrink: 0;
       line-height: 1;
+      margin-right: 0.15rem;
     }
     .apple-cal-icon .cal-month {
       background: #ff3b30;
       color: #ffffff;
-      font-size: 5.5px;
+      font-size: 6px;
       font-weight: 800;
       text-align: center;
-      padding: 1.5px 0 0.5px;
-      letter-spacing: 0.4px;
+      padding: 1.5px 0 1px;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+      line-height: 1.1;
     }
     .apple-cal-icon .cal-day {
       flex: 1;
@@ -2712,10 +2799,11 @@
       align-items: center;
       justify-content: center;
       color: #1c1c1e;
-      font-size: 10px;
+      font-size: 10.5px;
       font-weight: 800;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
       padding-bottom: 0.5px;
+      line-height: 1;
     }
     .schedule-scope-btn.active .scope-count-badge {
       background-color: var(--accent-blue);
@@ -2888,7 +2976,7 @@
 
 <header class="app-header">
   <div class="header-inner">
-    <div class="header-brand-row">
+    <div class="header-top-row">
       <div class="header-brand" onclick="scrollToTop()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')scrollToTop()" title="Scroll to top of schedule">
         <span class="brand-badge">MHS</span>
         <div class="header-titles">
@@ -2906,6 +2994,43 @@
         </button>
       </div>
     </div>
+
+    <!-- Global Selectors Bar (BEFORE Nav Tabs): Sports, Location, Search -->
+    <div class="header-global-bar" id="header-global-bar">
+      <!-- Sport Picker Trigger -->
+      <button class="apple-picker-btn" id="sport-picker-btn" onclick="openSportSheet()" aria-label="Select sport" aria-haspopup="dialog">
+        <div class="picker-btn-content">
+          <span class="picker-btn-icon" id="picker-sport-icon">🌟</span>
+          <span class="picker-btn-text" id="picker-sport-title">Sports</span>
+        </div>
+        <span class="picker-btn-chevron">▾</span>
+      </button>
+
+      <!-- Location / Filter Trigger -->
+      <button class="apple-picker-btn" id="loc-picker-btn" onclick="openLocSheet()" aria-label="Select location filter" aria-haspopup="dialog">
+        <div class="picker-btn-content">
+          <span class="picker-btn-icon" id="picker-loc-icon">📍</span>
+          <span class="picker-btn-text" id="picker-loc-title">Location</span>
+        </div>
+        <span class="picker-btn-chevron">▾</span>
+      </button>
+
+      <!-- Search Icon Button -->
+      <button class="apple-icon-btn" id="search-toggle-btn" onclick="toggleSearchDrawer()" title="Search schedule" aria-label="Search schedule">
+        <span id="search-btn-icon">🔍</span>
+      </button>
+    </div>
+
+    <!-- Expandable Search Drawer (Slide-down if open) -->
+    <div class="apple-search-drawer" id="apple-search-drawer">
+      <div class="apple-search-inner">
+        <span class="search-drawer-icon">🔍</span>
+        <input type="text" id="schedule-search" class="apple-search-input" placeholder="Search opponent, sport, or venue..." oninput="onFilterChange()" aria-label="Search schedule">
+        <button class="search-drawer-clear" id="search-clear-btn" onclick="clearSearchInput()" aria-label="Clear search" style="display:none;">✕</button>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs (Enlarged): Schedule | Scores | Standings -->
     <div class="nav-tabs-wrapper">
       <div class="nav-tabs" role="tablist">
         <button class="tab-button active" id="tab-calendar" onclick="switchTab('calendar')" role="tab" aria-selected="true">
@@ -2954,41 +3079,6 @@
   </div>
 
   <main id="calendar-view" class="view-panel active" role="tabpanel" aria-labelledby="tab-calendar">
-    <!-- Apple Sports Segmented Selector Bar (Dropdowns for Sports & Location) -->
-    <div class="apple-sports-bar" id="apple-sports-bar">
-      <!-- Sport Picker Trigger -->
-      <button class="apple-picker-btn" id="sport-picker-btn" onclick="openSportSheet()" aria-label="Select sport" aria-haspopup="dialog">
-        <div class="picker-btn-content">
-          <span class="picker-btn-icon" id="picker-sport-icon">🌟</span>
-          <span class="picker-btn-text" id="picker-sport-title">Sports</span>
-        </div>
-        <span class="picker-btn-chevron">▾</span>
-      </button>
-
-      <!-- Location / Filter Trigger -->
-      <button class="apple-picker-btn" id="loc-picker-btn" onclick="openLocSheet()" aria-label="Select location filter" aria-haspopup="dialog">
-        <div class="picker-btn-content">
-          <span class="picker-btn-icon" id="picker-loc-icon">📍</span>
-          <span class="picker-btn-text" id="picker-loc-title">Location</span>
-        </div>
-        <span class="picker-btn-chevron">▾</span>
-      </button>
-
-      <!-- Search Icon Button -->
-      <button class="apple-icon-btn" id="search-toggle-btn" onclick="toggleSearchDrawer()" title="Search schedule" aria-label="Search schedule">
-        <span id="search-btn-icon">🔍</span>
-      </button>
-    </div>
-
-    <!-- Expandable Search Drawer (Slide-down) -->
-    <div class="apple-search-drawer" id="apple-search-drawer">
-      <div class="apple-search-inner">
-        <span class="search-drawer-icon">🔍</span>
-        <input type="text" id="schedule-search" class="apple-search-input" placeholder="Search opponent, sport, or venue..." oninput="onFilterChange()" aria-label="Search schedule">
-        <button class="search-drawer-clear" id="search-clear-btn" onclick="clearSearchInput()" aria-label="Clear search" style="display:none;">✕</button>
-      </div>
-    </div>
-
     <!-- Apple-Style Schedule Scope Segmented Control: Today vs All Upcoming -->
     <div class="schedule-scope-toggle-bar" id="schedule-scope-bar" role="tablist" aria-label="Schedule view scope">
       <button class="schedule-scope-btn is-today active" id="scope-btn-today" onclick="setScheduleScope('today')" role="tab" aria-selected="true">
@@ -3017,53 +3107,16 @@
   </main>
 
   <main id="scores-view" class="view-panel" role="tabpanel" aria-labelledby="tab-scores">
-    <!-- Apple Sports Segmented Selector Bar for Scores -->
-    <div class="apple-sports-bar" id="scores-apple-bar">
-      <!-- Sport Picker Trigger -->
-      <button class="apple-picker-btn" id="scores-sport-picker-btn" onclick="openScoresSportSheet()" aria-label="Select scores sport" aria-haspopup="dialog">
-        <div class="picker-btn-content">
-          <span class="picker-btn-icon" id="scores-picker-sport-icon">🌟</span>
-          <span class="picker-btn-text" id="scores-picker-sport-title">Sports</span>
-        </div>
-        <span class="picker-btn-chevron">▾</span>
-      </button>
-
-      <!-- Location Filter Trigger for Scores -->
-      <button class="apple-picker-btn" id="scores-location-picker-btn" onclick="openLocationSheet()" aria-label="Filter scores by venue" aria-haspopup="dialog">
-        <div class="picker-btn-content">
-          <span class="picker-btn-icon" id="scores-picker-loc-icon">📍</span>
-          <span class="picker-btn-text" id="scores-picker-loc-title">Location</span>
-        </div>
-        <span class="picker-btn-chevron">▾</span>
-      </button>
-
-      <!-- Results Count Badge -->
-      <div class="standings-league-badge" id="scores-count-badge">
-        <span class="sync-status-dot"></span>
-        <span id="scores-count-text">Fall 2026 Results</span>
-      </div>
+    <div class="apple-status-line" id="scores-status-line">
+      <span class="apple-count-text" id="scores-count-text">Fall 2026 Results</span>
     </div>
 
     <div class="scores-feed-container" id="scores-container"></div>
   </main>
 
   <main id="standings-view" class="view-panel" role="tabpanel" aria-labelledby="tab-standings">
-    <!-- Apple Sports Segmented Selector Bar for Standings -->
-    <div class="apple-sports-bar" id="standings-apple-bar">
-      <!-- Sport Picker Trigger -->
-      <button class="apple-picker-btn" id="standings-sport-picker-btn" onclick="openStandingsSportSheet()" aria-label="Select standings sport" aria-haspopup="dialog">
-        <div class="picker-btn-content">
-          <span class="picker-btn-icon" id="standings-picker-sport-icon">🌟</span>
-          <span class="picker-btn-text" id="standings-picker-sport-title">Sports</span>
-        </div>
-        <span class="picker-btn-chevron">▾</span>
-      </button>
-
-      <!-- League Status Badge -->
-      <div class="standings-league-badge" id="standings-sync-badge">
-        <span class="sync-status-dot"></span>
-        <span id="standings-sync-text">Middlesex League</span>
-      </div>
+    <div class="apple-status-line" id="standings-status-line">
+      <span class="apple-count-text" id="standings-sync-text">Middlesex League &bull; Freedom Division</span>
     </div>
 
     <div id="standings-container"></div>
