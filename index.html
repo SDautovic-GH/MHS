@@ -2633,76 +2633,63 @@
     .day-strip-all-link:hover {
       text-decoration: underline;
     }
-    .day-strip-scroll {
+    /* Apple-Style Schedule Scope Segmented Control: All Upcoming vs Today */
+    .schedule-scope-toggle-bar {
       display: flex;
       align-items: center;
-      gap: 0.4rem;
-      overflow-x: auto;
-      padding: 0.2rem 0.1rem;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-    .day-strip-scroll::-webkit-scrollbar {
-      display: none;
-    }
-    .day-strip-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0.45rem 0.6rem;
-      min-width: 52px;
-      border-radius: 10px;
       background-color: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 4px;
+      margin: 0.35rem 0 0.85rem;
+      gap: 4px;
+    }
+    .schedule-scope-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.65rem 0.95rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: transparent;
+      border: none;
+      border-radius: 10px;
       cursor: pointer;
-      transition: all 0.15s cubic-bezier(0.32, 0.72, 0, 1);
-      flex-shrink: 0;
+      transition: all 0.18s cubic-bezier(0.32, 0.72, 0, 1);
       user-select: none;
       -webkit-user-select: none;
     }
-    .day-strip-item:hover {
-      border-color: var(--border-highlight);
-      transform: translateY(-1px);
-    }
-    .day-strip-item:active {
-      transform: scale(0.94);
-    }
-    .day-strip-item.active {
-      background-color: var(--accent-blue);
-      border-color: var(--accent-blue);
-      color: #ffffff !important;
-      box-shadow: 0 2px 8px rgba(0, 113, 227, 0.35);
-    }
-    .day-strip-item.is-today {
-      border-color: rgba(225, 29, 72, 0.5);
-    }
-    .day-strip-item.is-today .day-dow {
-      color: #f87171;
-    }
-    .day-strip-item.active .day-dow,
-    .day-strip-item.active .day-dom {
-      color: #ffffff !important;
-    }
-    .day-dow {
-      font-size: 0.625rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-    }
-    .day-dom {
-      font-size: 0.95rem;
-      font-weight: 800;
-      font-variant-numeric: tabular-nums;
+    .schedule-scope-btn:hover {
       color: var(--text-primary);
     }
-    .day-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: var(--accent-cyan);
-      margin-top: 2px;
+    .schedule-scope-btn:active {
+      transform: scale(0.97);
+    }
+    .schedule-scope-btn.active {
+      background-color: var(--bg-surface);
+      color: var(--text-primary);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+      border: 1px solid var(--border-highlight);
+    }
+    .scope-count-badge {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.12rem 0.5rem;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      transition: all 0.15s ease;
+    }
+    .schedule-scope-btn.active .scope-count-badge {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+    }
+    .schedule-scope-btn.is-today.active .scope-count-badge {
+      background-color: #ef4444;
+      color: #ffffff;
     }
 
     /* Apple Sports Game Detail Sheet Modal */
@@ -2970,8 +2957,17 @@
     <!-- Apple "My Sports" Quick-Pill Ribbon (1-tap sport switching) -->
     <div class="my-sports-ribbon-wrapper" id="calendar-sport-ribbon"></div>
 
-    <!-- Apple Sports Day Strip (Horizontal Date Ribbon) -->
-    <div class="apple-day-strip-wrapper" id="calendar-day-strip"></div>
+    <!-- Apple-Style Schedule Scope Segmented Control: All Upcoming vs Today -->
+    <div class="schedule-scope-toggle-bar" id="schedule-scope-bar" role="tablist" aria-label="Schedule view scope">
+      <button class="schedule-scope-btn active" id="scope-btn-upcoming" onclick="setScheduleScope('upcoming')" role="tab" aria-selected="true">
+        <span>📅 All Upcoming</span>
+        <span class="scope-count-badge" id="scope-upcoming-count">96</span>
+      </button>
+      <button class="schedule-scope-btn is-today" id="scope-btn-today" onclick="setScheduleScope('today')" role="tab" aria-selected="false">
+        <span>🔥 Today's Games</span>
+        <span class="scope-count-badge" id="scope-today-count">0</span>
+      </button>
+    </div>
 
     <!-- Status Line -->
     <div class="apple-status-line" id="apple-status-line">
@@ -4397,94 +4393,29 @@ function onRibbonPillClick(viewName, sportKey) {
 }
 
 // ==========================================
-// Apple Sports Day Strip (Horizontal Date Ribbon)
+// Apple-Style Schedule Scope: All Upcoming vs Today
 // ==========================================
-function renderDayStrip() {
-  const container = document.getElementById('calendar-day-strip');
-  if (!container) return;
+let scheduleScope = 'upcoming'; // 'upcoming' | 'today'
 
-  const todayStr = getTodayEasternString();
-  const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
+function setScheduleScope(scope) {
+  scheduleScope = scope;
+  const btnUpcoming = document.getElementById('scope-btn-upcoming');
+  const btnToday = document.getElementById('scope-btn-today');
 
-  // Find upcoming dates matching current sport & location filters
-  const upcoming = sorted.filter(item => {
-    const isCompleted = Boolean(item.result || item.mhsScore !== undefined || item.date < todayStr);
-    if (isCompleted) return false;
-    if (currentSelectedSport !== 'all' && item.sport !== currentSelectedSport) return false;
-    if (activeLocFilter === 'home' && !item.isHome) return false;
-    if (activeLocFilter === 'away' && item.isHome) return false;
-    if (activeLocFilter === 'fnl') {
-      const d = new Date(item.date + 'T12:00:00');
-      const day = d.getDay();
-      const isFridayNight = (day === 5 && (item.time.includes('PM') && !item.time.startsWith('12:') && !item.time.startsWith('1:') && !item.time.startsWith('2:') && !item.time.startsWith('3:') && !item.time.startsWith('4:')));
-      const isWeekend = (day === 0 || day === 6);
-      if (!isFridayNight && !isWeekend) return false;
-    }
-    return true;
-  });
-
-  const distinctDates = Array.from(new Set(upcoming.map(e => e.date)));
-
-  if (distinctDates.length === 0) {
-    container.innerHTML = '';
-    return;
+  if (btnUpcoming) {
+    btnUpcoming.classList.toggle('active', scope === 'upcoming');
+    btnUpcoming.setAttribute('aria-selected', scope === 'upcoming' ? 'true' : 'false');
+  }
+  if (btnToday) {
+    btnToday.classList.toggle('active', scope === 'today');
+    btnToday.setAttribute('aria-selected', scope === 'today' ? 'true' : 'false');
   }
 
-  // Validate active selection still exists in filtered dates
-  if (selectedDayStripDate && !distinctDates.includes(selectedDayStripDate)) {
-    selectedDayStripDate = null;
-  }
-
-  const isAllActive = !selectedDayStripDate;
-  let html = `
-    <button class="day-strip-item ${isAllActive ? 'active' : ''}" onclick="selectDayStripDate(null)" aria-label="Show all dates">
-      <span class="day-dow">ALL</span>
-      <span class="day-dom">${distinctDates.length}d</span>
-      <span class="day-dot" style="${isAllActive ? 'background-color:#ffffff;' : 'opacity:0;'}"></span>
-    </button>
-  `;
-
-  distinctDates.forEach(dateStr => {
-    const isToday = dateStr === todayStr;
-    const isSelected = selectedDayStripDate === dateStr;
-    const parts = dateStr.split('-');
-    const monthIndex = parseInt(parts[1], 10) - 1;
-    const dayNum = parseInt(parts[2], 10);
-    const dateObj = new Date(parseInt(parts[0], 10), monthIndex, dayNum);
-    const dayName = isToday ? 'TODAY' : dateObj.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase();
-
-    html += `
-      <button class="day-strip-item ${isToday ? 'is-today' : ''} ${isSelected ? 'active' : ''}" onclick="selectDayStripDate('${dateStr}')" aria-label="${formatDate(dateStr)}">
-        <span class="day-dow">${dayName}</span>
-        <span class="day-dom">${dayNum}</span>
-        <span class="day-dot" style="${isSelected ? 'background-color:#ffffff;' : (isToday ? 'background-color:#f87171;' : '')}"></span>
-      </button>
-    `;
-  });
-
-  container.innerHTML = html;
+  renderDailyView();
 }
 
-function selectDayStripDate(dateStr) {
-  if (selectedDayStripDate === dateStr) {
-    selectedDayStripDate = null;
-  } else {
-    selectedDayStripDate = dateStr;
-  }
-  renderDailyView();
-
-  if (selectedDayStripDate) {
-    setTimeout(() => {
-      const targetCard = document.querySelector(`.card[data-date="${selectedDayStripDate}"]`);
-      if (targetCard) {
-        const headerEl = document.querySelector('.app-header');
-        const headerHeight = headerEl ? headerEl.offsetHeight : 140;
-        const rect = targetCard.getBoundingClientRect();
-        const topPos = window.pageYOffset + rect.top - headerHeight - 16;
-        window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
-      }
-    }, 60);
-  }
+function renderDayStrip() {
+  // Maintained as safe no-op for backward compatibility
 }
 
 // ==========================================
@@ -4804,7 +4735,8 @@ function renderDailyView() {
 
   const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
 
-  const filtered = sorted.filter(item => {
+  // Base filtered upcoming games matching sport, location, and search
+  const baseFiltered = sorted.filter(item => {
     // Strict Temporal Separation: Schedule displays strictly upcoming & active games
     const isCompleted = Boolean(item.result || item.mhsScore !== undefined || item.date < todayStr);
     if (isCompleted) return false;
@@ -4820,11 +4752,26 @@ function renderDailyView() {
       if (!isFridayNight && !isWeekend) return false;
     }
 
-    if (selectedDayStripDate && item.date !== selectedDayStripDate) return false;
-
     if (query) {
       const matchText = `${item.sport} ${item.opp} ${item.venue} ${item.date}`.toLowerCase();
       if (!matchText.includes(query)) return false;
+    }
+    return true;
+  });
+
+  // Calculate live counts for scope buttons
+  const todayCount = baseFiltered.filter(item => item.date === todayStr).length;
+  const upcomingCount = baseFiltered.length;
+
+  const scopeUpcomingBadge = document.getElementById('scope-upcoming-count');
+  const scopeTodayBadge = document.getElementById('scope-today-count');
+  if (scopeUpcomingBadge) scopeUpcomingBadge.textContent = upcomingCount;
+  if (scopeTodayBadge) scopeTodayBadge.textContent = todayCount;
+
+  // Filter based on selected schedule scope
+  const filtered = baseFiltered.filter(item => {
+    if (scheduleScope === 'today') {
+      return item.date === todayStr;
     }
     return true;
   });
@@ -4835,14 +4782,14 @@ function renderDailyView() {
 
   if (countEl) {
     const locDesc = activeLocFilter === 'all' ? '' : ` (${LOC_FILTER_OPTIONS[activeLocFilter].name})`;
-    const dateDesc = selectedDayStripDate ? ` &bull; 📅 ${formatDate(selectedDayStripDate)}` : '';
+    const scopeDesc = scheduleScope === 'today' ? " today's" : " upcoming";
     if (currentSelectedSport === 'all') {
-      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> upcoming games${locDesc}${dateDesc}`;
+      countEl.innerHTML = `Showing <strong>${filtered.length}</strong>${scopeDesc} games${locDesc}`;
       if (syncSportBtn) syncSportBtn.style.display = 'none';
     } else {
       const meta = SPORT_META[currentSelectedSport];
       const venueStr = meta ? ` &bull; 📍 ${meta.venue}` : '';
-      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> upcoming ${currentSelectedSport} games${locDesc}${dateDesc}${venueStr}`;
+      countEl.innerHTML = `Showing <strong>${filtered.length}</strong>${scopeDesc} ${currentSelectedSport} games${locDesc}${venueStr}`;
       if (syncSportBtn) {
         syncSportBtn.style.display = 'inline-flex';
         syncSportBtn.innerHTML = `<span>📅 Sync ${currentSelectedSport}</span>`;
@@ -4851,13 +4798,31 @@ function renderDailyView() {
   }
 
   if (filtered.length === 0) {
-    container.innerHTML = `
-      <div class="empty-state">
-        <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem;">No upcoming games found</p>
-        <p style="font-size: 0.85rem; margin-bottom: 0.75rem;">Looking for past match results? Check the <a href="#scores" onclick="switchTab('scores')" style="color: var(--accent-blue); text-decoration: underline; font-weight: 600;">🏁 Scores tab</a>.</p>
-        <p style="font-size: 0.8rem; color: var(--text-muted);">Or try adjusting your search query, sport, or date filter.</p>
-      </div>
-    `;
+    if (scheduleScope === 'today') {
+      const nextGame = baseFiltered[0];
+      const nextGameInfo = nextGame 
+        ? `Next upcoming match: <strong>${nextGame.sport} vs. ${nextGame.opp}</strong> on <strong>${formatDate(nextGame.date)} at ${nextGame.time}</strong>.`
+        : 'No upcoming games found for this selection.';
+
+      container.innerHTML = `
+        <div class="empty-state" style="padding: 2.5rem 1.5rem; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.65rem;">📅</div>
+          <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">No Games Scheduled for Today</p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); max-width: 440px; margin: 0 auto 1.25rem; line-height: 1.5;">${nextGameInfo}</p>
+          <button class="detail-action-btn primary" onclick="setScheduleScope('upcoming')" style="max-width: 250px; margin: 0 auto;">
+            <span>📅 View All Future Games</span>
+          </button>
+        </div>
+      `;
+    } else {
+      container.innerHTML = `
+        <div class="empty-state">
+          <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem;">No upcoming games found</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.75rem;">Looking for past match results? Check the <a href="#scores" onclick="switchTab('scores')" style="color: var(--accent-blue); text-decoration: underline; font-weight: 600;">🏁 Scores tab</a>.</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">Or try adjusting your search query, sport, or location filter.</p>
+        </div>
+      `;
+    }
   } else {
     const target = getTargetGameDay();
     let firstTargetAssigned = false;
@@ -4880,8 +4845,6 @@ function renderDailyView() {
       return renderCard(item, targetBadge, isTarget, targetCardId);
     }).join('');
   }
-
-  renderDayStrip();
 }
 
 let isFabInTopMode = false;
@@ -5297,7 +5260,6 @@ function switchTab(view, updateHistory = true) {
     if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
     document.getElementById('calendar-view').classList.add('active');
     renderMySportsRibbons();
-    renderDayStrip();
   } else if (view === 'scores') {
     const tab = document.getElementById('tab-scores');
     if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
@@ -5519,7 +5481,6 @@ renderMySportsRibbons();
 renderDailyView();
 renderScoresView();
 renderStandingsView();
-renderDayStrip();
 loadDynamicScoresAndStandings();
 startNextGameCountdown();
 setTimeout(syncHeaderHeight, 100);
