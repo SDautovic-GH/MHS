@@ -503,52 +503,199 @@
       white-space: nowrap;
     }
 
-    /* Quick Sport Chips Grid (Wraps all 8 sports into 2 clean rows) */
-    .sport-chips-strip {
+    /* Apple Sports Segmented Selector Bar */
+    .apple-sports-bar {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem 0.35rem;
-      padding-top: 0.65rem;
-      padding-bottom: 0.25rem;
-      margin: 0;
-      border-top: 1px solid var(--border-subtle);
+      align-items: center;
+      gap: 0.45rem;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 0.5rem 0.65rem;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      position: sticky;
+      top: calc(var(--header-height, 58px) + 6px);
+      z-index: 85;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
 
-    .sport-chip-btn {
+    .apple-picker-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
       background-color: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
-      color: var(--text-secondary);
-      font-size: 0.775rem;
-      font-weight: 600;
-      padding: 0.35rem 0.65rem;
-      border-radius: 20px;
+      color: var(--text-primary);
+      font-size: 0.825rem;
+      font-weight: 700;
+      padding: 0.45rem 0.7rem;
+      border-radius: 12px;
       cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.15s ease;
+      transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
       user-select: none;
       -webkit-user-select: none;
+      white-space: nowrap;
+      flex: 1;
+      min-width: 0;
     }
 
-    .sport-chip-btn:hover {
-      color: var(--text-primary);
+    .apple-picker-btn:hover {
       border-color: var(--border-highlight);
     }
 
-    .sport-chip-btn.active {
+    .apple-picker-btn:active {
+      transform: scale(0.97);
+    }
+
+    .picker-btn-content {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .picker-btn-icon {
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .picker-btn-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .picker-btn-right {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+
+    .picker-btn-count {
+      font-size: 0.725rem;
+      font-weight: 800;
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--accent-blue);
+      padding: 0.1rem 0.45rem;
+      border-radius: 8px;
+      line-height: 1.2;
+    }
+
+    .picker-btn-chevron {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      line-height: 1;
+    }
+
+    .apple-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-size: 0.9rem;
+    }
+
+    .apple-icon-btn:hover {
+      border-color: var(--border-highlight);
+    }
+
+    .apple-icon-btn:active {
+      transform: scale(0.95);
+    }
+
+    .apple-icon-btn.active {
       background-color: var(--accent-blue);
       color: #ffffff;
       border-color: var(--accent-blue);
-      box-shadow: 0 2px 6px rgba(59, 130, 246, 0.3);
     }
 
-    /* Filter Status & Compact Inline Actions */
-    .filter-status-row {
+    .apple-icon-btn.next-game-accent {
+      color: var(--accent-cyan);
+    }
+
+    /* Expandable Search Drawer */
+    .apple-search-drawer {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 0.45rem 0.75rem;
+      margin-bottom: 0.75rem;
+      display: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+      animation: appleSlideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes appleSlideDown {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .apple-search-inner {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+    }
+
+    .search-drawer-icon {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .apple-search-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-primary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      min-width: 0;
+    }
+
+    .search-drawer-clear {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      cursor: pointer;
+      padding: 0.2rem 0.4rem;
+      border-radius: 50%;
+    }
+
+    .search-drawer-clear:hover {
+      color: var(--text-primary);
+    }
+
+    /* Status & Actions Line */
+    .apple-status-line {
+      display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 0.5rem;
-      padding-top: 0.25rem;
+      margin-bottom: 1rem;
+      padding: 0 0.25rem;
+    }
+
+    .apple-count-text {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
     }
 
     .sync-sport-ics-inline {
@@ -571,6 +718,219 @@
       background-color: var(--accent-blue);
       color: #ffffff;
       border-color: var(--accent-blue);
+    }
+
+    /* Apple-Style Bottom Sheet Modals */
+    .apple-sheet-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .apple-sheet-backdrop.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .apple-sheet {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-highlight);
+      border-bottom: none;
+      border-radius: 24px 24px 0 0;
+      width: 100%;
+      max-width: 520px;
+      max-height: 82vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.35);
+      transform: translateY(100%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+      overflow: hidden;
+    }
+
+    .apple-sheet-backdrop.active .apple-sheet {
+      transform: translateY(0);
+    }
+
+    .apple-sheet-handle-bar {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 0.75rem;
+      padding-bottom: 0.4rem;
+    }
+
+    .apple-sheet-handle {
+      width: 36px;
+      height: 5px;
+      border-radius: 3px;
+      background-color: var(--border-highlight);
+    }
+
+    .apple-sheet-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.35rem 1.25rem 0.85rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .apple-sheet-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+
+    .apple-sheet-close {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .apple-sheet-close:hover {
+      color: var(--text-primary);
+      border-color: var(--border-highlight);
+    }
+
+    .apple-sheet-body {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 0.65rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .apple-sheet-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0.95rem;
+      border-radius: 14px;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.12s ease;
+      text-align: left;
+      width: 100%;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .apple-sheet-option:hover, .apple-sheet-option:active {
+      background-color: var(--bg-surface-elevated);
+    }
+
+    .apple-sheet-option.active {
+      background-color: var(--bg-surface-elevated);
+      border-color: var(--border-highlight);
+    }
+
+    .sheet-opt-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 0;
+    }
+
+    .sheet-opt-icon {
+      font-size: 1.35rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .sheet-opt-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      min-width: 0;
+    }
+
+    .sheet-opt-title {
+      font-size: 0.925rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .sheet-opt-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sheet-opt-right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .sheet-opt-count {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 0.15rem 0.5rem;
+      border-radius: 10px;
+    }
+
+    .sheet-opt-check {
+      color: var(--accent-blue);
+      font-size: 1.15rem;
+      font-weight: 900;
+      opacity: 0;
+      width: 20px;
+      text-align: center;
+    }
+
+    .apple-sheet-option.active .sheet-opt-check {
+      opacity: 1;
+    }
+
+    .sheet-footer-action {
+      padding: 0.75rem 0.85rem 0.25rem;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 0.35rem;
+    }
+
+    .sheet-sync-btn {
+      width: 100%;
+      background-color: var(--accent-blue);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 0.65rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
     }
 
     /* Floating Quick-Action Button ("📍 Next Game") */
@@ -1890,47 +2250,55 @@
   </div>
 
   <main id="calendar-view" class="view-panel active" role="tabpanel" aria-labelledby="tab-calendar">
-    <div class="filter-bar">
-      <!-- Search Input -->
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="schedule-search" class="search-input" placeholder="Search opponent, sport, or venue..." oninput="onFilterChange()" aria-label="Search schedule">
-      </div>
-
-      <!-- Quick Sport Chips Scroller -->
-      <div class="sport-chips-strip" role="tablist" aria-label="Filter by sport">
-        <button class="sport-chip-btn active" data-sport="all" onclick="selectSport('all')">🌟 All Sports</button>
-        <button class="sport-chip-btn" data-sport="Football" onclick="selectSport('Football')">🏈 Football</button>
-        <button class="sport-chip-btn" data-sport="Boys' Soccer" onclick="selectSport('Boys\' Soccer')">⚽ Boys Soccer</button>
-        <button class="sport-chip-btn" data-sport="Girls' Soccer" onclick="selectSport('Girls\' Soccer')">⚽ Girls Soccer</button>
-        <button class="sport-chip-btn" data-sport="Girls' Volleyball" onclick="selectSport('Girls\' Volleyball')">🏐 Volleyball</button>
-        <button class="sport-chip-btn" data-sport="Field Hockey" onclick="selectSport('Field Hockey')">🏑 Field Hockey</button>
-        <button class="sport-chip-btn" data-sport="Golf" onclick="selectSport('Golf')">⛳ Golf</button>
-        <button class="sport-chip-btn" data-sport="Cross Country" onclick="selectSport('Cross Country')">🏃 Cross Country</button>
-      </div>
-
-      <!-- Location & State Filter Pills Row -->
-      <div class="filter-pills-row">
-        <div class="filter-pills">
-          <button class="filter-pill active" data-loc="all" onclick="setLocFilter('all')">All Locations</button>
-          <button class="filter-pill" data-loc="home" onclick="setLocFilter('home')">🏠 Home</button>
-          <button class="filter-pill" data-loc="away" onclick="setLocFilter('away')">🚌 Away</button>
-          <button class="filter-pill" data-loc="past" onclick="setLocFilter('past')">🏁 Past &amp; Scores</button>
-          <button class="filter-pill" data-loc="fnl" onclick="setLocFilter('fnl')">🌙 Fri Night &amp; Weekend</button>
+    <!-- Apple Sports Segmented Selector Bar -->
+    <div class="apple-sports-bar" id="apple-sports-bar">
+      <!-- Sport Picker Trigger -->
+      <button class="apple-picker-btn" id="sport-picker-btn" onclick="openSportSheet()" aria-label="Select sport" aria-haspopup="dialog">
+        <div class="picker-btn-content">
+          <span class="picker-btn-icon" id="picker-sport-icon">🌟</span>
+          <span class="picker-btn-text" id="picker-sport-title">All Sports</span>
         </div>
-        <button class="jump-today-btn" id="jump-today-btn" onclick="scrollToCurrentOrNextGame(true)" title="Jump to today or next game day">
-          <span>📍</span>
-          <span id="jump-today-text">Next Game</span>
-        </button>
-      </div>
+        <div class="picker-btn-right">
+          <span class="picker-btn-count" id="picker-sport-count">96</span>
+          <span class="picker-btn-chevron">▾</span>
+        </div>
+      </button>
 
-      <!-- Filter Status & Actions Row -->
-      <div class="filter-status-row">
-        <span class="count-indicator" id="filter-count">Showing 96 games</span>
-        <button class="sync-sport-ics-inline" id="sync-sport-btn" onclick="exportCurrentSportIcs()" style="display:none;" title="Add schedule for this sport to your calendar">
-          <span>📅 Add to Calendar (.ics)</span>
-        </button>
+      <!-- Location / Filter Trigger -->
+      <button class="apple-picker-btn" id="loc-picker-btn" onclick="openLocSheet()" aria-label="Select location filter" aria-haspopup="dialog">
+        <div class="picker-btn-content">
+          <span class="picker-btn-icon" id="picker-loc-icon">📍</span>
+          <span class="picker-btn-text" id="picker-loc-title">All Games</span>
+        </div>
+        <span class="picker-btn-chevron">▾</span>
+      </button>
+
+      <!-- Search Icon Button -->
+      <button class="apple-icon-btn" id="search-toggle-btn" onclick="toggleSearchDrawer()" title="Search schedule" aria-label="Search schedule">
+        <span id="search-btn-icon">🔍</span>
+      </button>
+
+      <!-- Jump to Next Game Button -->
+      <button class="apple-icon-btn next-game-accent" onclick="scrollToCurrentOrNextGame(true)" title="Jump to next game" aria-label="Jump to next game">
+        <span>📍</span>
+      </button>
+    </div>
+
+    <!-- Expandable Search Drawer (Slide-down) -->
+    <div class="apple-search-drawer" id="apple-search-drawer">
+      <div class="apple-search-inner">
+        <span class="search-drawer-icon">🔍</span>
+        <input type="text" id="schedule-search" class="apple-search-input" placeholder="Search opponent, sport, or venue..." oninput="onFilterChange()" aria-label="Search schedule">
+        <button class="search-drawer-clear" id="search-clear-btn" onclick="clearSearchInput()" aria-label="Clear search" style="display:none;">✕</button>
       </div>
+    </div>
+
+    <!-- Status Line -->
+    <div class="apple-status-line" id="apple-status-line">
+      <span class="apple-count-text" id="filter-count">Showing 96 games</span>
+      <button class="sync-sport-ics-inline" id="sync-sport-btn" onclick="exportCurrentSportIcs()" style="display:none;" title="Add schedule for this sport to your calendar">
+        <span>📅 Add to Calendar (.ics)</span>
+      </button>
     </div>
 
     <div class="grid" id="daily-grid"></div>
@@ -2361,6 +2729,96 @@
 
 <!-- Floating Toast Feedback -->
 <div id="toast-notify" class="toast-notify" role="alert"></div>
+
+<!-- Apple-Style Bottom Sheet: Sport Picker -->
+<div class="apple-sheet-backdrop" id="sheet-sport-backdrop" onclick="if(event.target===this)closeAllSheets()">
+  <div class="apple-sheet" role="dialog" aria-modal="true" aria-labelledby="sport-sheet-title">
+    <div class="apple-sheet-handle-bar"><div class="apple-sheet-handle"></div></div>
+    <div class="apple-sheet-header">
+      <h3 class="apple-sheet-title" id="sport-sheet-title">Select Sport</h3>
+      <button class="apple-sheet-close" onclick="closeAllSheets()" aria-label="Close sport picker">✕</button>
+    </div>
+    <div class="apple-sheet-body" id="sport-sheet-list"></div>
+    <div class="sheet-footer-action" id="sport-sheet-footer" style="display:none;">
+      <button class="sheet-sync-btn" id="sheet-sync-btn" onclick="exportCurrentSportIcs()">
+        <span>📅 Add to Calendar (.ics)</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Apple-Style Bottom Sheet: Location Filter Picker -->
+<div class="apple-sheet-backdrop" id="sheet-loc-backdrop" onclick="if(event.target===this)closeAllSheets()">
+  <div class="apple-sheet" role="dialog" aria-modal="true" aria-labelledby="loc-sheet-title">
+    <div class="apple-sheet-handle-bar"><div class="apple-sheet-handle"></div></div>
+    <div class="apple-sheet-header">
+      <h3 class="apple-sheet-title" id="loc-sheet-title">Filter by Game Type</h3>
+      <button class="apple-sheet-close" onclick="closeAllSheets()" aria-label="Close location filter">✕</button>
+    </div>
+    <div class="apple-sheet-body" id="loc-sheet-list">
+      <button class="apple-sheet-option active" data-loc="all" onclick="selectLocOption('all')">
+        <div class="sheet-opt-left">
+          <span class="sheet-opt-icon">📍</span>
+          <div class="sheet-opt-info">
+            <span class="sheet-opt-title">All Games</span>
+            <span class="sheet-opt-subtitle">Home and away matchups</span>
+          </div>
+        </div>
+        <div class="sheet-opt-right">
+          <span class="sheet-opt-check">✓</span>
+        </div>
+      </button>
+      <button class="apple-sheet-option" data-loc="home" onclick="selectLocOption('home')">
+        <div class="sheet-opt-left">
+          <span class="sheet-opt-icon">🏠</span>
+          <div class="sheet-opt-info">
+            <span class="sheet-opt-title">Home Games Only</span>
+            <span class="sheet-opt-subtitle">Melrose local stadiums &amp; courts</span>
+          </div>
+        </div>
+        <div class="sheet-opt-right">
+          <span class="sheet-opt-check">✓</span>
+        </div>
+      </button>
+      <button class="apple-sheet-option" data-loc="away" onclick="selectLocOption('away')">
+        <div class="sheet-opt-left">
+          <span class="sheet-opt-icon">🚌</span>
+          <div class="sheet-opt-info">
+            <span class="sheet-opt-title">Away Games Only</span>
+            <span class="sheet-opt-subtitle">Traveling opponent venues</span>
+          </div>
+        </div>
+        <div class="sheet-opt-right">
+          <span class="sheet-opt-check">✓</span>
+        </div>
+      </button>
+      <button class="apple-sheet-option" data-loc="past" onclick="selectLocOption('past')">
+        <div class="sheet-opt-left">
+          <span class="sheet-opt-icon">🏁</span>
+          <div class="sheet-opt-info">
+            <span class="sheet-opt-title">Past Games &amp; Scores</span>
+            <span class="sheet-opt-subtitle">Final scores &amp; completed matches</span>
+          </div>
+        </div>
+        <div class="sheet-opt-right">
+          <span class="sheet-opt-check">✓</span>
+        </div>
+      </button>
+      <button class="apple-sheet-option" data-loc="fnl" onclick="selectLocOption('fnl')">
+        <div class="sheet-opt-left">
+          <span class="sheet-opt-icon">🌙</span>
+          <div class="sheet-opt-info">
+            <span class="sheet-opt-title">Fri Night &amp; Weekend</span>
+            <span class="sheet-opt-subtitle">Friday night lights &amp; weekend games</span>
+          </div>
+        </div>
+        <div class="sheet-opt-right">
+          <span class="sheet-opt-check">✓</span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
 
 <script>
 // Complete Varsity Athletic Schedule Data (Pristine 96 games of Fall 2026)
@@ -3085,17 +3543,193 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
   `;
 }
 
-let activeLocFilter = 'all'; // 'all' | 'home' | 'away' | 'fnl'
+// ==========================================
+// Apple Sports Selector Bar & Sheet Logic
+// ==========================================
+const ALL_SPORTS_LIST = [
+  { key: 'all', name: 'All Sports', icon: '🌟', venue: 'All Melrose Facilities' },
+  { key: 'Football', name: 'Football', icon: '🏈', venue: 'Fred Green Memorial Field' },
+  { key: 'Boys\' Soccer', name: 'Boys\' Soccer', icon: '⚽', venue: 'Pine Banks & The Knoll' },
+  { key: 'Girls\' Soccer', name: 'Girls\' Soccer', icon: '⚽', venue: 'Pine Banks & Fred Green Field' },
+  { key: 'Girls\' Volleyball', name: 'Girls\' Volleyball', icon: '🏐', venue: 'MVMMS Middle School Gym' },
+  { key: 'Field Hockey', name: 'Field Hockey', icon: '🏑', venue: 'Pine Banks Park' },
+  { key: 'Golf', name: 'Golf', icon: '⛳', venue: 'Bellevue Golf Club' },
+  { key: 'Cross Country', name: 'Cross Country', icon: '🏃', venue: 'Pine Banks Park' }
+];
 
-function setLocFilter(loc) {
-  activeLocFilter = loc;
-  document.querySelectorAll('.filter-pill').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-loc') === loc);
+const SPORT_META = {
+  "all": { name: "All Sports", icon: "🌟", venue: "All Melrose Facilities" },
+  "Football": { name: "Football", icon: "🏈", venue: "Fred Green Memorial Field" },
+  "Boys' Soccer": { name: "Boys' Soccer", icon: "⚽", venue: "Pine Banks & The Knoll" },
+  "Girls' Soccer": { name: "Girls' Soccer", icon: "⚽", venue: "Pine Banks & Fred Green Field" },
+  "Girls' Volleyball": { name: "Girls' Volleyball", icon: "🏐", venue: "MVMMS Middle School Gym" },
+  "Field Hockey": { name: "Field Hockey", icon: "🏑", venue: "Pine Banks Park" },
+  "Golf": { name: "Golf", icon: "⛳", venue: "Bellevue Golf Club" },
+  "Cross Country": { name: "Cross Country", icon: "🏃", venue: "Pine Banks Park" }
+};
+
+const LOC_FILTER_OPTIONS = {
+  'all': { name: 'All Games', icon: '📍', subtitle: 'Home and away matchups' },
+  'home': { name: 'Home Only', icon: '🏠', subtitle: 'Melrose local stadiums & courts' },
+  'away': { name: 'Away Only', icon: '🚌', subtitle: 'Traveling opponent venues' },
+  'past': { name: 'Past & Scores', icon: '🏁', subtitle: 'Final scores & completed matches' },
+  'fnl': { name: 'Fri Night & Weekend', icon: '🌙', subtitle: 'Friday night lights & weekend games' }
+};
+
+let currentSelectedSport = 'all';
+let activeLocFilter = 'all'; // 'all' | 'home' | 'away' | 'past' | 'fnl'
+let isSearchDrawerOpen = false;
+
+function openSportSheet() {
+  closeAllSheets();
+  renderSportSheetList();
+  const backdrop = document.getElementById('sheet-sport-backdrop');
+  if (backdrop) backdrop.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function openLocSheet() {
+  closeAllSheets();
+  updateLocSheetSelection();
+  const backdrop = document.getElementById('sheet-loc-backdrop');
+  if (backdrop) backdrop.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAllSheets() {
+  document.querySelectorAll('.apple-sheet-backdrop').forEach(b => b.classList.remove('active'));
+  document.body.style.overflow = '';
+}
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeAllSheets();
+});
+
+function renderSportSheetList() {
+  const listEl = document.getElementById('sport-sheet-list');
+  if (!listEl) return;
+
+  listEl.innerHTML = ALL_SPORTS_LIST.map(s => {
+    const isSelected = currentSelectedSport === s.key;
+    const count = s.key === 'all'
+      ? events.length
+      : events.filter(e => e.sport === s.name).length;
+
+    return `
+      <button class="apple-sheet-option ${isSelected ? 'active' : ''}" onclick="selectSport('${s.key.replace(/'/g, "\\'")}')">
+        <div class="sheet-opt-left">
+          <span class="sheet-opt-icon">${s.icon}</span>
+          <div class="sheet-opt-info">
+            <span class="sheet-opt-title">${s.name}</span>
+            <span class="sheet-opt-subtitle">${s.venue}</span>
+          </div>
+        </div>
+        <div class="sheet-opt-right">
+          <span class="sheet-opt-count">${count}</span>
+          <span class="sheet-opt-check">✓</span>
+        </div>
+      </button>
+    `;
+  }).join('');
+
+  const footerEl = document.getElementById('sport-sheet-footer');
+  const syncBtn = document.getElementById('sheet-sync-btn');
+  if (footerEl && syncBtn) {
+    footerEl.style.display = 'block';
+    if (currentSelectedSport !== 'all') {
+      syncBtn.innerHTML = `<span>📅 Add ${currentSelectedSport} Schedule to Calendar (.ics)</span>`;
+    } else {
+      syncBtn.innerHTML = `<span>📅 Add All 96 Games to Calendar (.ics)</span>`;
+    }
+  }
+}
+
+function updateLocSheetSelection() {
+  document.querySelectorAll('#loc-sheet-list .apple-sheet-option').forEach(opt => {
+    const loc = opt.getAttribute('data-loc');
+    opt.classList.toggle('active', loc === activeLocFilter);
   });
+}
+
+function selectSport(sportKey) {
+  currentSelectedSport = sportKey;
+
+  const found = ALL_SPORTS_LIST.find(s => s.key === sportKey) || ALL_SPORTS_LIST[0];
+  const count = sportKey === 'all'
+    ? events.length
+    : events.filter(e => e.sport === found.name).length;
+
+  const iconEl = document.getElementById('picker-sport-icon');
+  const titleEl = document.getElementById('picker-sport-title');
+  const countEl = document.getElementById('picker-sport-count');
+
+  if (iconEl) iconEl.textContent = found.icon;
+  if (titleEl) titleEl.textContent = found.name;
+  if (countEl) countEl.textContent = count;
+
+  closeAllSheets();
   renderDailyView();
 }
 
+function selectLocOption(loc) {
+  setLocFilter(loc);
+  closeAllSheets();
+}
+
+function setLocFilter(loc) {
+  activeLocFilter = loc;
+
+  const opt = LOC_FILTER_OPTIONS[loc] || LOC_FILTER_OPTIONS['all'];
+  const iconEl = document.getElementById('picker-loc-icon');
+  const titleEl = document.getElementById('picker-loc-title');
+
+  if (iconEl) iconEl.textContent = opt.icon;
+  if (titleEl) titleEl.textContent = opt.name;
+
+  updateLocSheetSelection();
+  renderDailyView();
+}
+
+function toggleSearchDrawer() {
+  const drawer = document.getElementById('apple-search-drawer');
+  const btn = document.getElementById('search-toggle-btn');
+  const input = document.getElementById('schedule-search');
+  if (!drawer) return;
+
+  isSearchDrawerOpen = !isSearchDrawerOpen;
+  drawer.style.display = isSearchDrawerOpen ? 'flex' : 'none';
+  if (btn) btn.classList.toggle('active', isSearchDrawerOpen);
+
+  if (isSearchDrawerOpen && input) {
+    input.focus();
+  }
+}
+
+function clearSearchInput() {
+  const input = document.getElementById('schedule-search');
+  const clearBtn = document.getElementById('search-clear-btn');
+  if (input) {
+    input.value = '';
+    if (clearBtn) clearBtn.style.display = 'none';
+    onFilterChange();
+    input.focus();
+  }
+}
+
 function onFilterChange() {
+  const input = document.getElementById('schedule-search');
+  const clearBtn = document.getElementById('search-clear-btn');
+  const searchBtn = document.getElementById('search-toggle-btn');
+  if (input && clearBtn) {
+    clearBtn.style.display = input.value.length > 0 ? 'inline-block' : 'none';
+  }
+  if (searchBtn && input) {
+    if (input.value.length > 0) {
+      searchBtn.classList.add('active');
+    } else if (!isSearchDrawerOpen) {
+      searchBtn.classList.remove('active');
+    }
+  }
   renderDailyView();
 }
 
@@ -3133,13 +3767,14 @@ function renderDailyView() {
   const syncSportBtn = document.getElementById('sync-sport-btn');
 
   if (countEl) {
+    const locDesc = activeLocFilter === 'all' ? '' : ` (${LOC_FILTER_OPTIONS[activeLocFilter].name})`;
     if (currentSelectedSport === 'all') {
-      countEl.textContent = `Showing ${filtered.length} games`;
+      countEl.textContent = `Showing ${filtered.length} games${locDesc}`;
       if (syncSportBtn) syncSportBtn.style.display = 'none';
     } else {
       const meta = SPORT_META[currentSelectedSport];
       const venueStr = meta ? ` &bull; 📍 ${meta.venue}` : '';
-      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> ${currentSelectedSport} games${venueStr}`;
+      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> ${currentSelectedSport} games${locDesc}${venueStr}`;
       if (syncSportBtn) {
         syncSportBtn.style.display = 'inline-flex';
         syncSportBtn.innerHTML = `<span>📅 Sync ${currentSelectedSport}</span>`;
@@ -3151,21 +3786,12 @@ function renderDailyView() {
     container.innerHTML = `
       <div class="empty-state">
         <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem;">No games match your search</p>
-        <p style="font-size: 0.85rem;">Try adjusting your search query or location filter.</p>
+        <p style="font-size: 0.85rem;">Try adjusting your search query, sport, or location filter.</p>
       </div>
     `;
   } else {
     const target = getTargetGameDay();
     let firstTargetAssigned = false;
-
-    const jumpBtnText = document.getElementById('jump-today-text');
-    if (jumpBtnText) {
-      jumpBtnText.textContent = target.isToday ? "Today's Games" : "Next Game";
-    }
-    const fabLabel = document.getElementById('fab-text');
-    if (fabLabel) {
-      fabLabel.textContent = target.isToday ? "Today's Games" : "Next Game";
-    }
 
     container.innerHTML = filtered.map(item => {
       const isTarget = item.date === target.date;
@@ -3185,33 +3811,6 @@ function renderDailyView() {
       return renderCard(item, targetBadge, isTarget, targetCardId);
     }).join('');
   }
-}
-
-// Sport Metadata & Unified Selector Logic
-const SPORT_META = {
-  "all": { name: "All Sports", icon: "🌟", venue: "All Melrose Facilities" },
-  "Football": { name: "Football", icon: "🏈", venue: "Fred Green Memorial Field" },
-  "Boys' Soccer": { name: "Boys' Soccer", icon: "⚽", venue: "Pine Banks & The Knoll" },
-  "Girls' Soccer": { name: "Girls' Soccer", icon: "⚽", venue: "Pine Banks & Fred Green Field" },
-  "Girls' Volleyball": { name: "Girls' Volleyball", icon: "🏐", venue: "MVMMS Middle School Gym" },
-  "Field Hockey": { name: "Field Hockey", icon: "🏑", venue: "Pine Banks Park" },
-  "Golf": { name: "Golf", icon: "⛳", venue: "Bellevue Golf Club" },
-  "Cross Country": { name: "Cross Country", icon: "🏃", venue: "Pine Banks Park" }
-};
-
-let currentSelectedSport = 'all';
-
-function selectSport(sportName) {
-  if (currentSelectedSport === sportName && sportName !== 'all') {
-    sportName = 'all';
-  }
-  currentSelectedSport = sportName;
-
-  document.querySelectorAll('.sport-chip-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-sport') === sportName);
-  });
-
-  renderDailyView();
 }
 
 let isFabInTopMode = false;
