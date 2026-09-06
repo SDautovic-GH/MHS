@@ -2281,6 +2281,57 @@
       border-color: rgba(59, 130, 246, 0.5);
       box-shadow: 0 4px 16px rgba(59, 130, 246, 0.18);
     }
+
+    /* Clean App Footer */
+    .app-footer {
+      margin-top: 3rem;
+      padding: 2rem 1rem 4rem;
+      border-top: 1px solid var(--border-subtle);
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .footer-link, .footer-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.35rem 0.65rem;
+      border-radius: 8px;
+      transition: all 0.15s ease;
+    }
+    .footer-link:hover, .footer-link-btn:hover {
+      color: var(--accent-blue);
+      background-color: var(--bg-surface-elevated);
+    }
+    .footer-sep {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+    .footer-subtext {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -2296,15 +2347,6 @@
         </div>
       </div>
       <div class="header-actions">
-        <a href="https://www.youtube.com/@MelroseCommunityTelevision/streams" target="_blank" rel="noopener" class="header-link-btn mmtv-btn" title="Watch Melrose sports livestreams on MMTV" aria-label="Watch Melrose sports livestreams on MMTV">
-          <span class="live-pulse-dot"></span>
-          <span class="btn-text-full">Watch MMTV</span>
-          <span class="btn-text-short">MMTV</span>
-        </a>
-        <button class="header-link-btn" onclick="openVenueModal()" title="Melrose Athletic Venues &amp; Parking" aria-label="Venues &amp; Parking">
-          <span>📍</span>
-          <span class="btn-text-full">Venues</span>
-        </button>
         <a id="popout-btn" class="popout-btn" href="#" target="_blank" rel="noopener" style="display:none;" title="Open in dedicated Safari tab for full standalone app">
           <span>Open App ↗</span>
         </a>
@@ -2425,6 +2467,22 @@
     <div id="standings-container"></div>
   </main>
 </div>
+
+<!-- App Footer: MMTV Streams & Venue Guide -->
+<footer class="app-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="https://www.youtube.com/@MelroseCommunityTelevision/streams" target="_blank" rel="noopener" class="footer-link-btn mmtv-footer-btn" title="Watch Melrose sports livestreams on MMTV" aria-label="Watch Melrose sports livestreams on MMTV">
+        <span class="live-pulse-dot"></span>
+        <span>Watch MMTV Livestreams ↗</span>
+      </a>
+      <button class="footer-link-btn" onclick="openVenueModal()" title="Melrose Athletic Venues, Directions &amp; Parking" aria-label="Melrose Athletic Venues &amp; Parking">
+        <span>📍 Venues &amp; Directions</span>
+      </button>
+    </div>
+    <p class="footer-subtext">Melrose High School Athletics &bull; Fall 2026 Varsity &bull; Go Red Raiders!</p>
+  </div>
+</footer>
 
 <!-- Floating Quick-Action Button ("📍 Next Game") -->
 <button id="floating-jump-btn" class="floating-jump-btn" onclick="onFloatingJumpClick()" title="Jump to Today / Next Game" aria-label="Jump to Today or Next Game">
