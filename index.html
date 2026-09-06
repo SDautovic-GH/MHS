@@ -2957,15 +2957,15 @@
     <!-- Apple "My Sports" Quick-Pill Ribbon (1-tap sport switching) -->
     <div class="my-sports-ribbon-wrapper" id="calendar-sport-ribbon"></div>
 
-    <!-- Apple-Style Schedule Scope Segmented Control: All Upcoming vs Today -->
+    <!-- Apple-Style Schedule Scope Segmented Control: Today vs All Upcoming -->
     <div class="schedule-scope-toggle-bar" id="schedule-scope-bar" role="tablist" aria-label="Schedule view scope">
-      <button class="schedule-scope-btn active" id="scope-btn-upcoming" onclick="setScheduleScope('upcoming')" role="tab" aria-selected="true">
-        <span>📅 All Upcoming</span>
-        <span class="scope-count-badge" id="scope-upcoming-count">96</span>
-      </button>
-      <button class="schedule-scope-btn is-today" id="scope-btn-today" onclick="setScheduleScope('today')" role="tab" aria-selected="false">
+      <button class="schedule-scope-btn is-today active" id="scope-btn-today" onclick="setScheduleScope('today')" role="tab" aria-selected="true">
         <span>🔥 Today's Games</span>
         <span class="scope-count-badge" id="scope-today-count">0</span>
+      </button>
+      <button class="schedule-scope-btn" id="scope-btn-upcoming" onclick="setScheduleScope('upcoming')" role="tab" aria-selected="false">
+        <span>📅 All Upcoming</span>
+        <span class="scope-count-badge" id="scope-upcoming-count">96</span>
       </button>
     </div>
 
@@ -4393,9 +4393,9 @@ function onRibbonPillClick(viewName, sportKey) {
 }
 
 // ==========================================
-// Apple-Style Schedule Scope: All Upcoming vs Today
+// Apple-Style Schedule Scope: Today vs All Upcoming
 // ==========================================
-let scheduleScope = 'upcoming'; // 'upcoming' | 'today'
+let scheduleScope = 'today'; // default to 'today'
 
 function setScheduleScope(scope) {
   scheduleScope = scope;
@@ -4782,17 +4782,29 @@ function renderDailyView() {
 
   if (countEl) {
     const locDesc = activeLocFilter === 'all' ? '' : ` (${LOC_FILTER_OPTIONS[activeLocFilter].name})`;
-    const scopeDesc = scheduleScope === 'today' ? " today's" : " upcoming";
-    if (currentSelectedSport === 'all') {
-      countEl.innerHTML = `Showing <strong>${filtered.length}</strong>${scopeDesc} games${locDesc}`;
+    if (scheduleScope === 'today') {
+      if (filtered.length === 0) {
+        countEl.innerHTML = currentSelectedSport === 'all'
+          ? `No games scheduled today${locDesc}`
+          : `No ${currentSelectedSport} games scheduled today${locDesc}`;
+      } else {
+        countEl.innerHTML = currentSelectedSport === 'all'
+          ? `Showing <strong>${filtered.length}</strong> game${filtered.length > 1 ? 's' : ''} today${locDesc}`
+          : `Showing <strong>${filtered.length}</strong> ${currentSelectedSport} game${filtered.length > 1 ? 's' : ''} today${locDesc}`;
+      }
       if (syncSportBtn) syncSportBtn.style.display = 'none';
     } else {
-      const meta = SPORT_META[currentSelectedSport];
-      const venueStr = meta ? ` &bull; 📍 ${meta.venue}` : '';
-      countEl.innerHTML = `Showing <strong>${filtered.length}</strong>${scopeDesc} ${currentSelectedSport} games${locDesc}${venueStr}`;
-      if (syncSportBtn) {
-        syncSportBtn.style.display = 'inline-flex';
-        syncSportBtn.innerHTML = `<span>📅 Sync ${currentSelectedSport}</span>`;
+      if (currentSelectedSport === 'all') {
+        countEl.innerHTML = `Showing <strong>${filtered.length}</strong> upcoming games${locDesc}`;
+        if (syncSportBtn) syncSportBtn.style.display = 'none';
+      } else {
+        const meta = SPORT_META[currentSelectedSport];
+        const venueStr = meta ? ` &bull; 📍 ${meta.venue}` : '';
+        countEl.innerHTML = `Showing <strong>${filtered.length}</strong> upcoming ${currentSelectedSport} games${locDesc}${venueStr}`;
+        if (syncSportBtn) {
+          syncSportBtn.style.display = 'inline-flex';
+          syncSportBtn.innerHTML = `<span>📅 Sync ${currentSelectedSport}</span>`;
+        }
       }
     }
   }
@@ -4805,12 +4817,12 @@ function renderDailyView() {
         : 'No upcoming games found for this selection.';
 
       container.innerHTML = `
-        <div class="empty-state" style="padding: 2.5rem 1.5rem; text-align: center;">
-          <div style="font-size: 2.5rem; margin-bottom: 0.65rem;">📅</div>
-          <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">No Games Scheduled for Today</p>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); max-width: 440px; margin: 0 auto 1.25rem; line-height: 1.5;">${nextGameInfo}</p>
+        <div class="empty-state" style="padding: 2.25rem 1.25rem; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">☀️</div>
+          <p style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.35rem;">No Games Today</p>
+          <p style="font-size: 0.925rem; color: var(--text-secondary); max-width: 440px; margin: 0 auto 1.25rem; line-height: 1.5;">${nextGameInfo}</p>
           <button class="detail-action-btn primary" onclick="setScheduleScope('upcoming')" style="max-width: 250px; margin: 0 auto;">
-            <span>📅 View All Future Games</span>
+            <span>📅 View All Upcoming Games</span>
           </button>
         </div>
       `;
