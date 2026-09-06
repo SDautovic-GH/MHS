@@ -995,12 +995,55 @@
       color: var(--text-primary);
       background-color: var(--bg-surface);
     }
+    .venue-dialog-tabs {
+      display: flex;
+      padding: 0 1.25rem;
+      border-bottom: 1px solid var(--border-subtle);
+      background-color: var(--bg-surface-elevated);
+      gap: 0.5rem;
+    }
+    .venue-tab-btn {
+      padding: 0.65rem 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.15s ease;
+    }
+    .venue-tab-btn:hover {
+      color: var(--text-primary);
+    }
+    .venue-tab-btn.active {
+      color: var(--accent-blue);
+      border-bottom-color: var(--accent-blue);
+    }
     .venue-dialog-body {
       padding: 1rem 1.25rem;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
       gap: 0.85rem;
+    }
+    .venue-dialog-pane {
+      display: none;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .venue-dialog-pane.active {
+      display: flex;
+    }
+    .venue-mascot-img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      border-radius: 4px;
+      vertical-align: middle;
     }
     .venue-card {
       background-color: var(--bg-surface-elevated);
@@ -2027,80 +2070,394 @@
   <div class="venue-dialog-card">
     <div class="venue-dialog-header">
       <div class="venue-dialog-title">
-        <h3>📍 Melrose Athletic Venues &amp; Parking</h3>
-        <p>Addresses, directions, and parking notes for MHS home events</p>
+        <h3>📍 Athletic Venues &amp; Directions</h3>
+        <p>Addresses, directions, and navigation for Home &amp; Away games</p>
       </div>
       <button class="venue-dialog-close" onclick="closeVenueModal()" aria-label="Close modal">&times;</button>
     </div>
+    <div class="venue-dialog-tabs" role="tablist">
+      <button class="venue-tab-btn active" id="vtab-btn-home" onclick="switchVenueTab('home')" role="tab" aria-selected="true">
+        🏠 Home Venues (Melrose)
+      </button>
+      <button class="venue-tab-btn" id="vtab-btn-away" onclick="switchVenueTab('away')" role="tab" aria-selected="false">
+        🚌 Away Stadiums &amp; Courses
+      </button>
+    </div>
     <div class="venue-dialog-body">
-      <div class="venue-card">
-        <div class="venue-card-main">
-          <div class="venue-name-row">
-            <h4>Fred Green Memorial Field</h4>
-            <span class="venue-sport-badge">🏈 Football &bull; ⚽ Soccer</span>
+      <!-- Home Venues Pane -->
+      <div id="vtab-pane-home" class="venue-dialog-pane active">
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>Fred Green Memorial Field</h4>
+              <span class="venue-sport-badge">🏈 Football &bull; ⚽ Soccer</span>
+            </div>
+            <p class="venue-address">350 Lynn Fells Pkwy, Melrose, MA 02176</p>
+            <p class="venue-tip">🚗 <strong>Parking:</strong> Melrose High School main lot, middle school complex, or legal on-street parking along Lynn Fells Pkwy.</p>
           </div>
-          <p class="venue-address">350 Lynn Fells Pkwy, Melrose, MA 02176</p>
-          <p class="venue-tip">🚗 <strong>Parking:</strong> Melrose High School main lot, middle school complex, or legal on-street parking along Lynn Fells Pkwy.</p>
+          <button onclick="openMapAddress('Fred Green Memorial Field, 350 Lynn Fells Pkwy, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to Fred Green Memorial Field">
+            <span>Get Directions ↗</span>
+          </button>
         </div>
-        <button onclick="openMapAddress('Fred Green Memorial Field, 350 Lynn Fells Pkwy, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to Fred Green Memorial Field">
-          <span>Get Directions ↗</span>
-        </button>
+
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>Pine Banks Park</h4>
+              <span class="venue-sport-badge">⚽ Soccer &bull; 🏑 Field Hockey &bull; 🏃 XC</span>
+            </div>
+            <p class="venue-address">Main St, Malden/Melrose, MA 02176</p>
+            <p class="venue-tip">🚗 <strong>Parking:</strong> Main parking lot entered from Main St. Walking paths connect to both turf fields and trails.</p>
+          </div>
+          <button onclick="openMapAddress('Pine Banks Park, Main St, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to Pine Banks Park">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>MVMMS Middle School Gym</h4>
+              <span class="venue-sport-badge">🏐 Girls' Volleyball</span>
+            </div>
+            <p class="venue-address">350 Lynn Fells Pkwy, Melrose, MA 02176</p>
+            <p class="venue-tip">🚗 <strong>Parking:</strong> Middle school rear lot or high school campus lots. Gym entrance is on the east side of MVMMS.</p>
+          </div>
+          <button onclick="openMapAddress('Melrose Veterans Memorial Middle School, 350 Lynn Fells Pkwy, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to MVMMS Gym">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>The Knoll</h4>
+              <span class="venue-sport-badge">⚽ Soccer</span>
+            </div>
+            <p class="venue-address">Lynn Fells Pkwy (Opposite Melrose High), Melrose, MA 02176</p>
+            <p class="venue-tip">🚗 <strong>Parking:</strong> Use Melrose High School main lots; cross safely at the pedestrian signal.</p>
+          </div>
+          <button onclick="openMapAddress('The Knoll, Lynn Fells Pkwy, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to The Knoll">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>Bellevue Golf Club</h4>
+              <span class="venue-sport-badge">⛳ Golf</span>
+            </div>
+            <p class="venue-address">320 Porter St, Melrose, MA 02176</p>
+            <p class="venue-tip">🚗 <strong>Parking:</strong> Clubhouse parking lot off Porter St. Please respect clubhouse rules and golf course etiquette.</p>
+          </div>
+          <button onclick="openMapAddress('Bellevue Golf Club, 320 Porter St, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to Bellevue Golf Club">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
       </div>
 
-      <div class="venue-card">
-        <div class="venue-card-main">
-          <div class="venue-name-row">
-            <h4>Pine Banks Park</h4>
-            <span class="venue-sport-badge">⚽ Soccer &bull; 🏑 Field Hockey &bull; 🏃 XC</span>
+      <!-- Away Opponents & Stadiums Pane -->
+      <div id="vtab-pane-away" class="venue-dialog-pane">
+        <!-- Reading -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <span class="venue-badge-opp">
+                <img src="https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg" class="venue-mascot-img" alt="Reading">
+                <h4>Reading Memorial High School</h4>
+              </span>
+              <span class="venue-sport-badge">🏈 Hal Dean Stadium &bull; 🏐 Hawkes Gym</span>
+            </div>
+            <p class="venue-address">62 Oakland Rd, Reading, MA 01867</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Main athletic fields &amp; fieldhouse located behind the high school complex.</p>
           </div>
-          <p class="venue-address">Main St, Malden/Melrose, MA 02176</p>
-          <p class="venue-tip">🚗 <strong>Parking:</strong> Main parking lot entered from Main St. Walking paths connect to both turf fields and trails.</p>
+          <button onclick="openMapAddress('Reading Memorial High School, 62 Oakland Rd, Reading, MA 01867')" class="venue-maps-btn" aria-label="Directions to Reading Memorial High School">
+            <span>Get Directions ↗</span>
+          </button>
         </div>
-        <button onclick="openMapAddress('Pine Banks Park, Main St, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to Pine Banks Park">
-          <span>Get Directions ↗</span>
-        </button>
-      </div>
 
-      <div class="venue-card">
-        <div class="venue-card-main">
-          <div class="venue-name-row">
-            <h4>MVMMS Middle School Gym</h4>
-            <span class="venue-sport-badge">🏐 Girls' Volleyball</span>
+        <!-- Wakefield -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <span class="venue-badge-opp">
+                <img src="https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg" class="venue-mascot-img" alt="Wakefield">
+                <h4>Wakefield Memorial High School</h4>
+              </span>
+              <span class="venue-sport-badge">🏈 Shaun Beasley Field &bull; ⚽ Field Hockey</span>
+            </div>
+            <p class="venue-address">60 Farm St, Wakefield, MA 01880</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Stadium and turf fields accessed via Farm St / Landrigan Field.</p>
           </div>
-          <p class="venue-address">350 Lynn Fells Pkwy, Melrose, MA 02176</p>
-          <p class="venue-tip">🚗 <strong>Parking:</strong> Middle school rear lot or high school campus lots. Gym entrance is on the east side of MVMMS.</p>
+          <button onclick="openMapAddress('Wakefield Memorial High School, 60 Farm St, Wakefield, MA 01880')" class="venue-maps-btn" aria-label="Directions to Wakefield Memorial High School">
+            <span>Get Directions ↗</span>
+          </button>
         </div>
-        <button onclick="openMapAddress('Melrose Veterans Memorial Middle School, 350 Lynn Fells Pkwy, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to MVMMS Gym">
-          <span>Get Directions ↗</span>
-        </button>
-      </div>
 
-      <div class="venue-card">
-        <div class="venue-card-main">
-          <div class="venue-name-row">
-            <h4>The Knoll</h4>
-            <span class="venue-sport-badge">⚽ Soccer</span>
+        <!-- Stoneham -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <span class="venue-badge-opp">
+                <img src="https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg" class="venue-mascot-img" alt="Stoneham">
+                <h4>Stoneham High School</h4>
+              </span>
+              <span class="venue-sport-badge">🏈 Spartan Stadium &bull; ⚽ Turf Field</span>
+            </div>
+            <p class="venue-address">149 Franklin St, Stoneham, MA 02180</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Stadium and gymnasium adjacent to the high school campus.</p>
           </div>
-          <p class="venue-address">Lynn Fells Pkwy (Opposite Melrose High), Melrose, MA 02176</p>
-          <p class="venue-tip">🚗 <strong>Parking:</strong> Use Melrose High School main lots; cross safely at the pedestrian signal.</p>
+          <button onclick="openMapAddress('Stoneham High School, 149 Franklin St, Stoneham, MA 02180')" class="venue-maps-btn" aria-label="Directions to Stoneham High School">
+            <span>Get Directions ↗</span>
+          </button>
         </div>
-        <button onclick="openMapAddress('The Knoll, Lynn Fells Pkwy, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to The Knoll">
-          <span>Get Directions ↗</span>
-        </button>
-      </div>
 
-      <div class="venue-card">
-        <div class="venue-card-main">
-          <div class="venue-name-row">
-            <h4>Bellevue Golf Club</h4>
-            <span class="venue-sport-badge">⛳ Golf</span>
+        <!-- Burlington -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <span class="venue-badge-opp">
+                <img src="https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg" class="venue-mascot-img" alt="Burlington">
+                <h4>Burlington High School</h4>
+              </span>
+              <span class="venue-sport-badge">🏈 Varsity Stadium &bull; 🏐 Gym</span>
+            </div>
+            <p class="venue-address">123 Cambridge St, Burlington, MA 01803</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Parking lots located off Cambridge St and rear entrance off Bedford St.</p>
           </div>
-          <p class="venue-address">320 Porter St, Melrose, MA 02176</p>
-          <p class="venue-tip">🚗 <strong>Parking:</strong> Clubhouse parking lot off Porter St. Please respect clubhouse rules and golf course etiquette.</p>
+          <button onclick="openMapAddress('Burlington High School, 123 Cambridge St, Burlington, MA 01803')" class="venue-maps-btn" aria-label="Directions to Burlington High School">
+            <span>Get Directions ↗</span>
+          </button>
         </div>
-        <button onclick="openMapAddress('Bellevue Golf Club, 320 Porter St, Melrose, MA 02176')" class="venue-maps-btn" aria-label="Directions to Bellevue Golf Club">
-          <span>Get Directions ↗</span>
-        </button>
+
+        <!-- Watertown (Victory Field) -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <span class="venue-badge-opp">
+                <img src="https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg" class="venue-mascot-img" alt="Watertown">
+                <h4>Watertown / Victory Field</h4>
+              </span>
+              <span class="venue-sport-badge">🏈 Football &bull; ⚽ Soccer &bull; 🏑 Field Hockey</span>
+            </div>
+            <p class="venue-address">40 Orchard St, Watertown, MA 02472</p>
+            <p class="venue-tip">🚗 <strong>Note:</strong> Watertown athletic stadium &amp; turf field are at Victory Field, separate from the high school building.</p>
+          </div>
+          <button onclick="openMapAddress('Victory Field, 40 Orchard St, Watertown, MA 02472')" class="venue-maps-btn" aria-label="Directions to Victory Field">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Wilmington -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <span class="venue-badge-opp">
+                <img src="https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg" class="venue-mascot-img" alt="Wilmington">
+                <h4>Wilmington High School</h4>
+              </span>
+              <span class="venue-sport-badge">🏈 Alumni Stadium &bull; ⚽ Turf</span>
+            </div>
+            <p class="venue-address">159 Church St, Wilmington, MA 01887</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Stadium and parking directly behind Wilmington High School.</p>
+          </div>
+          <button onclick="openMapAddress('Wilmington High School, 159 Church St, Wilmington, MA 01887')" class="venue-maps-btn" aria-label="Directions to Wilmington High School">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Winchester -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>Winchester / Knowlton Stadium</h4>
+              <span class="venue-sport-badge">🏈 Football &bull; ⚽ Soccer &bull; 🏑 Field Hockey</span>
+            </div>
+            <p class="venue-address">80 Skillings Rd, Winchester, MA 01890</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Knowlton Stadium and gym entrance on Skillings Rd campus.</p>
+          </div>
+          <button onclick="openMapAddress('Winchester High School Knowlton Stadium, 80 Skillings Rd, Winchester, MA 01890')" class="venue-maps-btn" aria-label="Directions to Winchester High School">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Woburn -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <span class="venue-badge-opp">
+                <img src="https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg" class="venue-mascot-img" alt="Woburn">
+                <h4>Woburn Memorial High School</h4>
+              </span>
+              <span class="venue-sport-badge">🏈 Connolly Stadium &bull; 🏐 Gym</span>
+            </div>
+            <p class="venue-address">88 Montvale Ave, Woburn, MA 01801</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Connolly Stadium complex located off Montvale Ave.</p>
+          </div>
+          <button onclick="openMapAddress('Woburn Memorial High School Connolly Stadium, 88 Montvale Ave, Woburn, MA 01801')" class="venue-maps-btn" aria-label="Directions to Woburn Memorial High School">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Arlington -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <span class="venue-badge-opp">
+                <img src="https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg" class="venue-mascot-img" alt="Arlington">
+                <h4>Arlington / Peirce Field</h4>
+              </span>
+              <span class="venue-sport-badge">🏈 Football &bull; ⚽ Soccer &bull; 🏑 Field Hockey</span>
+            </div>
+            <p class="venue-address">869 Massachusetts Ave, Arlington, MA 02476</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Peirce turf field behind Arlington High School off Mill St / Park Ave.</p>
+          </div>
+          <button onclick="openMapAddress('Arlington High School Peirce Field, 869 Massachusetts Ave, Arlington, MA 02476')" class="venue-maps-btn" aria-label="Directions to Arlington High School">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Belmont -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <span class="venue-badge-opp">
+                <img src="https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg" class="venue-mascot-img" alt="Belmont">
+                <h4>Belmont / Harris Field</h4>
+              </span>
+              <span class="venue-sport-badge">🏈 Harris Field &bull; 🏐 Gym</span>
+            </div>
+            <p class="venue-address">221 Concord Ave, Belmont, MA 02478</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Turf complex and athletic center on the Belmont Middle &amp; High School campus.</p>
+          </div>
+          <button onclick="openMapAddress('Belmont High School Harris Field, 221 Concord Ave, Belmont, MA 02478')" class="venue-maps-btn" aria-label="Directions to Belmont High School">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Lexington -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <span class="venue-badge-opp">
+                <img src="https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg" class="venue-mascot-img" alt="Lexington">
+                <h4>Lexington High School</h4>
+              </span>
+              <span class="venue-sport-badge">🏈 Stadium Field &bull; ⚽ Soccer</span>
+            </div>
+            <p class="venue-address">251 Waltham St, Lexington, MA 02421</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Athletic facilities off Waltham St and Worthen Rd.</p>
+          </div>
+          <button onclick="openMapAddress('Lexington High School, 251 Waltham St, Lexington, MA 02421')" class="venue-maps-btn" aria-label="Directions to Lexington High School">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Swampscott -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>Swampscott / Blocksidge Field</h4>
+              <span class="venue-sport-badge">🏈 Football (Fri Night Lights)</span>
+            </div>
+            <p class="venue-address">200 Essex St, Swampscott, MA 01907</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Historic Phillips Park / Blocksidge Field complex on Humphrey &amp; Essex St.</p>
+          </div>
+          <button onclick="openMapAddress('Swampscott High School Blocksidge Field, 200 Essex St, Swampscott, MA 01907')" class="venue-maps-btn" aria-label="Directions to Swampscott High School">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Danvers -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>Danvers / Deering Stadium</h4>
+              <span class="venue-sport-badge">🏈 Football &bull; ⚽ Soccer</span>
+            </div>
+            <p class="venue-address">60 Cabot Rd, Danvers, MA 01923</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Stadium behind Danvers High School.</p>
+          </div>
+          <button onclick="openMapAddress('Danvers High School Deering Stadium, 60 Cabot Rd, Danvers, MA 01923')" class="venue-maps-btn" aria-label="Directions to Danvers High School">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Beverly -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>Beverly High School</h4>
+              <span class="venue-sport-badge">⚽ Soccer</span>
+            </div>
+            <p class="venue-address">100 Sohier Rd, Beverly, MA 01915</p>
+            <p class="venue-tip">🚗 <strong>Campus:</strong> Athletic turf complex off Sohier Rd.</p>
+          </div>
+          <button onclick="openMapAddress('Beverly High School, 100 Sohier Rd, Beverly, MA 01915')" class="venue-maps-btn" aria-label="Directions to Beverly High School">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Away Golf: CC of Billerica -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>Country Club of Billerica</h4>
+              <span class="venue-sport-badge">⛳ Golf vs. Burlington</span>
+            </div>
+            <p class="venue-address">51 Baldwin Rd, Billerica, MA 01821</p>
+            <p class="venue-tip">🚗 <strong>Course:</strong> Home course for Burlington High School Varsity Golf matches.</p>
+          </div>
+          <button onclick="openMapAddress('Country Club of Billerica, 51 Baldwin Rd, Billerica, MA 01821')" class="venue-maps-btn" aria-label="Directions to Country Club of Billerica">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Away Golf: Bear Hill -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>Bear Hill Golf Club</h4>
+              <span class="venue-sport-badge">⛳ Golf vs. Stoneham</span>
+            </div>
+            <p class="venue-address">2 North St, Stoneham, MA 02180</p>
+            <p class="venue-tip">🚗 <strong>Course:</strong> Home course for Stoneham High School Varsity Golf matches.</p>
+          </div>
+          <button onclick="openMapAddress('Bear Hill Golf Club, 2 North St, Stoneham, MA 02180')" class="venue-maps-btn" aria-label="Directions to Bear Hill Golf Club">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Away Golf: Lexington Golf Club -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>Lexington Golf Club</h4>
+              <span class="venue-sport-badge">⛳ Golf vs. Lexington</span>
+            </div>
+            <p class="venue-address">55 Hill St, Lexington, MA 02421</p>
+            <p class="venue-tip">🚗 <strong>Course:</strong> Home course for Lexington High School Varsity Golf matches.</p>
+          </div>
+          <button onclick="openMapAddress('Lexington Golf Club, 55 Hill St, Lexington, MA 02421')" class="venue-maps-btn" aria-label="Directions to Lexington Golf Club">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
+
+        <!-- Away Golf: Unicorn Golf Course -->
+        <div class="venue-card">
+          <div class="venue-card-main">
+            <div class="venue-name-row">
+              <h4>Unicorn Golf Course</h4>
+              <span class="venue-sport-badge">⛳ Golf vs. Winchester</span>
+            </div>
+            <p class="venue-address">460 Marion Rd, Stoneham, MA 02180</p>
+            <p class="venue-tip">🚗 <strong>Course:</strong> Home course for Winchester High School Varsity Golf matches.</p>
+          </div>
+          <button onclick="openMapAddress('Unicorn Golf Course, 460 Marion Rd, Stoneham, MA 02180')" class="venue-maps-btn" aria-label="Directions to Unicorn Golf Course">
+            <span>Get Directions ↗</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -2508,7 +2865,52 @@ function getVenueFullAddress(item) {
     }
     return `${item.venue}, Melrose, MA 02176`;
   }
-  return `${item.opp} High School, MA`;
+
+  // Specific Away Stadiums & Golf Courses
+  const opp = item.opp || '';
+  const sport = item.sport || '';
+  
+  if (sport === 'Golf') {
+    if (opp.includes('Burlington')) return "Country Club of Billerica, 51 Baldwin Rd, Billerica, MA 01821";
+    if (opp.includes('Stoneham')) return "Bear Hill Golf Club, 2 North St, Stoneham, MA 02180";
+    if (opp.includes('Lexington')) return "Lexington Golf Club, 55 Hill St, Lexington, MA 02421";
+    if (opp.includes('Winchester')) return "Unicorn Golf Course, 460 Marion Rd, Stoneham, MA 02180";
+    if (opp.includes('Reading')) return "Meadow Brook Golf Club, 292 Grove St, Reading, MA 01867";
+  }
+
+  const AWAY_CAMPUS_LOOKUP = {
+    "Reading": "Reading Memorial High School, 62 Oakland Rd, Reading, MA 01867",
+    "Wakefield": "Wakefield Memorial High School, 60 Farm St, Wakefield, MA 01880",
+    "Stoneham": "Stoneham High School, 149 Franklin St, Stoneham, MA 02180",
+    "Burlington": "Burlington High School, 123 Cambridge St, Burlington, MA 01803",
+    "Watertown": "Victory Field, 40 Orchard St, Watertown, MA 02472",
+    "Wilmington": "Wilmington High School Alumni Field, 159 Church St, Wilmington, MA 01887",
+    "Winchester": "Winchester High School Knowlton Stadium, 80 Skillings Rd, Winchester, MA 01890",
+    "Woburn": "Woburn Memorial High School Connolly Stadium, 88 Montvale Ave, Woburn, MA 01801",
+    "Arlington": "Arlington High School Peirce Field, 869 Massachusetts Ave, Arlington, MA 02476",
+    "Belmont": "Belmont High School Harris Field, 221 Concord Ave, Belmont, MA 02478",
+    "Lexington": "Lexington High School, 251 Waltham St, Lexington, MA 02421",
+    "Swampscott": "Swampscott High School Blocksidge Field, 200 Essex St, Swampscott, MA 01907",
+    "Danvers": "Danvers High School Deering Stadium, 60 Cabot Rd, Danvers, MA 01923",
+    "Beverly": "Beverly High School, 100 Sohier Rd, Beverly, MA 01915",
+    "Ipswich": "Ipswich High School, 134 High St, Ipswich, MA 01938",
+    "Methuen": "Methuen High School, 1 Ranger Rd, Methuen, MA 01844",
+    "Tewksbury": "Tewksbury Memorial High School, 320 Pleasant St, Tewksbury, MA 01876",
+    "Bishop Feehan": "Bishop Feehan High School, 70 Holcott Dr, Attleboro, MA 02703",
+    "Clinton": "Clinton High School, 200 W Boylston St, Clinton, MA 01510",
+    "Newburyport": "Newburyport High School, 241 High St, Newburyport, MA 01950",
+    "Duxbury": "Duxbury High School, 71 Alden St, Duxbury, MA 02332",
+    "Marblehead": "Marblehead High School Piper Field, 2 Humphrey St, Marblehead, MA 01945",
+    "Somerville": "Dilboy Stadium, 110 Alewife Brook Pkwy, Somerville, MA 02144"
+  };
+
+  for (const [key, addr] of Object.entries(AWAY_CAMPUS_LOOKUP)) {
+    if (opp.toLowerCase().includes(key.toLowerCase())) {
+      return addr;
+    }
+  }
+
+  return `${opp} High School, MA`;
 }
 
 function getDirectionsUrl(item) {
@@ -2549,6 +2951,18 @@ function openVenueModal() {
   if (d && typeof d.showModal === 'function') {
     d.showModal();
   }
+}
+
+function switchVenueTab(which) {
+  const isHome = which === 'home';
+  const btnHome = document.getElementById('vtab-btn-home');
+  const btnAway = document.getElementById('vtab-btn-away');
+  const paneHome = document.getElementById('vtab-pane-home');
+  const paneAway = document.getElementById('vtab-pane-away');
+  if (btnHome) { btnHome.classList.toggle('active', isHome); btnHome.setAttribute('aria-selected', isHome ? 'true' : 'false'); }
+  if (btnAway) { btnAway.classList.toggle('active', !isHome); btnAway.setAttribute('aria-selected', !isHome ? 'true' : 'false'); }
+  if (paneHome) paneHome.classList.toggle('active', isHome);
+  if (paneAway) paneAway.classList.toggle('active', !isHome);
 }
 
 function closeVenueModal() {
