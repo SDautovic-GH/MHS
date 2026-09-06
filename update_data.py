@@ -213,13 +213,22 @@ def main():
     print(f"[*] Loaded {len(scheduled_keys)} official 2026 varsity games")
 
     scores = fetch_scores(scheduled_keys)
+    existing_scores = {}
+    if os.path.exists("scores.json"):
+        try:
+            with open("scores.json", "r", encoding="utf-8") as f:
+                existing_data = json.load(f)
+                existing_scores = existing_data.get("scores", {})
+        except Exception:
+            pass
+    existing_scores.update(scores)
     scores_payload = {
         "lastUpdated": datetime.now().isoformat(),
-        "scores": scores
+        "scores": existing_scores
     }
     with open("scores.json", "w", encoding="utf-8") as f:
         json.dump(scores_payload, f, indent=2)
-    print(f"[✓] Saved scores.json ({len(scores)} completed varsity scores)")
+    print(f"[✓] Saved scores.json ({len(existing_scores)} completed varsity scores)")
 
     standings = fetch_standings()
     standings_payload = {

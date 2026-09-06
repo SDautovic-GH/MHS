@@ -1512,6 +1512,11 @@
       color: #cbd5e1;
       border: 1px solid rgba(148, 163, 184, 0.35);
     }
+    .score-badge.pending {
+      background-color: var(--bg-surface);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+    }
     .score-status-text {
       font-size: 0.7rem;
       font-weight: 700;
@@ -2658,6 +2663,8 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
   const locClass = item.isHome ? 'home' : 'away';
   const locLabel = item.isHome ? 'HOME' : 'AWAY';
   const prefix = item.isHome ? 'vs.' : '@';
+  const todayStr = getTodayEasternString();
+  const isPast = item.date < todayStr;
   
   let scoreHtml = '';
   if (item.result && item.mhsScore !== undefined && item.oppScore !== undefined) {
@@ -2670,6 +2677,15 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
           <span>${item.mhsScore} - ${item.oppScore}</span>
         </div>
         <span class="score-status-text">FINAL SCORE</span>
+      </div>
+    `;
+  } else if (isPast) {
+    scoreHtml = `
+      <div class="card-score-row pending">
+        <div class="score-badge pending">
+          <span>FINAL</span>
+        </div>
+        <span class="score-status-text">SCORE PENDING</span>
       </div>
     `;
   }
@@ -2707,7 +2723,7 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
       </div>
       ${scoreHtml}
       <div class="meta-row">
-        <span>⏰ ${item.time}</span>
+        <span>${isPast ? '🏁' : '⏰'} ${item.time}</span>
         <span class="location-badge ${locClass}">${locLabel}</span>
       </div>
       <div class="card-footer-row">
