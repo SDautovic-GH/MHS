@@ -2919,17 +2919,8 @@
   </div>
 
   <main id="calendar-view" class="view-panel active" role="tabpanel" aria-labelledby="tab-calendar">
-    <!-- Apple Sports Segmented Selector Bar -->
+    <!-- Apple Sports Control Bar: Location & Search -->
     <div class="apple-sports-bar" id="apple-sports-bar">
-      <!-- Sport Picker Trigger -->
-      <button class="apple-picker-btn" id="sport-picker-btn" onclick="openSportSheet()" aria-label="Select sport" aria-haspopup="dialog">
-        <div class="picker-btn-content">
-          <span class="picker-btn-icon" id="picker-sport-icon">🌟</span>
-          <span class="picker-btn-text" id="picker-sport-title">Sports</span>
-        </div>
-        <span class="picker-btn-chevron">▾</span>
-      </button>
-
       <!-- Location / Filter Trigger -->
       <button class="apple-picker-btn" id="loc-picker-btn" onclick="openLocSheet()" aria-label="Select location filter" aria-haspopup="dialog">
         <div class="picker-btn-content">
@@ -2981,19 +2972,10 @@
   </main>
 
   <main id="scores-view" class="view-panel" role="tabpanel" aria-labelledby="tab-scores">
-    <!-- Apple Sports Segmented Selector Bar for Scores -->
+    <!-- Apple Sports Header Bar for Scores -->
     <div class="apple-sports-bar" id="scores-apple-bar">
-      <!-- Sport Picker Trigger -->
-      <button class="apple-picker-btn" id="scores-sport-picker-btn" onclick="openScoresSportSheet()" aria-label="Select scores sport" aria-haspopup="dialog">
-        <div class="picker-btn-content">
-          <span class="picker-btn-icon" id="scores-picker-sport-icon">🌟</span>
-          <span class="picker-btn-text" id="scores-picker-sport-title">Sports</span>
-        </div>
-        <span class="picker-btn-chevron">▾</span>
-      </button>
-
       <!-- Results Count Badge -->
-      <div class="standings-league-badge" id="scores-count-badge">
+      <div class="standings-league-badge" id="scores-count-badge" style="flex: 1; justify-content: flex-start; padding: 0.5rem 0.85rem;">
         <span class="sync-status-dot"></span>
         <span id="scores-count-text">Fall 2026 Results</span>
       </div>
@@ -3006,21 +2988,12 @@
   </main>
 
   <main id="standings-view" class="view-panel" role="tabpanel" aria-labelledby="tab-standings">
-    <!-- Apple Sports Segmented Selector Bar for Standings -->
+    <!-- Apple Sports Header Bar for Standings -->
     <div class="apple-sports-bar" id="standings-apple-bar">
-      <!-- Sport Picker Trigger -->
-      <button class="apple-picker-btn" id="standings-sport-picker-btn" onclick="openStandingsSportSheet()" aria-label="Select standings sport" aria-haspopup="dialog">
-        <div class="picker-btn-content">
-          <span class="picker-btn-icon" id="standings-picker-sport-icon">🌟</span>
-          <span class="picker-btn-text" id="standings-picker-sport-title">Sports</span>
-        </div>
-        <span class="picker-btn-chevron">▾</span>
-      </button>
-
       <!-- League Status Badge -->
-      <div class="standings-league-badge" id="standings-sync-badge">
+      <div class="standings-league-badge" id="standings-sync-badge" style="flex: 1; justify-content: flex-start; padding: 0.5rem 0.85rem;">
         <span class="sync-status-dot"></span>
-        <span id="standings-sync-text">Middlesex League</span>
+        <span id="standings-sync-text">Middlesex League (Freedom Division)</span>
       </div>
     </div>
 
@@ -4342,9 +4315,10 @@ function renderMySportsRibbons() {
   if (calRibbon) {
     calRibbon.innerHTML = ALL_SPORTS_LIST.map(s => {
       const isSel = currentSelectedSport === s.key;
+      const label = s.key === 'all' ? 'All Sports' : s.name;
       return `
         <button class="sport-ribbon-pill ${isSel ? 'active' : ''}" onclick="onRibbonPillClick('calendar', '${escapeQuotes(s.key)}')" aria-pressed="${isSel}">
-          <span>${s.icon}</span><span>${s.name}</span>
+          <span>${s.icon}</span><span>${label}</span>
         </button>
       `;
     }).join('');
@@ -4353,9 +4327,10 @@ function renderMySportsRibbons() {
   if (scoresRibbon) {
     scoresRibbon.innerHTML = ALL_SPORTS_LIST.map(s => {
       const isSel = activeScoresSport === s.key;
+      const label = s.key === 'all' ? 'All Sports' : s.name;
       return `
         <button class="sport-ribbon-pill ${isSel ? 'active' : ''}" onclick="onRibbonPillClick('scores', '${escapeQuotes(s.key)}')" aria-pressed="${isSel}">
-          <span>${s.icon}</span><span>${s.name}</span>
+          <span>${s.icon}</span><span>${label}</span>
         </button>
       `;
     }).join('');
