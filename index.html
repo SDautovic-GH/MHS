@@ -2289,9 +2289,9 @@
       gap: 0.2rem;
     }
     .gameday-pill.today {
-      background-color: rgba(239, 68, 68, 0.18);
-      color: #f87171;
-      border: 1px solid rgba(239, 68, 68, 0.35);
+      background-color: rgba(56, 189, 248, 0.18);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.35);
     }
     .gameday-pill.next {
       background-color: rgba(59, 130, 246, 0.18);
@@ -2683,13 +2683,48 @@
       color: var(--text-muted);
       transition: all 0.15s ease;
     }
+    .apple-cal-icon {
+      width: 20px;
+      height: 20px;
+      background: #ffffff;
+      border-radius: 5px;
+      display: inline-flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .apple-cal-icon .cal-month {
+      background: #ff3b30;
+      color: #ffffff;
+      font-size: 5.5px;
+      font-weight: 800;
+      text-align: center;
+      padding: 1.5px 0 0.5px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    }
+    .apple-cal-icon .cal-day {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1c1c1e;
+      font-size: 10px;
+      font-weight: 800;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+      padding-bottom: 0.5px;
+    }
     .schedule-scope-btn.active .scope-count-badge {
       background-color: var(--accent-blue);
       color: #ffffff;
     }
-    .schedule-scope-btn.is-today.active .scope-count-badge {
-      background-color: #ef4444;
-      color: #ffffff;
+    .schedule-scope-btn .scope-count-badge.is-zero,
+    .schedule-scope-btn.active .scope-count-badge.is-zero {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: var(--text-muted);
     }
 
     /* Apple Sports Game Detail Sheet Modal */
@@ -2957,8 +2992,12 @@
     <!-- Apple-Style Schedule Scope Segmented Control: Today vs All Upcoming -->
     <div class="schedule-scope-toggle-bar" id="schedule-scope-bar" role="tablist" aria-label="Schedule view scope">
       <button class="schedule-scope-btn is-today active" id="scope-btn-today" onclick="setScheduleScope('today')" role="tab" aria-selected="true">
-        <span>📆 Today's Games</span>
-        <span class="scope-count-badge" id="scope-today-count">0</span>
+        <span class="apple-cal-icon" aria-hidden="true">
+          <span class="cal-month" id="today-cal-month">SEP</span>
+          <span class="cal-day" id="today-cal-day">6</span>
+        </span>
+        <span>Today</span>
+        <span class="scope-count-badge is-zero" id="scope-today-count">0</span>
       </button>
       <button class="schedule-scope-btn" id="scope-btn-upcoming" onclick="setScheduleScope('upcoming')" role="tab" aria-selected="false">
         <span>📅 All Upcoming</span>
@@ -4390,6 +4429,14 @@ function onRibbonPillClick(viewName, sportKey) {
 // ==========================================
 let scheduleScope = 'today'; // default to 'today'
 
+function updateTodayCalendarIcon() {
+  const now = new Date();
+  const mEl = document.getElementById('today-cal-month');
+  const dEl = document.getElementById('today-cal-day');
+  if (mEl) mEl.textContent = now.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+  if (dEl) dEl.textContent = now.getDate();
+}
+
 function setScheduleScope(scope) {
   scheduleScope = scope;
   const btnUpcoming = document.getElementById('scope-btn-upcoming');
@@ -4404,6 +4451,7 @@ function setScheduleScope(scope) {
     btnToday.setAttribute('aria-selected', scope === 'today' ? 'true' : 'false');
   }
 
+  updateTodayCalendarIcon();
   renderDailyView();
 }
 
@@ -4759,7 +4807,11 @@ function renderDailyView() {
   const scopeUpcomingBadge = document.getElementById('scope-upcoming-count');
   const scopeTodayBadge = document.getElementById('scope-today-count');
   if (scopeUpcomingBadge) scopeUpcomingBadge.textContent = upcomingCount;
-  if (scopeTodayBadge) scopeTodayBadge.textContent = todayCount;
+  if (scopeTodayBadge) {
+    scopeTodayBadge.textContent = todayCount;
+    scopeTodayBadge.classList.toggle('is-zero', todayCount === 0);
+  }
+  updateTodayCalendarIcon();
 
   // Filter based on selected schedule scope
   const filtered = baseFiltered.filter(item => {
@@ -4843,7 +4895,7 @@ function renderDailyView() {
           firstTargetAssigned = true;
         }
         targetBadge = target.isToday
-          ? `<span class="gameday-pill today">📆 TODAY</span>`
+          ? `<span class="gameday-pill today">⚡ TODAY</span>`
           : `<span class="gameday-pill next">NEXT GAME</span>`;
       }
 
