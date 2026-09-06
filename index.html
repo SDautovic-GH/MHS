@@ -177,7 +177,7 @@
     }
 
     :root {
-      --header-height: 66px;
+      --header-height: 80px;
     }
 
     html {
@@ -226,8 +226,8 @@
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
       border-bottom: 1px solid var(--border-subtle);
-      padding-top: max(0.6rem, env(safe-area-inset-top));
-      padding-bottom: 0.6rem;
+      padding-top: max(0.85rem, env(safe-area-inset-top));
+      padding-bottom: 0.85rem;
       padding-left: max(1rem, env(safe-area-inset-left));
       padding-right: max(1rem, env(safe-area-inset-right));
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
@@ -244,20 +244,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
     .header-brand-row {
       display: flex;
       align-items: center;
-      gap: 0.85rem;
+      gap: 1rem;
       min-width: 0;
     }
 
     .header-brand {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
+      gap: 0.85rem;
       text-decoration: none;
       color: inherit;
       min-width: 0;
@@ -279,15 +279,15 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 34px;
-      height: 34px;
-      border-radius: 9px;
+      width: 50px;
+      height: 50px;
+      border-radius: 13px;
       background: linear-gradient(135deg, #dc2626, #991b1b);
       color: #ffffff;
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      box-shadow: 0 2px 8px rgba(220, 38, 38, 0.35);
+      font-size: 1.15rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      box-shadow: 0 3px 12px rgba(220, 38, 38, 0.4);
       flex-shrink: 0;
     }
 
@@ -297,9 +297,9 @@
     }
 
     .header-titles h1 {
-      font-size: 1.125rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
+      font-size: 1.45rem;
+      font-weight: 850;
+      letter-spacing: -0.025em;
       color: var(--text-primary);
       line-height: 1.2;
       margin: 0;
@@ -307,9 +307,9 @@
     }
 
     .header-season {
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       color: var(--text-secondary);
-      font-weight: 500;
+      font-weight: 600;
       display: block;
       line-height: 1.2;
       white-space: nowrap;
@@ -1735,48 +1735,48 @@
 
     @media (max-width: 640px) {
       :root {
-        --header-height: 94px;
+        --header-height: 110px;
       }
       body {
-        padding-top: calc(var(--header-height, 94px) + 0.65rem);
+        padding-top: calc(var(--header-height, 110px) + 0.65rem);
       }
       .app-header {
-        padding-top: max(0.45rem, env(safe-area-inset-top));
-        padding-bottom: 0.45rem;
+        padding-top: max(0.65rem, env(safe-area-inset-top));
+        padding-bottom: 0.6rem;
       }
       .header-inner {
         flex-direction: column;
         align-items: stretch;
-        gap: 0.4rem;
+        gap: 0.5rem;
       }
       .header-brand-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        gap: 0.35rem;
+        gap: 0.4rem;
       }
       .header-brand {
         flex-shrink: 0;
         min-width: 0;
-        gap: 0.45rem;
+        gap: 0.65rem;
       }
       .brand-badge {
-        width: 30px;
-        height: 30px;
-        font-size: 0.75rem;
-        border-radius: 7px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.05rem;
+        border-radius: 11px;
       }
       .header-titles {
         min-width: 0;
         white-space: nowrap;
       }
       .header-titles h1 {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
         white-space: nowrap;
       }
       .header-season {
-        font-size: 0.68rem;
+        font-size: 0.78rem;
         white-space: nowrap;
       }
       .header-actions {
@@ -1948,9 +1948,18 @@
       .picker-btn-text {
         font-size: 0.775rem;
       }
+      .brand-badge {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+        border-radius: 9px;
+      }
       .header-titles h1 {
-        font-size: 0.88rem;
+        font-size: 1.05rem;
         white-space: nowrap;
+      }
+      .header-season {
+        font-size: 0.72rem;
       }
       .btn-text-short {
         display: none;
