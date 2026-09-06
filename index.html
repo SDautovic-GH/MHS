@@ -529,9 +529,9 @@
       background-color: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
       color: var(--text-primary);
-      font-size: 0.825rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      padding: 0.45rem 0.7rem;
+      padding: 0.45rem 0.75rem;
       border-radius: 12px;
       cursor: pointer;
       transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -568,29 +568,15 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-
-    .picker-btn-right {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      flex-shrink: 0;
-    }
-
-    .picker-btn-count {
-      font-size: 0.725rem;
-      font-weight: 800;
-      background: rgba(59, 130, 246, 0.15);
-      color: var(--accent-blue);
-      padding: 0.1rem 0.45rem;
-      border-radius: 8px;
-      line-height: 1.2;
+      font-size: 0.825rem;
     }
 
     .picker-btn-chevron {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       color: var(--text-muted);
       line-height: 1;
+      margin-left: 0.15rem;
+      flex-shrink: 0;
     }
 
     .apple-icon-btn {
@@ -2256,19 +2242,16 @@
       <button class="apple-picker-btn" id="sport-picker-btn" onclick="openSportSheet()" aria-label="Select sport" aria-haspopup="dialog">
         <div class="picker-btn-content">
           <span class="picker-btn-icon" id="picker-sport-icon">🌟</span>
-          <span class="picker-btn-text" id="picker-sport-title">All Sports</span>
+          <span class="picker-btn-text" id="picker-sport-title">Sports</span>
         </div>
-        <div class="picker-btn-right">
-          <span class="picker-btn-count" id="picker-sport-count">96</span>
-          <span class="picker-btn-chevron">▾</span>
-        </div>
+        <span class="picker-btn-chevron">▾</span>
       </button>
 
       <!-- Location / Filter Trigger -->
       <button class="apple-picker-btn" id="loc-picker-btn" onclick="openLocSheet()" aria-label="Select location filter" aria-haspopup="dialog">
         <div class="picker-btn-content">
           <span class="picker-btn-icon" id="picker-loc-icon">📍</span>
-          <span class="picker-btn-text" id="picker-loc-title">All Games</span>
+          <span class="picker-btn-text" id="picker-loc-title">Location</span>
         </div>
         <span class="picker-btn-chevron">▾</span>
       </button>
@@ -2276,11 +2259,6 @@
       <!-- Search Icon Button -->
       <button class="apple-icon-btn" id="search-toggle-btn" onclick="toggleSearchDrawer()" title="Search schedule" aria-label="Search schedule">
         <span id="search-btn-icon">🔍</span>
-      </button>
-
-      <!-- Jump to Next Game Button -->
-      <button class="apple-icon-btn next-game-accent" onclick="scrollToCurrentOrNextGame(true)" title="Jump to next game" aria-label="Jump to next game">
-        <span>📍</span>
       </button>
     </div>
 
@@ -3547,14 +3525,14 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
 // Apple Sports Selector Bar & Sheet Logic
 // ==========================================
 const ALL_SPORTS_LIST = [
-  { key: 'all', name: 'All Sports', icon: '🌟', venue: 'All Melrose Facilities' },
-  { key: 'Football', name: 'Football', icon: '🏈', venue: 'Fred Green Memorial Field' },
-  { key: 'Boys\' Soccer', name: 'Boys\' Soccer', icon: '⚽', venue: 'Pine Banks & The Knoll' },
-  { key: 'Girls\' Soccer', name: 'Girls\' Soccer', icon: '⚽', venue: 'Pine Banks & Fred Green Field' },
-  { key: 'Girls\' Volleyball', name: 'Girls\' Volleyball', icon: '🏐', venue: 'MVMMS Middle School Gym' },
-  { key: 'Field Hockey', name: 'Field Hockey', icon: '🏑', venue: 'Pine Banks Park' },
-  { key: 'Golf', name: 'Golf', icon: '⛳', venue: 'Bellevue Golf Club' },
-  { key: 'Cross Country', name: 'Cross Country', icon: '🏃', venue: 'Pine Banks Park' }
+  { key: 'all', name: 'Sports', sheetTitle: 'All Sports', icon: '🌟', venue: 'All Melrose Facilities' },
+  { key: 'Football', name: 'Football', sheetTitle: 'Football', icon: '🏈', venue: 'Fred Green Memorial Field' },
+  { key: 'Boys\' Soccer', name: 'Boys Soccer', sheetTitle: 'Boys\' Soccer', icon: '⚽', venue: 'Pine Banks & The Knoll' },
+  { key: 'Girls\' Soccer', name: 'Girls Soccer', sheetTitle: 'Girls\' Soccer', icon: '⚽', venue: 'Pine Banks & Fred Green Field' },
+  { key: 'Girls\' Volleyball', name: 'Volleyball', sheetTitle: 'Girls\' Volleyball', icon: '🏐', venue: 'MVMMS Middle School Gym' },
+  { key: 'Field Hockey', name: 'Field Hockey', sheetTitle: 'Field Hockey', icon: '🏑', venue: 'Pine Banks Park' },
+  { key: 'Golf', name: 'Golf', sheetTitle: 'Golf', icon: '⛳', venue: 'Bellevue Golf Club' },
+  { key: 'Cross Country', name: 'Cross Country', sheetTitle: 'Cross Country', icon: '🏃', venue: 'Pine Banks Park' }
 ];
 
 const SPORT_META = {
@@ -3569,11 +3547,11 @@ const SPORT_META = {
 };
 
 const LOC_FILTER_OPTIONS = {
-  'all': { name: 'All Games', icon: '📍', subtitle: 'Home and away matchups' },
-  'home': { name: 'Home Only', icon: '🏠', subtitle: 'Melrose local stadiums & courts' },
-  'away': { name: 'Away Only', icon: '🚌', subtitle: 'Traveling opponent venues' },
-  'past': { name: 'Past & Scores', icon: '🏁', subtitle: 'Final scores & completed matches' },
-  'fnl': { name: 'Fri Night & Weekend', icon: '🌙', subtitle: 'Friday night lights & weekend games' }
+  'all': { name: 'Location', sheetTitle: 'All Games', icon: '📍', subtitle: 'Home and away matchups' },
+  'home': { name: 'Home Only', sheetTitle: 'Home Games Only', icon: '🏠', subtitle: 'Melrose local stadiums & courts' },
+  'away': { name: 'Away Only', sheetTitle: 'Away Games Only', icon: '🚌', subtitle: 'Traveling opponent venues' },
+  'past': { name: 'Past Scores', sheetTitle: 'Past Games & Scores', icon: '🏁', subtitle: 'Final scores & completed matches' },
+  'fnl': { name: 'Fri & Wknd', sheetTitle: 'Fri Night & Weekend', icon: '🌙', subtitle: 'Friday night lights & weekend games' }
 };
 
 let currentSelectedSport = 'all';
@@ -3613,14 +3591,14 @@ function renderSportSheetList() {
     const isSelected = currentSelectedSport === s.key;
     const count = s.key === 'all'
       ? events.length
-      : events.filter(e => e.sport === s.name).length;
+      : events.filter(e => e.sport === s.sheetTitle || e.sport === s.name).length;
 
     return `
       <button class="apple-sheet-option ${isSelected ? 'active' : ''}" onclick="selectSport('${s.key.replace(/'/g, "\\'")}')">
         <div class="sheet-opt-left">
           <span class="sheet-opt-icon">${s.icon}</span>
           <div class="sheet-opt-info">
-            <span class="sheet-opt-title">${s.name}</span>
+            <span class="sheet-opt-title">${s.sheetTitle}</span>
             <span class="sheet-opt-subtitle">${s.venue}</span>
           </div>
         </div>
@@ -3655,17 +3633,11 @@ function selectSport(sportKey) {
   currentSelectedSport = sportKey;
 
   const found = ALL_SPORTS_LIST.find(s => s.key === sportKey) || ALL_SPORTS_LIST[0];
-  const count = sportKey === 'all'
-    ? events.length
-    : events.filter(e => e.sport === found.name).length;
-
   const iconEl = document.getElementById('picker-sport-icon');
   const titleEl = document.getElementById('picker-sport-title');
-  const countEl = document.getElementById('picker-sport-count');
 
   if (iconEl) iconEl.textContent = found.icon;
-  if (titleEl) titleEl.textContent = found.name;
-  if (countEl) countEl.textContent = count;
+  if (titleEl) titleEl.textContent = sportKey === 'all' ? 'Sports' : found.name;
 
   closeAllSheets();
   renderDailyView();
@@ -3684,7 +3656,7 @@ function setLocFilter(loc) {
   const titleEl = document.getElementById('picker-loc-title');
 
   if (iconEl) iconEl.textContent = opt.icon;
-  if (titleEl) titleEl.textContent = opt.name;
+  if (titleEl) titleEl.textContent = loc === 'all' ? 'Location' : opt.name;
 
   updateLocSheetSelection();
   renderDailyView();
