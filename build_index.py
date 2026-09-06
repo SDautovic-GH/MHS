@@ -22,13 +22,23 @@ def main():
         html = f.read()
 
     new_standings_json = json.dumps(standings_data.get("standings", {}))
-    
-    # Replace embedded INITIAL_STANDINGS
     updated_html, count = re.subn(
         r"const INITIAL_STANDINGS = \{.*?\};",
         f"const INITIAL_STANDINGS = {new_standings_json};",
         html
     )
+
+    if os.path.exists("scores.json"):
+        with open("scores.json", "r", encoding="utf-8") as f:
+            scores_data = json.load(f)
+        new_scores_json = json.dumps(scores_data.get("scores", {}))
+        updated_html, s_count = re.subn(
+            r"const INITIAL_SCORES = \{.*?\};",
+            f"const INITIAL_SCORES = {new_scores_json};",
+            updated_html
+        )
+        if s_count > 0:
+            print(f"[✓] Successfully synchronized embedded INITIAL_SCORES in index.html")
 
     if count > 0:
         with open("index.html", "w", encoding="utf-8") as f:
