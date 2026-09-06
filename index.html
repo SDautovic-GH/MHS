@@ -970,26 +970,34 @@
       letter-spacing: 0.01em;
     }
 
-    /* Live Next Game Countdown Ticker Banner */
+    /* Compact Live Next Game Countdown Ticker Banner */
     .next-game-ticker {
       background: linear-gradient(135deg, rgba(19, 27, 46, 0.95), rgba(15, 23, 42, 0.95));
       border: 1px solid var(--border-highlight);
-      border-radius: 14px;
-      padding: 0.95rem 1.25rem;
-      margin-bottom: 1.25rem;
+      border-radius: 12px;
+      padding: 0.45rem 0.8rem;
+      margin-bottom: 0.65rem;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      gap: 0.75rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       position: relative;
       overflow: hidden;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .next-game-ticker:hover {
+      border-color: var(--accent-blue);
+      box-shadow: 0 3px 14px rgba(37, 99, 235, 0.15);
+    }
+    .next-game-ticker:active {
+      transform: scale(0.995);
     }
     :root[data-theme="light"] .next-game-ticker {
-      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+      background: linear-gradient(135deg, #ffffff, #f8fafc);
       border-color: #cbd5e1;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     }
     .next-game-ticker::before {
       content: '';
@@ -997,108 +1005,127 @@
       left: 0;
       top: 0;
       bottom: 0;
-      width: 4px;
+      width: 3.5px;
       background: linear-gradient(to bottom, var(--accent-red), var(--accent-blue));
     }
     .ticker-left {
       display: flex;
       flex-direction: column;
-      gap: 0.25rem;
+      gap: 0.15rem;
       flex: 1;
-      min-width: 250px;
+      min-width: 0;
     }
-    .ticker-status-wrap {
+    .ticker-header-row {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+      gap: 0.4rem;
+      flex-wrap: nowrap;
+      min-width: 0;
+      overflow: hidden;
     }
     .ticker-pulse-badge {
       background: rgba(239, 68, 68, 0.18);
       color: #f87171;
       border: 1px solid rgba(239, 68, 68, 0.35);
-      font-size: 0.675rem;
+      font-size: 0.6rem;
       font-weight: 800;
-      padding: 0.2rem 0.5rem;
-      border-radius: 6px;
-      letter-spacing: 0.04em;
+      padding: 0.12rem 0.4rem;
+      border-radius: 5px;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+      line-height: 1.2;
     }
     .ticker-sport-tag {
       font-size: 0.775rem;
       font-weight: 700;
       color: var(--accent-cyan);
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .ticker-matchup {
-      font-size: 1.2rem;
+      font-size: 0.875rem;
       font-weight: 800;
       color: var(--text-primary);
-      letter-spacing: -0.02em;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
     }
     .ticker-details {
-      font-size: 0.825rem;
+      font-size: 0.75rem;
       color: var(--text-secondary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
     }
     .ticker-right {
       display: flex;
       align-items: center;
-      gap: 0.85rem;
-      flex-wrap: wrap;
+      gap: 0.45rem;
+      flex-shrink: 0;
     }
     .countdown-display {
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.2rem;
       background-color: var(--bg-surface);
       border: 1px solid var(--border-subtle);
-      border-radius: 10px;
-      padding: 0.4rem 0.65rem;
+      border-radius: 8px;
+      padding: 0.25rem 0.45rem;
     }
     .cd-box {
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-width: 30px;
+      min-width: 20px;
     }
     .cd-val {
-      font-size: 1.15rem;
+      font-size: 0.9rem;
       font-weight: 800;
       line-height: 1;
       color: var(--accent-blue);
       font-variant-numeric: tabular-nums;
     }
     .cd-lbl {
-      font-size: 0.55rem;
+      font-size: 0.5rem;
       font-weight: 700;
       color: var(--text-muted);
-      letter-spacing: 0.05em;
-      margin-top: 0.15rem;
+      letter-spacing: 0.04em;
+      margin-top: 0.1rem;
+      line-height: 1;
     }
     .cd-colon {
-      font-size: 1rem;
+      font-size: 0.75rem;
       font-weight: 800;
       color: var(--text-muted);
       line-height: 1;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.2rem;
     }
     .ticker-jump-btn {
       background-color: var(--accent-blue);
       color: #ffffff;
       border: none;
-      padding: 0.5rem 0.85rem;
-      font-size: 0.8rem;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.75rem;
       font-weight: 700;
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.15s ease;
       white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
     }
     .ticker-jump-btn:hover {
       background-color: #2563eb;
-      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+    }
+    .jump-btn-icon {
+      display: none;
     }
 
     /* Streamlined, De-cluttered Card Footer & Quick Actions */
@@ -1865,9 +1892,63 @@
         width: 36px;
         height: 36px;
       }
+      .next-game-ticker {
+        padding: 0.38rem 0.55rem;
+        margin-bottom: 0.5rem;
+        gap: 0.4rem;
+        border-radius: 10px;
+      }
+      .ticker-header-row {
+        gap: 0.3rem;
+      }
+      .ticker-pulse-badge {
+        font-size: 0.55rem;
+        padding: 0.1rem 0.32rem;
+      }
+      .ticker-sport-tag {
+        font-size: 0.725rem;
+      }
+      .ticker-matchup {
+        font-size: 0.8rem;
+      }
+      .ticker-details {
+        font-size: 0.685rem;
+      }
+      .countdown-display {
+        padding: 0.2rem 0.35rem;
+        gap: 0.15rem;
+      }
+      .cd-box {
+        min-width: 17px;
+      }
+      .cd-val {
+        font-size: 0.8rem;
+      }
+      .cd-lbl {
+        font-size: 0.45rem;
+      }
+      .cd-colon {
+        font-size: 0.68rem;
+      }
+      .jump-btn-text {
+        display: none;
+      }
+      .jump-btn-icon {
+        display: inline;
+      }
+      .ticker-jump-btn {
+        padding: 0.3rem 0.45rem;
+        font-size: 0.75rem;
+      }
     }
 
     @media (max-width: 390px) {
+      .ticker-sport-tag {
+        display: none;
+      }
+      .cd-box.cd-secs, .cd-colon.cd-secs-colon {
+        display: none;
+      }
       .apple-sports-bar {
         padding: 0.35rem 0.45rem;
         gap: 0.3rem;
@@ -2242,14 +2323,14 @@
 </header>
 
 <div class="container">
-  <!-- Live Next Game Countdown Ticker Banner -->
-  <div class="next-game-ticker" id="next-game-ticker">
+  <!-- Live Next Game Countdown Ticker Banner (Compact Apple Style) -->
+  <div class="next-game-ticker" id="next-game-ticker" onclick="scrollToCurrentOrNextGame(true)" role="button" tabindex="0" title="Jump to this game on schedule">
     <div class="ticker-left">
-      <div class="ticker-status-wrap">
+      <div class="ticker-header-row">
         <span class="ticker-pulse-badge" id="ticker-badge">NEXT GAME</span>
         <span class="ticker-sport-tag" id="ticker-sport">🏈 Varsity Football</span>
+        <span class="ticker-matchup" id="ticker-matchup">vs. Reading Memorial</span>
       </div>
-      <div class="ticker-matchup" id="ticker-matchup">vs. Reading Memorial</div>
       <div class="ticker-details" id="ticker-details">Fri, Sep 10 &bull; 7:00 PM &bull; Fred Green Field</div>
     </div>
     <div class="ticker-right">
@@ -2259,11 +2340,12 @@
         <div class="cd-box"><span class="cd-val" id="cd-hours">--</span><span class="cd-lbl">HRS</span></div>
         <span class="cd-colon">:</span>
         <div class="cd-box"><span class="cd-val" id="cd-mins">--</span><span class="cd-lbl">MIN</span></div>
-        <span class="cd-colon">:</span>
-        <div class="cd-box"><span class="cd-val" id="cd-secs">--</span><span class="cd-lbl">SEC</span></div>
+        <span class="cd-colon cd-secs-colon">:</span>
+        <div class="cd-box cd-secs"><span class="cd-val" id="cd-secs">--</span><span class="cd-lbl">SEC</span></div>
       </div>
-      <button class="ticker-jump-btn" onclick="scrollToCurrentOrNextGame(true)" title="Jump to this game on schedule">
-        <span>View Card 📍</span>
+      <button class="ticker-jump-btn" onclick="event.stopPropagation(); scrollToCurrentOrNextGame(true)" title="Jump to this game on schedule" aria-label="Jump to next game card">
+        <span class="jump-btn-text">View 📍</span>
+        <span class="jump-btn-icon">📍</span>
       </button>
     </div>
   </div>
