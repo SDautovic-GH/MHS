@@ -3028,6 +3028,15 @@
         <span class="picker-btn-chevron">▾</span>
       </button>
 
+      <!-- Location Filter Trigger for Scores -->
+      <button class="apple-picker-btn" id="scores-location-picker-btn" onclick="openLocationSheet()" aria-label="Filter scores by venue" aria-haspopup="dialog">
+        <div class="picker-btn-content">
+          <span class="picker-btn-icon" id="scores-picker-loc-icon">📍</span>
+          <span class="picker-btn-text" id="scores-picker-loc-title">Location</span>
+        </div>
+        <span class="picker-btn-chevron">▾</span>
+      </button>
+
       <!-- Results Count Badge -->
       <div class="standings-league-badge" id="scores-count-badge">
         <span class="sync-status-dot"></span>
@@ -4356,8 +4365,10 @@ const LOC_FILTER_OPTIONS = {
   'fnl': { name: 'Fri & Wknd', sheetTitle: 'Fri Night & Weekend', icon: '🌙', subtitle: 'Friday night lights & weekend games' }
 };
 
-let currentSelectedSport = 'all';
-let activeLocFilter = 'all'; // 'all' | 'home' | 'away' | 'past' | 'fnl'
+let currentSelectedSport = (typeof SafeStorage !== 'undefined' && SafeStorage.getItem('mhs_selected_sport')) || 'all';
+let activeScoresSport = currentSelectedSport;
+let activeStandingsSport = currentSelectedSport;
+let activeLocFilter = (typeof SafeStorage !== 'undefined' && SafeStorage.getItem('mhs_selected_location')) || 'all'; // 'all' | 'home' | 'away' | 'past' | 'fnl'
 let isSearchDrawerOpen = false;
 let selectedDayStripDate = null;
 
@@ -4687,23 +4698,63 @@ function updateLocSheetSelection() {
   });
 }
 
-function selectSport(sportKey) {
+function syncAllFilterButtons() {
+  const sport = currentSelectedSport || 'all';
+  const found = ALL_SPORTS_LIST.find(s => s.key === sport) || ALL_SPORTS_LIST[0];
+  const sportName = sport === 'all' ? 'Sports' : found.name;
+
+  const sportPairs = [
+    ['picker-sport-icon', 'picker-sport-title'],
+    ['scores-picker-sport-icon', 'scores-picker-sport-title'],
+    ['standings-picker-sport-icon', 'standings-picker-sport-title']
+  ];
+  sportPairs.forEach(([iId, tId]) => {
+    const iEl = document.getElementById(iId);
+    const tEl = document.getElementById(tId);
+    if (iEl) iEl.textContent = found.icon;
+    if (tEl) tEl.textContent = sportName;
+  });
+
+  const loc = activeLocFilter || 'all';
+  const opt = LOC_FILTER_OPTIONS[loc] || LOC_FILTER_OPTIONS['all'];
+  const locTitle = loc === 'all' ? 'Location' : opt.name;
+
+  const locPairs = [
+    ['picker-loc-icon', 'picker-loc-title'],
+    ['scores-picker-loc-icon', 'scores-picker-loc-title']
+  ];
+  locPairs.forEach(([iId, tId]) => {
+    const iEl = document.getElementById(iId);
+    const tEl = document.getElementById(tId);
+    if (iEl) iEl.textContent = opt.icon;
+    if (tEl) tEl.textContent = locTitle;
+  });
+
+  updateLocSheetSelection();
+}
+
+function setGlobalSport(sportKey) {
   currentSelectedSport = sportKey;
+  activeScoresSport = sportKey;
+  activeStandingsSport = sportKey;
   selectedDayStripDate = null;
+  if (typeof SafeStorage !== 'undefined') {
+    SafeStorage.setItem('mhs_selected_sport', sportKey);
+  }
 
-  const found = ALL_SPORTS_LIST.find(s => s.key === sportKey) || ALL_SPORTS_LIST[0];
-  const iconEl = document.getElementById('picker-sport-icon');
-  const titleEl = document.getElementById('picker-sport-title');
-
-  if (iconEl) iconEl.textContent = found.icon;
-  if (titleEl) titleEl.textContent = sportKey === 'all' ? 'Sports' : found.name;
-
+  syncAllFilterButtons();
   closeAllSheets();
   renderMySportsRibbons();
   renderDailyView();
+  renderScoresView();
+  renderStandingsView();
   if (typeof updateNextGameTicker === 'function') {
     updateNextGameTicker();
   }
+}
+
+function selectSport(sportKey) {
+  setGlobalSport(sportKey);
 }
 
 function selectLocOption(loc) {
@@ -4714,16 +4765,13 @@ function selectLocOption(loc) {
 function setLocFilter(loc) {
   activeLocFilter = loc;
   selectedDayStripDate = null;
+  if (typeof SafeStorage !== 'undefined') {
+    SafeStorage.setItem('mhs_selected_location', loc);
+  }
 
-  const opt = LOC_FILTER_OPTIONS[loc] || LOC_FILTER_OPTIONS['all'];
-  const iconEl = document.getElementById('picker-loc-icon');
-  const titleEl = document.getElementById('picker-loc-title');
-
-  if (iconEl) iconEl.textContent = opt.icon;
-  if (titleEl) titleEl.textContent = loc === 'all' ? 'Location' : opt.name;
-
-  updateLocSheetSelection();
+  syncAllFilterButtons();
   renderDailyView();
+  renderScoresView();
 }
 
 function toggleSearchDrawer() {
@@ -4960,8 +5008,6 @@ const STANDINGS_SPORTS_LIST = [
   { key: 'Field Hockey', name: 'Field Hockey', icon: '🏑', subtitle: 'Middlesex Freedom Division' }
 ];
 
-let activeStandingsSport = 'all';
-
 function renderStandingsSportSheetList() {
   const listEl = document.getElementById('standings-sport-sheet-list');
   if (!listEl) return;
@@ -4994,25 +5040,11 @@ function openStandingsSportSheet() {
 }
 
 function selectStandingsSport(sportKey) {
-  setStandingsSport(sportKey);
-  closeAllSheets();
+  setGlobalSport(sportKey);
 }
 
 function setStandingsSport(sport) {
-  activeStandingsSport = sport;
-
-  const found = STANDINGS_SPORTS_LIST.find(s => s.key === sport) || STANDINGS_SPORTS_LIST[0];
-  const iconEl = document.getElementById('standings-picker-sport-icon');
-  const titleEl = document.getElementById('standings-picker-sport-title');
-
-  if (iconEl) iconEl.textContent = found.icon;
-  if (titleEl) titleEl.textContent = sport === 'all' ? 'Sports' : found.name;
-
-  renderMySportsRibbons();
-  renderStandingsView();
-  if (typeof updateNextGameTicker === 'function') {
-    updateNextGameTicker();
-  }
+  setGlobalSport(sport);
 }
 
 function renderStandingsView() {
@@ -5023,7 +5055,19 @@ function renderStandingsView() {
   const targetSports = activeStandingsSport === 'all' ? sports : sports.filter(s => s === activeStandingsSport);
 
   if (targetSports.length === 0) {
-    container.innerHTML = `<div class="empty-state"><p>No standings data available for this sport.</p></div>`;
+    const sportObj = ALL_SPORTS_LIST.find(s => s.key === activeStandingsSport) || { name: activeStandingsSport };
+    container.innerHTML = `
+      <div class="empty-state" style="padding: 3rem 1rem; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏆</div>
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">Individual Meet Sport</h3>
+        <p style="color: var(--text-secondary); font-size: 0.875rem; max-width: 440px; margin: 0 auto 1.25rem;">
+          Middlesex League standings tables are published for head-to-head varsity team sports. For ${sportObj.name}, see the Schedule for meet times and results.
+        </p>
+        <button class="jump-today-btn" onclick="switchTab('calendar')" style="margin: 0 auto;">
+          <span>📅 View Schedule</span>
+        </button>
+      </div>
+    `;
     return;
   }
 
@@ -5101,8 +5145,6 @@ function renderStandingsView() {
 // ==========================================
 // Scores View & Apple Sports Match Results Feed
 // ==========================================
-let activeScoresSport = 'all';
-
 function renderScoresSportSheetList() {
   const listEl = document.getElementById('scores-sport-sheet-list');
   if (!listEl) return;
@@ -5142,25 +5184,11 @@ function openScoresSportSheet() {
 }
 
 function selectScoresSport(sportKey) {
-  setScoresSport(sportKey);
-  closeAllSheets();
+  setGlobalSport(sportKey);
 }
 
 function setScoresSport(sport) {
-  activeScoresSport = sport;
-
-  const found = ALL_SPORTS_LIST.find(s => s.key === sport) || ALL_SPORTS_LIST[0];
-  const iconEl = document.getElementById('scores-picker-sport-icon');
-  const titleEl = document.getElementById('scores-picker-sport-title');
-
-  if (iconEl) iconEl.textContent = found.icon;
-  if (titleEl) titleEl.textContent = sport === 'all' ? 'Sports' : found.name;
-
-  renderMySportsRibbons();
-  renderScoresView();
-  if (typeof updateNextGameTicker === 'function') {
-    updateNextGameTicker();
-  }
+  setGlobalSport(sport);
 }
 
 function renderScoresView() {
@@ -5177,21 +5205,29 @@ function renderScoresView() {
     completed = completed.filter(e => e.sport === targetTitle || e.sport === activeScoresSport);
   }
 
+  if (activeLocFilter === 'home') {
+    completed = completed.filter(e => e.isHome);
+  } else if (activeLocFilter === 'away') {
+    completed = completed.filter(e => !e.isHome);
+  }
+
   // Reverse chronological: newest completed matches first
   completed.sort((a, b) => b.date.localeCompare(a.date));
 
   if (countBadgeText) {
-    countBadgeText.textContent = `${completed.length} Completed ${completed.length === 1 ? 'Game' : 'Games'}`;
+    const locDesc = activeLocFilter === 'all' ? '' : ` (${LOC_FILTER_OPTIONS[activeLocFilter].name})`;
+    countBadgeText.textContent = `${completed.length} Completed${locDesc}`;
   }
 
   if (completed.length === 0) {
     const sportName = activeScoresSport === 'all' ? 'Varsity' : activeScoresSport;
+    const locDesc = activeLocFilter === 'all' ? '' : ` (${LOC_FILTER_OPTIONS[activeLocFilter].name.toLowerCase()})`;
     container.innerHTML = `
       <div class="empty-state" style="grid-column: 1 / -1; padding: 3rem 1rem; text-align: center;">
         <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏁</div>
-        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">No Completed Games Yet</h3>
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">No Completed Games Found</h3>
         <p style="color: var(--text-secondary); font-size: 0.875rem; max-width: 440px; margin: 0 auto 1.25rem;">
-          No varsity matches have been completed for ${sportName} yet. Upcoming matchups can be found on the full schedule.
+          No completed varsity matches found for ${sportName}${locDesc}. Upcoming matchups can be found on the full schedule.
         </p>
         <button class="jump-today-btn" onclick="switchTab('calendar')" style="margin: 0 auto;">
           <span>📅 View Schedule</span>
@@ -5534,6 +5570,7 @@ function startNextGameCountdown() {
 // Initial Render
 syncHeaderHeight();
 updateThemeUI();
+syncAllFilterButtons();
 renderMySportsRibbons();
 renderDailyView();
 renderScoresView();
