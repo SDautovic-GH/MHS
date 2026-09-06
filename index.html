@@ -622,6 +622,421 @@
       letter-spacing: 0.01em;
     }
 
+    /* Live Next Game Countdown Ticker Banner */
+    .next-game-ticker {
+      background: linear-gradient(135deg, rgba(19, 27, 46, 0.95), rgba(15, 23, 42, 0.95));
+      border: 1px solid var(--border-highlight);
+      border-radius: 14px;
+      padding: 0.95rem 1.25rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    :root[data-theme="light"] .next-game-ticker {
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+    .next-game-ticker::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--accent-red), var(--accent-blue));
+    }
+    .ticker-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      flex: 1;
+      min-width: 250px;
+    }
+    .ticker-status-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .ticker-pulse-badge {
+      background: rgba(239, 68, 68, 0.18);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      font-size: 0.675rem;
+      font-weight: 800;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .ticker-sport-tag {
+      font-size: 0.775rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+    }
+    .ticker-matchup {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+    .ticker-details {
+      font-size: 0.825rem;
+      color: var(--text-secondary);
+    }
+    .ticker-right {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .countdown-display {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 0.4rem 0.65rem;
+    }
+    .cd-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 30px;
+    }
+    .cd-val {
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--accent-blue);
+      font-variant-numeric: tabular-nums;
+    }
+    .cd-lbl {
+      font-size: 0.55rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      margin-top: 0.15rem;
+    }
+    .cd-colon {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .ticker-jump-btn {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+      border: none;
+      padding: 0.5rem 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .ticker-jump-btn:hover {
+      background-color: #2563eb;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+    }
+
+    /* Card Action Row */
+    .card-action-row {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.65rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .card-sub-action {
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 0.725rem;
+      font-weight: 600;
+      padding: 0.28rem 0.45rem;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      transition: all 0.15s ease;
+      user-select: none;
+      -webkit-user-select: none;
+      flex: 1;
+      justify-content: center;
+      white-space: nowrap;
+    }
+    .card-sub-action:hover {
+      background-color: var(--bg-surface);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+    .card-sub-action:active {
+      transform: scale(0.97);
+    }
+
+    .opp-mascot-img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: contain;
+      background-color: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-subtle);
+      flex-shrink: 0;
+    }
+
+    .special-game-badge {
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 0.18rem 0.45rem;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+      white-space: nowrap;
+    }
+    .special-game-badge.thanksgiving {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.25));
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.45);
+    }
+    .special-game-badge.rivalry {
+      background-color: rgba(239, 68, 68, 0.18);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.35);
+    }
+
+    /* Header Link Buttons (MMTV & Venues) */
+    .header-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 0.45rem 0.65rem;
+      font-size: 0.775rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .header-link-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--border-highlight);
+      background-color: var(--bg-surface-elevated);
+    }
+    .header-link-btn.mmtv-btn {
+      color: #f87171;
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+    .header-link-btn.mmtv-btn:hover {
+      background-color: rgba(239, 68, 68, 0.15);
+      border-color: #ef4444;
+      color: #ef4444;
+    }
+    .live-pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #ef4444;
+      box-shadow: 0 0 6px #ef4444;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+    }
+
+    /* Venue Modal Dialog */
+    .venue-dialog {
+      border: none;
+      border-radius: 16px;
+      background: transparent;
+      padding: 0;
+      max-width: 600px;
+      width: 92%;
+      margin: auto;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+    .venue-dialog::backdrop {
+      background-color: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .venue-dialog-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-highlight);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      max-height: 85vh;
+    }
+    .venue-dialog-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.15rem 1.25rem;
+      border-bottom: 1px solid var(--border-subtle);
+      background-color: var(--bg-surface-elevated);
+    }
+    .venue-dialog-title h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+    .venue-dialog-title p {
+      font-size: 0.775rem;
+      color: var(--text-secondary);
+      margin-top: 0.2rem;
+    }
+    .venue-dialog-close {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+    }
+    .venue-dialog-close:hover {
+      color: var(--text-primary);
+      background-color: var(--bg-surface);
+    }
+    .venue-dialog-body {
+      padding: 1rem 1.25rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .venue-card {
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .venue-card-main {
+      flex: 1;
+      min-width: 240px;
+    }
+    .venue-name-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.25rem;
+    }
+    .venue-name-row h4 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+    .venue-sport-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+    }
+    .venue-address {
+      font-size: 0.775rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+    .venue-tip {
+      font-size: 0.725rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .venue-maps-btn {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+      font-size: 0.775rem;
+      font-weight: 700;
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .venue-maps-btn:hover {
+      background-color: #2563eb;
+    }
+
+    /* Toast Notification */
+    .toast-notify {
+      position: fixed;
+      bottom: max(1.5rem, env(safe-area-inset-bottom) + 0.75rem);
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background-color: rgba(15, 23, 42, 0.96);
+      color: #ffffff;
+      border: 1px solid var(--accent-blue);
+      padding: 0.65rem 1.25rem;
+      border-radius: 30px;
+      font-size: 0.825rem;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      white-space: nowrap;
+    }
+    .toast-notify.visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Sync Sport ICS Button */
+    .sync-sport-ics-btn {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--accent-blue);
+      color: var(--accent-cyan);
+      font-size: 0.775rem;
+      font-weight: 700;
+      padding: 0.38rem 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .sync-sport-ics-btn:hover {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+    }
+
     /* Filter & Search Bar */
     .filter-bar {
       display: flex;
@@ -1247,6 +1662,13 @@
         </div>
       </div>
       <div class="header-actions">
+        <a href="https://www.youtube.com/@MelroseCommunityTelevision/streams" target="_blank" rel="noopener" class="header-link-btn mmtv-btn" title="Watch Melrose sports livestreams on MMTV">
+          <span class="live-pulse-dot"></span>
+          <span>Watch MMTV</span>
+        </a>
+        <button class="header-link-btn" onclick="openVenueModal()" title="Melrose Athletic Venues &amp; Parking">
+          <span>📍 Venues</span>
+        </button>
         <a id="popout-btn" class="popout-btn" href="#" target="_blank" rel="noopener" style="display:none;" title="Open in dedicated Safari tab for full standalone app">
           <span>Open App ↗</span>
         </a>
@@ -1276,6 +1698,32 @@
 </header>
 
 <div class="container">
+  <!-- Live Next Game Countdown Ticker Banner -->
+  <div class="next-game-ticker" id="next-game-ticker">
+    <div class="ticker-left">
+      <div class="ticker-status-wrap">
+        <span class="ticker-pulse-badge" id="ticker-badge">NEXT GAME</span>
+        <span class="ticker-sport-tag" id="ticker-sport">🏈 Varsity Football</span>
+      </div>
+      <div class="ticker-matchup" id="ticker-matchup">vs. Reading Memorial</div>
+      <div class="ticker-details" id="ticker-details">Fri, Sep 10 &bull; 7:00 PM &bull; Fred Green Field</div>
+    </div>
+    <div class="ticker-right">
+      <div class="countdown-display" id="countdown-display">
+        <div class="cd-box"><span class="cd-val" id="cd-days">--</span><span class="cd-lbl">DAYS</span></div>
+        <span class="cd-colon">:</span>
+        <div class="cd-box"><span class="cd-val" id="cd-hours">--</span><span class="cd-lbl">HRS</span></div>
+        <span class="cd-colon">:</span>
+        <div class="cd-box"><span class="cd-val" id="cd-mins">--</span><span class="cd-lbl">MIN</span></div>
+        <span class="cd-colon">:</span>
+        <div class="cd-box"><span class="cd-val" id="cd-secs">--</span><span class="cd-lbl">SEC</span></div>
+      </div>
+      <button class="ticker-jump-btn" onclick="scrollToCurrentOrNextGame(true)" title="Jump to this game on schedule">
+        <span>View Card 📍</span>
+      </button>
+    </div>
+  </div>
+
   <main id="calendar-view" class="view-panel active" role="tabpanel" aria-labelledby="tab-calendar">
     <div class="filter-bar">
       <div class="search-box">
@@ -1284,8 +1732,9 @@
       </div>
       <div class="filter-pills">
         <button class="filter-pill active" data-loc="all" onclick="setLocFilter('all')">All</button>
-        <button class="filter-pill" data-loc="home" onclick="setLocFilter('home')">Home Only</button>
-        <button class="filter-pill" data-loc="away" onclick="setLocFilter('away')">Away Only</button>
+        <button class="filter-pill" data-loc="home" onclick="setLocFilter('home')">Home</button>
+        <button class="filter-pill" data-loc="away" onclick="setLocFilter('away')">Away</button>
+        <button class="filter-pill" data-loc="fnl" onclick="setLocFilter('fnl')">🌙 Night &amp; Weekend</button>
       </div>
       <button class="jump-today-btn" id="jump-today-btn" onclick="scrollToCurrentOrNextGame(true)" title="Jump to today or next game day">
         <span>📍</span>
@@ -1342,6 +1791,11 @@
         </div>
       </div>
       <div class="sport-summary-banner-right" id="banner-sport-next"></div>
+      <div class="sport-summary-banner-actions">
+        <button class="sync-sport-ics-btn" id="sync-sport-btn" onclick="exportCurrentSportIcs()" title="Download schedule for this sport to your calendar">
+          <span>📅 Sync Season (.ics)</span>
+        </button>
+      </div>
     </div>
 
     <div class="sport-section-block" id="sec-vball" data-sport="vball">
@@ -1425,6 +1879,93 @@
   <span class="fab-icon">📍</span>
   <span class="fab-text" id="fab-text">Next Game</span>
 </button>
+
+<!-- Venue Guide Modal -->
+<dialog id="venue-dialog" class="venue-dialog" onclick="if(event.target===this)closeVenueModal()">
+  <div class="venue-dialog-card">
+    <div class="venue-dialog-header">
+      <div class="venue-dialog-title">
+        <h3>📍 Melrose Athletic Venues &amp; Parking</h3>
+        <p>Addresses, directions, and parking notes for MHS home events</p>
+      </div>
+      <button class="venue-dialog-close" onclick="closeVenueModal()" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="venue-dialog-body">
+      <div class="venue-card">
+        <div class="venue-card-main">
+          <div class="venue-name-row">
+            <h4>Fred Green Memorial Field</h4>
+            <span class="venue-sport-badge">🏈 Football &bull; ⚽ Soccer</span>
+          </div>
+          <p class="venue-address">350 Lynn Fells Pkwy, Melrose, MA 02176</p>
+          <p class="venue-tip">🚗 <strong>Parking:</strong> Melrose High School main lot, middle school complex, or legal on-street parking along Lynn Fells Pkwy.</p>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Fred+Green+Memorial+Field+Melrose+MA" target="_blank" rel="noopener" class="venue-maps-btn">
+          <span>Get Directions ↗</span>
+        </a>
+      </div>
+
+      <div class="venue-card">
+        <div class="venue-card-main">
+          <div class="venue-name-row">
+            <h4>Pine Banks Park</h4>
+            <span class="venue-sport-badge">⚽ Soccer &bull; 🏑 Field Hockey &bull; 🏃 XC</span>
+          </div>
+          <p class="venue-address">Main St, Malden/Melrose, MA 02176</p>
+          <p class="venue-tip">🚗 <strong>Parking:</strong> Main parking lot entered from Main St. Walking paths connect to both turf fields and trails.</p>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Pine+Banks+Park+Main+St+Melrose+MA" target="_blank" rel="noopener" class="venue-maps-btn">
+          <span>Get Directions ↗</span>
+        </a>
+      </div>
+
+      <div class="venue-card">
+        <div class="venue-card-main">
+          <div class="venue-name-row">
+            <h4>MVMMS Middle School Gym</h4>
+            <span class="venue-sport-badge">🏐 Girls' Volleyball</span>
+          </div>
+          <p class="venue-address">350 Lynn Fells Pkwy, Melrose, MA 02176</p>
+          <p class="venue-tip">🚗 <strong>Parking:</strong> Middle school rear lot or high school campus lots. Gym entrance is on the east side of MVMMS.</p>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Melrose+Veterans+Memorial+Middle+School+Melrose+MA" target="_blank" rel="noopener" class="venue-maps-btn">
+          <span>Get Directions ↗</span>
+        </a>
+      </div>
+
+      <div class="venue-card">
+        <div class="venue-card-main">
+          <div class="venue-name-row">
+            <h4>The Knoll</h4>
+            <span class="venue-sport-badge">⚽ Soccer</span>
+          </div>
+          <p class="venue-address">Lynn Fells Pkwy (Opposite Melrose High), Melrose, MA 02176</p>
+          <p class="venue-tip">🚗 <strong>Parking:</strong> Use Melrose High School main lots; cross safely at the pedestrian signal.</p>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=The+Knoll+Lynn+Fells+Pkwy+Melrose+MA" target="_blank" rel="noopener" class="venue-maps-btn">
+          <span>Get Directions ↗</span>
+        </a>
+      </div>
+
+      <div class="venue-card">
+        <div class="venue-card-main">
+          <div class="venue-name-row">
+            <h4>Bellevue Golf Club</h4>
+            <span class="venue-sport-badge">⛳ Golf</span>
+          </div>
+          <p class="venue-address">320 Porter St, Melrose, MA 02176</p>
+          <p class="venue-tip">🚗 <strong>Parking:</strong> Clubhouse parking lot off Porter St. Please respect clubhouse rules and golf course etiquette.</p>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Bellevue+Golf+Club+Melrose+MA" target="_blank" rel="noopener" class="venue-maps-btn">
+          <span>Get Directions ↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Floating Toast Feedback -->
+<div id="toast-notify" class="toast-notify" role="alert"></div>
 
 <script>
 // Complete Varsity Athletic Schedule Data (Pristine 96 games of Fall 2026)
@@ -1686,13 +2227,34 @@ function formatDateShort(isoStr) {
   return d.toLocaleDateString('en-US', { weekday: 'short', month: 'numeric', day: 'numeric' });
 }
 
-// Calculate Today or Next Game Day
-function getTargetGameDay() {
+function getTodayEasternString() {
   const now = new Date();
   const y = now.getFullYear();
   const m = String(now.getMonth() + 1).padStart(2, '0');
   const d = String(now.getDate()).padStart(2, '0');
-  const todayStr = `${y}-${m}-${d}`;
+  return `${y}-${m}-${d}`;
+}
+
+function parseGameDateTime(item) {
+  const parts = item.date.split('-');
+  const y = parseInt(parts[0], 10);
+  const m = parseInt(parts[1], 10) - 1;
+  const d = parseInt(parts[2], 10);
+  let h = 16, min = 0;
+  if (item.time && item.time.includes(':')) {
+    const tp = item.time.trim().split(' ');
+    const hm = tp[0].split(':');
+    h = parseInt(hm[0], 10);
+    min = parseInt(hm[1], 10);
+    if (tp[1] && tp[1].toUpperCase() === 'PM' && h < 12) h += 12;
+    if (tp[1] && tp[1].toUpperCase() === 'AM' && h === 12) h = 0;
+  }
+  return new Date(y, m, d, h, min, 0);
+}
+
+// Calculate Today or Next Game Day
+function getTargetGameDay() {
+  const todayStr = getTodayEasternString();
 
   const allDates = [...new Set(events.map(e => e.date))].sort();
   if (allDates.includes(todayStr)) {
@@ -1708,6 +2270,12 @@ function getTargetGameDay() {
 }
 
 function scrollToCurrentOrNextGame(smooth = true) {
+  const currentTab = SafeStorage.getItem('mhs_active_tab') || 'calendar';
+  if (currentTab !== 'calendar') {
+    switchTab('calendar', true);
+    setTimeout(() => scrollToCurrentOrNextGame(smooth), 150);
+    return;
+  }
   const targetCard = document.getElementById('target-game-card');
   if (!targetCard || typeof targetCard.getBoundingClientRect !== 'function') return;
 
@@ -1722,6 +2290,198 @@ function scrollToCurrentOrNextGame(smooth = true) {
       top: Math.max(0, targetY),
       behavior: smooth ? 'smooth' : 'auto'
     });
+  }
+}
+
+// ==========================================
+// Mascot Lookup & Venue Helpers
+// ==========================================
+const MASCOT_LOOKUP = {
+  "Burlington": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
+  "Stoneham": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg",
+  "Wakefield": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg",
+  "Wakefield Memorial": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg",
+  "Watertown": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg",
+  "Wilmington": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg",
+  "Lexington": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg",
+  "Woburn": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg",
+  "Woburn Memorial": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg",
+  "Belmont": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg",
+  "Reading": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg",
+  "Reading Memorial": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg",
+  "Arlington": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg"
+};
+
+function getOpponentMascot(opp) {
+  if (!opp) return '';
+  if (MASCOT_LOOKUP[opp]) return MASCOT_LOOKUP[opp];
+  if (typeof currentStandingsData === 'object' && currentStandingsData) {
+    for (const sport of Object.keys(currentStandingsData)) {
+      const teams = currentStandingsData[sport]?.teams || [];
+      const match = teams.find(t => t.school && t.school.toLowerCase().includes(opp.toLowerCase()));
+      if (match && match.mascot) return match.mascot;
+    }
+  }
+  return '';
+}
+
+function getDirectionsUrl(item) {
+  if (item.isHome) {
+    if (item.venue.includes('Fred Green')) {
+      return "https://www.google.com/maps/search/?api=1&query=Fred+Green+Memorial+Field+Melrose+MA";
+    }
+    if (item.venue.includes('Pine Banks')) {
+      return "https://www.google.com/maps/search/?api=1&query=Pine+Banks+Park+Main+St+Melrose+MA";
+    }
+    if (item.venue.includes('MVMMS')) {
+      return "https://www.google.com/maps/search/?api=1&query=Melrose+Veterans+Memorial+Middle+School+Melrose+MA";
+    }
+    if (item.venue.includes('Knoll')) {
+      return "https://www.google.com/maps/search/?api=1&query=The+Knoll+Lynn+Fells+Pkwy+Melrose+MA";
+    }
+    if (item.venue.includes('Bellevue')) {
+      return "https://www.google.com/maps/search/?api=1&query=Bellevue+Golf+Club+Melrose+MA";
+    }
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.venue + ' Melrose MA')}`;
+  }
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.opp + ' High School MA')}`;
+}
+
+const escapeQuotes = (s) => (s || '').replace(/'/g, "\\'");
+
+function showToast(msg) {
+  const toast = document.getElementById('toast-notify');
+  if (!toast) return;
+  toast.textContent = msg;
+  toast.classList.add('visible');
+  if (window._toastTimeout) clearTimeout(window._toastTimeout);
+  window._toastTimeout = setTimeout(() => {
+    toast.classList.remove('visible');
+  }, 2800);
+}
+
+function openVenueModal() {
+  const d = document.getElementById('venue-dialog');
+  if (d && typeof d.showModal === 'function') {
+    d.showModal();
+  }
+}
+
+function closeVenueModal() {
+  const d = document.getElementById('venue-dialog');
+  if (d && typeof d.close === 'function') {
+    d.close();
+  }
+}
+
+function createIcsContent(eventsList) {
+  const pad = (n) => String(n).padStart(2, '0');
+  
+  let lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Melrose High Athletics//Schedule 2026//EN",
+    "CALSCALE:GREGORIAN",
+    "METHOD:PUBLISH"
+  ];
+
+  eventsList.forEach(e => {
+    const dateParts = e.date.split('-');
+    const year = dateParts[0];
+    const month = dateParts[1];
+    const day = dateParts[2];
+
+    let hour = 16, min = 0;
+    if (e.time && e.time.includes(':')) {
+      const tp = e.time.trim().split(' ');
+      const hm = tp[0].split(':');
+      hour = parseInt(hm[0], 10);
+      min = parseInt(hm[1], 10);
+      if (tp[1] && tp[1].toUpperCase() === 'PM' && hour < 12) hour += 12;
+      if (tp[1] && tp[1].toUpperCase() === 'AM' && hour === 12) hour = 0;
+    }
+
+    const startLocal = `${year}${month}${day}T${pad(hour)}${pad(min)}00`;
+    const endHour = (hour + 2) % 24;
+    const endDay = hour + 2 >= 24 ? pad(parseInt(day, 10) + 1) : day;
+    const endLocal = `${year}${month}${endDay}T${pad(endHour)}${pad(min)}00`;
+
+    const summary = `Melrose ${e.sport} ${e.isHome ? 'vs.' : '@'} ${e.opp}`;
+    const location = e.isHome ? `${e.venue}, Melrose, MA` : `${e.opp} High School, MA`;
+    const desc = `Melrose High School Fall 2026 Athletics\\nSport: ${e.sport}\\nMatchup: ${summary}\\nVenue: ${e.venue}\\nTime: ${e.time}\\nSchedule: https://sdautovic-gh.github.io/MHS/`;
+    const uid = `mhs-${e.sport.replace(/[^a-zA-Z0-9]/g, '')}-${e.date}-${hour}${min}@melroseathletics.org`;
+
+    lines.push("BEGIN:VEVENT");
+    lines.push(`UID:${uid}`);
+    lines.push(`DTSTAMP:${year}${month}${day}T000000Z`);
+    lines.push(`DTSTART:${startLocal}`);
+    lines.push(`DTEND:${endLocal}`);
+    lines.push(`SUMMARY:${summary}`);
+    lines.push(`LOCATION:${location}`);
+    lines.push(`DESCRIPTION:${desc}`);
+    lines.push("BEGIN:VALARM");
+    lines.push("TRIGGER:-PT60M");
+    lines.push("ACTION:DISPLAY");
+    lines.push("DESCRIPTION:Game Reminder: " + summary);
+    lines.push("END:VALARM");
+    lines.push("END:VEVENT");
+  });
+
+  lines.push("END:VCALENDAR");
+  return lines.join("\r\n");
+}
+
+function downloadIcsFile(filename, icsContent) {
+  const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function exportSingleGameIcs(sport, opp, date, time, venue, isHome) {
+  const game = { sport, opp, date, time, venue, isHome };
+  const filename = `MHS_${sport.replace(/[^a-zA-Z]/g, '_')}_vs_${opp.replace(/[^a-zA-Z]/g, '_')}_${date}.ics`;
+  const ics = createIcsContent([game]);
+  downloadIcsFile(filename, ics);
+  showToast(`Added ${sport} vs. ${opp} to Calendar! 📅`);
+}
+
+function exportCurrentSportIcs() {
+  const meta = SPORT_META[currentSelectedSport];
+  let list = events;
+  let filename = "Melrose_Athletics_Schedule_2026.ics";
+  if (currentSelectedSport !== 'all' && meta) {
+    list = events.filter(e => e.sport === meta.name);
+    filename = `Melrose_${meta.name.replace(/[^a-zA-Z]/g, '_')}_Schedule_2026.ics`;
+  }
+  const ics = createIcsContent(list);
+  downloadIcsFile(filename, ics);
+  showToast(`Exported ${list.length} games to Calendar! 📅`);
+}
+
+function shareGame(sport, opp, date, time, venue, isHome) {
+  const prefix = isHome ? 'vs.' : '@';
+  const shareText = `🔴 Melrose High ${sport} ${prefix} ${opp}\n📅 ${formatDate(date)} at ${time}\n📍 Venue: ${venue}\n\nSchedule & Scores: https://sdautovic-gh.github.io/MHS/`;
+  
+  if (navigator.share) {
+    navigator.share({
+      title: `Melrose High ${sport} ${prefix} ${opp}`,
+      text: shareText,
+      url: 'https://sdautovic-gh.github.io/MHS/'
+    }).catch(() => {});
+  } else if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(shareText).then(() => {
+      showToast("Game details copied to clipboard! 📋");
+    }).catch(() => {
+      showToast("Game: " + sport + " " + prefix + " " + opp);
+    });
+  } else {
+    showToast("Game: " + sport + " " + prefix + " " + opp);
   }
 }
 
@@ -1745,27 +2505,58 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
     `;
   }
 
+  // Mascot and Rivalry Badges
+  const mascotUrl = getOpponentMascot(item.opp);
+  const mascotHtml = mascotUrl
+    ? `<img class="opp-mascot-img" src="${mascotUrl}" alt="${item.opp}" loading="lazy" onerror="this.style.display='none';">`
+    : '';
+
+  let specialBadgeHtml = '';
+  if (item.date === "2026-11-26") {
+    specialBadgeHtml = '<span class="special-game-badge thanksgiving">🦃 THANKSGIVING</span>';
+  } else if (['Wakefield', 'Stoneham', 'Reading', 'Winchester'].includes(item.opp)) {
+    specialBadgeHtml = '<span class="special-game-badge rivalry">⚔️ RIVALRY</span>';
+  }
+
+  const directionsUrl = getDirectionsUrl(item);
+
   return `
     <div class="card ${item.result ? 'has-score' : ''} ${isTarget ? 'is-target-day' : ''}" ${targetCardId}>
       <div class="card-header">
         <div class="card-header-left">
           <span class="date-label">${formatDate(item.date)}</span>
           ${targetBadge}
+          ${specialBadgeHtml}
         </div>
         <span class="sport-tag ${getSportClass(item.sport)}">${item.sport}</span>
       </div>
-      <div class="matchup">${prefix} ${item.opp}</div>
+      <div class="matchup">
+        <span style="color:var(--text-muted);">${prefix}</span>
+        ${mascotHtml}
+        <span>${item.opp}</span>
+      </div>
       ${scoreHtml}
       <div class="meta-row">
         <span>⏰ ${item.time}</span>
         <span class="location-badge ${locClass}">${locLabel}</span>
       </div>
       <div class="venue-detail">${item.venue}</div>
+      <div class="card-action-row">
+        <a href="${directionsUrl}" target="_blank" rel="noopener" class="card-sub-action" title="Open Map Directions">
+          <span>🗺️ Map</span>
+        </a>
+        <button class="card-sub-action" onclick="exportSingleGameIcs('${escapeQuotes(item.sport)}', '${escapeQuotes(item.opp)}', '${item.date}', '${item.time}', '${escapeQuotes(item.venue)}', ${item.isHome})" title="Add game to Calendar (.ics)">
+          <span>📅 Cal</span>
+        </button>
+        <button class="card-sub-action" onclick="shareGame('${escapeQuotes(item.sport)}', '${escapeQuotes(item.opp)}', '${item.date}', '${item.time}', '${escapeQuotes(item.venue)}', ${item.isHome})" title="Share game details">
+          <span>↗ Share</span>
+        </button>
+      </div>
     </div>
   `;
 }
 
-let activeLocFilter = 'all'; // 'all' | 'home' | 'away'
+let activeLocFilter = 'all'; // 'all' | 'home' | 'away' | 'fnl'
 
 function setLocFilter(loc) {
   activeLocFilter = loc;
@@ -1788,6 +2579,13 @@ function renderDailyView() {
   const filtered = sorted.filter(item => {
     if (activeLocFilter === 'home' && !item.isHome) return false;
     if (activeLocFilter === 'away' && item.isHome) return false;
+    if (activeLocFilter === 'fnl') {
+      const d = new Date(item.date + 'T12:00:00');
+      const day = d.getDay(); // 0 = Sun, 5 = Fri, 6 = Sat
+      const isFridayNight = (day === 5 && (item.time.includes('PM') && !item.time.startsWith('12:') && !item.time.startsWith('1:') && !item.time.startsWith('2:') && !item.time.startsWith('3:') && !item.time.startsWith('4:')));
+      const isWeekend = (day === 0 || day === 6);
+      if (!isFridayNight && !isWeekend) return false;
+    }
 
     if (query) {
       const matchText = `${item.sport} ${item.opp} ${item.venue} ${item.date} ${item.result || ''}`.toLowerCase();
@@ -2162,6 +2960,116 @@ if (typeof window !== 'undefined') {
   window.addEventListener('load', syncHeaderHeight);
 }
 
+// ==========================================
+// Next Game Live Countdown Ticker
+// ==========================================
+function startNextGameCountdown() {
+  const tickerEl = document.getElementById('next-game-ticker');
+  if (!tickerEl) return;
+
+  const badgeEl = document.getElementById('ticker-badge');
+  const sportEl = document.getElementById('ticker-sport');
+  const matchupEl = document.getElementById('ticker-matchup');
+  const detailsEl = document.getElementById('ticker-details');
+
+  const cdDays = document.getElementById('cd-days');
+  const cdHours = document.getElementById('cd-hours');
+  const cdMins = document.getElementById('cd-mins');
+  const cdSecs = document.getElementById('cd-secs');
+
+  const sportIcons = {
+    "Football": "🏈",
+    "Boys' Soccer": "⚽",
+    "Girls' Soccer": "⚽",
+    "Girls' Volleyball": "🏐",
+    "Field Hockey": "🏑",
+    "Cross Country": "🏃",
+    "Golf": "⛳"
+  };
+
+  function updateTicker() {
+    const now = new Date();
+    const sorted = [...events].sort((a, b) => {
+      const dtA = parseGameDateTime(a);
+      const dtB = parseGameDateTime(b);
+      return dtA - dtB;
+    });
+
+    let currentNext = null;
+    let isLive = false;
+
+    for (const game of sorted) {
+      const gDate = parseGameDateTime(game);
+      const diff = gDate.getTime() - now.getTime();
+      if (diff <= 0 && diff > -9000000) {
+        currentNext = game;
+        isLive = true;
+        break;
+      } else if (diff > 0) {
+        currentNext = game;
+        break;
+      }
+    }
+
+    if (!currentNext) {
+      currentNext = sorted[sorted.length - 1];
+    }
+
+    const icon = sportIcons[currentNext.sport] || '🏆';
+    const prefix = currentNext.isHome ? 'vs.' : '@';
+
+    if (sportEl) sportEl.textContent = `${icon} ${currentNext.sport}`;
+    if (matchupEl) matchupEl.textContent = `${prefix} ${currentNext.opp}`;
+    if (detailsEl) {
+      detailsEl.innerHTML = `${formatDate(currentNext.date)} &bull; ${currentNext.time} &bull; ${currentNext.venue}`;
+    }
+
+    const targetDate = parseGameDateTime(currentNext);
+    const msRemaining = targetDate.getTime() - now.getTime();
+
+    if (isLive) {
+      if (badgeEl) {
+        badgeEl.textContent = '🔥 LIVE NOW';
+        badgeEl.style.background = 'rgba(239, 68, 68, 0.25)';
+      }
+      if (cdDays) cdDays.textContent = '00';
+      if (cdHours) cdHours.textContent = '00';
+      if (cdMins) cdMins.textContent = '00';
+      if (cdSecs) cdSecs.textContent = '00';
+    } else if (msRemaining > 0) {
+      const todayStr = getTodayEasternString();
+      if (badgeEl) {
+        badgeEl.textContent = currentNext.date === todayStr ? 'GAME TODAY' : 'NEXT GAME';
+        badgeEl.style.background = currentNext.date === todayStr ? 'rgba(239, 68, 68, 0.22)' : 'rgba(59, 130, 246, 0.22)';
+        badgeEl.style.color = currentNext.date === todayStr ? '#f87171' : '#60a5fa';
+        badgeEl.style.borderColor = currentNext.date === todayStr ? 'rgba(239, 68, 68, 0.4)' : 'rgba(59, 130, 246, 0.4)';
+      }
+
+      const totalSecs = Math.floor(msRemaining / 1000);
+      const days = Math.floor(totalSecs / 86400);
+      const hours = Math.floor((totalSecs % 86400) / 3600);
+      const mins = Math.floor((totalSecs % 3600) / 60);
+      const secs = totalSecs % 60;
+
+      const pad = (n) => String(n).padStart(2, '0');
+      if (cdDays) cdDays.textContent = pad(days);
+      if (cdHours) cdHours.textContent = pad(hours);
+      if (cdMins) cdMins.textContent = pad(mins);
+      if (cdSecs) cdSecs.textContent = pad(secs);
+    } else {
+      if (badgeEl) badgeEl.textContent = 'FINAL / COMPLETED';
+      if (cdDays) cdDays.textContent = '00';
+      if (cdHours) cdHours.textContent = '00';
+      if (cdMins) cdMins.textContent = '00';
+      if (cdSecs) cdSecs.textContent = '00';
+    }
+  }
+
+  updateTicker();
+  if (window._countdownInterval) clearInterval(window._countdownInterval);
+  window._countdownInterval = setInterval(updateTicker, 1000);
+}
+
 // Initial Render
 syncHeaderHeight();
 updateThemeUI();
@@ -2169,6 +3077,7 @@ renderDailyView();
 populateSportsView();
 renderStandingsView();
 loadDynamicScoresAndStandings();
+startNextGameCountdown();
 setTimeout(syncHeaderHeight, 100);
 
 // Maintain active tab selection on refresh or load
