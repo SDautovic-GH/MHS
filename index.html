@@ -1763,6 +1763,15 @@
       color: #fff;
     }
 
+    .sport-tag.icon-only {
+      font-size: 0.95rem;
+      padding: 0.2rem 0.45rem;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .sport-vball { background-color: var(--badge-vball); }
     .sport-bsoc { background-color: var(--badge-bsoc); }
     .sport-gsoc { background-color: var(--badge-gsoc); }
@@ -4635,24 +4644,25 @@ function shareGame(sport, opp, date, time, venue, isHome) {
   }
 }
 
-function getSportTagHtml(sport) {
+function getSportTagHtml(sport, iconOnly = false) {
+  const iconClass = iconOnly ? ' icon-only' : '';
   switch (sport) {
     case "Girls' Volleyball": 
-      return `<span class="sport-tag sport-vball" title="${sport}">🏐 Volleyball</span>`;
+      return `<span class="sport-tag sport-vball${iconClass}" title="${sport}">🏐${iconOnly ? '' : ' Volleyball'}</span>`;
     case "Boys' Soccer": 
-      return `<span class="sport-tag sport-bsoc" title="${sport}">⚽ Boys</span>`;
+      return `<span class="sport-tag sport-bsoc${iconClass}" title="${sport}">⚽${iconOnly ? '' : ' Boys'}</span>`;
     case "Girls' Soccer": 
-      return `<span class="sport-tag sport-gsoc" title="${sport}">⚽ Girls</span>`;
+      return `<span class="sport-tag sport-gsoc${iconClass}" title="${sport}">⚽${iconOnly ? '' : ' Girls'}</span>`;
     case "Football": 
-      return `<span class="sport-tag sport-fball" title="${sport}">🏈 Football</span>`;
+      return `<span class="sport-tag sport-fball${iconClass}" title="${sport}">🏈${iconOnly ? '' : ' Football'}</span>`;
     case "Field Hockey": 
-      return `<span class="sport-tag sport-fhockey" title="${sport}">🏑 Field Hockey</span>`;
+      return `<span class="sport-tag sport-fhockey${iconClass}" title="${sport}">🏑${iconOnly ? '' : ' Field Hockey'}</span>`;
     case "Cross Country": 
-      return `<span class="sport-tag sport-xc" title="${sport}">🏃 XC</span>`;
+      return `<span class="sport-tag sport-xc${iconClass}" title="${sport}">🏃${iconOnly ? '' : ' XC'}</span>`;
     case "Golf": 
-      return `<span class="sport-tag sport-golf" title="${sport}">⛳ Golf</span>`;
+      return `<span class="sport-tag sport-golf${iconClass}" title="${sport}">⛳${iconOnly ? '' : ' Golf'}</span>`;
     default: 
-      return `<span class="sport-tag sport-other" title="${sport}">🏆 ${sport}</span>`;
+      return `<span class="sport-tag sport-other${iconClass}" title="${sport}">🏆${iconOnly ? '' : ' ' + sport}</span>`;
   }
 }
 
@@ -4711,7 +4721,7 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
           ${targetBadge}
           ${specialBadgeHtml}
         </div>
-        ${getSportTagHtml(item.sport)}
+        ${getSportTagHtml(item.sport, currentSelectedSport !== 'all')}
       </div>
       <div class="matchup">
         <span style="color:var(--text-muted); font-weight:600; margin-right:0.25rem;">${prefix}</span>
@@ -6030,7 +6040,7 @@ function renderScoresView() {
         <div class="score-card-header">
           <div class="score-sport-info">
             <span class="score-sport-icon">${sportInfo.icon}</span>
-            <span class="score-sport-name">${item.sport}</span>
+            ${activeScoresSport === 'all' ? `<span class="score-sport-name">${item.sport}</span>` : ''}
             <span class="score-home-away-tag ${item.isHome ? 'home' : 'away'}">${item.isHome ? 'HOME' : 'AWAY'}</span>
           </div>
           ${statusBadgeHtml}
