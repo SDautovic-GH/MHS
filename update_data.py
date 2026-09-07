@@ -290,6 +290,67 @@ def fetch_standings():
 
     return standings_data
 
+def fetch_maxpreps_rosters():
+    print("[*] Checking for official team rosters on MaxPreps...")
+    existing_players = {}
+    if os.path.exists("players.json"):
+        try:
+            with open("players.json", "r", encoding="utf-8") as f:
+                existing_players = json.load(f).get("sports", {})
+        except Exception:
+            pass
+
+    for sport_label, cfg in SPORTS_CONFIG.items():
+        slug = cfg["slug"]
+        url = f"https://www.maxpreps.com/ma/melrose/melrose-red-hawks/{slug}/roster/"
+        try:
+            html = fetch_url(url, timeout=10)
+            data = extract_next_data(html)
+            if not data:
+                continue
+            athletes = data.get("props", {}).get("pageProps", {}).get("athleteData", [])
+            if not athletes or len(athletes) == 0:
+                continue
+
+            current_sport_data = existing_players.get(sport_label, {})
+            current_roster_map = {p["id"]: p for p in current_sport_data.get("roster", []) if p.get("id")}
+            updated_roster = []
+
+            for a in athletes:
+                aid = a[4] if len(a) > 4 else ""
+                fname = a[5] if len(a) > 5 else ""
+                lname = a[6] if len(a) > 6 else ""
+                fullname = a[33] if len(a) > 33 and a[33] else f"{fname} {lname}"
+                jersey = str(a[7]) if len(a) > 7 and a[7] is not None else ""
+                pos = a[12] if len(a) > 12 and a[12] else ""
+                yr = a[36] if len(a) > 36 and a[36] else ""
+                purl = a[31] if len(a) > 31 and a[31] else ""
+
+                existing_p = current_roster_map.get(aid, {})
+                stats = existing_p.get("stats", {})
+
+                updated_roster.append({
+                    "id": aid,
+                    "firstName": fname,
+                    "lastName": lname,
+                    "fullName": fullname,
+                    "jersey": jersey,
+                    "position": pos,
+                    "year": yr,
+                    "profileUrl": purl,
+                    "stats": stats
+                })
+
+            if len(updated_roster) > 0:
+                if sport_label not in existing_players:
+                    existing_players[sport_label] = {"sport": sport_label, "roster": []}
+                existing_players[sport_label]["roster"] = updated_roster
+                print(f"  [+] {sport_label:18}: {len(updated_roster)} athletes synced from MaxPreps")
+        except Exception as e:
+            print(f"  [-] {sport_label:18}: Roster error ({e})")
+
+    return existing_players
+
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     os.chdir(script_dir)
@@ -336,6 +397,15 @@ def main():
     with open("standings.json", "w", encoding="utf-8") as f:
         json.dump(standings_payload, f, indent=2)
     print(f"[✓] Saved standings.json ({len(standings)} sports standings)")
+
+    players_data = fetch_maxpreps_rosters()
+    players_payload = {
+        "lastUpdated": datetime.now().isoformat(),
+        "sports": players_data
+    }
+    with open("players.json", "w", encoding="utf-8") as f:
+        json.dump(players_payload, f, indent=2)
+    print(f"[✓] Saved players.json ({len(players_data)} sports rosters synced)")
 
     build_script = os.path.join(script_dir, "build_index.py")
     if os.path.exists(build_script):

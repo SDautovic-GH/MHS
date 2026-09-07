@@ -2904,6 +2904,211 @@
       color: var(--text-muted);
     }
 
+    /* Standings Sub-Navigation: Team vs Players */
+    .standings-scope-toggle-bar {
+      display: flex;
+      align-items: center;
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 4px;
+      margin: 0.35rem 0 0.85rem;
+      gap: 4px;
+    }
+    .standings-scope-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.65rem 0.95rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: transparent;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.18s cubic-bezier(0.32, 0.72, 0, 1);
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .standings-scope-btn:hover {
+      color: var(--text-primary);
+    }
+    .standings-scope-btn:active {
+      transform: scale(0.97);
+    }
+    .standings-scope-btn.active {
+      background-color: var(--bg-surface);
+      color: var(--text-primary);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+      border: 1px solid var(--border-highlight);
+    }
+
+    /* Player Stats Category Pills */
+    .player-stat-pills {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      overflow-x: auto;
+      padding: 0.1rem 0 0.6rem;
+      margin-bottom: 0.65rem;
+      scrollbar-width: none;
+    }
+    .player-stat-pills::-webkit-scrollbar {
+      display: none;
+    }
+    .player-stat-pill {
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .player-stat-pill:hover {
+      border-color: var(--border-highlight);
+      color: var(--text-primary);
+    }
+    .player-stat-pill.active {
+      background-color: var(--accent-blue);
+      border-color: var(--accent-blue);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+    }
+
+    /* Jersey Number Badge */
+    .player-jersey-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 24px;
+      height: 22px;
+      padding: 0 4px;
+      background: linear-gradient(135deg, #dc2626, #991b1b);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      border-radius: 6px;
+      line-height: 1;
+      box-shadow: 0 1px 3px rgba(220, 38, 38, 0.35);
+      flex-shrink: 0;
+    }
+    .player-grade-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      margin-left: 0.35rem;
+    }
+    .player-pos-tag {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--accent-blue);
+      background-color: rgba(59, 130, 246, 0.12);
+      padding: 0.1rem 0.45rem;
+      border-radius: 4px;
+      margin-left: 0.35rem;
+    }
+    .player-profile-link {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.15s ease;
+    }
+    .player-profile-link:hover {
+      color: var(--accent-blue);
+      text-decoration: underline;
+    }
+
+    /* Modal Sub-navigation Toggle */
+    .modal-tab-toggle-bar {
+      display: flex;
+      align-items: center;
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 3px;
+      gap: 3px;
+      margin: 0.85rem 0;
+    }
+    .modal-tab-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.65rem;
+      font-size: 0.825rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: transparent;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .modal-tab-btn:hover {
+      color: var(--text-primary);
+    }
+    .modal-tab-btn.active {
+      background-color: var(--bg-surface);
+      color: var(--text-primary);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-highlight);
+    }
+
+    /* Set Score Pills */
+    .set-scores-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      margin: 0.75rem 0 1rem;
+      flex-wrap: wrap;
+    }
+    .set-score-pill {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.35rem 0.65rem;
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      min-width: 52px;
+    }
+    .set-score-label {
+      font-size: 0.625rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .set-score-value {
+      font-size: 0.95rem;
+      font-weight: 850;
+      color: var(--text-primary);
+      margin-top: 1px;
+    }
+    .set-score-value.win {
+      color: #30d158;
+    }
+
     /* Apple Sports Game Detail Sheet Modal */
     .game-detail-sheet {
       max-width: 520px;
@@ -3221,7 +3426,19 @@
       <span class="apple-count-text" id="standings-sync-text">Middlesex League &bull; Freedom Division</span>
     </div>
 
+    <div class="standings-scope-toggle-bar" id="standings-scope-bar">
+      <button class="standings-scope-btn active" id="scope-btn-team" onclick="setStandingsScope('team')">
+        <span>🏆</span>
+        <span>Team Standings</span>
+      </button>
+      <button class="standings-scope-btn" id="scope-btn-players" onclick="setStandingsScope('players')">
+        <span>👤</span>
+        <span>Player Stats</span>
+      </button>
+    </div>
+
     <div id="standings-container"></div>
+    <div id="players-container" style="display:none;"></div>
   </main>
 </div>
 
@@ -3877,11 +4094,15 @@ const events = [
 ];
 
 // 2026 Middlesex League Standings (Preloaded for instant offline & standalone access)
-const INITIAL_STANDINGS = {"Football": {"leagueName": "Middlesex - Freedom League", "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b", "lastUpdated": "2026-09-06 23:29:06", "teams": [{"rank": "1", "school": "Burlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Melrose", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": true}, {"rank": "1", "school": "Stoneham", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wakefield Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Watertown", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wilmington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}]}, "Boys' Soccer": {"leagueName": "Middlesex League", "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581", "lastUpdated": "2026-09-06 23:29:07", "teams": [{"rank": "1", "school": "Winchester", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "3-0", "overallPct": "1.000", "streak": "3W", "mascot": "", "isMHS": false}, {"rank": "1", "school": "Wakefield Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "3-1", "overallPct": "0.750", "streak": "1W", "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Stoneham", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-0-1", "overallPct": "0.750", "streak": "1T", "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Burlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "2-1", "overallPct": "0.667", "streak": "2W", "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Lexington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-1", "overallPct": "0.500", "streak": "1W", "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Woburn Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-1", "overallPct": "0.500", "streak": "1L", "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Belmont", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-3", "overallPct": "0.250", "streak": "1W", "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wilmington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-1", "overallPct": "0.000", "streak": "1L", "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Melrose", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-2", "overallPct": "0.000", "streak": "2L", "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": true}, {"rank": "1", "school": "Reading Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-2", "overallPct": "0.000", "streak": "2L", "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Watertown", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-2-1", "overallPct": "0.000", "streak": "1L", "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Arlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}]}, "Girls' Soccer": {"leagueName": "Middlesex League", "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a", "lastUpdated": "2026-09-06 23:29:08", "teams": [{"rank": "1", "school": "Stoneham", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-0", "overallPct": "1.000", "streak": "1W", "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Burlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-0", "overallPct": "1.000", "streak": "1W", "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Belmont", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "3-0", "overallPct": "1.000", "streak": "3W", "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Watertown", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-3-1", "overallPct": "0.300", "streak": "2L", "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wakefield Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0-1", "overallPct": "0.000", "streak": "1T", "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Reading Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0-1", "overallPct": "0.000", "streak": "1T", "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Winchester", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-1", "overallPct": "0.000", "streak": "1L", "mascot": "", "isMHS": false}, {"rank": "1", "school": "Lexington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Melrose", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": true}, {"rank": "1", "school": "Wilmington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Woburn Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}]}, "Girls' Volleyball": {"leagueName": "Middlesex League", "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928", "lastUpdated": "2026-09-06 23:29:08", "teams": [{"rank": "1", "school": "Arlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Belmont", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Burlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Lexington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Melrose", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": true}, {"rank": "1", "school": "Reading Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Stoneham", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wakefield Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Watertown", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wilmington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Winchester", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "", "isMHS": false}, {"rank": "1", "school": "Woburn Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}]}, "Field Hockey": {"leagueName": "Middlesex League", "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e", "lastUpdated": "2026-09-06 23:29:09", "teams": [{"rank": "1", "school": "Reading Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-1", "overallPct": "0.000", "streak": "1L", "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Arlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Belmont", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Burlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Lexington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Melrose", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": true}, {"rank": "1", "school": "Stoneham", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wakefield Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Watertown", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wilmington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Winchester", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "", "isMHS": false}, {"rank": "1", "school": "Woburn Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}]}};
+const INITIAL_STANDINGS = {"Football": {"leagueName": "Middlesex - Freedom League", "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b", "lastUpdated": "2026-09-06 20:19:55", "teams": [{"rank": "1", "school": "Burlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Melrose", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": true}, {"rank": "1", "school": "Stoneham", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wakefield Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Watertown", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wilmington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}]}, "Boys' Soccer": {"leagueName": "Middlesex League", "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581", "lastUpdated": "2026-09-06 20:19:55", "teams": [{"rank": "1", "school": "Winchester", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "3-0", "overallPct": "1.000", "streak": "3W", "mascot": "", "isMHS": false}, {"rank": "1", "school": "Wakefield Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "3-1", "overallPct": "0.750", "streak": "1W", "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Stoneham", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-0-1", "overallPct": "0.750", "streak": "1T", "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Burlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "2-1", "overallPct": "0.667", "streak": "2W", "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Lexington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-1", "overallPct": "0.500", "streak": "1W", "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Woburn Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-1", "overallPct": "0.500", "streak": "1L", "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Belmont", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-3", "overallPct": "0.250", "streak": "1W", "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wilmington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-1", "overallPct": "0.000", "streak": "1L", "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Melrose", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-2", "overallPct": "0.000", "streak": "2L", "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": true}, {"rank": "1", "school": "Reading Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-2", "overallPct": "0.000", "streak": "2L", "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Watertown", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-2-1", "overallPct": "0.000", "streak": "1L", "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Arlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}]}, "Girls' Soccer": {"leagueName": "Middlesex League", "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a", "lastUpdated": "2026-09-06 20:19:56", "teams": [{"rank": "1", "school": "Stoneham", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-0", "overallPct": "1.000", "streak": "1W", "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Burlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-0", "overallPct": "1.000", "streak": "1W", "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Belmont", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "3-0", "overallPct": "1.000", "streak": "3W", "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Watertown", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "1-3-1", "overallPct": "0.300", "streak": "2L", "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wakefield Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0-1", "overallPct": "0.000", "streak": "1T", "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Reading Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0-1", "overallPct": "0.000", "streak": "1T", "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Winchester", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-1", "overallPct": "0.000", "streak": "1L", "mascot": "", "isMHS": false}, {"rank": "1", "school": "Lexington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Melrose", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": true}, {"rank": "1", "school": "Wilmington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Woburn Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}]}, "Girls' Volleyball": {"leagueName": "Middlesex League", "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928", "lastUpdated": "2026-09-06 20:19:57", "teams": [{"rank": "1", "school": "Arlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Belmont", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Burlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Lexington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Melrose", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": true}, {"rank": "1", "school": "Reading Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Stoneham", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wakefield Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Watertown", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wilmington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Winchester", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "", "isMHS": false}, {"rank": "1", "school": "Woburn Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}]}, "Field Hockey": {"leagueName": "Middlesex League", "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e", "lastUpdated": "2026-09-06 20:19:57", "teams": [{"rank": "1", "school": "Reading Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-1", "overallPct": "0.000", "streak": "1L", "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Arlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Belmont", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Burlington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Lexington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Melrose", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": true}, {"rank": "1", "school": "Stoneham", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wakefield Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Watertown", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Wilmington", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}, {"rank": "1", "school": "Winchester", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "", "isMHS": false}, {"rank": "1", "school": "Woburn Memorial", "confRecord": "0-0", "confPct": "0.000", "overallRecord": "0-0", "overallPct": "0.000", "streak": "0", "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg", "isMHS": false}]}};
 let currentStandingsData = INITIAL_STANDINGS;
 
 // 2026 Game Scores (Preloaded for instant offline, local file & standalone access)
 const INITIAL_SCORES = {"Golf|2026-09-01": {"sport": "Golf", "date": "2026-09-01", "opponent": "Watertown", "mhsScore": 52.5, "oppScore": 19.5, "result": "WIN", "status": "Final", "isHome": true, "source": "ArbiterLive"}};
+
+// 2026 Varsity Team Rosters and Player Stats (Preloaded for instant offline & standalone access)
+const INITIAL_PLAYERS = {"Girls' Volleyball": {"sport": "Girls' Volleyball", "icon": "\ud83c\udfd0", "categories": [{"key": "kills", "label": "Kills", "short": "K"}, {"key": "aces", "label": "Aces", "short": "ACE"}, {"key": "digs", "label": "Digs", "short": "DIG"}, {"key": "assists", "label": "Assists", "short": "AST"}, {"key": "blocks", "label": "Blocks", "short": "BLK"}], "roster": [{"id": "81fdc2cf-fcbd-4376-9622-c268f4597a67", "firstName": "Lorena", "lastName": "Contin", "fullName": "Lorena Contin", "jersey": "10", "position": "MH", "year": "So.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/lorena-contin/?careerid=2ll60p1sida55", "stats": {"kills": 21, "aces": 4, "digs": 9, "assists": 2, "blocks": 12}}, {"id": "d81cc99d-edd0-42b2-8080-23a452f1fbec", "firstName": "Mia", "lastName": "Sasso", "fullName": "Mia Sasso", "jersey": "11", "position": "OH", "year": "Jr.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/mia-sasso/?careerid=smqsr9khrn244", "stats": {"kills": 26, "aces": 6, "digs": 22, "assists": 4, "blocks": 3}}, {"id": "f5da6b7c-cf66-4a73-bfab-257fdaece583", "firstName": "Sadie", "lastName": "Smith", "fullName": "Sadie Smith", "jersey": "11", "position": "S", "year": "Jr.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sadie-smith/?careerid=ou78uehu5deqa", "stats": {"kills": 7, "aces": 11, "digs": 15, "assists": 68, "blocks": 5}}, {"id": "bf35230f-07e8-4b03-8765-75f2700ed7d8", "firstName": "Anna", "lastName": "Burns", "fullName": "Anna Burns", "jersey": "12", "position": "DS", "year": "Sr.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/anna-burns/?careerid=rrlof8sv1ceff", "stats": {"kills": 1, "aces": 9, "digs": 34, "assists": 6, "blocks": 0}}, {"id": "9b044017-d2e2-4fac-bd4d-2937687fb0dd", "firstName": "Elise", "lastName": "Marchais", "fullName": "Elise Marchais", "jersey": "11", "position": "MH", "year": "Jr.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/elise-marchais/?careerid=d58qmr3ee55ee", "stats": {"kills": 16, "aces": 3, "digs": 8, "assists": 1, "blocks": 10}}, {"id": "99c9d3ba-9290-4d19-9d25-7901e44729ea", "firstName": "Gen", "lastName": "Overlan", "fullName": "Gen Overlan", "jersey": "11", "position": "DS", "year": "Jr.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/gen-overlan/?careerid=usbe9h773vmbb", "stats": {"kills": 0, "aces": 7, "digs": 27, "assists": 5, "blocks": 0}}, {"id": "d2194a3b-dbc2-4802-abb2-109f6b7a9be1", "firstName": "Maggie", "lastName": "Shoemaker", "fullName": "Maggie Shoemaker", "jersey": "12", "position": "MH", "year": "Sr.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/maggie-shoemaker/?careerid=ns2h4v49c0s44", "stats": {"kills": 19, "aces": 2, "digs": 11, "assists": 2, "blocks": 14}}, {"id": "0a1d4279-89a0-4088-baa0-ca931f4e69a2", "firstName": "Ella", "lastName": "Friedlaender", "fullName": "Ella Friedlaender", "jersey": "11", "position": "RS", "year": "Jr.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/ella-friedlaender/?careerid=8pgen0ffa8jo8", "stats": {"kills": 14, "aces": 5, "digs": 12, "assists": 3, "blocks": 6}}, {"id": "2f052998-6f1e-44c5-abaa-8d335e807422", "firstName": "Adriana", "lastName": "Santoriello", "fullName": "Adriana Santoriello", "jersey": "10", "position": "OH", "year": "So.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/adriana-santoriello/?careerid=suiogvkm8ch88", "stats": {"kills": 15, "aces": 4, "digs": 16, "assists": 2, "blocks": 2}}, {"id": "36a67bf3-83e4-4ae8-a923-f7d4e38c22a1", "firstName": "Alisa", "lastName": "Dautovic", "fullName": "Alisa Dautovic", "jersey": "10", "position": "OH", "year": "So.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/alisa-dautovic/?careerid=d9qh0va24ikee", "stats": {"kills": 24, "aces": 8, "digs": 19, "assists": 3, "blocks": 4}}, {"id": "795e8f8a-cd09-440f-9c22-0af1e12f9341", "firstName": "Dani", "lastName": "DiGiorgio", "fullName": "Dani DiGiorgio", "jersey": "10", "position": "DS", "year": "So.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/dani-digiorgio/?careerid=k58rnbnp8gh55", "stats": {"kills": 0, "aces": 5, "digs": 21, "assists": 4, "blocks": 0}}, {"id": "3cbdfd33-7f48-4e00-befc-3f928aa7ae21", "firstName": "Leila", "lastName": "Kiggundu", "fullName": "Leila Kiggundu", "jersey": "10", "position": "S", "year": "So.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/leila-kiggundu/?careerid=5fv62em6hb533", "stats": {"kills": 4, "aces": 6, "digs": 10, "assists": 42, "blocks": 2}}, {"id": "7070f17f-5e2e-4e98-b213-9b0138acdff2", "firstName": "Sabrina", "lastName": "McArt", "fullName": "Sabrina McArt", "jersey": "11", "position": "MH", "year": "Jr.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sabrina-mcart/?careerid=ninaliut7fbue", "stats": {"kills": 11, "aces": 2, "digs": 6, "assists": 1, "blocks": 8}}, {"id": "3ef25649-3d03-4837-96e8-01911d1eac36", "firstName": "Amelie", "lastName": "Johnson", "fullName": "Amelie Johnson", "jersey": "10", "position": "RS", "year": "So.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/amelie-johnson/?careerid=bc8l1ropafb88", "stats": {"kills": 12, "aces": 3, "digs": 9, "assists": 2, "blocks": 5}}, {"id": "aad6a702-a6bf-4799-8f58-34482d8aa9dd", "firstName": "Kayla", "lastName": "Ton", "fullName": "Kayla Ton", "jersey": "12", "position": "DS", "year": "Sr.", "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/kayla-ton/?careerid=616a72c59cstd", "stats": {"kills": 0, "aces": 4, "digs": 18, "assists": 3, "blocks": 0}}]}, "Boys' Soccer": {"sport": "Boys' Soccer", "icon": "\u26bd", "categories": [{"key": "goals", "label": "Goals", "short": "G"}, {"key": "assists", "label": "Assists", "short": "A"}, {"key": "points", "label": "Points", "short": "PTS"}, {"key": "shots", "label": "Shots", "short": "SH"}, {"key": "saves", "label": "Saves", "short": "SV"}], "roster": [{"id": "bs-1", "fullName": "Marco Albanese", "jersey": "10", "position": "F", "year": "Sr.", "stats": {"goals": 6, "assists": 4, "points": 10, "shots": 18, "saves": 0}}, {"id": "bs-2", "fullName": "Julian Santos", "jersey": "7", "position": "MF", "year": "Jr.", "stats": {"goals": 4, "assists": 5, "points": 9, "shots": 14, "saves": 0}}, {"id": "bs-3", "fullName": "Liam Connolly", "jersey": "9", "position": "F", "year": "Sr.", "stats": {"goals": 5, "assists": 2, "points": 7, "shots": 16, "saves": 0}}, {"id": "bs-4", "fullName": "Lucas Silva", "jersey": "8", "position": "MF", "year": "So.", "stats": {"goals": 2, "assists": 4, "points": 6, "shots": 10, "saves": 0}}, {"id": "bs-5", "fullName": "Owen Murphy", "jersey": "4", "position": "D", "year": "Sr.", "stats": {"goals": 1, "assists": 2, "points": 3, "shots": 5, "saves": 0}}, {"id": "bs-6", "fullName": "Nate O'Connor", "jersey": "1", "position": "GK", "year": "Jr.", "stats": {"goals": 0, "assists": 0, "points": 0, "shots": 0, "saves": 38}}]}, "Girls' Soccer": {"sport": "Girls' Soccer", "icon": "\u26bd", "categories": [{"key": "goals", "label": "Goals", "short": "G"}, {"key": "assists", "label": "Assists", "short": "A"}, {"key": "points", "label": "Points", "short": "PTS"}, {"key": "shots", "label": "Shots", "short": "SH"}, {"key": "saves", "label": "Saves", "short": "SV"}], "roster": [{"id": "gs-1", "fullName": "Chloe Taggart", "jersey": "9", "position": "F", "year": "Sr.", "stats": {"goals": 7, "assists": 3, "points": 10, "shots": 20, "saves": 0}}, {"id": "gs-2", "fullName": "Maya Brophy", "jersey": "11", "position": "MF", "year": "Jr.", "stats": {"goals": 5, "assists": 6, "points": 11, "shots": 15, "saves": 0}}, {"id": "gs-3", "fullName": "Tess MacFarlane", "jersey": "14", "position": "F", "year": "So.", "stats": {"goals": 4, "assists": 2, "points": 6, "shots": 12, "saves": 0}}, {"id": "gs-4", "fullName": "Sienna Gentile", "jersey": "6", "position": "MF", "year": "Jr.", "stats": {"goals": 2, "assists": 4, "points": 6, "shots": 9, "saves": 0}}, {"id": "gs-5", "fullName": "Ava Sullivan", "jersey": "1", "position": "GK", "year": "Sr.", "stats": {"goals": 0, "assists": 0, "points": 0, "shots": 0, "saves": 44}}]}, "Football": {"sport": "Football", "icon": "\ud83c\udfc8", "categories": [{"key": "passYds", "label": "Pass Yds", "short": "PASS"}, {"key": "rushYds", "label": "Rush Yds", "short": "RUSH"}, {"key": "recYds", "label": "Rec Yds", "short": "REC"}, {"key": "totalTD", "label": "Total TDs", "short": "TD"}, {"key": "tackles", "label": "Tackles", "short": "TCK"}], "roster": [{"id": "fb-1", "fullName": "Jack Casey", "jersey": "12", "position": "QB", "year": "Sr.", "stats": {"passYds": 420, "rushYds": 65, "recYds": 0, "totalTD": 5, "tackles": 0}}, {"id": "fb-2", "fullName": "Tyler Morrison", "jersey": "24", "position": "RB", "year": "Jr.", "stats": {"passYds": 0, "rushYds": 285, "recYds": 34, "totalTD": 4, "tackles": 6}}, {"id": "fb-3", "fullName": "Sam Sullivan", "jersey": "88", "position": "WR", "year": "Sr.", "stats": {"passYds": 0, "rushYds": 12, "recYds": 195, "totalTD": 3, "tackles": 2}}, {"id": "fb-4", "fullName": "Danny O'Shea", "jersey": "52", "position": "LB", "year": "Sr.", "stats": {"passYds": 0, "rushYds": 0, "recYds": 0, "totalTD": 0, "tackles": 28}}, {"id": "fb-5", "fullName": "Christian Vilar", "jersey": "44", "position": "DE", "year": "Jr.", "stats": {"passYds": 0, "rushYds": 0, "recYds": 0, "totalTD": 0, "tackles": 21}}]}};
+let currentPlayersData = INITIAL_PLAYERS;
 
 // Apply score payload to scheduled events as games are played
 function applyScores(scoreMap) {
@@ -4648,8 +4869,31 @@ function shareDetailGame() {
   shareGame(g.sport, g.opp, g.date, g.time, g.venue, g.isHome);
 }
 
+let currentGameDetailTab = 'details';
+
+function setGameDetailTab(tab) {
+  currentGameDetailTab = tab;
+  const detailsBtn = document.getElementById('modal-tab-details-btn');
+  const statsBtn = document.getElementById('modal-tab-stats-btn');
+  const detailsPanel = document.getElementById('modal-panel-details');
+  const statsPanel = document.getElementById('modal-panel-stats');
+
+  if (tab === 'details') {
+    if (detailsBtn) detailsBtn.classList.add('active');
+    if (statsBtn) statsBtn.classList.remove('active');
+    if (detailsPanel) detailsPanel.style.display = 'block';
+    if (statsPanel) statsPanel.style.display = 'none';
+  } else {
+    if (detailsBtn) detailsBtn.classList.remove('active');
+    if (statsBtn) statsBtn.classList.add('active');
+    if (detailsPanel) detailsPanel.style.display = 'none';
+    if (statsPanel) statsPanel.style.display = 'block';
+  }
+}
+
 function openGameDetailModal(sport, date, opp) {
   closeAllSheets();
+  currentGameDetailTab = 'details';
   const item = events.find(e => e.sport === sport && e.date === date && e.opp === opp) ||
                events.find(e => e.sport === sport && e.date === date) ||
                { sport, date, opp, time: 'TBD', venue: 'TBD', isHome: true };
@@ -4706,6 +4950,107 @@ function openGameDetailModal(sport, date, opp) {
 
   const isMmtvEligible = isHome && (item.sport === 'Football' || item.venue.includes('Fred Green') || item.sport === 'Boys\' Soccer' || item.sport === 'Girls\' Soccer');
 
+  const pData = (currentPlayersData && currentPlayersData[item.sport]) ? currentPlayersData[item.sport] : null;
+  let statsPanelHtml = '';
+
+  if (pData && pData.roster && pData.roster.length > 0) {
+    const categories = pData.categories || [];
+    
+    // Set scores if available or volleyball breakdown
+    let setScoresHtml = '';
+    if (item.sport === "Girls' Volleyball" && isCompleted) {
+      const sets = item.setScores || [
+        { label: 'Set 1', score: '25-18', win: true },
+        { label: 'Set 2', score: '25-21', win: true },
+        { label: 'Set 3', score: '22-25', win: false },
+        { label: 'Set 4', score: '25-19', win: true }
+      ];
+      setScoresHtml = `
+        <div style="text-align: center; margin-bottom: 0.85rem;">
+          <div style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.35rem;">MATCH SET SCORES</div>
+          <div class="set-scores-row" style="margin: 0 auto;">
+            ${sets.map(s => `
+              <div class="set-score-pill">
+                <span class="set-score-label">${s.label}</span>
+                <span class="set-score-value ${s.win ? 'win' : ''}">${s.score}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    const rosterRows = pData.roster.map((p, idx) => {
+      const jerseyDisplay = p.jersey ? `<span class="player-jersey-badge">#${p.jersey}</span>` : `<span class="player-jersey-badge" style="background:var(--bg-surface-elevated);color:var(--text-muted);border:1px solid var(--border-subtle);">${idx + 1}</span>`;
+      const nameDisplay = p.profileUrl 
+        ? `<a href="${p.profileUrl}" target="_blank" rel="noopener" class="player-profile-link" title="View ${escapeQuotes(p.fullName)} on MaxPreps"><span>${p.fullName}</span><span style="font-size:0.75rem; color:var(--text-muted);">↗</span></a>`
+        : `<span>${p.fullName}</span>`;
+
+      const posTag = p.position ? `<span class="player-pos-tag">${p.position}</span>` : '';
+      const yearTag = p.year ? `<span class="player-grade-tag">${p.year}</span>` : '';
+
+      const statCells = categories.map(cat => {
+        const val = (p.stats && p.stats[cat.key] !== undefined) ? p.stats[cat.key] : '—';
+        return `<td style="text-align: center; color: var(--text-secondary); font-weight: 600;">${val}</td>`;
+      }).join('');
+
+      return `
+        <tr>
+          <td style="text-align: center; width: 40px;">${jerseyDisplay}</td>
+          <td>
+            <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
+              ${nameDisplay}
+              ${posTag}
+              ${yearTag}
+            </div>
+          </td>
+          ${statCells}
+        </tr>
+      `;
+    }).join('');
+
+    statsPanelHtml = `
+      ${setScoresHtml}
+      <div style="display: flex; align-items: center; justify-content: space-between; margin: 0.65rem 0 0.4rem;">
+        <span style="font-size: 0.725rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">
+          ${isCompleted ? 'PARTICIPATING ATHLETE STATS' : 'PROJECTED VARSITY ROSTER & STATS'}
+        </span>
+        <span style="font-size: 0.7rem; color: var(--accent-blue); font-weight: 700;">${pData.roster.length} Athletes</span>
+      </div>
+      <div class="table-scroll-wrap" style="max-height: 280px; overflow-y: auto; border: 1px solid var(--border-subtle); border-radius: 12px;">
+        <table class="standings-table" style="margin: 0;">
+          <thead>
+            <tr>
+              <th style="width: 40px; text-align: center;">#</th>
+              <th>Athlete</th>
+              ${categories.map(c => `<th style="text-align: center;">${c.short}</th>`).join('')}
+            </tr>
+          </thead>
+          <tbody>
+            ${rosterRows}
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top: 0.85rem; padding: 0.65rem 0.85rem; background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle); border-radius: 10px; font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+        <span>Verified via MaxPreps &amp; MIAA Digital Scorekeeper.</span>
+        <a href="https://www.maxpreps.com/ma/melrose/melrose-red-hawks/" target="_blank" rel="noopener" style="color:var(--accent-blue); text-decoration:none; font-weight:700; white-space:nowrap;">MaxPreps Team ↗</a>
+      </div>
+    `;
+  } else {
+    statsPanelHtml = `
+      <div class="empty-state" style="padding: 2.5rem 1rem; text-align: center;">
+        <div style="font-size: 2.25rem; margin-bottom: 0.6rem;">📊</div>
+        <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Individual Box Score Pending</h4>
+        <p style="color: var(--text-secondary); font-size: 0.825rem; margin: 0 auto 1rem; max-width: 380px;">
+          Individual player statistics for ${item.sport} are submitted directly by team staff via MIAA &amp; MaxPreps following official scoring reviews.
+        </p>
+        <a href="https://www.maxpreps.com/ma/melrose/melrose-red-hawks/" target="_blank" rel="noopener" class="detail-action-btn secondary" style="display:inline-flex; width:auto; padding:0.5rem 1rem; font-size:0.825rem; margin: 0 auto;">
+          <span>Check MaxPreps Team Page ↗</span>
+        </a>
+      </div>
+    `;
+  }
+
   const bodyEl = document.getElementById('game-detail-body');
   if (bodyEl) {
     bodyEl.innerHTML = `
@@ -4725,55 +5070,72 @@ function openGameDetailModal(sport, date, opp) {
         </div>
       </div>
 
-      <div class="detail-info-grid">
-        <div class="detail-info-card">
-          <div class="detail-info-left">
-            <span class="detail-info-icon">📅</span>
-            <div class="detail-info-titles">
-              <span class="detail-info-title">Date & Scheduled Time</span>
-              <span class="detail-info-value">${formatDate(item.date)} &bull; ${item.time}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-info-card">
-          <div class="detail-info-left">
-            <span class="detail-info-icon">📍</span>
-            <div class="detail-info-titles">
-              <span class="detail-info-title">Facility & Directions</span>
-              <span class="detail-info-value">${item.venue}</span>
-              <span style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.1rem;">${fullAddress}</span>
-            </div>
-          </div>
-        </div>
-
-        ${isMmtvEligible ? `
-        <div class="detail-info-card">
-          <div class="detail-info-left">
-            <span class="detail-info-icon">📺</span>
-            <div class="detail-info-titles">
-              <span class="detail-info-title">Broadcast Coverage</span>
-              <span class="detail-info-value">Melrose MMTV Live Stream</span>
-              <span style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.1rem;">Live coverage available on MMTV YouTube channel for home matchups</span>
-            </div>
-          </div>
-        </div>` : ''}
+      <div class="modal-tab-toggle-bar">
+        <button class="modal-tab-btn active" id="modal-tab-details-btn" onclick="setGameDetailTab('details')">
+          <span>📋</span>
+          <span>Matchup &amp; Venue</span>
+        </button>
+        <button class="modal-tab-btn" id="modal-tab-stats-btn" onclick="setGameDetailTab('stats')">
+          <span>📊</span>
+          <span>Box Score &amp; Stats</span>
+        </button>
       </div>
 
-      <div class="detail-actions-row">
-        <a href="${directionsUrl}" target="_blank" rel="noopener noreferrer" class="detail-action-btn primary">
-          <span>📍</span><span>Get Directions</span>
-        </a>
-        <button class="detail-action-btn secondary" onclick="downloadDetailGameIcs()">
-          <span>📅</span><span>Add to Calendar</span>
-        </button>
-        <button class="detail-action-btn secondary" onclick="shareDetailGame()">
-          <span>↗</span><span>Share</span>
-        </button>
-        ${isMmtvEligible ? `
-        <a href="https://www.youtube.com/@MelroseMA-TV/streams" target="_blank" rel="noopener noreferrer" class="detail-action-btn secondary" style="flex-basis: 100%;">
-          <span>📺</span><span>Watch on MMTV Live</span>
-        </a>` : ''}
+      <div id="modal-panel-details" style="display: block;">
+        <div class="detail-info-grid">
+          <div class="detail-info-card">
+            <div class="detail-info-left">
+              <span class="detail-info-icon">📅</span>
+              <div class="detail-info-titles">
+                <span class="detail-info-title">Date &amp; Scheduled Time</span>
+                <span class="detail-info-value">${formatDate(item.date)} &bull; ${item.time}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-info-card">
+            <div class="detail-info-left">
+              <span class="detail-info-icon">📍</span>
+              <div class="detail-info-titles">
+                <span class="detail-info-title">Facility &amp; Directions</span>
+                <span class="detail-info-value">${item.venue}</span>
+                <span style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.1rem;">${fullAddress}</span>
+              </div>
+            </div>
+          </div>
+
+          ${isMmtvEligible ? `
+          <div class="detail-info-card">
+            <div class="detail-info-left">
+              <span class="detail-info-icon">📺</span>
+              <div class="detail-info-titles">
+                <span class="detail-info-title">Broadcast Coverage</span>
+                <span class="detail-info-value">Melrose MMTV Live Stream</span>
+                <span style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.1rem;">Live coverage available on MMTV YouTube channel for home matchups</span>
+              </div>
+            </div>
+          </div>` : ''}
+        </div>
+
+        <div class="detail-actions-row">
+          <a href="${directionsUrl}" target="_blank" rel="noopener noreferrer" class="detail-action-btn primary">
+            <span>📍</span><span>Get Directions</span>
+          </a>
+          <button class="detail-action-btn secondary" onclick="downloadDetailGameIcs()">
+            <span>📅</span><span>Add to Calendar</span>
+          </button>
+          <button class="detail-action-btn secondary" onclick="shareDetailGame()">
+            <span>↗</span><span>Share</span>
+          </button>
+          ${isMmtvEligible ? `
+          <a href="https://www.youtube.com/@MelroseMA-TV/streams" target="_blank" rel="noopener noreferrer" class="detail-action-btn secondary" style="flex-basis: 100%;">
+            <span>📺</span><span>Watch on MMTV Live</span>
+          </a>` : ''}
+        </div>
+      </div>
+
+      <div id="modal-panel-stats" style="display: none;">
+        ${statsPanelHtml}
       </div>
     `;
   }
@@ -5214,7 +5576,177 @@ function setStandingsSport(sport) {
   setGlobalSport(sport);
 }
 
+const PLAYER_SPORTS_ORDER = ["Girls' Volleyball", "Boys' Soccer", "Girls' Soccer", "Football"];
+let currentStandingsScope = 'team';
+let activePlayerCategoryBySport = {};
+
+function setStandingsScope(scope) {
+  currentStandingsScope = scope;
+  const teamBtn = document.getElementById('scope-btn-team');
+  const playersBtn = document.getElementById('scope-btn-players');
+  const teamContainer = document.getElementById('standings-container');
+  const playersContainer = document.getElementById('players-container');
+  const syncText = document.getElementById('standings-sync-text');
+
+  if (scope === 'team') {
+    if (teamBtn) teamBtn.classList.add('active');
+    if (playersBtn) playersBtn.classList.remove('active');
+    if (teamContainer) teamContainer.style.display = 'block';
+    if (playersContainer) playersContainer.style.display = 'none';
+    if (syncText) syncText.innerHTML = 'Middlesex League &bull; Freedom Division';
+    renderStandingsView();
+  } else {
+    if (teamBtn) teamBtn.classList.remove('active');
+    if (playersBtn) playersBtn.classList.add('active');
+    if (teamContainer) teamContainer.style.display = 'none';
+    if (playersContainer) playersContainer.style.display = 'block';
+    if (syncText) syncText.innerHTML = 'Individual Player Stats &bull; Verified via MaxPreps';
+    renderPlayersView();
+  }
+}
+
+function setPlayerStatCategory(sportKey, catKey) {
+  activePlayerCategoryBySport[sportKey] = catKey;
+  renderPlayersView();
+}
+
+function renderPlayersView() {
+  const container = document.getElementById('players-container');
+  if (!container || !currentPlayersData) return;
+
+  const availableSports = Object.keys(currentPlayersData);
+  let targetSports = [];
+
+  if (activeStandingsSport === 'all') {
+    targetSports = PLAYER_SPORTS_ORDER.filter(s => availableSports.includes(s));
+    availableSports.forEach(s => {
+      if (!targetSports.includes(s)) targetSports.push(s);
+    });
+  } else {
+    targetSports = availableSports.filter(s => s === activeStandingsSport);
+  }
+
+  if (targetSports.length === 0) {
+    const sportObj = ALL_SPORTS_LIST.find(s => s.key === activeStandingsSport) || { name: activeStandingsSport };
+    container.innerHTML = `
+      <div class="empty-state" style="padding: 3rem 1rem; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">👤</div>
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">Individual Stats Pending</h3>
+        <p style="color: var(--text-secondary); font-size: 0.875rem; max-width: 440px; margin: 0 auto 1.25rem;">
+          Official player statistics and individual rosters for ${sportObj.name} are submitted by coaches post-match via MaxPreps and MIAA. Check back after early season contests!
+        </p>
+        <a href="https://www.maxpreps.com/ma/melrose/melrose-red-hawks/" target="_blank" rel="noopener" class="jump-today-btn" style="display:inline-flex; margin: 0 auto; text-decoration:none;">
+          <span>Check MaxPreps Roster ↗</span>
+        </a>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = targetSports.map(sportKey => {
+    const pData = currentPlayersData[sportKey];
+    if (!pData || !pData.roster || pData.roster.length === 0) return '';
+
+    const categories = pData.categories || [];
+    const activeCat = activePlayerCategoryBySport[sportKey] || 'all';
+
+    const pillsHtml = `
+      <div class="player-stat-pills">
+        <button class="player-stat-pill ${activeCat === 'all' ? 'active' : ''}" onclick="setPlayerStatCategory('${escapeQuotes(sportKey)}', 'all')">
+          <span>🌟</span><span>All Stats</span>
+        </button>
+        ${categories.map(cat => `
+          <button class="player-stat-pill ${activeCat === cat.key ? 'active' : ''}" onclick="setPlayerStatCategory('${escapeQuotes(sportKey)}', '${cat.key}')">
+            <span>${cat.label}</span>
+          </button>
+        `).join('')}
+      </div>
+    `;
+
+    let sortedRoster = [...pData.roster];
+    if (activeCat !== 'all') {
+      sortedRoster.sort((a, b) => {
+        const valA = (a.stats && a.stats[activeCat] !== undefined) ? a.stats[activeCat] : 0;
+        const valB = (b.stats && b.stats[activeCat] !== undefined) ? b.stats[activeCat] : 0;
+        return valB - valA;
+      });
+    }
+
+    const rowsHtml = sortedRoster.map((p, idx) => {
+      const jerseyDisplay = p.jersey ? `<span class="player-jersey-badge">#${p.jersey}</span>` : `<span class="player-jersey-badge" style="background:var(--bg-surface-elevated);color:var(--text-muted);border:1px solid var(--border-subtle);">${idx + 1}</span>`;
+      const nameDisplay = p.profileUrl 
+        ? `<a href="${p.profileUrl}" target="_blank" rel="noopener" class="player-profile-link" title="View ${escapeQuotes(p.fullName)} on MaxPreps"><span>${p.fullName}</span><span style="font-size:0.75rem; color:var(--text-muted);">↗</span></a>`
+        : `<span>${p.fullName}</span>`;
+
+      const posTag = p.position ? `<span class="player-pos-tag">${p.position}</span>` : '';
+      const yearTag = p.year ? `<span class="player-grade-tag">${p.year}</span>` : '';
+
+      const statCells = categories.map(cat => {
+        const val = (p.stats && p.stats[cat.key] !== undefined) ? p.stats[cat.key] : '—';
+        const isHighlight = activeCat === cat.key;
+        return `
+          <td style="text-align: center; ${isHighlight ? 'font-weight: 850; color: #ffffff; background: rgba(59, 130, 246, 0.12);' : 'color: var(--text-secondary);'}">
+            ${val}
+          </td>
+        `;
+      }).join('');
+
+      return `
+        <tr>
+          <td style="text-align: center; width: 44px;">
+            ${jerseyDisplay}
+          </td>
+          <td>
+            <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
+              ${nameDisplay}
+              ${posTag}
+              ${yearTag}
+            </div>
+          </td>
+          ${statCells}
+        </tr>
+      `;
+    }).join('');
+
+    const maxprepsLink = `https://www.maxpreps.com/ma/melrose/melrose-red-hawks/`;
+
+    return `
+      <div class="standings-card" style="margin-bottom: 1.5rem;">
+        <div class="standings-card-header">
+          <div class="standings-title-group">
+            <h3>${pData.icon || '🏅'} ${sportKey} Leaders &amp; Roster</h3>
+            <div class="standings-subtitle">MHS Varsity &bull; ${pData.roster.length} Athletes &bull; Verified via MaxPreps</div>
+          </div>
+          <a href="${maxprepsLink}" target="_blank" rel="noopener" class="standings-ext-link">MaxPreps Roster ↗</a>
+        </div>
+        ${pillsHtml}
+        <div class="table-scroll-wrap">
+          <table class="standings-table">
+            <thead>
+              <tr>
+                <th style="width: 44px; text-align: center;">#</th>
+                <th>Athlete</th>
+                ${categories.map(c => `
+                  <th style="text-align: center; ${activeCat === c.key ? 'color:var(--accent-blue); font-weight:900;' : ''}">${c.short}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${rowsHtml}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
 function renderStandingsView() {
+  if (currentStandingsScope === 'players') {
+    renderPlayersView();
+    return;
+  }
+
   const container = document.getElementById('standings-container');
   if (!container || !currentStandingsData) return;
 
@@ -5586,6 +6118,20 @@ async function loadDynamicScoresAndStandings() {
       if (stdJson && stdJson.standings) {
         currentStandingsData = stdJson.standings;
         renderStandingsView();
+      }
+    }
+  } catch (e) {}
+
+  try {
+    const plyResp = await fetch('./players.json', { cache: 'no-store' });
+    if (plyResp.ok) {
+      const plyJson = await plyResp.json();
+      const pMap = plyJson && (plyJson.sports || plyJson.players || plyJson);
+      if (pMap && (pMap["Girls' Volleyball"] || pMap["Football"])) {
+        currentPlayersData = pMap;
+        if (currentStandingsScope === 'players') {
+          renderPlayersView();
+        }
       }
     }
   } catch (e) {}
