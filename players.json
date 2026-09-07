@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-06T20:20:00.055255",
+  "lastUpdated": "2026-09-06T20:24:45.463071",
   "sports": {
     "Girls' Volleyball": {
       "sport": "Girls' Volleyball",
@@ -37,16 +37,16 @@
           "firstName": "Lorena",
           "lastName": "Contin",
           "fullName": "Lorena Contin",
-          "jersey": "10",
+          "jersey": "",
           "position": "MH",
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/lorena-contin/?careerid=2ll60p1sida55",
           "stats": {
-            "kills": 21,
-            "aces": 4,
-            "digs": 9,
-            "assists": 2,
-            "blocks": 12
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
           }
         },
         {
@@ -54,16 +54,16 @@
           "firstName": "Mia",
           "lastName": "Sasso",
           "fullName": "Mia Sasso",
-          "jersey": "11",
+          "jersey": "",
           "position": "OH",
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/mia-sasso/?careerid=smqsr9khrn244",
           "stats": {
-            "kills": 26,
-            "aces": 6,
-            "digs": 22,
-            "assists": 4,
-            "blocks": 3
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
           }
         },
         {
@@ -71,16 +71,16 @@
           "firstName": "Sadie",
           "lastName": "Smith",
           "fullName": "Sadie Smith",
-          "jersey": "11",
+          "jersey": "",
           "position": "S",
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sadie-smith/?careerid=ou78uehu5deqa",
           "stats": {
-            "kills": 7,
-            "aces": 11,
-            "digs": 15,
-            "assists": 68,
-            "blocks": 5
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
           }
         },
         {
@@ -88,15 +88,15 @@
           "firstName": "Anna",
           "lastName": "Burns",
           "fullName": "Anna Burns",
-          "jersey": "12",
+          "jersey": "",
           "position": "DS",
           "year": "Sr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/anna-burns/?careerid=rrlof8sv1ceff",
           "stats": {
-            "kills": 1,
-            "aces": 9,
-            "digs": 34,
-            "assists": 6,
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
             "blocks": 0
           }
         },
@@ -105,16 +105,16 @@
           "firstName": "Elise",
           "lastName": "Marchais",
           "fullName": "Elise Marchais",
-          "jersey": "11",
+          "jersey": "",
           "position": "MH",
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/elise-marchais/?careerid=d58qmr3ee55ee",
           "stats": {
-            "kills": 16,
-            "aces": 3,
-            "digs": 8,
-            "assists": 1,
-            "blocks": 10
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
           }
         },
         {
@@ -122,15 +122,15 @@
           "firstName": "Gen",
           "lastName": "Overlan",
           "fullName": "Gen Overlan",
-          "jersey": "11",
+          "jersey": "",
           "position": "DS",
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/gen-overlan/?careerid=usbe9h773vmbb",
           "stats": {
             "kills": 0,
-            "aces": 7,
-            "digs": 27,
-            "assists": 5,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
             "blocks": 0
           }
         },
@@ -139,16 +139,16 @@
           "firstName": "Maggie",
           "lastName": "Shoemaker",
           "fullName": "Maggie Shoemaker",
-          "jersey": "12",
+          "jersey": "",
           "position": "MH",
           "year": "Sr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/maggie-shoemaker/?careerid=ns2h4v49c0s44",
           "stats": {
-            "kills": 19,
-            "aces": 2,
-            "digs": 11,
-            "assists": 2,
-            "blocks": 14
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
           }
         },
         {
@@ -156,16 +156,16 @@
           "firstName": "Ella",
           "lastName": "Friedlaender",
           "fullName": "Ella Friedlaender",
-          "jersey": "11",
+          "jersey": "",
           "position": "RS",
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/ella-friedlaender/?careerid=8pgen0ffa8jo8",
           "stats": {
-            "kills": 14,
-            "aces": 5,
-            "digs": 12,
-            "assists": 3,
-            "blocks": 6
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
           }
         },
         {
@@ -173,16 +173,16 @@
           "firstName": "Adriana",
           "lastName": "Santoriello",
           "fullName": "Adriana Santoriello",
-          "jersey": "10",
+          "jersey": "",
           "position": "OH",
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/adriana-santoriello/?careerid=suiogvkm8ch88",
           "stats": {
-            "kills": 15,
-            "aces": 4,
-            "digs": 16,
-            "assists": 2,
-            "blocks": 2
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
           }
         },
         {
@@ -190,16 +190,16 @@
           "firstName": "Alisa",
           "lastName": "Dautovic",
           "fullName": "Alisa Dautovic",
-          "jersey": "10",
+          "jersey": "",
           "position": "OH",
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/alisa-dautovic/?careerid=d9qh0va24ikee",
           "stats": {
-            "kills": 24,
-            "aces": 8,
-            "digs": 19,
-            "assists": 3,
-            "blocks": 4
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
           }
         },
         {
@@ -207,15 +207,15 @@
           "firstName": "Dani",
           "lastName": "DiGiorgio",
           "fullName": "Dani DiGiorgio",
-          "jersey": "10",
+          "jersey": "",
           "position": "DS",
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/dani-digiorgio/?careerid=k58rnbnp8gh55",
           "stats": {
             "kills": 0,
-            "aces": 5,
-            "digs": 21,
-            "assists": 4,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
             "blocks": 0
           }
         },
@@ -224,16 +224,16 @@
           "firstName": "Leila",
           "lastName": "Kiggundu",
           "fullName": "Leila Kiggundu",
-          "jersey": "10",
+          "jersey": "",
           "position": "S",
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/leila-kiggundu/?careerid=5fv62em6hb533",
           "stats": {
-            "kills": 4,
-            "aces": 6,
-            "digs": 10,
-            "assists": 42,
-            "blocks": 2
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
           }
         },
         {
@@ -241,16 +241,16 @@
           "firstName": "Sabrina",
           "lastName": "McArt",
           "fullName": "Sabrina McArt",
-          "jersey": "11",
+          "jersey": "",
           "position": "MH",
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sabrina-mcart/?careerid=ninaliut7fbue",
           "stats": {
-            "kills": 11,
-            "aces": 2,
-            "digs": 6,
-            "assists": 1,
-            "blocks": 8
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
           }
         },
         {
@@ -258,16 +258,16 @@
           "firstName": "Amelie",
           "lastName": "Johnson",
           "fullName": "Amelie Johnson",
-          "jersey": "10",
+          "jersey": "",
           "position": "RS",
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/amelie-johnson/?careerid=bc8l1ropafb88",
           "stats": {
-            "kills": 12,
-            "aces": 3,
-            "digs": 9,
-            "assists": 2,
-            "blocks": 5
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
           }
         },
         {
@@ -275,15 +275,15 @@
           "firstName": "Kayla",
           "lastName": "Ton",
           "fullName": "Kayla Ton",
-          "jersey": "12",
+          "jersey": "",
           "position": "DS",
           "year": "Sr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/kayla-ton/?careerid=616a72c59cstd",
           "stats": {
             "kills": 0,
-            "aces": 4,
-            "digs": 18,
-            "assists": 3,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
             "blocks": 0
           }
         }
@@ -323,77 +323,77 @@
         {
           "id": "bs-1",
           "fullName": "Marco Albanese",
-          "jersey": "10",
+          "jersey": "",
           "position": "F",
           "year": "Sr.",
           "stats": {
-            "goals": 6,
-            "assists": 4,
-            "points": 10,
-            "shots": 18,
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "shots": 0,
             "saves": 0
           }
         },
         {
           "id": "bs-2",
           "fullName": "Julian Santos",
-          "jersey": "7",
+          "jersey": "",
           "position": "MF",
           "year": "Jr.",
           "stats": {
-            "goals": 4,
-            "assists": 5,
-            "points": 9,
-            "shots": 14,
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "shots": 0,
             "saves": 0
           }
         },
         {
           "id": "bs-3",
           "fullName": "Liam Connolly",
-          "jersey": "9",
+          "jersey": "",
           "position": "F",
           "year": "Sr.",
           "stats": {
-            "goals": 5,
-            "assists": 2,
-            "points": 7,
-            "shots": 16,
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "shots": 0,
             "saves": 0
           }
         },
         {
           "id": "bs-4",
           "fullName": "Lucas Silva",
-          "jersey": "8",
+          "jersey": "",
           "position": "MF",
           "year": "So.",
           "stats": {
-            "goals": 2,
-            "assists": 4,
-            "points": 6,
-            "shots": 10,
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "shots": 0,
             "saves": 0
           }
         },
         {
           "id": "bs-5",
           "fullName": "Owen Murphy",
-          "jersey": "4",
+          "jersey": "",
           "position": "D",
           "year": "Sr.",
           "stats": {
-            "goals": 1,
-            "assists": 2,
-            "points": 3,
-            "shots": 5,
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "shots": 0,
             "saves": 0
           }
         },
         {
           "id": "bs-6",
           "fullName": "Nate O'Connor",
-          "jersey": "1",
+          "jersey": "",
           "position": "GK",
           "year": "Jr.",
           "stats": {
@@ -401,7 +401,7 @@
             "assists": 0,
             "points": 0,
             "shots": 0,
-            "saves": 38
+            "saves": 0
           }
         }
       ]
@@ -440,63 +440,63 @@
         {
           "id": "gs-1",
           "fullName": "Chloe Taggart",
-          "jersey": "9",
+          "jersey": "",
           "position": "F",
           "year": "Sr.",
           "stats": {
-            "goals": 7,
-            "assists": 3,
-            "points": 10,
-            "shots": 20,
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "shots": 0,
             "saves": 0
           }
         },
         {
           "id": "gs-2",
           "fullName": "Maya Brophy",
-          "jersey": "11",
+          "jersey": "",
           "position": "MF",
           "year": "Jr.",
           "stats": {
-            "goals": 5,
-            "assists": 6,
-            "points": 11,
-            "shots": 15,
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "shots": 0,
             "saves": 0
           }
         },
         {
           "id": "gs-3",
           "fullName": "Tess MacFarlane",
-          "jersey": "14",
+          "jersey": "",
           "position": "F",
           "year": "So.",
           "stats": {
-            "goals": 4,
-            "assists": 2,
-            "points": 6,
-            "shots": 12,
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "shots": 0,
             "saves": 0
           }
         },
         {
           "id": "gs-4",
           "fullName": "Sienna Gentile",
-          "jersey": "6",
+          "jersey": "",
           "position": "MF",
           "year": "Jr.",
           "stats": {
-            "goals": 2,
-            "assists": 4,
-            "points": 6,
-            "shots": 9,
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "shots": 0,
             "saves": 0
           }
         },
         {
           "id": "gs-5",
           "fullName": "Ava Sullivan",
-          "jersey": "1",
+          "jersey": "",
           "position": "GK",
           "year": "Sr.",
           "stats": {
@@ -504,7 +504,7 @@
             "assists": 0,
             "points": 0,
             "shots": 0,
-            "saves": 44
+            "saves": 0
           }
         }
       ]
@@ -543,49 +543,49 @@
         {
           "id": "fb-1",
           "fullName": "Jack Casey",
-          "jersey": "12",
+          "jersey": "",
           "position": "QB",
           "year": "Sr.",
           "stats": {
-            "passYds": 420,
-            "rushYds": 65,
+            "passYds": 0,
+            "rushYds": 0,
             "recYds": 0,
-            "totalTD": 5,
+            "totalTD": 0,
             "tackles": 0
           }
         },
         {
           "id": "fb-2",
           "fullName": "Tyler Morrison",
-          "jersey": "24",
+          "jersey": "",
           "position": "RB",
           "year": "Jr.",
           "stats": {
             "passYds": 0,
-            "rushYds": 285,
-            "recYds": 34,
-            "totalTD": 4,
-            "tackles": 6
+            "rushYds": 0,
+            "recYds": 0,
+            "totalTD": 0,
+            "tackles": 0
           }
         },
         {
           "id": "fb-3",
           "fullName": "Sam Sullivan",
-          "jersey": "88",
+          "jersey": "",
           "position": "WR",
           "year": "Sr.",
           "stats": {
             "passYds": 0,
-            "rushYds": 12,
-            "recYds": 195,
-            "totalTD": 3,
-            "tackles": 2
+            "rushYds": 0,
+            "recYds": 0,
+            "totalTD": 0,
+            "tackles": 0
           }
         },
         {
           "id": "fb-4",
           "fullName": "Danny O'Shea",
-          "jersey": "52",
+          "jersey": "",
           "position": "LB",
           "year": "Sr.",
           "stats": {
@@ -593,13 +593,13 @@
             "rushYds": 0,
             "recYds": 0,
             "totalTD": 0,
-            "tackles": 28
+            "tackles": 0
           }
         },
         {
           "id": "fb-5",
           "fullName": "Christian Vilar",
-          "jersey": "44",
+          "jersey": "",
           "position": "DE",
           "year": "Jr.",
           "stats": {
@@ -607,7 +607,7 @@
             "rushYds": 0,
             "recYds": 0,
             "totalTD": 0,
-            "tackles": 21
+            "tackles": 0
           }
         }
       ]

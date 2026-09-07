@@ -321,7 +321,9 @@ def fetch_maxpreps_rosters():
                 fname = a[5] if len(a) > 5 else ""
                 lname = a[6] if len(a) > 6 else ""
                 fullname = a[33] if len(a) > 33 and a[33] else f"{fname} {lname}"
-                jersey = str(a[7]) if len(a) > 7 and a[7] is not None else ""
+                # Note: Index 7 in MaxPreps athleteData is numeric grade level (10=So, 11=Jr, 12=Sr), not jersey number.
+                # Official jersey numbers for 2026 are currently null on MaxPreps until posted by coaching staff.
+                jersey = ""
                 pos = a[12] if len(a) > 12 and a[12] else ""
                 yr = a[36] if len(a) > 36 and a[36] else ""
                 purl = a[31] if len(a) > 31 and a[31] else ""
