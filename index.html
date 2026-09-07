@@ -105,14 +105,38 @@
       --away-text: #64d2ff;
       --away-border: rgba(10, 132, 255, 0.3);
 
-      --badge-vball: #bf5af2;
-      --badge-bsoc: #0a84ff;
-      --badge-gsoc: #ff375f;
-      --badge-fball: #ff9f0a;
-      --badge-fhockey: #30d158;
-      --badge-xc: #34c759;
-      --badge-golf: #5e5ce6;
-      --badge-other: #64748b;
+      /* Apple-Style Soft Translucent Sport Badges (Dark Mode Default) */
+      --tag-vball-bg: rgba(191, 90, 242, 0.14);
+      --tag-vball-text: #da8aff;
+      --tag-vball-border: rgba(191, 90, 242, 0.28);
+
+      --tag-bsoc-bg: rgba(10, 132, 255, 0.14);
+      --tag-bsoc-text: #60a5fa;
+      --tag-bsoc-border: rgba(10, 132, 255, 0.28);
+
+      --tag-gsoc-bg: rgba(255, 55, 95, 0.14);
+      --tag-gsoc-text: #ff6482;
+      --tag-gsoc-border: rgba(255, 55, 95, 0.28);
+
+      --tag-fball-bg: rgba(255, 159, 10, 0.14);
+      --tag-fball-text: #fbbf24;
+      --tag-fball-border: rgba(255, 159, 10, 0.28);
+
+      --tag-fhockey-bg: rgba(48, 209, 88, 0.14);
+      --tag-fhockey-text: #4ade80;
+      --tag-fhockey-border: rgba(48, 209, 88, 0.28);
+
+      --tag-xc-bg: rgba(52, 199, 89, 0.14);
+      --tag-xc-text: #34d399;
+      --tag-xc-border: rgba(52, 199, 89, 0.28);
+
+      --tag-golf-bg: rgba(94, 92, 230, 0.14);
+      --tag-golf-text: #818cf8;
+      --tag-golf-border: rgba(94, 92, 230, 0.28);
+
+      --tag-other-bg: rgba(148, 163, 184, 0.14);
+      --tag-other-text: #cbd5e1;
+      --tag-other-border: rgba(148, 163, 184, 0.28);
 
       --search-bg: #161618;
       --search-border: rgba(255, 255, 255, 0.1);
@@ -142,6 +166,39 @@
       --away-text: #2563eb;
       --away-border: #bfdbfe;
 
+      /* Apple-Style Soft Translucent Sport Badges (Light Theme) */
+      --tag-vball-bg: #fbf0ff;
+      --tag-vball-text: #9333ea;
+      --tag-vball-border: #f3d4ff;
+
+      --tag-bsoc-bg: #eff6ff;
+      --tag-bsoc-text: #2563eb;
+      --tag-bsoc-border: #bfdbfe;
+
+      --tag-gsoc-bg: #fff1f2;
+      --tag-gsoc-text: #e11d48;
+      --tag-gsoc-border: #fecdd3;
+
+      --tag-fball-bg: #fffbeb;
+      --tag-fball-text: #d97706;
+      --tag-fball-border: #fde68a;
+
+      --tag-fhockey-bg: #f0fdf4;
+      --tag-fhockey-text: #16a34a;
+      --tag-fhockey-border: #bbf7d0;
+
+      --tag-xc-bg: #ecfdf5;
+      --tag-xc-text: #059669;
+      --tag-xc-border: #a7f3d0;
+
+      --tag-golf-bg: #eef2ff;
+      --tag-golf-text: #4f46e5;
+      --tag-golf-border: #c7d2fe;
+
+      --tag-other-bg: #f8fafc;
+      --tag-other-text: #475569;
+      --tag-other-border: #e2e8f0;
+
       --search-bg: #ffffff;
       --search-border: #cbd5e1;
       --search-focus: #2563eb;
@@ -169,6 +226,39 @@
       --away-bg: rgba(59, 130, 246, 0.15);
       --away-text: #60a5fa;
       --away-border: rgba(59, 130, 246, 0.3);
+
+      /* Apple-Style Soft Translucent Sport Badges (Explicit Dark Override) */
+      --tag-vball-bg: rgba(191, 90, 242, 0.14);
+      --tag-vball-text: #da8aff;
+      --tag-vball-border: rgba(191, 90, 242, 0.28);
+
+      --tag-bsoc-bg: rgba(10, 132, 255, 0.14);
+      --tag-bsoc-text: #60a5fa;
+      --tag-bsoc-border: rgba(10, 132, 255, 0.28);
+
+      --tag-gsoc-bg: rgba(255, 55, 95, 0.14);
+      --tag-gsoc-text: #ff6482;
+      --tag-gsoc-border: rgba(255, 55, 95, 0.28);
+
+      --tag-fball-bg: rgba(255, 159, 10, 0.14);
+      --tag-fball-text: #fbbf24;
+      --tag-fball-border: rgba(255, 159, 10, 0.28);
+
+      --tag-fhockey-bg: rgba(48, 209, 88, 0.14);
+      --tag-fhockey-text: #4ade80;
+      --tag-fhockey-border: rgba(48, 209, 88, 0.28);
+
+      --tag-xc-bg: rgba(52, 199, 89, 0.14);
+      --tag-xc-text: #34d399;
+      --tag-xc-border: rgba(52, 199, 89, 0.28);
+
+      --tag-golf-bg: rgba(94, 92, 230, 0.14);
+      --tag-golf-text: #818cf8;
+      --tag-golf-border: rgba(94, 92, 230, 0.28);
+
+      --tag-other-bg: rgba(148, 163, 184, 0.14);
+      --tag-other-text: #cbd5e1;
+      --tag-other-border: rgba(148, 163, 184, 0.28);
 
       --search-bg: #131b2e;
       --search-border: #233252;
@@ -1754,32 +1844,35 @@
     }
 
     .sport-tag {
-      font-size: 0.7rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.25rem 0.55rem;
+      letter-spacing: 0.04em;
+      padding: 0.2rem 0.52rem;
       border-radius: 6px;
-      color: #fff;
+      border: 1px solid transparent;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
     .sport-tag.icon-only {
       font-size: 0.95rem;
       padding: 0.2rem 0.45rem;
       line-height: 1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      border-radius: 7px;
     }
 
-    .sport-vball { background-color: var(--badge-vball); }
-    .sport-bsoc { background-color: var(--badge-bsoc); }
-    .sport-gsoc { background-color: var(--badge-gsoc); }
-    .sport-fball { background-color: var(--badge-fball); }
-    .sport-fhockey { background-color: var(--badge-fhockey); }
-    .sport-xc { background-color: var(--badge-xc); }
-    .sport-golf { background-color: var(--badge-golf); }
-    .sport-other { background-color: var(--badge-other); }
+    .sport-vball { background-color: var(--tag-vball-bg); color: var(--tag-vball-text); border-color: var(--tag-vball-border); }
+    .sport-bsoc { background-color: var(--tag-bsoc-bg); color: var(--tag-bsoc-text); border-color: var(--tag-bsoc-border); }
+    .sport-gsoc { background-color: var(--tag-gsoc-bg); color: var(--tag-gsoc-text); border-color: var(--tag-gsoc-border); }
+    .sport-fball { background-color: var(--tag-fball-bg); color: var(--tag-fball-text); border-color: var(--tag-fball-border); }
+    .sport-fhockey { background-color: var(--tag-fhockey-bg); color: var(--tag-fhockey-text); border-color: var(--tag-fhockey-border); }
+    .sport-xc { background-color: var(--tag-xc-bg); color: var(--tag-xc-text); border-color: var(--tag-xc-border); }
+    .sport-golf { background-color: var(--tag-golf-bg); color: var(--tag-golf-text); border-color: var(--tag-golf-border); }
+    .sport-other { background-color: var(--tag-other-bg); color: var(--tag-other-text); border-color: var(--tag-other-border); }
 
     .matchup {
       font-size: 1.15rem;
@@ -6286,7 +6379,9 @@ function startNextGameCountdown() {
     const icon = sportIcons[currentNext.sport] || '🏆';
     const prefix = currentNext.isHome ? 'vs.' : '@';
 
-    if (sportEl) sportEl.textContent = `${icon} ${currentNext.sport}`;
+    if (sportEl) {
+      sportEl.textContent = (filterSport !== 'all') ? `${icon}` : `${icon} ${currentNext.sport}`;
+    }
     if (matchupEl) matchupEl.textContent = `${prefix} ${currentNext.opp}`;
     if (detailsEl) {
       detailsEl.innerHTML = `${formatDate(currentNext.date)} &bull; ${currentNext.time} &bull; ${currentNext.venue}`;
