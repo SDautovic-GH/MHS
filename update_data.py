@@ -290,6 +290,25 @@ def fetch_standings():
 
     return standings_data
 
+GIRLS_VOLLEYBALL_JERSEYS = {
+    "Gen Overlan": "1",
+    "Anna Burns": "2",
+    "Kayla Ton": "3",
+    "Leila Kiggundu": "4",
+    "Sadie Smith": "6",
+    "Dani DiGiorgio": "7",
+    "Daniella DiGiorgio": "7",
+    "Amelie Johnson": "8",
+    "Adriana Santoriello": "9",
+    "Alisa Dautovic": "10",
+    "Maggie Shoemaker": "11",
+    "Mia Sasso": "12",
+    "Sabrina McArt": "13",
+    "Ella Friedlaender": "14",
+    "Elise Marchais": "15",
+    "Lorena Contin": "16",
+}
+
 def fetch_maxpreps_rosters():
     print("[*] Checking for official team rosters on MaxPreps...")
     existing_players = {}
@@ -321,9 +340,15 @@ def fetch_maxpreps_rosters():
                 fname = a[5] if len(a) > 5 else ""
                 lname = a[6] if len(a) > 6 else ""
                 fullname = a[33] if len(a) > 33 and a[33] else f"{fname} {lname}"
-                # Note: Index 7 in MaxPreps athleteData is numeric grade level (10=So, 11=Jr, 12=Sr), not jersey number.
-                # Official jersey numbers for 2026 are currently null on MaxPreps until posted by coaching staff.
+                
+                # Assign verified official jersey number if known, otherwise existing, otherwise empty
                 jersey = ""
+                if sport_label == "Girls' Volleyball":
+                    jersey = GIRLS_VOLLEYBALL_JERSEYS.get(fullname, GIRLS_VOLLEYBALL_JERSEYS.get(f"{fname} {lname}", ""))
+                if not jersey:
+                    existing_p = current_roster_map.get(aid, {})
+                    jersey = existing_p.get("jersey", "")
+
                 pos = a[12] if len(a) > 12 and a[12] else ""
                 yr = a[36] if len(a) > 36 and a[36] else ""
                 purl = a[31] if len(a) > 31 and a[31] else ""
@@ -336,7 +361,7 @@ def fetch_maxpreps_rosters():
                     "firstName": fname,
                     "lastName": lname,
                     "fullName": fullname,
-                    "jersey": jersey,
+                    "jersey": str(jersey) if jersey else "",
                     "position": pos,
                     "year": yr,
                     "profileUrl": purl,
@@ -344,6 +369,12 @@ def fetch_maxpreps_rosters():
                 })
 
             if len(updated_roster) > 0:
+                # Sort roster numerically by jersey number if available
+                try:
+                    updated_roster.sort(key=lambda x: int(x["jersey"]) if x.get("jersey") and str(x["jersey"]).isdigit() else 999)
+                except Exception:
+                    pass
+
                 if sport_label not in existing_players:
                     existing_players[sport_label] = {"sport": sport_label, "roster": []}
                 existing_players[sport_label]["roster"] = updated_roster

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-06T20:24:45.463071",
+  "lastUpdated": "2026-09-06T20:53:14.909992",
   "sports": {
     "Girls' Volleyball": {
       "sport": "Girls' Volleyball",
@@ -33,48 +33,14 @@
       ],
       "roster": [
         {
-          "id": "81fdc2cf-fcbd-4376-9622-c268f4597a67",
-          "firstName": "Lorena",
-          "lastName": "Contin",
-          "fullName": "Lorena Contin",
-          "jersey": "",
-          "position": "MH",
-          "year": "So.",
-          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/lorena-contin/?careerid=2ll60p1sida55",
-          "stats": {
-            "kills": 0,
-            "aces": 0,
-            "digs": 0,
-            "assists": 0,
-            "blocks": 0
-          }
-        },
-        {
-          "id": "d81cc99d-edd0-42b2-8080-23a452f1fbec",
-          "firstName": "Mia",
-          "lastName": "Sasso",
-          "fullName": "Mia Sasso",
-          "jersey": "",
-          "position": "OH",
+          "id": "99c9d3ba-9290-4d19-9d25-7901e44729ea",
+          "firstName": "Gen",
+          "lastName": "Overlan",
+          "fullName": "Gen Overlan",
+          "jersey": "1",
+          "position": "DS",
           "year": "Jr.",
-          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/mia-sasso/?careerid=smqsr9khrn244",
-          "stats": {
-            "kills": 0,
-            "aces": 0,
-            "digs": 0,
-            "assists": 0,
-            "blocks": 0
-          }
-        },
-        {
-          "id": "f5da6b7c-cf66-4a73-bfab-257fdaece583",
-          "firstName": "Sadie",
-          "lastName": "Smith",
-          "fullName": "Sadie Smith",
-          "jersey": "",
-          "position": "S",
-          "year": "Jr.",
-          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sadie-smith/?careerid=ou78uehu5deqa",
+          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/gen-overlan/?careerid=usbe9h773vmbb",
           "stats": {
             "kills": 0,
             "aces": 0,
@@ -88,7 +54,7 @@
           "firstName": "Anna",
           "lastName": "Burns",
           "fullName": "Anna Burns",
-          "jersey": "",
+          "jersey": "2",
           "position": "DS",
           "year": "Sr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/anna-burns/?careerid=rrlof8sv1ceff",
@@ -101,48 +67,14 @@
           }
         },
         {
-          "id": "9b044017-d2e2-4fac-bd4d-2937687fb0dd",
-          "firstName": "Elise",
-          "lastName": "Marchais",
-          "fullName": "Elise Marchais",
-          "jersey": "",
-          "position": "MH",
-          "year": "Jr.",
-          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/elise-marchais/?careerid=d58qmr3ee55ee",
-          "stats": {
-            "kills": 0,
-            "aces": 0,
-            "digs": 0,
-            "assists": 0,
-            "blocks": 0
-          }
-        },
-        {
-          "id": "99c9d3ba-9290-4d19-9d25-7901e44729ea",
-          "firstName": "Gen",
-          "lastName": "Overlan",
-          "fullName": "Gen Overlan",
-          "jersey": "",
+          "id": "aad6a702-a6bf-4799-8f58-34482d8aa9dd",
+          "firstName": "Kayla",
+          "lastName": "Ton",
+          "fullName": "Kayla Ton",
+          "jersey": "3",
           "position": "DS",
-          "year": "Jr.",
-          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/gen-overlan/?careerid=usbe9h773vmbb",
-          "stats": {
-            "kills": 0,
-            "aces": 0,
-            "digs": 0,
-            "assists": 0,
-            "blocks": 0
-          }
-        },
-        {
-          "id": "d2194a3b-dbc2-4802-abb2-109f6b7a9be1",
-          "firstName": "Maggie",
-          "lastName": "Shoemaker",
-          "fullName": "Maggie Shoemaker",
-          "jersey": "",
-          "position": "MH",
           "year": "Sr.",
-          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/maggie-shoemaker/?careerid=ns2h4v49c0s44",
+          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/kayla-ton/?careerid=616a72c59cstd",
           "stats": {
             "kills": 0,
             "aces": 0,
@@ -152,14 +84,65 @@
           }
         },
         {
-          "id": "0a1d4279-89a0-4088-baa0-ca931f4e69a2",
-          "firstName": "Ella",
-          "lastName": "Friedlaender",
-          "fullName": "Ella Friedlaender",
-          "jersey": "",
-          "position": "RS",
+          "id": "3cbdfd33-7f48-4e00-befc-3f928aa7ae21",
+          "firstName": "Leila",
+          "lastName": "Kiggundu",
+          "fullName": "Leila Kiggundu",
+          "jersey": "4",
+          "position": "S",
+          "year": "So.",
+          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/leila-kiggundu/?careerid=5fv62em6hb533",
+          "stats": {
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
+          }
+        },
+        {
+          "id": "f5da6b7c-cf66-4a73-bfab-257fdaece583",
+          "firstName": "Sadie",
+          "lastName": "Smith",
+          "fullName": "Sadie Smith",
+          "jersey": "6",
+          "position": "S",
           "year": "Jr.",
-          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/ella-friedlaender/?careerid=8pgen0ffa8jo8",
+          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sadie-smith/?careerid=ou78uehu5deqa",
+          "stats": {
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
+          }
+        },
+        {
+          "id": "795e8f8a-cd09-440f-9c22-0af1e12f9341",
+          "firstName": "Dani",
+          "lastName": "DiGiorgio",
+          "fullName": "Dani DiGiorgio",
+          "jersey": "7",
+          "position": "DS",
+          "year": "So.",
+          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/dani-digiorgio/?careerid=k58rnbnp8gh55",
+          "stats": {
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
+          }
+        },
+        {
+          "id": "3ef25649-3d03-4837-96e8-01911d1eac36",
+          "firstName": "Amelie",
+          "lastName": "Johnson",
+          "fullName": "Amelie Johnson",
+          "jersey": "8",
+          "position": "RS",
+          "year": "So.",
+          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/amelie-johnson/?careerid=bc8l1ropafb88",
           "stats": {
             "kills": 0,
             "aces": 0,
@@ -173,7 +156,7 @@
           "firstName": "Adriana",
           "lastName": "Santoriello",
           "fullName": "Adriana Santoriello",
-          "jersey": "",
+          "jersey": "9",
           "position": "OH",
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/adriana-santoriello/?careerid=suiogvkm8ch88",
@@ -190,7 +173,7 @@
           "firstName": "Alisa",
           "lastName": "Dautovic",
           "fullName": "Alisa Dautovic",
-          "jersey": "",
+          "jersey": "10",
           "position": "OH",
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/alisa-dautovic/?careerid=d9qh0va24ikee",
@@ -203,14 +186,14 @@
           }
         },
         {
-          "id": "795e8f8a-cd09-440f-9c22-0af1e12f9341",
-          "firstName": "Dani",
-          "lastName": "DiGiorgio",
-          "fullName": "Dani DiGiorgio",
-          "jersey": "",
-          "position": "DS",
-          "year": "So.",
-          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/dani-digiorgio/?careerid=k58rnbnp8gh55",
+          "id": "d2194a3b-dbc2-4802-abb2-109f6b7a9be1",
+          "firstName": "Maggie",
+          "lastName": "Shoemaker",
+          "fullName": "Maggie Shoemaker",
+          "jersey": "11",
+          "position": "MH",
+          "year": "Sr.",
+          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/maggie-shoemaker/?careerid=ns2h4v49c0s44",
           "stats": {
             "kills": 0,
             "aces": 0,
@@ -220,14 +203,14 @@
           }
         },
         {
-          "id": "3cbdfd33-7f48-4e00-befc-3f928aa7ae21",
-          "firstName": "Leila",
-          "lastName": "Kiggundu",
-          "fullName": "Leila Kiggundu",
-          "jersey": "",
-          "position": "S",
-          "year": "So.",
-          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/leila-kiggundu/?careerid=5fv62em6hb533",
+          "id": "d81cc99d-edd0-42b2-8080-23a452f1fbec",
+          "firstName": "Mia",
+          "lastName": "Sasso",
+          "fullName": "Mia Sasso",
+          "jersey": "12",
+          "position": "OH",
+          "year": "Jr.",
+          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/mia-sasso/?careerid=smqsr9khrn244",
           "stats": {
             "kills": 0,
             "aces": 0,
@@ -241,7 +224,7 @@
           "firstName": "Sabrina",
           "lastName": "McArt",
           "fullName": "Sabrina McArt",
-          "jersey": "",
+          "jersey": "13",
           "position": "MH",
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sabrina-mcart/?careerid=ninaliut7fbue",
@@ -254,14 +237,14 @@
           }
         },
         {
-          "id": "3ef25649-3d03-4837-96e8-01911d1eac36",
-          "firstName": "Amelie",
-          "lastName": "Johnson",
-          "fullName": "Amelie Johnson",
-          "jersey": "",
+          "id": "0a1d4279-89a0-4088-baa0-ca931f4e69a2",
+          "firstName": "Ella",
+          "lastName": "Friedlaender",
+          "fullName": "Ella Friedlaender",
+          "jersey": "14",
           "position": "RS",
-          "year": "So.",
-          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/amelie-johnson/?careerid=bc8l1ropafb88",
+          "year": "Jr.",
+          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/ella-friedlaender/?careerid=8pgen0ffa8jo8",
           "stats": {
             "kills": 0,
             "aces": 0,
@@ -271,14 +254,31 @@
           }
         },
         {
-          "id": "aad6a702-a6bf-4799-8f58-34482d8aa9dd",
-          "firstName": "Kayla",
-          "lastName": "Ton",
-          "fullName": "Kayla Ton",
-          "jersey": "",
-          "position": "DS",
-          "year": "Sr.",
-          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/kayla-ton/?careerid=616a72c59cstd",
+          "id": "9b044017-d2e2-4fac-bd4d-2937687fb0dd",
+          "firstName": "Elise",
+          "lastName": "Marchais",
+          "fullName": "Elise Marchais",
+          "jersey": "15",
+          "position": "MH",
+          "year": "Jr.",
+          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/elise-marchais/?careerid=d58qmr3ee55ee",
+          "stats": {
+            "kills": 0,
+            "aces": 0,
+            "digs": 0,
+            "assists": 0,
+            "blocks": 0
+          }
+        },
+        {
+          "id": "81fdc2cf-fcbd-4376-9622-c268f4597a67",
+          "firstName": "Lorena",
+          "lastName": "Contin",
+          "fullName": "Lorena Contin",
+          "jersey": "16",
+          "position": "MH",
+          "year": "So.",
+          "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/lorena-contin/?careerid=2ll60p1sida55",
           "stats": {
             "kills": 0,
             "aces": 0,
