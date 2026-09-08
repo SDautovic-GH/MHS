@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-08T20:40:02.400815",
+  "lastUpdated": "2026-09-08T23:09:42.606105",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -10,6 +10,17 @@
       "result": "WIN",
       "status": "Final",
       "isHome": true,
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-09-08": {
+      "sport": "Field Hockey",
+      "date": "2026-09-08",
+      "opponent": "Reading",
+      "mhsScore": 0,
+      "oppScore": 4,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": false,
       "source": "ArbiterLive"
     }
   }
