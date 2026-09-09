@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-09-09T02:55:12.018391",
+  "lastUpdated": "2026-09-09T07:50:44.485419",
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-09-09 02:55:08",
+      "lastUpdated": "2026-09-09 07:50:41",
       "teams": [
         {
           "rank": "1",
@@ -77,7 +77,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-09-09 02:55:09",
+      "lastUpdated": "2026-09-09 07:50:42",
       "teams": [
         {
           "rank": "1",
@@ -216,7 +216,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-09-09 02:55:09",
+      "lastUpdated": "2026-09-09 07:50:43",
       "teams": [
         {
           "rank": "1",
@@ -344,8 +344,30 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-09-09 02:55:10",
+      "lastUpdated": "2026-09-09 07:50:43",
       "teams": [
+        {
+          "rank": "1",
+          "school": "Arlington",
+          "confRecord": "1-0",
+          "confPct": "1.000",
+          "overallRecord": "1-0",
+          "overallPct": "1.000",
+          "streak": "1W",
+          "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "1",
+          "school": "Belmont",
+          "confRecord": "1-0",
+          "confPct": "1.000",
+          "overallRecord": "1-0",
+          "overallPct": "1.000",
+          "streak": "1W",
+          "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg",
+          "isMHS": false
+        },
         {
           "rank": "1",
           "school": "Reading Memorial",
@@ -358,7 +380,7 @@
           "isMHS": false
         },
         {
-          "rank": "2",
+          "rank": "4",
           "school": "Woburn Memorial",
           "confRecord": "1-0",
           "confPct": "1.000",
@@ -369,7 +391,7 @@
           "isMHS": false
         },
         {
-          "rank": "3",
+          "rank": "5",
           "school": "Lexington",
           "confRecord": "1-0",
           "confPct": "1.000",
@@ -380,7 +402,7 @@
           "isMHS": false
         },
         {
-          "rank": "4",
+          "rank": "6",
           "school": "Burlington",
           "confRecord": "0-1",
           "confPct": "0.000",
@@ -391,7 +413,7 @@
           "isMHS": false
         },
         {
-          "rank": "5",
+          "rank": "7",
           "school": "Wakefield Memorial",
           "confRecord": "0-1",
           "confPct": "0.000",
@@ -402,7 +424,7 @@
           "isMHS": false
         },
         {
-          "rank": "6",
+          "rank": "8",
           "school": "Melrose",
           "confRecord": "0-1",
           "confPct": "0.000",
@@ -413,29 +435,29 @@
           "isMHS": true
         },
         {
-          "rank": "7",
-          "school": "Arlington",
-          "confRecord": "0-0",
+          "rank": "8",
+          "school": "Watertown",
+          "confRecord": "0-1",
           "confPct": "0.000",
-          "overallRecord": "0-0",
+          "overallRecord": "0-1",
           "overallPct": "0.000",
-          "streak": "0",
-          "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
         {
-          "rank": "7",
-          "school": "Belmont",
-          "confRecord": "0-0",
+          "rank": "8",
+          "school": "Wilmington",
+          "confRecord": "0-1",
           "confPct": "0.000",
-          "overallRecord": "0-0",
+          "overallRecord": "0-1",
           "overallPct": "0.000",
-          "streak": "0",
-          "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
         {
-          "rank": "7",
+          "rank": "11",
           "school": "Stoneham",
           "confRecord": "0-0",
           "confPct": "0.000",
@@ -446,29 +468,7 @@
           "isMHS": false
         },
         {
-          "rank": "7",
-          "school": "Watertown",
-          "confRecord": "0-0",
-          "confPct": "0.000",
-          "overallRecord": "0-0",
-          "overallPct": "0.000",
-          "streak": "0",
-          "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg",
-          "isMHS": false
-        },
-        {
-          "rank": "7",
-          "school": "Wilmington",
-          "confRecord": "0-0",
-          "confPct": "0.000",
-          "overallRecord": "0-0",
-          "overallPct": "0.000",
-          "streak": "0",
-          "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg",
-          "isMHS": false
-        },
-        {
-          "rank": "7",
+          "rank": "11",
           "school": "Winchester",
           "confRecord": "0-0",
           "confPct": "0.000",
@@ -483,7 +483,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-09-09 02:55:12",
+      "lastUpdated": "2026-09-09 07:50:44",
       "teams": [
         {
           "rank": "1",
@@ -520,6 +520,28 @@
         },
         {
           "rank": "4",
+          "school": "Arlington",
+          "confRecord": "1-0",
+          "confPct": "1.000",
+          "overallRecord": "1-0",
+          "overallPct": "1.000",
+          "streak": "1W",
+          "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "5",
+          "school": "Wilmington",
+          "confRecord": "0-1",
+          "confPct": "0.000",
+          "overallRecord": "0-1",
+          "overallPct": "0.000",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "6",
           "school": "Stoneham",
           "confRecord": "0-1",
           "confPct": "0.000",
@@ -530,7 +552,7 @@
           "isMHS": false
         },
         {
-          "rank": "5",
+          "rank": "7",
           "school": "Melrose",
           "confRecord": "0-1",
           "confPct": "0.000",
@@ -541,7 +563,7 @@
           "isMHS": true
         },
         {
-          "rank": "6",
+          "rank": "8",
           "school": "Burlington",
           "confRecord": "0-1",
           "confPct": "0.000",
@@ -552,18 +574,7 @@
           "isMHS": false
         },
         {
-          "rank": "7",
-          "school": "Arlington",
-          "confRecord": "0-0",
-          "confPct": "0.000",
-          "overallRecord": "0-0",
-          "overallPct": "0.000",
-          "streak": "0",
-          "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
-          "isMHS": false
-        },
-        {
-          "rank": "7",
+          "rank": "9",
           "school": "Belmont",
           "confRecord": "0-0",
           "confPct": "0.000",
@@ -574,7 +585,7 @@
           "isMHS": false
         },
         {
-          "rank": "7",
+          "rank": "9",
           "school": "Wakefield Memorial",
           "confRecord": "0-0",
           "confPct": "0.000",
@@ -585,7 +596,7 @@
           "isMHS": false
         },
         {
-          "rank": "7",
+          "rank": "9",
           "school": "Watertown",
           "confRecord": "0-0",
           "confPct": "0.000",
@@ -596,18 +607,7 @@
           "isMHS": false
         },
         {
-          "rank": "7",
-          "school": "Wilmington",
-          "confRecord": "0-0",
-          "confPct": "0.000",
-          "overallRecord": "0-0",
-          "overallPct": "0.000",
-          "streak": "0",
-          "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg",
-          "isMHS": false
-        },
-        {
-          "rank": "7",
+          "rank": "9",
           "school": "Woburn Memorial",
           "confRecord": "0-0",
           "confPct": "0.000",
