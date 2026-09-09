@@ -156,6 +156,44 @@ def fetch_arbiter_scores(scheduled_events):
     print(f"[*] Total ArbiterLive scores retrieved: {total_found}")
     return arbiter_scores
 
+def fetch_volleyball_set_scores(match_url):
+    if not match_url:
+        return None
+    try:
+        html = fetch_url(match_url, timeout=8)
+        tables = re.findall(r'<table[^>]*>(.*?)</table>', html, re.DOTALL)
+        for t in tables:
+            headers = [re.sub(r'<[^>]+>', '', th).strip() for th in re.findall(r'<th[^>]*>(.*?)</th>', t[:1000], re.DOTALL)]
+            set_headers = [h for h in headers if re.match(r'^S\d+$', h)]
+            if not set_headers:
+                continue
+            tbody = re.search(r'<tbody>(.*?)</tbody>', t, re.DOTALL)
+            if not tbody:
+                continue
+            rows = re.findall(r'<tr[^>]*>(.*?)</tr>', tbody.group(1), re.DOTALL)
+            mhs_scores = []
+            opp_scores = []
+            for r in rows:
+                is_mhs = 'melrose' in r.lower()
+                tds = [re.sub(r'<[^>]+>', '', td).strip() for td in re.findall(r'<td[^>]*>(.*?)</td>', r, re.DOTALL)]
+                if len(tds) >= len(set_headers):
+                    if is_mhs:
+                        mhs_scores = [int(x) if x.isdigit() else 0 for x in tds[:len(set_headers)]]
+                    else:
+                        opp_scores = [int(x) if x.isdigit() else 0 for x in tds[:len(set_headers)]]
+            if mhs_scores and opp_scores and len(mhs_scores) == len(opp_scores):
+                sets = []
+                for idx, (m_s, o_s) in enumerate(zip(mhs_scores, opp_scores)):
+                    sets.append({
+                        "label": f"Set {idx + 1}",
+                        "score": f"{m_s}-{o_s}",
+                        "win": m_s > o_s
+                    })
+                return sets
+    except Exception as e:
+        print(f"    [-] Error fetching set scores: {e}")
+    return None
+
 def fetch_scores(scheduled_keys):
     print("[*] Checking for completed 2026 game scores on MaxPreps...")
     scores_by_key = {}
@@ -203,7 +241,7 @@ def fetch_scores(scheduled_keys):
                         else:
                             mhs_res = "T"
 
-                    scores_by_key[key] = {
+                    score_entry = {
                         "sport": sport_label,
                         "date": iso_date,
                         "opponent": opp[14],
@@ -214,6 +252,12 @@ def fetch_scores(scheduled_keys):
                         "isHome": mhs[4] == 1,
                         "source": "MaxPreps"
                     }
+                    if sport_label == "Girls' Volleyball" and len(c) > 18 and c[18]:
+                        sets = fetch_volleyball_set_scores(c[18])
+                        if sets:
+                            score_entry["setScores"] = sets
+
+                    scores_by_key[key] = score_entry
                     sport_scores += 1
                     total_found += 1
 
@@ -309,8 +353,166 @@ GIRLS_VOLLEYBALL_JERSEYS = {
     "Lorena Contin": "16",
 }
 
+DEFAULT_CATEGORIES = {
+    "Girls' Volleyball": {
+        "icon": "🏐",
+        "categories": [
+            {"key": "kills", "label": "Kills", "short": "K"},
+            {"key": "aces", "label": "Aces", "short": "ACE"},
+            {"key": "digs", "label": "Digs", "short": "DIG"},
+            {"key": "assists", "label": "Assists", "short": "AST"},
+            {"key": "blocks", "label": "Blocks", "short": "BLK"}
+        ]
+    },
+    "Boys' Soccer": {
+        "icon": "⚽",
+        "categories": [
+            {"key": "goals", "label": "Goals", "short": "G"},
+            {"key": "assists", "label": "Assists", "short": "A"},
+            {"key": "points", "label": "Points", "short": "PTS"},
+            {"key": "shots", "label": "Shots", "short": "SH"},
+            {"key": "saves", "label": "Saves", "short": "SV"}
+        ]
+    },
+    "Girls' Soccer": {
+        "icon": "⚽",
+        "categories": [
+            {"key": "goals", "label": "Goals", "short": "G"},
+            {"key": "assists", "label": "Assists", "short": "A"},
+            {"key": "points", "label": "Points", "short": "PTS"},
+            {"key": "shots", "label": "Shots", "short": "SH"},
+            {"key": "saves", "label": "Saves", "short": "SV"}
+        ]
+    },
+    "Football": {
+        "icon": "🏈",
+        "categories": [
+            {"key": "passYds", "label": "Pass Yds", "short": "PASS"},
+            {"key": "rushYds", "label": "Rush Yds", "short": "RUSH"},
+            {"key": "recYds", "label": "Rec Yds", "short": "REC"},
+            {"key": "totalTD", "label": "Total TDs", "short": "TD"},
+            {"key": "tackles", "label": "Tackles", "short": "TCK"}
+        ]
+    },
+    "Field Hockey": {
+        "icon": "🏑",
+        "categories": [
+            {"key": "goals", "label": "Goals", "short": "G"},
+            {"key": "assists", "label": "Assists", "short": "A"},
+            {"key": "points", "label": "Points", "short": "PTS"},
+            {"key": "shots", "label": "Shots", "short": "SH"},
+            {"key": "saves", "label": "Saves", "short": "SV"}
+        ]
+    }
+}
+
+def fetch_sport_stats(sport_label, slug, roster):
+    url = f"https://www.maxpreps.com/ma/melrose/melrose-red-hawks/{slug}/stats/"
+    stats_updated = 0
+    try:
+        html = fetch_url(url, timeout=10)
+        data = extract_next_data(html)
+        if not data:
+            return stats_updated
+
+        pp = data.get("props", {}).get("pageProps", {})
+        leaders = pp.get("playerStatLeadersData", {}).get("leaders", [])
+
+        # 1. Update from Leaders if available
+        leader_stat_map = {
+            'K': 'kills', 'Kills': 'kills',
+            'A': 'aces', 'Aces': 'aces',
+            'D': 'digs', 'Digs': 'digs',
+            'AST': 'assists', 'Ast': 'assists', 'Assists': 'assists',
+            'Tot Blks': 'blocks', 'Blocks': 'blocks',
+            'G': 'goals', 'Goals': 'goals',
+            'PTS': 'points', 'Points': 'points',
+            'SH': 'shots', 'Shots': 'shots',
+            'SV': 'saves', 'Saves': 'saves',
+            'PASS': 'passYds', 'Passing': 'passYds',
+            'RUSH': 'rushYds', 'Rushing': 'rushYds',
+            'REC': 'recYds', 'Receiving': 'recYds',
+            'TD': 'totalTD',
+            'TCK': 'tackles', 'Tackles': 'tackles'
+        }
+
+        for l in leaders:
+            aid = l.get("athleteId")
+            st = l.get("stat", {})
+            header = st.get("header", "")
+            dname = st.get("displayName", "")
+            val = st.get("value", "0")
+            cat_key = leader_stat_map.get(header) or leader_stat_map.get(dname)
+            if cat_key and val and val.replace('.', '', 1).isdigit():
+                num_val = int(float(val))
+                p = next((x for x in roster if x.get("id") == aid), None)
+                if p:
+                    if "stats" not in p or not isinstance(p["stats"], dict):
+                        p["stats"] = {}
+                    p["stats"][cat_key] = num_val
+                    stats_updated += 1
+
+        # 2. Fetch full season team stats tables from Print URL
+        shared_links = pp.get("sharedStatsLinks", [])
+        print_url = next((s.get("canonicalUrl") for s in shared_links if s.get("displayText") == "Print"), None)
+        if print_url:
+            p_html = fetch_url(print_url, timeout=10)
+            tables = re.findall(r'<table[^>]*>(.*?)</table>', p_html, re.DOTALL)
+
+            def find_player(name_str):
+                m = re.search(r'([A-Z])\.\s+([A-Za-z\'-]+)', name_str)
+                if m:
+                    init, last = m.group(1).lower(), m.group(2).lower()
+                    return next((p for p in roster if p.get('lastName', '').lower() == last and p.get('firstName', '').lower().startswith(init)), None)
+                clean_name = re.sub(r'\s*\([^)]*\)', '', name_str).strip().lower()
+                return next((p for p in roster if p.get('fullName', '').lower() == clean_name), None)
+
+            # Map column headers to categories
+            col_map = {
+                'K': 'kills',
+                'A': 'aces',
+                'D': 'digs',
+                'Ast': 'assists',
+                'Tot Blks': 'blocks', 'BS': 'blocks',
+                'G': 'goals', 'Goals': 'goals',
+                'Pts': 'points', 'PTS': 'points',
+                'Sh': 'shots', 'Shots': 'shots',
+                'Svs': 'saves', 'Saves': 'saves',
+                'Pass Yds': 'passYds',
+                'Rush Yds': 'rushYds',
+                'Rec Yds': 'recYds',
+                'TD': 'totalTD',
+                'Tckl': 'tackles'
+            }
+
+            for t in tables:
+                ths = [re.sub(r'<[^>]+>', '', th).strip() for th in re.findall(r'<th[^>]*>(.*?)</th>', t[:1500], re.DOTALL) if 'sort-column' in th]
+                tbody = re.search(r'<tbody>(.*?)</tbody>', t, re.DOTALL)
+                if not tbody:
+                    continue
+                rows = re.findall(r'<tr[^>]*>(.*?)</tr>', tbody.group(1), re.DOTALL)
+                for r in rows:
+                    name_m = re.search(r'<th[^>]*>(.*?)</th>', r, re.DOTALL)
+                    if not name_m:
+                        continue
+                    name = re.sub(r'<[^>]+>', '', name_m.group(1)).strip()
+                    p = find_player(name)
+                    if not p:
+                        continue
+                    if "stats" not in p or not isinstance(p["stats"], dict):
+                        p["stats"] = {}
+                    tds = [re.sub(r'<[^>]+>', '', td).strip() for td in re.findall(r'<td[^>]*>(.*?)</td>', r, re.DOTALL)]
+                    for col_header, td_val in zip(ths[1:], tds):
+                        if col_header in col_map and td_val.isdigit():
+                            p["stats"][col_map[col_header]] = int(td_val)
+                            stats_updated += 1
+    except Exception as e:
+        print(f"    [-] Error fetching stats for {sport_label}: {e}")
+
+    return stats_updated
+
 def fetch_maxpreps_rosters():
-    print("[*] Checking for official team rosters on MaxPreps...")
+    print("[*] Checking for official team rosters & player stats on MaxPreps...")
     existing_players = {}
     if os.path.exists("players.json"):
         try:
@@ -321,66 +523,82 @@ def fetch_maxpreps_rosters():
 
     for sport_label, cfg in SPORTS_CONFIG.items():
         slug = cfg["slug"]
+        defaults = DEFAULT_CATEGORIES.get(sport_label, {"icon": "🏅", "categories": []})
+
+        if sport_label not in existing_players:
+            existing_players[sport_label] = {
+                "sport": sport_label,
+                "icon": defaults["icon"],
+                "categories": defaults["categories"],
+                "roster": []
+            }
+        else:
+            if "categories" not in existing_players[sport_label] or not existing_players[sport_label]["categories"]:
+                existing_players[sport_label]["icon"] = defaults["icon"]
+                existing_players[sport_label]["categories"] = defaults["categories"]
+
         url = f"https://www.maxpreps.com/ma/melrose/melrose-red-hawks/{slug}/roster/"
+        updated_roster = []
         try:
             html = fetch_url(url, timeout=10)
             data = extract_next_data(html)
-            if not data:
-                continue
-            athletes = data.get("props", {}).get("pageProps", {}).get("athleteData", [])
-            if not athletes or len(athletes) == 0:
-                continue
+            if data:
+                athletes = data.get("props", {}).get("pageProps", {}).get("athleteData", [])
+                current_sport_data = existing_players.get(sport_label, {})
+                current_roster_map = {p["id"]: p for p in current_sport_data.get("roster", []) if p.get("id")}
 
-            current_sport_data = existing_players.get(sport_label, {})
-            current_roster_map = {p["id"]: p for p in current_sport_data.get("roster", []) if p.get("id")}
-            updated_roster = []
+                for a in athletes:
+                    aid = a[4] if len(a) > 4 else ""
+                    fname = a[5] if len(a) > 5 else ""
+                    lname = a[6] if len(a) > 6 else ""
+                    fullname = a[33] if len(a) > 33 and a[33] else f"{fname} {lname}"
 
-            for a in athletes:
-                aid = a[4] if len(a) > 4 else ""
-                fname = a[5] if len(a) > 5 else ""
-                lname = a[6] if len(a) > 6 else ""
-                fullname = a[33] if len(a) > 33 and a[33] else f"{fname} {lname}"
-                
-                # Assign verified official jersey number if known, otherwise existing, otherwise empty
-                jersey = ""
-                if sport_label == "Girls' Volleyball":
-                    jersey = GIRLS_VOLLEYBALL_JERSEYS.get(fullname, GIRLS_VOLLEYBALL_JERSEYS.get(f"{fname} {lname}", ""))
-                if not jersey:
+                    jersey = ""
+                    if sport_label == "Girls' Volleyball":
+                        jersey = GIRLS_VOLLEYBALL_JERSEYS.get(fullname, GIRLS_VOLLEYBALL_JERSEYS.get(f"{fname} {lname}", ""))
+                    if not jersey:
+                        existing_p = current_roster_map.get(aid, {})
+                        jersey = existing_p.get("jersey", "")
+
+                    pos = a[12] if len(a) > 12 and a[12] else ""
+                    yr = a[36] if len(a) > 36 and a[36] else ""
+                    purl = a[31] if len(a) > 31 and a[31] else ""
+
                     existing_p = current_roster_map.get(aid, {})
-                    jersey = existing_p.get("jersey", "")
+                    stats = existing_p.get("stats", {})
 
-                pos = a[12] if len(a) > 12 and a[12] else ""
-                yr = a[36] if len(a) > 36 and a[36] else ""
-                purl = a[31] if len(a) > 31 and a[31] else ""
-
-                existing_p = current_roster_map.get(aid, {})
-                stats = existing_p.get("stats", {})
-
-                updated_roster.append({
-                    "id": aid,
-                    "firstName": fname,
-                    "lastName": lname,
-                    "fullName": fullname,
-                    "jersey": str(jersey) if jersey else "",
-                    "position": pos,
-                    "year": yr,
-                    "profileUrl": purl,
-                    "stats": stats
-                })
-
-            if len(updated_roster) > 0:
-                # Sort roster numerically by jersey number if available
-                try:
-                    updated_roster.sort(key=lambda x: int(x["jersey"]) if x.get("jersey") and str(x["jersey"]).isdigit() else 999)
-                except Exception:
-                    pass
-
-                if sport_label not in existing_players:
-                    existing_players[sport_label] = {"sport": sport_label, "roster": []}
-                existing_players[sport_label]["roster"] = updated_roster
-                print(f"  [+] {sport_label:18}: {len(updated_roster)} athletes synced from MaxPreps")
+                    updated_roster.append({
+                        "id": aid,
+                        "firstName": fname,
+                        "lastName": lname,
+                        "fullName": fullname,
+                        "jersey": str(jersey) if jersey else "",
+                        "position": pos,
+                        "year": yr,
+                        "profileUrl": purl,
+                        "stats": stats
+                    })
         except Exception as e:
             print(f"  [-] {sport_label:18}: Roster error ({e})")
+
+        if len(updated_roster) > 0:
+            try:
+                updated_roster.sort(key=lambda x: int(x["jersey"]) if x.get("jersey") and str(x["jersey"]).isdigit() else 999)
+            except Exception:
+                pass
+            existing_players[sport_label]["roster"] = updated_roster
+            print(f"  [+] {sport_label:18}: {len(updated_roster)} athletes synced from MaxPreps")
+        else:
+            current_count = len(existing_players[sport_label].get("roster", []))
+            if current_count > 0:
+                print(f"  [+] {sport_label:18}: {current_count} athletes preserved from existing roster")
+
+        # Now fetch and sync player stats for this sport
+        target_roster = existing_players[sport_label].get("roster", [])
+        if target_roster:
+            stats_count = fetch_sport_stats(sport_label, slug, target_roster)
+            if stats_count > 0:
+                print(f"      [✓] {stats_count} individual stats updated for {sport_label}")
 
     return existing_players
 

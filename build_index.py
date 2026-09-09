@@ -28,6 +28,7 @@ def main():
         html
     )
 
+    s_count = 0
     if os.path.exists("scores.json"):
         with open("scores.json", "r", encoding="utf-8") as f:
             scores_data = json.load(f)
@@ -40,6 +41,7 @@ def main():
         if s_count > 0:
             print(f"[✓] Successfully synchronized embedded INITIAL_SCORES in index.html")
 
+    p_count = 0
     if os.path.exists("players.json"):
         with open("players.json", "r", encoding="utf-8") as f:
             players_data = json.load(f)
@@ -52,12 +54,12 @@ def main():
         if p_count > 0:
             print(f"[✓] Successfully synchronized embedded INITIAL_PLAYERS in index.html")
 
-    if count > 0:
+    if count > 0 or s_count > 0 or p_count > 0:
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(updated_html)
-        print(f"[✓] Successfully synchronized embedded INITIAL_STANDINGS in index.html")
+        print(f"[✓] Successfully updated index.html (standings: {count}, scores: {s_count}, players: {p_count})")
     else:
-        print("[-] Warning: Could not locate INITIAL_STANDINGS in index.html")
+        print("[-] Warning: No embedded data patterns matched in index.html")
 
 if __name__ == "__main__":
     main()
