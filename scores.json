@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-08T23:09:42.606105",
+  "lastUpdated": "2026-09-09T02:55:07.669560",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -15,13 +15,24 @@
     "Field Hockey|2026-09-08": {
       "sport": "Field Hockey",
       "date": "2026-09-08",
-      "opponent": "Reading",
+      "opponent": "Reading Memorial",
       "mhsScore": 0,
       "oppScore": 4,
-      "result": "LOSS",
+      "result": "L",
       "status": "Final",
       "isHome": false,
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2026-09-08": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-08",
+      "opponent": "Reading Memorial",
+      "mhsScore": 0,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
     }
   }
 }
