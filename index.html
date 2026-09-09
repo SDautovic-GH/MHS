@@ -2009,6 +2009,12 @@
       .app-header {
         padding-top: calc(env(safe-area-inset-top, 0px) + 0.65rem);
         padding-bottom: 0.65rem;
+        padding-left: max(0.75rem, env(safe-area-inset-left));
+        padding-right: max(0.75rem, env(safe-area-inset-left));
+      }
+      .container {
+        padding-left: max(0.75rem, env(safe-area-inset-left));
+        padding-right: max(0.75rem, env(safe-area-inset-left));
       }
       .header-inner {
         flex-direction: column;
@@ -2020,7 +2026,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        gap: 0.45rem;
+        gap: 0.35rem;
         min-width: 0;
       }
       .header-brand {
@@ -2032,7 +2038,7 @@
       .brand-badge {
         width: 38px;
         height: 38px;
-        font-size: 0.95rem;
+        font-size: 0.98rem;
         border-radius: 9px;
         flex-shrink: 0;
       }
@@ -2041,14 +2047,16 @@
         overflow: hidden;
       }
       .header-titles h1 {
-        font-size: 1.05rem;
+        font-size: 1.06rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
         line-height: 1.25;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }
       .header-season {
-        font-size: 0.72rem;
+        font-size: 0.74rem;
         margin-top: 0.1rem;
         white-space: nowrap;
         overflow: hidden;
@@ -2062,8 +2070,9 @@
       }
       .header-global-bar .apple-picker-btn {
         flex: 1;
+        min-width: 0;
         height: 38px;
-        padding: 0 0.75rem;
+        padding: 0 0.65rem;
         font-size: 0.86rem;
         border-radius: 10px;
       }
@@ -2073,20 +2082,30 @@
       .header-global-bar .picker-btn-icon {
         font-size: 1rem;
       }
-      .header-actions {
-        display: flex;
-        align-items: center;
-        gap: 0.35rem;
-        flex-shrink: 0;
-      }
-      .header-actions .apple-icon-btn,
-      .header-actions .theme-toggle-btn {
+      .header-global-bar .apple-icon-btn {
         width: 38px;
         height: 38px;
         min-width: 38px;
-        padding: 0;
-        border-radius: 10px;
         font-size: 0.95rem;
+        border-radius: 10px;
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.28rem;
+        flex-shrink: 0;
+      }
+      .theme-toggle-btn {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        padding: 0;
+        border-radius: 9px;
+        font-size: 0.88rem;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -3527,9 +3546,6 @@
         <a id="popout-btn" class="popout-btn" href="#" target="_blank" rel="noopener" style="display:none;" title="Open in dedicated Safari tab for full standalone app">
           <span>Open App ↗</span>
         </a>
-        <button class="apple-icon-btn" id="search-toggle-btn" onclick="toggleSearchDrawer()" title="Search schedule" aria-label="Search schedule">
-          <span id="search-btn-icon">🔍</span>
-        </button>
         <button id="theme-toggle" class="theme-toggle-btn" onclick="cycleTheme()" aria-label="Toggle Theme" title="Theme Toggle">
           <span id="theme-icon">💻</span>
           <span id="theme-text" class="btn-text-full">Auto</span>
@@ -3537,7 +3553,7 @@
       </div>
     </div>
 
-    <!-- Global Selectors Bar: Sports & Location (Symmetrical 50/50 split) -->
+    <!-- Global Selectors Bar: Sports, Location & Search -->
     <div class="header-global-bar" id="header-global-bar">
       <!-- Sport Picker Trigger -->
       <button class="apple-picker-btn" id="sport-picker-btn" onclick="openSportSheet()" aria-label="Select sport" aria-haspopup="dialog">
@@ -3555,6 +3571,11 @@
           <span class="picker-btn-text" id="picker-loc-title">Location</span>
         </div>
         <span class="picker-btn-chevron">▾</span>
+      </button>
+
+      <!-- Search Icon Button -->
+      <button class="apple-icon-btn" id="search-toggle-btn" onclick="toggleSearchDrawer()" title="Search schedule" aria-label="Search schedule">
+        <span id="search-btn-icon">🔍</span>
       </button>
     </div>
 
