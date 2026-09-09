@@ -2723,6 +2723,24 @@
       border-color: rgba(59, 130, 246, 0.5);
       box-shadow: 0 4px 16px rgba(59, 130, 246, 0.18);
     }
+    .card.highlight-pulse {
+      animation: targetCardPulse 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      border-color: var(--accent-blue) !important;
+    }
+    @keyframes targetCardPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.75), 0 8px 24px rgba(59, 130, 246, 0.3);
+        transform: scale(1.025);
+      }
+      40% {
+        box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.2), 0 8px 24px rgba(59, 130, 246, 0.25);
+        transform: scale(1.01);
+      }
+      100% {
+        box-shadow: 0 4px 16px rgba(59, 130, 246, 0.18);
+        transform: scale(1);
+      }
+    }
 
     /* Clean App Footer */
     .app-footer {
@@ -4561,17 +4579,31 @@ function scrollToCurrentOrNextGame(smooth = true) {
       selectSport(activeStandingsSport);
     }
     switchTab('calendar', true);
-    setTimeout(() => scrollToCurrentOrNextGame(smooth), 150);
+    setTimeout(() => scrollToCurrentOrNextGame(smooth), 180);
     return;
   }
-  const targetCard = document.getElementById('target-game-card');
+
+  // If currently in 'today' scope and no target card exists, switch to 'upcoming' view
+  let targetCard = document.getElementById('target-game-card');
+  if (!targetCard && scheduleScope === 'today') {
+    setScheduleScope('upcoming');
+    setTimeout(() => scrollToCurrentOrNextGame(smooth), 120);
+    return;
+  }
+
+  // Fallback: first card in grid
+  if (!targetCard) {
+    targetCard = document.querySelector('#daily-grid .card');
+  }
+
   if (!targetCard || typeof targetCard.getBoundingClientRect !== 'function') return;
 
   const header = document.querySelector('.app-header');
-  const headerOffset = (header ? header.offsetHeight : 70) + 16;
+  const headerOffset = (header ? header.offsetHeight : 80) + 16;
 
   const rect = targetCard.getBoundingClientRect();
-  const targetY = (window.pageYOffset || 0) + rect.top - headerOffset;
+  const currentScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+  const targetY = currentScrollY + rect.top - headerOffset;
 
   if (typeof window.scrollTo === 'function') {
     window.scrollTo({
@@ -4579,6 +4611,12 @@ function scrollToCurrentOrNextGame(smooth = true) {
       behavior: smooth ? 'smooth' : 'auto'
     });
   }
+
+  // Trigger pulse highlight animation
+  targetCard.classList.remove('highlight-pulse');
+  void targetCard.offsetWidth; // trigger reflow
+  targetCard.classList.add('highlight-pulse');
+  setTimeout(() => targetCard.classList.remove('highlight-pulse'), 2500);
 }
 
 function scrollToTop() {
@@ -5720,20 +5758,26 @@ function renderDailyView() {
       `;
     }
   } else {
-    const target = getTargetGameDay();
+    const todayStr = getTodayEasternString();
     let firstTargetAssigned = false;
 
+    // Find the next target game within the filtered set
+    const targetItem = filtered.find(item => item.date === todayStr) ||
+                       filtered.find(item => item.date > todayStr) ||
+                       filtered[0];
+
     container.innerHTML = filtered.map(item => {
-      const isTarget = item.date === target.date;
+      const isTarget = targetItem && (
+        (item.id && targetItem.id && item.id === targetItem.id) ||
+        (item.date === targetItem.date && item.opp === targetItem.opp && item.sport === targetItem.sport)
+      );
       let targetCardId = '';
       let targetBadge = '';
 
-      if (isTarget) {
-        if (!firstTargetAssigned) {
-          targetCardId = 'id="target-game-card"';
-          firstTargetAssigned = true;
-        }
-        targetBadge = target.isToday
+      if (isTarget && !firstTargetAssigned) {
+        targetCardId = 'id="target-game-card"';
+        firstTargetAssigned = true;
+        targetBadge = (item.date === todayStr)
           ? `<span class="gameday-pill today">⚡ TODAY</span>`
           : `<span class="gameday-pill next">NEXT GAME</span>`;
       }
