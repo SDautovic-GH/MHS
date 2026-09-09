@@ -489,26 +489,26 @@
       line-height: 1;
     }
 
-    .header-global-bar .apple-icon-btn {
+    .apple-icon-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
-      min-width: 40px;
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
       box-sizing: border-box;
       flex-shrink: 0;
       background-color: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       color: var(--text-primary);
-      border-radius: 10px;
+      border-radius: 9px;
       cursor: pointer;
       transition: all 0.15s ease;
-      font-size: 1.05rem;
+      font-size: 0.95rem;
     }
 
-    .header-global-bar .apple-icon-btn:hover,
-    .header-global-bar .apple-icon-btn.active {
+    .apple-icon-btn:hover,
+    .apple-icon-btn.active {
       border-color: var(--border-highlight);
       background-color: var(--bg-surface-elevated);
     }
@@ -913,6 +913,20 @@
       background-color: var(--accent-blue);
       color: #ffffff;
       border-color: var(--accent-blue);
+    }
+    .sync-sport-text-full {
+      display: inline;
+    }
+    .sync-sport-text-short {
+      display: none;
+    }
+    @media (max-width: 520px) {
+      .sync-sport-text-full {
+        display: none;
+      }
+      .sync-sport-text-short {
+        display: inline;
+      }
     }
 
     /* Apple-Style Modals (Centered Dialog on Desktop, Bottom Sheet on Mobile) */
@@ -1987,39 +2001,39 @@
 
     @media (max-width: 640px) {
       :root {
-        --header-height: 110px;
+        --header-height: 118px;
       }
       body {
-        padding-top: calc(var(--header-height, 110px) + 0.65rem);
+        padding-top: calc(var(--header-height, 118px) + 0.45rem);
       }
       .app-header {
-        padding-top: max(0.65rem, env(safe-area-inset-top));
-        padding-bottom: 0.6rem;
+        padding-top: calc(env(safe-area-inset-top, 0px) + 0.45rem);
+        padding-bottom: 0.45rem;
       }
       .header-inner {
         flex-direction: column;
         align-items: stretch;
-        gap: 0.5rem;
+        gap: 0.35rem;
       }
       .header-top-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        gap: 0.4rem;
+        gap: 0.35rem;
         min-width: 0;
       }
       .header-brand {
         flex: 1;
         min-width: 0;
-        gap: 0.6rem;
+        gap: 0.5rem;
         overflow: hidden;
       }
       .brand-badge {
-        width: 42px;
-        height: 42px;
-        font-size: 1.05rem;
-        border-radius: 11px;
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+        border-radius: 9px;
         flex-shrink: 0;
       }
       .header-titles {
@@ -2027,13 +2041,14 @@
         overflow: hidden;
       }
       .header-titles h1 {
-        font-size: 1.15rem;
+        font-size: 1.05rem;
+        line-height: 1.2;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }
       .header-season {
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -2042,31 +2057,38 @@
         width: 100%;
         max-width: 100%;
         gap: 0.35rem;
-        height: 36px;
+        height: 33px;
       }
       .header-global-bar .apple-picker-btn {
-        height: 36px;
+        flex: 1;
+        height: 33px;
         padding: 0 0.55rem;
-        font-size: 0.82rem;
-        border-radius: 9px;
+        font-size: 0.8rem;
+        border-radius: 8px;
       }
       .header-global-bar .picker-btn-text {
-        font-size: 0.82rem;
+        font-size: 0.8rem;
       }
       .header-global-bar .picker-btn-icon {
-        font-size: 0.95rem;
-      }
-      .header-global-bar .apple-icon-btn {
-        width: 36px;
-        height: 36px;
-        min-width: 36px;
-        font-size: 0.95rem;
-        border-radius: 9px;
+        font-size: 0.9rem;
       }
       .header-actions {
         display: flex;
         align-items: center;
-        gap: 0.28rem;
+        gap: 0.3rem;
+        flex-shrink: 0;
+      }
+      .header-actions .apple-icon-btn,
+      .header-actions .theme-toggle-btn {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        padding: 0;
+        border-radius: 8px;
+        font-size: 0.88rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         flex-shrink: 0;
       }
       .header-link-btn {
@@ -2074,17 +2096,6 @@
         font-size: 0.75rem;
         border-radius: 8px;
         gap: 0.25rem;
-        flex-shrink: 0;
-      }
-      .theme-toggle-btn {
-        padding: 0.35rem 0.45rem;
-        border-radius: 8px;
-        font-size: 0.85rem;
-        min-width: 32px;
-        height: 30px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
         flex-shrink: 0;
       }
       .btn-text-full {
@@ -2101,10 +2112,10 @@
         max-width: 100%;
         display: inline-flex;
         align-items: center;
-        height: 36px;
+        height: 34px;
         padding: 2.5px;
-        border-radius: 9px;
-        gap: 0.25rem;
+        border-radius: 8px;
+        gap: 0.2rem;
         box-sizing: border-box;
       }
       .tab-button {
@@ -2112,15 +2123,15 @@
         height: 100%;
         justify-content: center;
         text-align: center;
-        padding: 0 0.35rem;
-        font-size: 0.82rem;
+        padding: 0 0.25rem;
+        font-size: 0.8rem;
         font-weight: 700;
-        border-radius: 7px;
-        gap: 0.3rem;
+        border-radius: 6px;
+        gap: 0.25rem;
         box-sizing: border-box;
       }
       .tab-button span:first-child {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
       }
       .sport-picker-row {
         flex-direction: column;
@@ -2159,70 +2170,62 @@
         padding: 0.65rem 0.6rem;
         font-size: 0.8rem;
       }
-      .apple-sports-bar {
-        padding: 0.4rem 0.5rem;
-        gap: 0.35rem;
-      }
-      .apple-picker-btn {
-        padding: 0.4rem 0.55rem;
-        gap: 0.25rem;
-        font-size: 0.8rem;
-      }
-      .picker-btn-content {
-        gap: 0.3rem;
-      }
-      .picker-btn-text {
-        font-size: 0.8rem;
-      }
-      .apple-icon-btn {
-        width: 36px;
-        height: 36px;
-      }
       .next-game-ticker {
-        padding: 0.55rem 0.75rem;
-        margin-bottom: 0.65rem;
-        gap: 0.5rem;
-        border-radius: 12px;
+        padding: 0.42rem 0.65rem;
+        margin-top: 0.15rem;
+        margin-bottom: 0.45rem;
+        gap: 0.45rem;
+        border-radius: 11px;
+      }
+      .ticker-left {
+        gap: 0.15rem;
+        min-width: 0;
       }
       .ticker-header-row {
         gap: 0.35rem;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        align-items: center;
       }
       .ticker-pulse-badge {
-        font-size: 0.625rem;
-        padding: 0.14rem 0.4rem;
+        font-size: 0.6rem;
+        padding: 0.12rem 0.38rem;
       }
       .ticker-sport-tag {
-        font-size: 0.8rem;
+        display: none;
       }
       .ticker-matchup {
-        font-size: 0.95rem;
-        white-space: normal;
-        overflow: visible;
-        text-overflow: unset;
+        font-size: 0.92rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .ticker-details {
-        font-size: 0.775rem;
-        white-space: normal;
-        overflow: visible;
-        text-overflow: unset;
-        line-height: 1.3;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.2;
+      }
+      .ticker-right {
+        gap: 0.35rem;
+        flex-shrink: 0;
       }
       .countdown-display {
-        padding: 0.25rem 0.35rem;
-        gap: 0.15rem;
+        padding: 0.2rem 0.35rem;
+        gap: 0.12rem;
+        border-radius: 8px;
       }
       .cd-box {
         min-width: 17px;
       }
       .cd-val {
-        font-size: 0.88rem;
+        font-size: 0.85rem;
       }
       .cd-lbl {
-        font-size: 0.46rem;
+        font-size: 0.45rem;
       }
       .cd-colon {
-        font-size: 0.7rem;
+        font-size: 0.68rem;
       }
       .jump-btn-text {
         display: none;
@@ -2231,26 +2234,64 @@
         display: inline;
       }
       .ticker-jump-btn {
-        padding: 0.35rem 0.5rem;
-        font-size: 0.825rem;
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-size: 0.82rem;
       }
 
-      /* Apple Status Line full-width across screen on mobile */
+      /* Apple-Style Schedule Scope Toggle */
+      .schedule-scope-toggle-bar {
+        margin: 0.15rem 0 0.45rem;
+        padding: 3px;
+        border-radius: 11px;
+        gap: 3px;
+      }
+      .schedule-scope-btn {
+        padding: 0.42rem 0.35rem;
+        font-size: 0.78rem;
+        border-radius: 8px;
+        gap: 0.28rem;
+      }
+      .apple-cal-icon-svg {
+        width: 15px;
+        height: 15px;
+      }
+      .scope-count-badge {
+        padding: 0.08rem 0.38rem;
+        font-size: 0.68rem;
+      }
+
+      /* Apple Status Line - compact single row */
       .apple-status-line {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.55rem;
-        margin-bottom: 0.85rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-bottom: 0.55rem;
+        padding: 0 0.15rem;
       }
       .apple-count-text {
-        width: 100%;
-        font-size: 0.84rem;
-        line-height: 1.45;
+        flex: 1;
+        min-width: 0;
+        font-size: 0.8rem;
+        line-height: 1.3;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .sync-sport-ics-inline {
-        align-self: flex-start;
-        padding: 0.3rem 0.75rem;
-        font-size: 0.78rem;
+        align-self: auto;
+        flex-shrink: 0;
+        padding: 0.26rem 0.55rem;
+        font-size: 0.74rem;
+        border-radius: 7px;
+        white-space: nowrap;
       }
 
       /* Apple Sheet Mobile Overrides: Slide-up bottom sheet */
@@ -2293,10 +2334,10 @@
 
     @media (max-width: 390px) {
       .header-global-bar {
-        height: 34px;
+        height: 31px;
       }
       .header-global-bar .apple-picker-btn {
-        height: 34px;
+        height: 31px;
         padding: 0 0.4rem;
         font-size: 0.76rem;
       }
@@ -2304,80 +2345,53 @@
         font-size: 0.76rem;
       }
       .header-global-bar .picker-btn-icon {
-        font-size: 0.88rem;
-      }
-      .header-global-bar .apple-icon-btn {
-        width: 34px;
-        height: 34px;
-        min-width: 34px;
-        font-size: 0.88rem;
+        font-size: 0.85rem;
       }
       .nav-tabs {
-        height: 34px;
+        height: 32px;
         padding: 2px;
-        gap: 0.2rem;
+        gap: 0.15rem;
       }
       .tab-button {
         height: 100%;
-        font-size: 0.76rem;
+        font-size: 0.75rem;
         padding: 0 0.2rem;
         gap: 0.2rem;
       }
       .tab-button span:first-child {
-        font-size: 0.88rem;
-      }
-      .ticker-sport-tag {
-        display: none;
+        font-size: 0.85rem;
       }
       .cd-box.cd-secs, .cd-colon.cd-secs-colon {
         display: none;
       }
-      .apple-sports-bar {
-        padding: 0.35rem 0.45rem;
-        gap: 0.3rem;
-      }
-      .apple-picker-btn {
-        padding: 0.35rem 0.45rem;
-        font-size: 0.775rem;
-      }
-      .standings-league-badge {
-        padding: 0.35rem 0.45rem;
-        font-size: 0.725rem;
-      }
-      .picker-btn-icon {
-        font-size: 0.88rem;
-      }
-      .picker-btn-text {
-        font-size: 0.76rem;
-      }
       .brand-badge {
-        width: 38px;
-        height: 38px;
-        font-size: 0.95rem;
-        border-radius: 9px;
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+        border-radius: 8px;
       }
       .header-titles h1 {
-        font-size: 1.05rem;
+        font-size: 0.98rem;
         white-space: nowrap;
       }
       .header-season {
-        font-size: 0.72rem;
-      }
-      .header-link-btn {
-        padding: 0.35rem 0.45rem;
+        font-size: 0.7rem;
       }
       .schedule-scope-btn {
-        padding: 0.5rem 0.35rem;
-        font-size: 0.8rem;
-        gap: 0.25rem;
+        padding: 0.38rem 0.25rem;
+        font-size: 0.75rem;
+        gap: 0.2rem;
       }
       .apple-cal-icon-svg {
-        width: 14px;
-        height: 14px;
+        width: 13px;
+        height: 13px;
       }
       .scope-count-badge {
-        padding: 0.08rem 0.35rem;
-        font-size: 0.68rem;
+        padding: 0.06rem 0.32rem;
+        font-size: 0.65rem;
+      }
+      .apple-status-line {
+        margin-bottom: 0.45rem;
       }
     }
 
@@ -3508,6 +3522,9 @@
         <a id="popout-btn" class="popout-btn" href="#" target="_blank" rel="noopener" style="display:none;" title="Open in dedicated Safari tab for full standalone app">
           <span>Open App ↗</span>
         </a>
+        <button class="apple-icon-btn" id="search-toggle-btn" onclick="toggleSearchDrawer()" title="Search schedule" aria-label="Search schedule">
+          <span id="search-btn-icon">🔍</span>
+        </button>
         <button id="theme-toggle" class="theme-toggle-btn" onclick="cycleTheme()" aria-label="Toggle Theme" title="Theme Toggle">
           <span id="theme-icon">💻</span>
           <span id="theme-text" class="btn-text-full">Auto</span>
@@ -3515,7 +3532,7 @@
       </div>
     </div>
 
-    <!-- Global Selectors Bar (BEFORE Nav Tabs): Sports, Location, Search -->
+    <!-- Global Selectors Bar: Sports & Location (Symmetrical 50/50 split) -->
     <div class="header-global-bar" id="header-global-bar">
       <!-- Sport Picker Trigger -->
       <button class="apple-picker-btn" id="sport-picker-btn" onclick="openSportSheet()" aria-label="Select sport" aria-haspopup="dialog">
@@ -3533,11 +3550,6 @@
           <span class="picker-btn-text" id="picker-loc-title">Location</span>
         </div>
         <span class="picker-btn-chevron">▾</span>
-      </button>
-
-      <!-- Search Icon Button -->
-      <button class="apple-icon-btn" id="search-toggle-btn" onclick="toggleSearchDrawer()" title="Search schedule" aria-label="Search schedule">
-        <span id="search-btn-icon">🔍</span>
       </button>
     </div>
 
@@ -5643,7 +5655,7 @@ function renderDailyView() {
         countEl.innerHTML = `Showing <strong>${filtered.length}</strong> upcoming ${currentSelectedSport} games${locDesc}${venueStr}`;
         if (syncSportBtn) {
           syncSportBtn.style.display = 'inline-flex';
-          syncSportBtn.innerHTML = `<span>📅 Sync ${currentSelectedSport}</span>`;
+          syncSportBtn.innerHTML = `<span>📅 <span class="sync-sport-text-full">Sync ${currentSelectedSport}</span><span class="sync-sport-text-short">Sync</span></span>`;
         }
       }
     }
