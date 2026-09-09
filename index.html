@@ -2265,6 +2265,20 @@
         box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.35);
         padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
       }
+      /* Option 1: Native Apple Sports Near-Fullscreen Game Detail Sheet */
+      .apple-sheet.game-detail-sheet {
+        height: calc(100dvh - env(safe-area-inset-top, 12px) - 12px);
+        max-height: calc(100dvh - env(safe-area-inset-top, 12px) - 12px);
+        border-radius: 22px 22px 0 0;
+      }
+      .apple-sheet.game-detail-sheet .apple-sheet-body {
+        flex: 1;
+        min-height: 0;
+        padding-bottom: max(2rem, env(safe-area-inset-bottom, 20px));
+      }
+      .apple-sheet.game-detail-sheet .table-scroll-wrap {
+        max-height: none !important;
+      }
       .apple-sheet-backdrop.active .apple-sheet {
         opacity: 1;
         animation: appleSheetSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
