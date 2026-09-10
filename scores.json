@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-09T16:25:48.424502",
+  "lastUpdated": "2026-09-10T07:06:13.570465",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -47,6 +47,28 @@
       "mhsScore": 0,
       "oppScore": 4,
       "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-09-09": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-09",
+      "opponent": "Reading Memorial",
+      "mhsScore": 1,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-09-09": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-09",
+      "opponent": "Reading Memorial",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
       "status": "Final",
       "isHome": false,
       "source": "MaxPreps"
