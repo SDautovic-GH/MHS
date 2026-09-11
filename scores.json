@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-11T07:05:19.875369",
+  "lastUpdated": "2026-09-11T14:52:46.328505",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -97,8 +97,23 @@
       "setScores": [
         {
           "label": "Set 1",
-          "score": "0-0",
+          "score": "25-21",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "24-26",
           "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "25-22",
+          "win": true
+        },
+        {
+          "label": "Set 4",
+          "score": "25-20",
+          "win": true
         }
       ]
     },
