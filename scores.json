@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-10T18:11:46.007691",
+  "lastUpdated": "2026-09-11T07:05:19.875369",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -67,6 +67,46 @@
       "date": "2026-09-09",
       "opponent": "Reading Memorial",
       "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Football|2026-09-10": {
+      "sport": "Football",
+      "date": "2026-09-10",
+      "opponent": "Reading Memorial",
+      "mhsScore": 35,
+      "oppScore": 14,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2026-09-10": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-10",
+      "opponent": "Burlington",
+      "mhsScore": 3,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "0-0",
+          "win": false
+        }
+      ]
+    },
+    "Field Hockey|2026-09-10": {
+      "sport": "Field Hockey",
+      "date": "2026-09-10",
+      "opponent": "Burlington",
+      "mhsScore": 4,
       "oppScore": 0,
       "result": "W",
       "status": "Final",
