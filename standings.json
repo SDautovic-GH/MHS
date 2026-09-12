@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-09-11T18:13:53.978979",
+  "lastUpdated": "2026-09-12T06:57:46.221155",
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-09-11 18:13:51",
+      "lastUpdated": "2026-09-12 06:57:42",
       "teams": [
         {
           "rank": "1",
@@ -15,6 +15,28 @@
           "overallPct": "1.000",
           "streak": "1W",
           "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "1",
+          "school": "Wilmington",
+          "confRecord": "0-0",
+          "confPct": "0.000",
+          "overallRecord": "1-0",
+          "overallPct": "1.000",
+          "streak": "1W",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "1",
+          "school": "Watertown",
+          "confRecord": "0-0",
+          "confPct": "0.000",
+          "overallRecord": "1-0",
+          "overallPct": "1.000",
+          "streak": "1W",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
         {
@@ -30,46 +52,24 @@
         },
         {
           "rank": "1",
-          "school": "Stoneham",
-          "confRecord": "0-0",
-          "confPct": "0.000",
-          "overallRecord": "0-0",
-          "overallPct": "0.000",
-          "streak": "0",
-          "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg",
-          "isMHS": false
-        },
-        {
-          "rank": "1",
           "school": "Wakefield Memorial",
           "confRecord": "0-0",
           "confPct": "0.000",
-          "overallRecord": "0-0",
-          "overallPct": "0.000",
-          "streak": "0",
+          "overallRecord": "1-0",
+          "overallPct": "1.000",
+          "streak": "1W",
           "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
         {
           "rank": "1",
-          "school": "Watertown",
+          "school": "Stoneham",
           "confRecord": "0-0",
           "confPct": "0.000",
-          "overallRecord": "0-0",
+          "overallRecord": "0-1",
           "overallPct": "0.000",
-          "streak": "0",
-          "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg",
-          "isMHS": false
-        },
-        {
-          "rank": "1",
-          "school": "Wilmington",
-          "confRecord": "0-0",
-          "confPct": "0.000",
-          "overallRecord": "0-0",
-          "overallPct": "0.000",
-          "streak": "0",
-          "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         }
       ]
@@ -77,16 +77,16 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-09-11 18:13:51",
+      "lastUpdated": "2026-09-12 06:57:43",
       "teams": [
         {
           "rank": "1",
           "school": "Wakefield Memorial",
           "confRecord": "1-0",
           "confPct": "1.000",
-          "overallRecord": "4-1",
-          "overallPct": "0.800",
-          "streak": "2W",
+          "overallRecord": "4-2",
+          "overallPct": "0.667",
+          "streak": "1L",
           "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -183,9 +183,9 @@
           "school": "Burlington",
           "confRecord": "0-1",
           "confPct": "0.000",
-          "overallRecord": "2-2",
-          "overallPct": "0.500",
-          "streak": "1L",
+          "overallRecord": "3-2",
+          "overallPct": "0.600",
+          "streak": "1W",
           "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -216,7 +216,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-09-11 18:13:52",
+      "lastUpdated": "2026-09-12 06:57:44",
       "teams": [
         {
           "rank": "1",
@@ -267,9 +267,9 @@
           "school": "Burlington",
           "confRecord": "0-1",
           "confPct": "0.000",
-          "overallRecord": "1-1",
-          "overallPct": "0.500",
-          "streak": "1L",
+          "overallRecord": "2-1",
+          "overallPct": "0.667",
+          "streak": "1W",
           "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -289,9 +289,9 @@
           "school": "Stoneham",
           "confRecord": "0-1",
           "confPct": "0.000",
-          "overallRecord": "1-2",
-          "overallPct": "0.333",
-          "streak": "2L",
+          "overallRecord": "2-2",
+          "overallPct": "0.500",
+          "streak": "1W",
           "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -300,9 +300,9 @@
           "school": "Watertown",
           "confRecord": "0-1",
           "confPct": "0.000",
-          "overallRecord": "1-4-1",
-          "overallPct": "0.250",
-          "streak": "3L",
+          "overallRecord": "1-5-1",
+          "overallPct": "0.214",
+          "streak": "4L",
           "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -344,7 +344,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-09-11 18:13:53",
+      "lastUpdated": "2026-09-12 06:57:45",
       "teams": [
         {
           "rank": "1",
@@ -483,7 +483,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-09-11 18:13:53",
+      "lastUpdated": "2026-09-12 06:57:46",
       "teams": [
         {
           "rank": "1",
