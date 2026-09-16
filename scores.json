@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-15T20:15:19.755135",
+  "lastUpdated": "2026-09-16T07:22:41.090515",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -166,6 +166,17 @@
           "win": false
         }
       ]
+    },
+    "Boys' Soccer|2026-09-15": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-15",
+      "opponent": "Burlington",
+      "mhsScore": 2,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
     }
   }
 }
