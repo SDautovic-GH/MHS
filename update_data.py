@@ -77,15 +77,16 @@ def load_scheduled_events():
         with open("index.html", "r", encoding="utf-8") as f:
             content = f.read()
         matches = re.findall(
-            r'date:\s*"([^"]+)",\s*time:\s*"[^"]+",\s*sport:\s*"([^"]+)",\s*opp:\s*"([^"]+)",\s*isHome:\s*(true|false)',
+            r'date:\s*"([^"]+)",\s*time:\s*"[^"]+",\s*sport:\s*"([^"]+)",\s*opp:\s*"([^"]+)",\s*isHome:\s*(true|false),\s*venue:\s*"([^"]+)"',
             content
         )
-        for d, s, opp, is_home in matches:
+        for d, s, opp, is_home, venue in matches:
             events[f"{s}|{d}"] = {
                 "sport": s,
                 "date": d,
                 "opponent": opp,
-                "isHome": is_home == "true"
+                "isHome": is_home == "true",
+                "venue": venue
             }
     return events
 
@@ -268,6 +269,104 @@ def fetch_scores(scheduled_keys):
 
     print(f"[*] Total completed 2026 varsity games: {total_found}")
     return scores_by_key
+
+def fetch_schedule_locations(scheduled_events):
+    """
+    Fetches game locations (isHome and venue) from MaxPreps and ArbiterLive
+    for all scheduled contests to ensure game locations stay synchronized
+    with official athletic schedules.
+    """
+    print("[*] Synchronizing game locations from MaxPreps & ArbiterLive...")
+    locations = {}
+
+    def get_home_venue(sport, current_venue=None):
+        if sport == "Girls' Volleyball": return "MVMMS"
+        if sport == "Football": return "Fred Green Field"
+        if sport == "Golf": return "Bellevue Golf Club"
+        if current_venue in ["Knoll", "Fred Green Field", "MVMMS", "Bellevue Golf Club", "Pine Banks"]:
+            return current_venue
+        return "Pine Banks"
+
+    def get_away_venue(opp_str):
+        name = re.sub(r'\s+(High School|Memorial|Veterans Memorial|HS|Academy).*$', '', opp_str, flags=re.IGNORECASE).strip()
+        return name if name else opp_str
+
+    # 1. Fetch from MaxPreps
+    for sport_label, cfg in SPORTS_CONFIG.items():
+        slug = cfg["slug"]
+        url = f"https://www.maxpreps.com/ma/melrose/melrose-red-hawks/{slug}/schedule/"
+        try:
+            html = fetch_url(url)
+            data = extract_next_data(html)
+            if not data:
+                continue
+            contests = data.get("props", {}).get("pageProps", {}).get("contests", [])
+            for c in contests:
+                teams = c[0]
+                if len(teams) < 2:
+                    continue
+                mhs = next((t for t in teams if "melrose" in t[14].lower()), None)
+                opp = next((t for t in teams if "melrose" not in t[14].lower()), None)
+                if not mhs or not opp:
+                    continue
+                iso_date = c[11][:10] if len(c) > 11 and c[11] else ""
+                key = f"{sport_label}|{iso_date}"
+                if key not in scheduled_events:
+                    continue
+
+                is_home = (mhs[4] == 1)
+                ev = scheduled_events[key]
+                venue = get_home_venue(sport_label, ev.get("venue")) if is_home else ev.get("opponent", get_away_venue(opp[14]))
+                locations[key] = {
+                    "sport": sport_label,
+                    "date": iso_date,
+                    "isHome": is_home,
+                    "venue": venue,
+                    "source": "MaxPreps"
+                }
+        except Exception as e:
+            print(f"  [x] {sport_label}: Error syncing locations from MaxPreps ({e})")
+
+    # 2. Complement / verify with ArbiterLive
+    months = {
+        'Jan':'01','Feb':'02','Mar':'03','Apr':'04','May':'05','Jun':'06',
+        'Jul':'07','Aug':'08','Sep':'09','Oct':'10','Nov':'11','Dec':'12'
+    }
+    for sport_label, team_id in ARBITER_TEAMS.items():
+        url = f"https://www.arbiterlive.com/Teams/Schedule/{team_id}?activeEntityId=14381"
+        try:
+            html = fetch_url(url, timeout=10)
+            rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
+            for r in rows:
+                tds = re.findall(r'<td[^>]*>(.*?)</td>', r, re.DOTALL)
+                if len(tds) < 4:
+                    continue
+                cleaned = [' '.join(re.sub(r'<[^>]+>', ' ', td).split()) for td in tds]
+                d_match = re.search(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})\b', cleaned[0])
+                if not d_match:
+                    continue
+                iso_date = f"2026-{months[d_match.group(1)]}-{d_match.group(2).zfill(2)}"
+                s_key = "Cross Country" if "Cross Country" in sport_label else sport_label
+                key = f"{s_key}|{iso_date}"
+                if key not in scheduled_events:
+                    continue
+
+                home_away = cleaned[1] # 'vs' or '@'
+                is_home = (home_away == 'vs')
+                ev = scheduled_events[key]
+                venue = get_home_venue(s_key, ev.get("venue")) if is_home else ev.get("opponent", get_away_venue(cleaned[2]))
+                locations[key] = {
+                    "sport": s_key,
+                    "date": iso_date,
+                    "isHome": is_home,
+                    "venue": venue,
+                    "source": "ArbiterLive"
+                }
+        except Exception:
+            pass
+
+    print(f"[*] Verified schedule locations for {len(locations)} games")
+    return locations
 
 def fetch_standings():
     print("[*] Fetching 2026 Middlesex League standings from MaxPreps...")
@@ -657,6 +756,15 @@ def main():
     with open("players.json", "w", encoding="utf-8") as f:
         json.dump(players_payload, f, indent=2)
     print(f"[✓] Saved players.json ({len(players_data)} sports rosters synced)")
+
+    schedule_locations = fetch_schedule_locations(scheduled_events)
+    schedule_payload = {
+        "lastUpdated": datetime.now().isoformat(),
+        "schedule": schedule_locations
+    }
+    with open("schedule.json", "w", encoding="utf-8") as f:
+        json.dump(schedule_payload, f, indent=2)
+    print(f"[✓] Saved schedule.json ({len(schedule_locations)} verified game locations)")
 
     build_script = os.path.join(script_dir, "build_index.py")
     if os.path.exists(build_script):

@@ -54,10 +54,33 @@ def main():
         if p_count > 0:
             print(f"[✓] Successfully synchronized embedded INITIAL_PLAYERS in index.html")
 
-    if count > 0 or s_count > 0 or p_count > 0:
+    loc_count = 0
+    if os.path.exists("schedule.json"):
+        with open("schedule.json", "r", encoding="utf-8") as f:
+            sched_data = json.load(f).get("schedule", {})
+
+        def replacer(m):
+            d, t, s, opp, is_home, venue = m.groups()
+            key = f"{s}|{d}"
+            if key in sched_data:
+                upd = sched_data[key]
+                new_is_home = "true" if upd["isHome"] else "false"
+                new_venue = upd["venue"]
+                if is_home != new_is_home or venue != new_venue:
+                    nonlocal loc_count
+                    loc_count += 1
+                return f'{{ date: "{d}", time: "{t}", sport: "{s}", opp: "{opp}", isHome: {new_is_home}, venue: "{new_venue}" }}'
+            return m.group(0)
+
+        pattern = r'\{\s*date:\s*"([^"]+)",\s*time:\s*"([^"]+)",\s*sport:\s*"([^"]+)",\s*opp:\s*"([^"]+)",\s*isHome:\s*(true|false),\s*venue:\s*"([^"]+)"\s*\}'
+        updated_html = re.sub(pattern, replacer, updated_html)
+        if loc_count > 0:
+            print(f"[✓] Successfully synchronized {loc_count} game location(s) in events array")
+
+    if count > 0 or s_count > 0 or p_count > 0 or loc_count > 0:
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(updated_html)
-        print(f"[✓] Successfully updated index.html (standings: {count}, scores: {s_count}, players: {p_count})")
+        print(f"[✓] Successfully updated index.html (standings: {count}, scores: {s_count}, players: {p_count}, locations: {loc_count})")
     else:
         print("[-] Warning: No embedded data patterns matched in index.html")
 

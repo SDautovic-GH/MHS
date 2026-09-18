@@ -1,0 +1,621 @@
+{
+  "lastUpdated": "2026-09-18T08:00:00.608372",
+  "schedule": {
+    "Football|2026-09-10": {
+      "sport": "Football",
+      "date": "2026-09-10",
+      "isHome": true,
+      "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Football|2026-09-18": {
+      "sport": "Football",
+      "date": "2026-09-18",
+      "isHome": true,
+      "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Football|2026-09-25": {
+      "sport": "Football",
+      "date": "2026-09-25",
+      "isHome": false,
+      "venue": "Swampscott",
+      "source": "ArbiterLive"
+    },
+    "Football|2026-10-02": {
+      "sport": "Football",
+      "date": "2026-10-02",
+      "isHome": true,
+      "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Football|2026-10-09": {
+      "sport": "Football",
+      "date": "2026-10-09",
+      "isHome": false,
+      "venue": "Burlington",
+      "source": "ArbiterLive"
+    },
+    "Football|2026-10-16": {
+      "sport": "Football",
+      "date": "2026-10-16",
+      "isHome": false,
+      "venue": "Watertown",
+      "source": "ArbiterLive"
+    },
+    "Football|2026-10-23": {
+      "sport": "Football",
+      "date": "2026-10-23",
+      "isHome": true,
+      "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Football|2026-10-30": {
+      "sport": "Football",
+      "date": "2026-10-30",
+      "isHome": false,
+      "venue": "Stoneham",
+      "source": "ArbiterLive"
+    },
+    "Football|2026-11-26": {
+      "sport": "Football",
+      "date": "2026-11-26",
+      "isHome": true,
+      "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-09-09": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-09",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-09-15": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-15",
+      "isHome": false,
+      "venue": "Burlington",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-09-21": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-21",
+      "isHome": false,
+      "venue": "Clinton",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-09-23": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-23",
+      "isHome": false,
+      "venue": "Winchester",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-09-29": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-29",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-01": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-01",
+      "isHome": true,
+      "venue": "Knoll",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-05": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-05",
+      "isHome": false,
+      "venue": "Arlington",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-07": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-07",
+      "isHome": true,
+      "venue": "Knoll",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-09": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-09",
+      "isHome": true,
+      "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-14": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-14",
+      "isHome": false,
+      "venue": "Watertown",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-17": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-17",
+      "isHome": false,
+      "venue": "Beverly",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-19": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-19",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-21": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-21",
+      "isHome": false,
+      "venue": "Belmont",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-24": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-24",
+      "isHome": true,
+      "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-27": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-27",
+      "isHome": true,
+      "venue": "Knoll",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-29": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-29",
+      "isHome": false,
+      "venue": "Methuen",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-09-09": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-09",
+      "isHome": false,
+      "venue": "Reading",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-09-14": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-14",
+      "isHome": false,
+      "venue": "Burlington",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-09-19": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-19",
+      "isHome": true,
+      "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-09-23": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-23",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-09-25": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-25",
+      "isHome": false,
+      "venue": "Danvers",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-09-29": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-29",
+      "isHome": false,
+      "venue": "Lexington",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-01": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-01",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-05": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-05",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-07": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-07",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-09": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-09",
+      "isHome": true,
+      "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-12": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-12",
+      "isHome": false,
+      "venue": "Woburn",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-14": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-14",
+      "isHome": false,
+      "venue": "Watertown",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-17": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-17",
+      "isHome": false,
+      "venue": "Bishop Feehan",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-21": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-21",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-24": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-24",
+      "isHome": false,
+      "venue": "Tewksbury",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-27": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-27",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-30": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-30",
+      "isHome": false,
+      "venue": "Beverly",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-09-08": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-08",
+      "isHome": false,
+      "venue": "Reading",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-09-10": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-10",
+      "isHome": false,
+      "venue": "Burlington",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-09-14": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-14",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-09-16": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-16",
+      "isHome": false,
+      "venue": "Ipswich",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-09-18": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-18",
+      "isHome": false,
+      "venue": "Lexington",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-09-22": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-22",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-09-24": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-24",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-09-28": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-28",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-09-30": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-30",
+      "isHome": false,
+      "venue": "Newburyport",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-02": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-02",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-06": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-06",
+      "isHome": false,
+      "venue": "Woburn",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-09": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-09",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-13": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-13",
+      "isHome": false,
+      "venue": "Watertown",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-15": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-15",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-17": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-17",
+      "isHome": false,
+      "venue": "Duxbury",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-20": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-20",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-23": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-23",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-30": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-30",
+      "isHome": false,
+      "venue": "Methuen",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-09-08": {
+      "sport": "Field Hockey",
+      "date": "2026-09-08",
+      "isHome": false,
+      "venue": "Reading",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-09-10": {
+      "sport": "Field Hockey",
+      "date": "2026-09-10",
+      "isHome": false,
+      "venue": "Burlington",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-09-18": {
+      "sport": "Field Hockey",
+      "date": "2026-09-18",
+      "isHome": false,
+      "venue": "Lexington",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-09-22": {
+      "sport": "Field Hockey",
+      "date": "2026-09-22",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-09-28": {
+      "sport": "Field Hockey",
+      "date": "2026-09-28",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-09-29": {
+      "sport": "Field Hockey",
+      "date": "2026-09-29",
+      "isHome": false,
+      "venue": "Beverly",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-10-02": {
+      "sport": "Field Hockey",
+      "date": "2026-10-02",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-10-06": {
+      "sport": "Field Hockey",
+      "date": "2026-10-06",
+      "isHome": false,
+      "venue": "Woburn",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-10-08": {
+      "sport": "Field Hockey",
+      "date": "2026-10-08",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-10-09": {
+      "sport": "Field Hockey",
+      "date": "2026-10-09",
+      "isHome": false,
+      "venue": "Stoneham",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-10-12": {
+      "sport": "Field Hockey",
+      "date": "2026-10-12",
+      "isHome": false,
+      "venue": "Watertown",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-10-13": {
+      "sport": "Field Hockey",
+      "date": "2026-10-13",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-10-15": {
+      "sport": "Field Hockey",
+      "date": "2026-10-15",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-10-20": {
+      "sport": "Field Hockey",
+      "date": "2026-10-20",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-10-22": {
+      "sport": "Field Hockey",
+      "date": "2026-10-22",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-08-31": {
+      "sport": "Golf",
+      "date": "2026-08-31",
+      "isHome": true,
+      "venue": "Bellevue Golf Club",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-09-01": {
+      "sport": "Golf",
+      "date": "2026-09-01",
+      "isHome": true,
+      "venue": "Bellevue Golf Club",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-09-03": {
+      "sport": "Golf",
+      "date": "2026-09-03",
+      "isHome": true,
+      "venue": "Bellevue Golf Club",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-09-18": {
+      "sport": "Golf",
+      "date": "2026-09-18",
+      "isHome": false,
+      "venue": "Burlington",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-09-22": {
+      "sport": "Golf",
+      "date": "2026-09-22",
+      "isHome": true,
+      "venue": "Bellevue Golf Club",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-09-24": {
+      "sport": "Golf",
+      "date": "2026-09-24",
+      "isHome": true,
+      "venue": "Bellevue Golf Club",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-09-28": {
+      "sport": "Golf",
+      "date": "2026-09-28",
+      "isHome": false,
+      "venue": "Stoneham",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-09-29": {
+      "sport": "Golf",
+      "date": "2026-09-29",
+      "isHome": true,
+      "venue": "Bellevue Golf Club",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-09-30": {
+      "sport": "Golf",
+      "date": "2026-09-30",
+      "isHome": false,
+      "venue": "Lexington",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-10-01": {
+      "sport": "Golf",
+      "date": "2026-10-01",
+      "isHome": true,
+      "venue": "Bellevue Golf Club",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-10-06": {
+      "sport": "Golf",
+      "date": "2026-10-06",
+      "isHome": false,
+      "venue": "Reading",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-26": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-26",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-28": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-28",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    }
+  }
+}
