@@ -2,9 +2,9 @@ name: Update MHS Scores & Standings
 
 on:
   schedule:
-    # Morning runs (day after game): 7:00 AM, 10:00 AM, 11:00 AM EDT (11:00, 14:00, 15:00 UTC)
-    # Evening runs (game days): 10:00 PM, 11:00 PM EDT (02:00, 03:00 UTC)
-    - cron: '0 2,3,11,14,15 * * *'
+    # Daytime runs: 7:00 AM, 9:00 AM, 10:00 AM, 11:00 AM, 12:00 PM EDT (11:00, 13:00, 14:00, 15:00, 16:00 UTC)
+    # Evening run: 10:00 PM EDT (02:00 UTC)
+    - cron: '0 2,11,13,14,15,16 * * *'
   workflow_dispatch:
 
 permissions:
