@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-18T17:02:41.153324",
+  "lastUpdated": "2026-09-19T07:15:56.705646",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -205,6 +205,46 @@
           "win": true
         }
       ]
+    },
+    "Football|2026-09-18": {
+      "sport": "Football",
+      "date": "2026-09-18",
+      "opponent": "Danvers",
+      "mhsScore": 7,
+      "oppScore": 17,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2026-09-18": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-18",
+      "opponent": "Lexington",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "0-0",
+          "win": false
+        }
+      ]
+    },
+    "Field Hockey|2026-09-18": {
+      "sport": "Field Hockey",
+      "date": "2026-09-18",
+      "opponent": "Lexington",
+      "mhsScore": 0,
+      "oppScore": 9,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
     }
   }
 }
