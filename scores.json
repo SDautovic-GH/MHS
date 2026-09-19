@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-19T14:18:05.414479",
+  "lastUpdated": "2026-09-19T17:54:56.603985",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -252,6 +252,17 @@
       "mhsScore": 0,
       "oppScore": 9,
       "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-09-19": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-19",
+      "opponent": "Peabody Veterans Memorial",
+      "mhsScore": 2,
+      "oppScore": 2,
+      "result": "T",
       "status": "Final",
       "isHome": false,
       "source": "MaxPreps"
