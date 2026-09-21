@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20T18:10:27.492719",
+  "lastUpdated": "2026-09-21T07:53:41.162621",
   "schedule": {
     "Football|2026-09-10": {
       "sport": "Football",
@@ -440,13 +440,6 @@
       "date": "2026-09-18",
       "isHome": false,
       "venue": "Lexington",
-      "source": "ArbiterLive"
-    },
-    "Field Hockey|2026-09-22": {
-      "sport": "Field Hockey",
-      "date": "2026-09-22",
-      "isHome": true,
-      "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
     "Field Hockey|2026-09-28": {
