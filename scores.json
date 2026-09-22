@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-21T16:57:31.701823",
+  "lastUpdated": "2026-09-22T07:38:06.424279",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -277,6 +277,17 @@
       "status": "Final",
       "isHome": false,
       "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-09-21": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-21",
+      "opponent": "Clinton",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
     }
   }
 }
