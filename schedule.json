@@ -1,68 +1,68 @@
 {
-  "lastUpdated": "2026-09-22T15:29:11.156916",
+  "lastUpdated": "2026-09-22T19:42:08.628180",
   "schedule": {
     "Football|2026-09-10": {
       "sport": "Football",
       "date": "2026-09-10",
       "isHome": true,
       "venue": "Fred Green Field",
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     },
     "Football|2026-09-18": {
       "sport": "Football",
       "date": "2026-09-18",
       "isHome": true,
       "venue": "Fred Green Field",
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     },
     "Football|2026-09-25": {
       "sport": "Football",
       "date": "2026-09-25",
       "isHome": false,
       "venue": "Swampscott",
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     },
     "Football|2026-10-02": {
       "sport": "Football",
       "date": "2026-10-02",
       "isHome": true,
       "venue": "Fred Green Field",
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     },
     "Football|2026-10-09": {
       "sport": "Football",
       "date": "2026-10-09",
       "isHome": false,
       "venue": "Burlington",
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     },
     "Football|2026-10-16": {
       "sport": "Football",
       "date": "2026-10-16",
       "isHome": false,
       "venue": "Watertown",
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     },
     "Football|2026-10-23": {
       "sport": "Football",
       "date": "2026-10-23",
       "isHome": true,
       "venue": "Fred Green Field",
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     },
     "Football|2026-10-30": {
       "sport": "Football",
       "date": "2026-10-30",
       "isHome": false,
       "venue": "Stoneham",
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     },
     "Football|2026-11-26": {
       "sport": "Football",
       "date": "2026-11-26",
       "isHome": true,
       "venue": "Fred Green Field",
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     },
     "Boys' Soccer|2026-09-09": {
       "sport": "Boys' Soccer",
@@ -501,13 +501,6 @@
     "Field Hockey|2026-10-15": {
       "sport": "Field Hockey",
       "date": "2026-10-15",
-      "isHome": true,
-      "venue": "Pine Banks",
-      "source": "ArbiterLive"
-    },
-    "Field Hockey|2026-10-20": {
-      "sport": "Field Hockey",
-      "date": "2026-10-20",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
