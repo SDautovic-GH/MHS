@@ -360,7 +360,7 @@
     .header-brand {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.5rem;
       text-decoration: none;
       color: inherit;
       min-width: 0;
@@ -382,39 +382,46 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 11px;
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
       background: linear-gradient(135deg, #dc2626, #991b1b);
       color: #ffffff;
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       font-weight: 900;
-      letter-spacing: 0.05em;
-      box-shadow: 0 2px 10px rgba(220, 38, 38, 0.35);
+      letter-spacing: 0.04em;
+      box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
       flex-shrink: 0;
+      line-height: 1;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .header-titles {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       min-width: 0;
-      white-space: nowrap;
+      line-height: 1.15;
     }
 
-    .header-titles h1 {
-      font-size: 1.25rem;
-      font-weight: 800;
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 850;
       letter-spacing: -0.025em;
       color: var(--text-primary);
-      line-height: 1.2;
       margin: 0;
       white-space: nowrap;
     }
 
     .header-season {
-      font-size: 0.76rem;
-      color: var(--text-secondary);
+      font-size: 0.72rem;
       font-weight: 600;
-      display: block;
-      line-height: 1.2;
+      color: var(--text-secondary);
+      letter-spacing: -0.01em;
+      margin-top: 1px;
       white-space: nowrap;
     }
 
@@ -546,9 +553,9 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 9999px;
       padding: 3px;
-      gap: 3px;
+      gap: 2px;
       width: 100%;
-      max-width: 480px;
+      max-width: 520px;
       height: 38px;
       box-sizing: border-box;
       backdrop-filter: blur(12px);
@@ -566,8 +573,8 @@
       background: transparent;
       border: none;
       color: var(--text-secondary);
-      padding: 0 0.85rem;
-      font-size: 0.88rem;
+      padding: 0 0.55rem;
+      font-size: 0.85rem;
       font-weight: 700;
       border-radius: 9999px;
       cursor: pointer;
@@ -575,14 +582,14 @@
       white-space: nowrap;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.35rem;
       user-select: none;
       -webkit-user-select: none;
       box-sizing: border-box;
     }
 
     .tab-button span:first-child {
-      font-size: 1rem;
+      font-size: 0.88rem;
       line-height: 1;
     }
 
@@ -600,6 +607,29 @@
       background: #ffffff;
       color: #0f172a;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.08rem 0.42rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--text-secondary);
+      line-height: 1.2;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .tab-button.active .nav-badge {
+      background: rgba(255, 255, 255, 0.28);
+      color: #ffffff;
+    }
+    :root[data-theme="light"] .tab-button.active .nav-badge {
+      background: rgba(0, 0, 0, 0.08);
+      color: #0f172a;
+    }
+    .nav-badge.is-zero {
+      display: none;
     }
 
     /* Sport Selector Panel on "By Sport" Tab */
@@ -1139,13 +1169,13 @@
       gap: 0.4rem;
     }
 
-    /* Floating Quick-Action Button ("📍 Next Game") */
+    /* Floating Quick-Action Button ("📍 Next Game") - permanently hidden per Apple Sports clean design */
     .floating-jump-btn {
+      display: none !important;
       position: fixed;
       bottom: max(1.5rem, env(safe-area-inset-bottom) + 0.75rem);
       right: max(1.25rem, env(safe-area-inset-right));
       z-index: 999;
-      display: inline-flex;
       align-items: center;
       gap: 0.45rem;
       background: linear-gradient(135deg, #1d4ed8, #2563eb);
@@ -2028,29 +2058,18 @@
       .brand-badge {
         width: 34px;
         height: 34px;
-        font-size: 0.88rem;
-        border-radius: 9px;
-        flex-shrink: 0;
+        font-size: 0.9rem;
+        border-radius: 8.5px;
       }
-      .header-titles {
-        min-width: 0;
-        overflow: hidden;
-      }
-      .header-titles h1 {
-        font-size: 1.1rem;
-        font-weight: 800;
-        letter-spacing: -0.02em;
-        line-height: 1.2;
+      .brand-title {
+        font-size: 1.05rem;
+        font-weight: 850;
+        letter-spacing: -0.025em;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
       .header-season {
-        font-size: 0.7rem;
-        margin-top: 0.05rem;
+        font-size: 0.68rem;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
       .header-actions {
         display: flex;
@@ -2087,12 +2106,16 @@
         gap: 2px;
       }
       .tab-button {
-        font-size: 0.84rem;
-        padding: 0 0.4rem;
-        gap: 0.3rem;
+        font-size: 0.82rem;
+        padding: 0 0.35rem;
+        gap: 0.25rem;
       }
       .tab-button span:first-child {
-        font-size: 0.92rem;
+        font-size: 0.88rem;
+      }
+      .nav-badge {
+        font-size: 0.68rem;
+        padding: 0.06rem 0.35rem;
       }
       .sport-picker-row {
         flex-direction: column;
@@ -2162,16 +2185,15 @@
         display: inline-block;
       }
       .ticker-matchup {
-        font-size: 0.98rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 1.05rem;
+        font-weight: 850;
+        margin: 0.12rem 0;
+        white-space: normal;
+        line-height: 1.25;
       }
       .ticker-details {
         font-size: 0.78rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal;
         line-height: 1.25;
       }
       .ticker-right {
@@ -2339,18 +2361,30 @@
       .cd-box.cd-secs, .cd-colon.cd-secs-colon {
         display: none;
       }
+      .header-brand {
+        gap: 0.45rem;
+      }
       .brand-badge {
         width: 32px;
         height: 32px;
-        font-size: 0.84rem;
+        font-size: 0.85rem;
         border-radius: 8px;
       }
-      .header-titles h1 {
-        font-size: 1.02rem;
-        white-space: nowrap;
+      .brand-title {
+        font-size: 0.98rem;
+        letter-spacing: -0.02em;
       }
       .header-season {
-        font-size: 0.68rem;
+        font-size: 0.65rem;
+      }
+      .tab-button {
+        font-size: 0.76rem;
+        padding: 0 0.2rem;
+        gap: 0.18rem;
+      }
+      .nav-badge {
+        font-size: 0.62rem;
+        padding: 0.05rem 0.3rem;
       }
       .schedule-scope-btn {
         padding: 0.38rem 0.3rem;
@@ -3524,9 +3558,9 @@
   <div class="header-inner">
     <div class="header-top-row">
       <div class="header-brand" onclick="scrollToTop()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')scrollToTop()" title="Scroll to top of schedule">
-        <span class="brand-badge">MHS</span>
+        <span class="brand-badge" aria-label="Melrose High School">MHS</span>
         <div class="header-titles">
-          <h1>Melrose Sports</h1>
+          <h1 class="brand-title">Melrose Sports</h1>
           <span class="header-season">Varsity Fall 2026</span>
         </div>
       </div>
@@ -3535,15 +3569,9 @@
         <button class="apple-sports-pill-btn" id="sport-picker-btn" onclick="openSportSheet()" aria-label="Select sport" aria-haspopup="dialog" title="Select sport">
           <div class="picker-btn-content">
             <span class="picker-btn-icon" id="picker-sport-icon">🌟</span>
-            <span class="picker-btn-text" id="picker-sport-title">Sports</span>
+            <span class="picker-btn-text" id="picker-sport-title">All Sports</span>
           </div>
           <span class="picker-btn-chevron">▾</span>
-        </button>
-
-        <!-- Location Filter Circle Button -->
-        <button class="apple-icon-circle-btn" id="loc-picker-btn" onclick="openLocSheet()" aria-label="Filter by location" aria-haspopup="dialog" title="Filter Home / Away">
-          <span id="picker-loc-icon">📍</span>
-          <span id="picker-loc-title" style="display:none;">Location</span>
         </button>
 
         <!-- Search Icon Button -->
@@ -3551,15 +3579,15 @@
           <span id="search-btn-icon">🔍</span>
         </button>
 
-        <!-- Dedicated Safari Popout (if iframe) -->
-        <a id="popout-btn" class="apple-icon-circle-btn" href="#" target="_blank" rel="noopener" style="display:none;" title="Open in dedicated tab">
-          <span>↗</span>
-        </a>
-
-        <!-- Theme Toggle Circle Button -->
-        <button id="theme-toggle" class="apple-icon-circle-btn" onclick="cycleTheme()" aria-label="Toggle Theme" title="Theme Toggle">
+        <!-- Hidden elements for backward JS compatibility -->
+        <button id="loc-picker-btn" onclick="openLocSheet()" style="display:none;" aria-hidden="true">
+          <span id="picker-loc-icon">📍</span>
+          <span id="picker-loc-title">Location</span>
+        </button>
+        <a id="popout-btn" href="#" target="_blank" rel="noopener" style="display:none;" aria-hidden="true">↗</a>
+        <button id="theme-toggle" onclick="cycleTheme()" style="display:none;" aria-hidden="true">
           <span id="theme-icon">💻</span>
-          <span id="theme-text" style="display:none;">Auto</span>
+          <span id="theme-text">Auto</span>
         </button>
       </div>
     </div>
@@ -3573,24 +3601,21 @@
       </div>
     </div>
 
-    <!-- Navigation Tabs (Segmented Capsule): Schedule | Scores | Standings -->
+    <!-- Apple Sports Unified 4-Segment Navigation Tabs: Today | Upcoming | Scores | Standings -->
     <div class="nav-tabs-wrapper">
-      <div class="nav-tabs" role="tablist">
-        <button class="tab-button active" id="tab-calendar" onclick="switchTab('calendar')" role="tab" aria-selected="true">
-          <svg class="apple-cal-icon-svg" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-            <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#ffffff" stroke="rgba(0,0,0,0.15)" stroke-width="0.75"/>
-            <path d="M 0.5 5 C 0.5 2.5 2.5 0.5 5 0.5 L 19 0.5 C 21.5 0.5 23.5 2.5 23.5 5 L 23.5 8 L 0.5 8 Z" fill="#ff3b30"/>
-            <text x="12" y="6.2" fill="#ffffff" font-size="4.8" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif" text-anchor="middle" letter-spacing="0.4">FALL</text>
-            <text x="12" y="19.2" fill="#1c1c1e" font-size="11.5" font-weight="850" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif" text-anchor="middle">26</text>
-          </svg>
-          <span>Schedule</span>
+      <div class="nav-tabs apple-sports-nav" role="tablist">
+        <button class="tab-button active" id="tab-today" onclick="switchAppleTab('today')" role="tab" aria-selected="true">
+          <span>Today</span>
+          <span class="nav-badge is-zero" id="scope-today-count">0</span>
         </button>
-        <button class="tab-button" id="tab-scores" onclick="switchTab('scores')" role="tab" aria-selected="false">
-          <span>🏁</span>
+        <button class="tab-button" id="tab-upcoming" onclick="switchAppleTab('upcoming')" role="tab" aria-selected="false">
+          <span>Upcoming</span>
+          <span class="nav-badge" id="scope-upcoming-count">70</span>
+        </button>
+        <button class="tab-button" id="tab-scores" onclick="switchAppleTab('scores')" role="tab" aria-selected="false">
           <span>Scores</span>
         </button>
-        <button class="tab-button" id="tab-standings" onclick="switchTab('standings')" role="tab" aria-selected="false">
-          <span>🏆</span>
+        <button class="tab-button" id="tab-standings" onclick="switchAppleTab('standings')" role="tab" aria-selected="false">
           <span>Standings</span>
         </button>
       </div>
@@ -3599,20 +3624,20 @@
 </header>
 
 <div class="container">
-  <!-- Live Next Game Countdown Ticker Banner (Compact Apple Style) -->
+  <!-- Live Next Game Countdown Ticker Banner (Roomy Apple Sports Card) -->
   <div class="next-game-ticker" id="next-game-ticker" onclick="scrollToCurrentOrNextGame(true)" role="button" tabindex="0" title="Jump to this game on schedule">
     <div class="ticker-left">
       <div class="ticker-header-row">
         <span class="ticker-pulse-badge" id="ticker-badge">NEXT GAME</span>
         <span class="ticker-sport-tag" id="ticker-sport">🏈 Varsity Football</span>
-        <span class="ticker-matchup" id="ticker-matchup">vs. Reading Memorial</span>
       </div>
+      <div class="ticker-matchup" id="ticker-matchup">vs. Reading Memorial</div>
       <div class="ticker-details" id="ticker-details">Fri, Sep 10 &bull; 7:00 PM &bull; Fred Green Field</div>
     </div>
     <div class="ticker-right">
       <div class="countdown-display" id="countdown-display">
         <div class="cd-box"><span class="cd-val" id="cd-days">--</span><span class="cd-lbl">DAYS</span></div>
-        <span class="cd-colon">:</span>
+        <span class="cd-colon" id="cd-days-colon">:</span>
         <div class="cd-box"><span class="cd-val" id="cd-hours">--</span><span class="cd-lbl">HRS</span></div>
         <span class="cd-colon">:</span>
         <div class="cd-box"><span class="cd-val" id="cd-mins">--</span><span class="cd-lbl">MIN</span></div>
@@ -3620,40 +3645,15 @@
         <div class="cd-box cd-secs"><span class="cd-val" id="cd-secs">--</span><span class="cd-lbl">SEC</span></div>
       </div>
       <button class="ticker-jump-btn" onclick="event.stopPropagation(); scrollToCurrentOrNextGame(true)" title="Jump to this game on schedule" aria-label="Jump to next game card">
-        <span class="jump-btn-text">View 📍</span>
-        <span class="jump-btn-icon">📍</span>
+        <span>📍</span>
       </button>
     </div>
   </div>
 
-  <main id="calendar-view" class="view-panel active" role="tabpanel" aria-labelledby="tab-calendar">
-    <!-- Apple-Style Schedule Scope Segmented Control: Today vs All Upcoming -->
-    <div class="schedule-scope-toggle-bar" id="schedule-scope-bar" role="tablist" aria-label="Schedule view scope">
-      <button class="schedule-scope-btn is-today active" id="scope-btn-today" onclick="setScheduleScope('today')" role="tab" aria-selected="true">
-        <svg class="apple-cal-icon-svg" id="today-cal-svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-          <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#ffffff" stroke="rgba(0,0,0,0.15)" stroke-width="0.75"/>
-          <path d="M 0.5 5 C 0.5 2.5 2.5 0.5 5 0.5 L 19 0.5 C 21.5 0.5 23.5 2.5 23.5 5 L 23.5 8 L 0.5 8 Z" fill="#ff3b30"/>
-          <text id="today-cal-svg-month" x="12" y="6.2" fill="#ffffff" font-size="4.8" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif" text-anchor="middle" letter-spacing="0.4">SEP</text>
-          <text id="today-cal-svg-day" x="12" y="19.2" fill="#1c1c1e" font-size="11.5" font-weight="850" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif" text-anchor="middle">6</text>
-        </svg>
-        <span>Today</span>
-        <span class="scope-count-badge is-zero" id="scope-today-count">0</span>
-      </button>
-      <button class="schedule-scope-btn" id="scope-btn-upcoming" onclick="setScheduleScope('upcoming')" role="tab" aria-selected="false">
-        <svg class="apple-cal-icon-svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-          <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#ffffff" stroke="rgba(0,0,0,0.15)" stroke-width="0.75"/>
-          <path d="M 0.5 5 C 0.5 2.5 2.5 0.5 5 0.5 L 19 0.5 C 21.5 0.5 23.5 2.5 23.5 5 L 23.5 8 L 0.5 8 Z" fill="#ff3b30"/>
-          <text x="12" y="6.2" fill="#ffffff" font-size="4.8" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif" text-anchor="middle" letter-spacing="0.4">FALL</text>
-          <text x="12" y="19.2" fill="#1c1c1e" font-size="11.5" font-weight="850" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif" text-anchor="middle">26</text>
-        </svg>
-        <span>Upcoming</span>
-        <span class="scope-count-badge" id="scope-upcoming-count">96</span>
-      </button>
-    </div>
-
+  <main id="calendar-view" class="view-panel active" role="tabpanel" aria-labelledby="tab-upcoming">
     <!-- Status Line -->
     <div class="apple-status-line" id="apple-status-line">
-      <span class="apple-count-text" id="filter-count">Showing 96 games</span>
+      <span class="apple-count-text" id="filter-count">Showing games</span>
       <button class="sync-sport-ics-inline" id="sync-sport-btn" onclick="exportCurrentSportIcs()" style="display:none;" title="Add schedule for this sport to your calendar">
         <span>📅 Add to Calendar (.ics)</span>
       </button>
@@ -3661,6 +3661,7 @@
 
     <div class="grid" id="daily-grid"></div>
   </main>
+
 
   <main id="scores-view" class="view-panel" role="tabpanel" aria-labelledby="tab-scores">
     <div class="apple-status-line" id="scores-status-line">
@@ -4986,7 +4987,7 @@ function renderCard(item, targetBadge = '', isTarget = false, targetCardId = '')
 // Apple Sports Selector Bar & Sheet Logic
 // ==========================================
 const ALL_SPORTS_LIST = [
-  { key: 'all', name: 'Sports', sheetTitle: 'All Sports', icon: '🌟', venue: 'All Melrose Facilities' },
+  { key: 'all', name: 'All Sports', sheetTitle: 'All Sports', icon: '🌟', venue: 'All Melrose Facilities' },
   { key: 'Football', name: 'Football', sheetTitle: 'Football', icon: '🏈', venue: 'Fred Green Memorial Field' },
   { key: 'Boys\' Soccer', name: 'Boys Soccer', sheetTitle: 'Boys\' Soccer', icon: '⚽', venue: 'Pine Banks & The Knoll' },
   { key: 'Girls\' Soccer', name: 'Girls Soccer', sheetTitle: 'Girls\' Soccer', icon: '⚽', venue: 'Pine Banks & Fred Green Field' },
@@ -5014,9 +5015,12 @@ const LOC_FILTER_OPTIONS = {
   'fnl': { name: 'Fri & Wknd', sheetTitle: 'Fri Night & Weekend', icon: '🌙', subtitle: 'Friday night lights & weekend games' }
 };
 
-let currentSelectedSport = (typeof SafeStorage !== 'undefined' && SafeStorage.getItem('mhs_selected_sport')) || 'all';
-let activeScoresSport = currentSelectedSport;
-let activeStandingsSport = currentSelectedSport;
+let currentSelectedSport = 'all';
+SafeStorage.removeItem('mhs_selected_sport'); // Always default to All Sports
+SafeStorage.removeItem('mhs_active_apple_tab'); // Always default to Today
+SafeStorage.removeItem('mhs_active_tab');
+let activeScoresSport = 'all';
+let activeStandingsSport = 'all';
 let activeLocFilter = (typeof SafeStorage !== 'undefined' && SafeStorage.getItem('mhs_selected_location')) || 'all'; // 'all' | 'home' | 'away' | 'past' | 'fnl'
 let isSearchDrawerOpen = false;
 let selectedDayStripDate = null;
@@ -5104,21 +5108,13 @@ function updateTodayCalendarIcon() {
 }
 
 function setScheduleScope(scope) {
-  scheduleScope = scope;
-  const btnUpcoming = document.getElementById('scope-btn-upcoming');
-  const btnToday = document.getElementById('scope-btn-today');
-
-  if (btnUpcoming) {
-    btnUpcoming.classList.toggle('active', scope === 'upcoming');
-    btnUpcoming.setAttribute('aria-selected', scope === 'upcoming' ? 'true' : 'false');
+  if (typeof switchAppleTab === 'function') {
+    switchAppleTab(scope);
+  } else {
+    scheduleScope = scope;
+    updateTodayCalendarIcon();
+    renderDailyView();
   }
-  if (btnToday) {
-    btnToday.classList.toggle('active', scope === 'today');
-    btnToday.setAttribute('aria-selected', scope === 'today' ? 'true' : 'false');
-  }
-
-  updateTodayCalendarIcon();
-  renderDailyView();
 }
 
 function renderDayStrip() {
@@ -5493,7 +5489,7 @@ function updateLocSheetSelection() {
 function syncAllFilterButtons() {
   const sport = currentSelectedSport || 'all';
   const found = ALL_SPORTS_LIST.find(s => s.key === sport) || ALL_SPORTS_LIST[0];
-  const sportName = sport === 'all' ? 'Sports' : found.name;
+  const sportName = (sport === 'all') ? 'All Sports' : found.name;
 
   const sportPairs = [
     ['picker-sport-icon', 'picker-sport-title'],
@@ -6328,40 +6324,47 @@ function formatScoresDate(dateStr) {
   return dateStr;
 }
 
-function switchTab(view, updateHistory = true) {
-  const validViews = ['calendar', 'scores', 'standings'];
-  if (!validViews.includes(view)) {
-    view = 'calendar';
+function switchAppleTab(tab, updateHistory = true) {
+  const validTabs = ['today', 'upcoming', 'scores', 'standings'];
+  if (!validTabs.includes(tab)) {
+    tab = 'today';
   }
 
-  const currentTab = SafeStorage.getItem('mhs_active_tab') || 'calendar';
-  if (view === 'calendar' && currentTab === 'calendar' && updateHistory) {
+  const currentAppleTab = SafeStorage.getItem('mhs_active_apple_tab') || 'today';
+  if (tab === currentAppleTab && updateHistory) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     return;
   }
 
-  document.querySelectorAll('.tab-button').forEach(b => {
+  // Deactivate all tab buttons
+  document.querySelectorAll('.apple-sports-nav .tab-button').forEach(b => {
     b.classList.remove('active');
     b.setAttribute('aria-selected', 'false');
   });
+
+  // Activate selected tab button
+  const tabBtn = document.getElementById('tab-' + tab);
+  if (tabBtn) {
+    tabBtn.classList.add('active');
+    tabBtn.setAttribute('aria-selected', 'true');
+  }
+
+  // Deactivate all view panels
   document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
 
-  if (view === 'calendar') {
-    const tab = document.getElementById('tab-calendar');
-    if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
-    document.getElementById('calendar-view').classList.add('active');
-    renderMySportsRibbons();
-  } else if (view === 'scores') {
-    const tab = document.getElementById('tab-scores');
-    if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
-    const panel = document.getElementById('scores-view');
-    if (panel) panel.classList.add('active');
+  if (tab === 'today' || tab === 'upcoming') {
+    scheduleScope = tab;
+    const calPanel = document.getElementById('calendar-view');
+    if (calPanel) calPanel.classList.add('active');
+    renderDailyView();
+  } else if (tab === 'scores') {
+    const scoresPanel = document.getElementById('scores-view');
+    if (scoresPanel) scoresPanel.classList.add('active');
     renderMySportsRibbons();
     renderScoresView();
-  } else if (view === 'standings') {
-    const tab = document.getElementById('tab-standings');
-    if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
-    document.getElementById('standings-view').classList.add('active');
+  } else if (tab === 'standings') {
+    const standingsPanel = document.getElementById('standings-view');
+    if (standingsPanel) standingsPanel.classList.add('active');
     renderMySportsRibbons();
     renderStandingsView();
   }
@@ -6370,11 +6373,20 @@ function switchTab(view, updateHistory = true) {
     updateNextGameTicker();
   }
 
-  SafeStorage.setItem('mhs_active_tab', view);
+  SafeStorage.setItem('mhs_active_apple_tab', tab);
+  SafeStorage.setItem('mhs_active_tab', (tab === 'today' || tab === 'upcoming') ? 'calendar' : tab);
   if (updateHistory && typeof history !== 'undefined' && history.replaceState) {
     try {
-      history.replaceState(null, '', '#' + view);
+      history.replaceState(null, '', '#' + tab);
     } catch (e) {}
+  }
+}
+
+function switchTab(view, updateHistory = true) {
+  if (view === 'calendar') {
+    switchAppleTab(scheduleScope || 'today', updateHistory);
+  } else {
+    switchAppleTab(view, updateHistory);
   }
 }
 
@@ -6382,15 +6394,22 @@ function getInitialTab() {
   const hash = (typeof window !== 'undefined' && window.location && window.location.hash)
     ? window.location.hash.replace('#', '').toLowerCase()
     : '';
-  const validViews = ['calendar', 'scores', 'standings'];
-  if (validViews.includes(hash)) {
+  const validTabs = ['today', 'upcoming', 'scores', 'standings'];
+  if (validTabs.includes(hash)) {
     return hash;
   }
+  if (hash === 'calendar') {
+    return 'today';
+  }
+  const savedApple = SafeStorage.getItem('mhs_active_apple_tab');
+  if (validTabs.includes(savedApple)) {
+    return savedApple;
+  }
   const saved = SafeStorage.getItem('mhs_active_tab');
-  if (validViews.includes(saved)) {
+  if (saved === 'scores' || saved === 'standings') {
     return saved;
   }
-  return 'calendar';
+  return 'today';
 }
 
 // ==========================================
@@ -6565,16 +6584,20 @@ function startNextGameCountdown() {
     const targetDate = parseGameDateTime(currentNext);
     const msRemaining = targetDate.getTime() - now.getTime();
 
+    const countdownEl = document.getElementById('countdown-display');
+    const daysBox = cdDays ? cdDays.closest('.cd-box') : null;
+    const daysColon = document.getElementById('cd-days-colon');
+
     if (isLive) {
       if (badgeEl) {
         badgeEl.textContent = '🔴 LIVE NOW';
         badgeEl.style.background = 'rgba(239, 68, 68, 0.25)';
+        badgeEl.style.color = '#f87171';
+        badgeEl.style.borderColor = 'rgba(239, 68, 68, 0.4)';
       }
-      if (cdDays) cdDays.textContent = '00';
-      if (cdHours) cdHours.textContent = '00';
-      if (cdMins) cdMins.textContent = '00';
-      if (cdSecs) cdSecs.textContent = '00';
+      if (countdownEl) countdownEl.style.display = 'none';
     } else if (msRemaining > 0) {
+      if (countdownEl) countdownEl.style.display = 'inline-flex';
       const todayStr = getTodayEasternString();
       if (badgeEl) {
         badgeEl.textContent = currentNext.date === todayStr ? 'GAME TODAY' : 'NEXT GAME';
@@ -6594,12 +6617,17 @@ function startNextGameCountdown() {
       if (cdHours) cdHours.textContent = pad(hours);
       if (cdMins) cdMins.textContent = pad(mins);
       if (cdSecs) cdSecs.textContent = pad(secs);
+
+      if (daysBox) daysBox.style.display = (days === 0) ? 'none' : 'flex';
+      if (daysColon) daysColon.style.display = (days === 0) ? 'none' : 'inline';
     } else {
-      if (badgeEl) badgeEl.textContent = 'FINAL / COMPLETED';
-      if (cdDays) cdDays.textContent = '00';
-      if (cdHours) cdHours.textContent = '00';
-      if (cdMins) cdMins.textContent = '00';
-      if (cdSecs) cdSecs.textContent = '00';
+      if (badgeEl) {
+        badgeEl.textContent = 'FINAL';
+        badgeEl.style.background = 'rgba(255, 255, 255, 0.1)';
+        badgeEl.style.color = 'var(--text-secondary)';
+        badgeEl.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+      }
+      if (countdownEl) countdownEl.style.display = 'none';
     }
   }
 
@@ -6624,7 +6652,7 @@ setTimeout(syncHeaderHeight, 100);
 
 // Maintain active tab selection on refresh or load
 const initialTab = getInitialTab();
-switchTab(initialTab, false);
+switchAppleTab(initialTab, false);
 
 // Ensure page starts cleanly at top so sport filters and countdown are in plain view
 if (typeof window !== 'undefined') {
@@ -6636,8 +6664,12 @@ if (typeof window !== 'undefined') {
 if (typeof window !== 'undefined') {
   window.addEventListener('hashchange', () => {
     const hash = window.location.hash ? window.location.hash.replace('#', '').toLowerCase() : '';
-    if (['calendar', 'scores', 'standings'].includes(hash)) {
-      switchTab(hash, false);
+    if (['today', 'upcoming', 'scores', 'standings', 'calendar'].includes(hash)) {
+      if (hash === 'calendar') {
+        switchAppleTab('today', false);
+      } else {
+        switchAppleTab(hash, false);
+      }
     }
   });
 }
