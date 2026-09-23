@@ -2056,8 +2056,8 @@
       .app-header {
         padding-top: calc(env(safe-area-inset-top, 0px) + 0.70rem);
         padding-bottom: 0.65rem;
-        padding-left: max(1rem, env(safe-area-inset-left));
-        padding-right: max(1rem, env(safe-area-inset-right));
+        padding-left: max(0.85rem, env(safe-area-inset-left));
+        padding-right: max(0.85rem, env(safe-area-inset-right));
       }
       .container {
         padding-top: 0.75rem;
@@ -2369,27 +2369,59 @@
     }
 
     @media (max-width: 414px) {
+      .app-header {
+        padding-left: max(0.65rem, env(safe-area-inset-left));
+        padding-right: max(0.65rem, env(safe-area-inset-right));
+      }
       .header-inner {
         gap: 0.65rem;
       }
+      .header-top-row {
+        gap: 0.45rem;
+      }
+      .header-brand {
+        gap: 0.45rem;
+      }
+      .brand-badge {
+        width: 37px;
+        height: 28px;
+        font-size: 0.58rem;
+        letter-spacing: 0.03em;
+        border-radius: 7px;
+      }
+      .brand-name {
+        font-size: 1.10rem;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+      .brand-sub {
+        font-size: 0.62rem;
+        letter-spacing: 0.09em;
+      }
+      .header-actions {
+        gap: 0.35rem;
+      }
       .apple-sports-pill-btn {
-        height: 38px;
-        padding: 0 0.85rem 0 0.72rem;
-        font-size: 0.86rem;
+        height: 36px;
+        padding: 0 0.65rem 0 0.55rem;
+        font-size: 0.82rem;
         max-width: none !important;
         flex-shrink: 0;
       }
       .apple-sports-pill-btn .picker-btn-text {
-        font-size: 0.86rem;
+        font-size: 0.82rem;
       }
       .apple-sports-pill-btn .picker-btn-icon {
-        font-size: 1.05rem;
+        font-size: 0.95rem;
+      }
+      .apple-sports-pill-btn .picker-btn-chevron {
+        font-size: 0.70rem;
       }
       .apple-icon-circle-btn {
-        width: 38px;
-        height: 38px;
-        min-width: 38px;
-        font-size: 0.90rem;
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+        font-size: 0.86rem;
       }
       .nav-tabs {
         height: auto;
@@ -2418,25 +2450,6 @@
       }
       .cd-box.cd-secs, .cd-colon.cd-secs-colon {
         display: none;
-      }
-      .header-brand {
-        gap: 0.55rem;
-      }
-      .brand-badge {
-        width: 40px;
-        height: 30px;
-        font-size: 0.62rem;
-        letter-spacing: 0.03em;
-        border-radius: 7.5px;
-      }
-      .brand-name {
-        font-size: 1.15rem;
-        letter-spacing: -0.02em;
-        line-height: 1.1;
-      }
-      .brand-sub {
-        font-size: 0.64rem;
-        letter-spacing: 0.09em;
       }
       .nav-badge {
         font-size: 0.64rem;
