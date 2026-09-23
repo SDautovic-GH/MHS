@@ -294,7 +294,7 @@
       line-height: 1.5;
       min-height: 100vh;
       min-height: -webkit-fill-available;
-      padding-top: calc(var(--header-height, 104px) + 0.85rem);
+      padding-top: 0 !important;
       padding-bottom: max(4rem, env(safe-area-inset-bottom) + 2rem);
       padding-left: 0;
       padding-right: 0;
@@ -313,19 +313,21 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
+      padding-top: 0.65rem;
       padding-left: max(1.25rem, env(safe-area-inset-left));
       padding-right: max(1.25rem, env(safe-area-inset-right));
     }
 
     /* Apple Sports Top Navigation Bar (Clean 2-Band System) */
     .app-header {
-      position: fixed;
+      position: -webkit-sticky;
+      position: sticky;
       top: 0;
       left: 0;
       right: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(7, 9, 19, 0.85);
+      background: rgba(7, 9, 19, 0.88);
       backdrop-filter: blur(28px) saturate(180%);
       -webkit-backdrop-filter: blur(28px) saturate(180%);
       border-bottom: 1px solid var(--border-subtle);
@@ -382,16 +384,16 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 9px;
+      width: 34px;
+      height: 34px;
+      border-radius: 8.5px;
       background: linear-gradient(135deg, #dc2626, #991b1b);
       color: #ffffff;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 900;
       letter-spacing: 0.04em;
       box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
       flex-shrink: 0;
       line-height: 1;
@@ -399,30 +401,33 @@
       -webkit-user-select: none;
     }
 
-    .header-titles {
+    .header-brand-text {
       display: flex;
       flex-direction: column;
       justify-content: center;
       min-width: 0;
-      line-height: 1.15;
+      line-height: 1.05;
     }
 
-    .brand-title {
-      font-size: 1.15rem;
+    .brand-name {
+      font-size: 1.12rem;
       font-weight: 850;
       letter-spacing: -0.025em;
       color: var(--text-primary);
       margin: 0;
       white-space: nowrap;
+      line-height: 1.1;
     }
 
-    .header-season {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--text-secondary);
-      letter-spacing: -0.01em;
+    .brand-sub {
+      font-size: 0.64rem;
+      font-weight: 850;
+      color: #f87171;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
       margin-top: 1px;
       white-space: nowrap;
+      line-height: 1;
     }
 
     .header-actions {
@@ -2024,7 +2029,7 @@
         --header-height: 104px;
       }
       body {
-        padding-top: calc(var(--header-height, 104px) + 0.85rem);
+        padding-top: 0 !important;
       }
       .app-header {
         padding-top: calc(env(safe-area-inset-top, 0px) + 0.55rem);
@@ -2033,6 +2038,7 @@
         padding-right: max(0.85rem, env(safe-area-inset-right));
       }
       .container {
+        padding-top: 0.65rem;
         padding-left: max(0.85rem, env(safe-area-inset-left));
         padding-right: max(0.85rem, env(safe-area-inset-right));
       }
@@ -2050,26 +2056,29 @@
         min-width: 0;
       }
       .header-brand {
-        flex: 1;
+        flex-shrink: 0;
         min-width: 0;
-        gap: 0.55rem;
-        overflow: hidden;
+        gap: 0.5rem;
       }
       .brand-badge {
-        width: 34px;
-        height: 34px;
-        font-size: 0.9rem;
-        border-radius: 8.5px;
+        width: 32px;
+        height: 32px;
+        font-size: 0.88rem;
+        border-radius: 8px;
       }
-      .brand-title {
+      .brand-name {
         font-size: 1.05rem;
         font-weight: 850;
         letter-spacing: -0.025em;
         white-space: nowrap;
+        line-height: 1.1;
       }
-      .header-season {
-        font-size: 0.68rem;
+      .brand-sub {
+        font-size: 0.62rem;
+        font-weight: 850;
+        letter-spacing: 0.08em;
         white-space: nowrap;
+        line-height: 1;
       }
       .header-actions {
         display: flex;
@@ -2078,10 +2087,11 @@
         flex-shrink: 0;
       }
       .apple-sports-pill-btn {
-        height: 34px;
+        height: 33px;
         padding: 0 0.7rem 0 0.6rem;
         font-size: 0.82rem;
-        max-width: 145px;
+        max-width: none !important;
+        flex-shrink: 0;
       }
       .apple-sports-pill-btn .picker-btn-text {
         font-size: 0.82rem;
@@ -2329,9 +2339,10 @@
       }
       .apple-sports-pill-btn {
         height: 32px;
-        padding: 0 0.55rem 0 0.5rem;
+        padding: 0 0.6rem 0 0.5rem;
         font-size: 0.78rem;
-        max-width: 120px;
+        max-width: none !important;
+        flex-shrink: 0;
       }
       .apple-sports-pill-btn .picker-btn-text {
         font-size: 0.78rem;
@@ -2362,20 +2373,22 @@
         display: none;
       }
       .header-brand {
-        gap: 0.45rem;
+        gap: 0.42rem;
       }
       .brand-badge {
-        width: 32px;
-        height: 32px;
-        font-size: 0.85rem;
-        border-radius: 8px;
+        width: 30px;
+        height: 30px;
+        font-size: 0.82rem;
+        border-radius: 7.5px;
       }
-      .brand-title {
+      .brand-name {
         font-size: 0.98rem;
         letter-spacing: -0.02em;
+        line-height: 1.1;
       }
-      .header-season {
-        font-size: 0.65rem;
+      .brand-sub {
+        font-size: 0.6rem;
+        letter-spacing: 0.08em;
       }
       .tab-button {
         font-size: 0.76rem;
@@ -3559,9 +3572,9 @@
     <div class="header-top-row">
       <div class="header-brand" onclick="scrollToTop()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')scrollToTop()" title="Scroll to top of schedule">
         <span class="brand-badge" aria-label="Melrose High School">MHS</span>
-        <div class="header-titles">
-          <h1 class="brand-title">Melrose Sports</h1>
-          <span class="header-season">Varsity Fall 2026</span>
+        <div class="header-brand-text">
+          <span class="brand-name">Melrose</span>
+          <span class="brand-sub">SPORTS</span>
         </div>
       </div>
       <div class="header-actions">
@@ -3629,13 +3642,13 @@
     <div class="ticker-left">
       <div class="ticker-header-row">
         <span class="ticker-pulse-badge" id="ticker-badge">NEXT GAME</span>
-        <span class="ticker-sport-tag" id="ticker-sport">🏈 Varsity Football</span>
+        <span class="ticker-sport-tag" id="ticker-sport">🏐 Girls' Volleyball</span>
       </div>
-      <div class="ticker-matchup" id="ticker-matchup">vs. Reading Memorial</div>
-      <div class="ticker-details" id="ticker-details">Fri, Sep 10 &bull; 7:00 PM &bull; Fred Green Field</div>
+      <div class="ticker-matchup" id="ticker-matchup">vs. Lynn Classical</div>
+      <div class="ticker-details" id="ticker-details">Thu, Sep 24 &bull; 5:00 PM &bull; MVMMS Middle School Gym</div>
     </div>
     <div class="ticker-right">
-      <div class="countdown-display" id="countdown-display">
+      <div class="countdown-display" id="countdown-display" style="display:none;">
         <div class="cd-box"><span class="cd-val" id="cd-days">--</span><span class="cd-lbl">DAYS</span></div>
         <span class="cd-colon" id="cd-days-colon">:</span>
         <div class="cd-box"><span class="cd-val" id="cd-hours">--</span><span class="cd-lbl">HRS</span></div>
@@ -6526,15 +6539,7 @@ function startNextGameCountdown() {
   };
 
   function updateTicker() {
-    const currentTab = SafeStorage.getItem('mhs_active_tab') || 'calendar';
-    let filterSport = 'all';
-    if (currentTab === 'standings') {
-      filterSport = activeStandingsSport;
-    } else if (currentTab === 'scores') {
-      filterSport = activeScoresSport;
-    } else {
-      filterSport = currentSelectedSport;
-    }
+    const filterSport = currentSelectedSport || 'all';
 
     const now = new Date();
     let sorted = [...events].sort((a, b) => {
