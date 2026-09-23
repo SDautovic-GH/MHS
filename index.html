@@ -384,13 +384,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 34px;
-      height: 34px;
-      border-radius: 8.5px;
+      width: 38px;
+      height: 30px;
+      border-radius: 7.5px;
       background: linear-gradient(135deg, #dc2626, #991b1b);
       color: #ffffff;
-      font-size: 0.92rem;
-      font-weight: 900;
+      font-size: 0.58rem;
+      font-weight: 850;
       letter-spacing: 0.04em;
       box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
       border: 1px solid rgba(255, 255, 255, 0.22);
@@ -556,9 +556,9 @@
       align-items: center;
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 9999px;
+      border-radius: 11px;
       padding: 3px;
-      gap: 2px;
+      gap: 3px;
       width: 100%;
       max-width: 520px;
       height: 38px;
@@ -578,23 +578,23 @@
       background: transparent;
       border: none;
       color: var(--text-secondary);
-      padding: 0 0.55rem;
-      font-size: 0.85rem;
-      font-weight: 700;
-      border-radius: 9999px;
+      padding: 0 0.45rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border-radius: 8.5px;
       cursor: pointer;
       transition: all 0.18s cubic-bezier(0.32, 0.72, 0, 1);
       white-space: nowrap;
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.3rem;
       user-select: none;
       -webkit-user-select: none;
       box-sizing: border-box;
     }
 
     .tab-button span:first-child {
-      font-size: 0.88rem;
+      font-size: inherit;
       line-height: 1;
     }
 
@@ -605,21 +605,22 @@
     .tab-button.active {
       background: rgba(255, 255, 255, 0.22);
       color: #ffffff;
-      font-weight: 750;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      font-weight: 700;
+      border-radius: 8.5px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
     :root[data-theme="light"] .tab-button.active {
       background: #ffffff;
       color: #0f172a;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
     }
 
     .nav-badge {
-      font-size: 0.72rem;
-      font-weight: 800;
-      padding: 0.08rem 0.42rem;
+      font-size: 0.68rem;
+      font-weight: 750;
+      padding: 0.06rem 0.38rem;
       border-radius: 9999px;
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.14);
       color: var(--text-secondary);
       line-height: 1.2;
       vertical-align: middle;
@@ -2061,10 +2062,11 @@
         gap: 0.5rem;
       }
       .brand-badge {
-        width: 32px;
-        height: 32px;
-        font-size: 0.88rem;
-        border-radius: 8px;
+        width: 36px;
+        height: 28px;
+        font-size: 0.56rem;
+        letter-spacing: 0.035em;
+        border-radius: 7px;
       }
       .brand-name {
         font-size: 1.05rem;
@@ -2111,21 +2113,26 @@
       .nav-tabs {
         width: 100%;
         max-width: 100%;
-        height: 36px;
+        height: 38px;
         padding: 2.5px;
-        gap: 2px;
+        border-radius: 10px;
+        gap: 2.5px;
       }
       .tab-button {
-        font-size: 0.82rem;
+        font-size: 0.80rem;
         padding: 0 0.35rem;
-        gap: 0.25rem;
+        gap: 0.22rem;
+        border-radius: 7.5px;
       }
       .tab-button span:first-child {
-        font-size: 0.88rem;
+        font-size: inherit;
+      }
+      .tab-button.active {
+        border-radius: 7.5px;
       }
       .nav-badge {
-        font-size: 0.68rem;
-        padding: 0.06rem 0.35rem;
+        font-size: 0.66rem;
+        padding: 0.05rem 0.34rem;
       }
       .sport-picker-row {
         flex-direction: column;
@@ -2333,7 +2340,7 @@
       }
     }
 
-    @media (max-width: 390px) {
+    @media (max-width: 414px) {
       .header-inner {
         gap: 0.45rem;
       }
@@ -2357,17 +2364,22 @@
         font-size: 0.82rem;
       }
       .nav-tabs {
-        height: 34px;
+        height: 36px;
         padding: 2px;
+        border-radius: 9px;
         gap: 2px;
       }
       .tab-button {
-        font-size: 0.8rem;
-        padding: 0 0.25rem;
-        gap: 0.25rem;
+        font-size: 0.76rem;
+        padding: 0 0.2rem;
+        gap: 0.18rem;
+        border-radius: 7px;
       }
       .tab-button span:first-child {
-        font-size: 0.88rem;
+        font-size: inherit;
+      }
+      .tab-button.active {
+        border-radius: 7px;
       }
       .cd-box.cd-secs, .cd-colon.cd-secs-colon {
         display: none;
@@ -2376,10 +2388,11 @@
         gap: 0.42rem;
       }
       .brand-badge {
-        width: 30px;
-        height: 30px;
-        font-size: 0.82rem;
-        border-radius: 7.5px;
+        width: 35px;
+        height: 27px;
+        font-size: 0.54rem;
+        letter-spacing: 0.03em;
+        border-radius: 6.5px;
       }
       .brand-name {
         font-size: 0.98rem;
@@ -2390,14 +2403,9 @@
         font-size: 0.6rem;
         letter-spacing: 0.08em;
       }
-      .tab-button {
-        font-size: 0.76rem;
-        padding: 0 0.2rem;
-        gap: 0.18rem;
-      }
       .nav-badge {
-        font-size: 0.62rem;
-        padding: 0.05rem 0.3rem;
+        font-size: 0.60rem;
+        padding: 0.04rem 0.28rem;
       }
       .schedule-scope-btn {
         padding: 0.38rem 0.3rem;
@@ -4418,6 +4426,9 @@ const SafeStorage = {
   },
   setItem: function(key, val) {
     try { localStorage.setItem(key, val); } catch (e) {}
+  },
+  removeItem: function(key) {
+    try { localStorage.removeItem(key); } catch (e) {}
   }
 };
 
