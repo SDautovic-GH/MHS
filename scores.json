@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-23T19:37:20.437316",
+  "lastUpdated": "2026-09-24T07:31:38.668212",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -327,6 +327,28 @@
           "win": true
         }
       ]
+    },
+    "Boys' Soccer|2026-09-23": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-23",
+      "opponent": "Winchester",
+      "mhsScore": 0,
+      "oppScore": 5,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-09-23": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-23",
+      "opponent": "Winchester",
+      "mhsScore": 0,
+      "oppScore": 4,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
     }
   }
 }
