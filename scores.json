@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-25T19:57:42.229999",
+  "lastUpdated": "2026-09-26T07:28:48.745864",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -388,6 +388,28 @@
           "win": true
         }
       ]
+    },
+    "Football|2026-09-25": {
+      "sport": "Football",
+      "date": "2026-09-25",
+      "opponent": "Swampscott",
+      "mhsScore": 26,
+      "oppScore": 7,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-09-25": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-25",
+      "opponent": "Danvers",
+      "mhsScore": 1,
+      "oppScore": 1,
+      "result": "T",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
     }
   }
 }
