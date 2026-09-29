@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-29T08:18:33.624867",
+  "lastUpdated": "2026-09-29T16:51:44.081703",
   "sports": {
     "Girls' Volleyball": {
       "sport": "Girls' Volleyball",
@@ -44,10 +44,10 @@
           "stats": {
             "kills": 0,
             "aces": 0,
-            "digs": 42,
+            "digs": 43,
             "assists": 3,
             "blocks": 0,
-            "points": 54
+            "points": 55
           }
         },
         {
@@ -62,10 +62,10 @@
           "stats": {
             "kills": 1,
             "aces": 0,
-            "digs": 89,
-            "assists": 13,
+            "digs": 102,
+            "assists": 14,
             "blocks": 0,
-            "points": 58
+            "points": 72
           }
         },
         {
@@ -116,10 +116,10 @@
           "stats": {
             "kills": 19,
             "aces": 0,
-            "digs": 46,
-            "assists": 187,
+            "digs": 48,
+            "assists": 211,
             "blocks": 0,
-            "points": 41
+            "points": 44
           }
         },
         {
@@ -134,10 +134,10 @@
           "stats": {
             "kills": 1,
             "aces": 0,
-            "digs": 60,
+            "digs": 69,
             "assists": 4,
             "blocks": 0,
-            "points": 47
+            "points": 57
           }
         },
         {
@@ -150,9 +150,9 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/amelie-johnson/?careerid=bc8l1ropafb88",
           "stats": {
-            "kills": 46,
+            "kills": 52,
             "aces": 0,
-            "digs": 3,
+            "digs": 4,
             "assists": 0,
             "blocks": 0,
             "points": 0
@@ -168,12 +168,12 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/adriana-santoriello/?careerid=suiogvkm8ch88",
           "stats": {
-            "kills": 54,
+            "kills": 62,
             "aces": 0,
-            "digs": 20,
-            "assists": 0,
+            "digs": 23,
+            "assists": 1,
             "blocks": 0,
-            "points": 30
+            "points": 32
           }
         },
         {
@@ -186,12 +186,12 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/alisa-dautovic/?careerid=d9qh0va24ikee",
           "stats": {
-            "kills": 14,
+            "kills": 22,
             "aces": 0,
-            "digs": 17,
+            "digs": 19,
             "assists": 2,
             "blocks": 0,
-            "points": 26
+            "points": 28
           }
         },
         {
@@ -204,7 +204,7 @@
           "year": "Sr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/maggie-shoemaker/?careerid=ns2h4v49c0s44",
           "stats": {
-            "kills": 15,
+            "kills": 17,
             "aces": 0,
             "digs": 4,
             "assists": 0,
@@ -240,7 +240,7 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sabrina-mcart/?careerid=ninaliut7fbue",
           "stats": {
-            "kills": 37,
+            "kills": 38,
             "aces": 0,
             "digs": 2,
             "assists": 0,
@@ -275,12 +275,12 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/elise-marchais/?careerid=d58qmr3ee55ee",
           "stats": {
-            "kills": 60,
+            "kills": 67,
             "aces": 0,
-            "digs": 10,
+            "digs": 11,
             "assists": 0,
             "blocks": 0,
-            "points": 14
+            "points": 28
           }
         },
         {

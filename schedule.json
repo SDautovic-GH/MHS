@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-29T08:18:39.769889",
+  "lastUpdated": "2026-09-29T16:51:51.325775",
   "schedule": {
     "Football|2026-09-10": {
       "sport": "Football",
@@ -102,8 +102,8 @@
     "Boys' Soccer|2026-10-01": {
       "sport": "Boys' Soccer",
       "date": "2026-10-01",
-      "isHome": true,
-      "venue": "Knoll",
+      "isHome": false,
+      "venue": "Wilmington",
       "source": "ArbiterLive"
     },
     "Boys' Soccer|2026-10-05": {
@@ -221,8 +221,8 @@
     "Girls' Soccer|2026-10-01": {
       "sport": "Girls' Soccer",
       "date": "2026-10-01",
-      "isHome": true,
-      "venue": "Pine Banks",
+      "isHome": false,
+      "venue": "Wilmington",
       "source": "ArbiterLive"
     },
     "Girls' Soccer|2026-10-05": {
