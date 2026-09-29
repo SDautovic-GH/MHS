@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-28T18:34:04.883813",
+  "lastUpdated": "2026-09-29T08:18:24.482915",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -409,6 +409,35 @@
       "result": "T",
       "status": "Final",
       "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2026-09-28": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-28",
+      "opponent": "Arlington",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "0-0",
+          "win": false
+        }
+      ]
+    },
+    "Field Hockey|2026-09-28": {
+      "sport": "Field Hockey",
+      "date": "2026-09-28",
+      "opponent": "Arlington",
+      "mhsScore": 1,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
       "source": "MaxPreps"
     }
   }
