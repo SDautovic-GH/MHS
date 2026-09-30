@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-29T16:51:35.743594",
+  "lastUpdated": "2026-09-30T08:18:26.617456",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -448,6 +448,50 @@
       "result": "L",
       "status": "Final",
       "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Golf|2026-09-29": {
+      "sport": "Golf",
+      "date": "2026-09-29",
+      "opponent": "Wilmington",
+      "mhsScore": 47.5,
+      "oppScore": 24.5,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-09-29": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-29",
+      "opponent": "Lexington",
+      "mhsScore": 2,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-09-29": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-29",
+      "opponent": "Lexington",
+      "mhsScore": 2,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2026-09-29": {
+      "sport": "Field Hockey",
+      "date": "2026-09-29",
+      "opponent": "Beverly",
+      "mhsScore": 1,
+      "oppScore": 5,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
       "source": "MaxPreps"
     }
   }
