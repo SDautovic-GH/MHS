@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-01T17:20:17.681579",
+  "lastUpdated": "2026-10-02T08:20:23.372583",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -537,6 +537,28 @@
       "status": "Final",
       "isHome": false,
       "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-01": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-01",
+      "opponent": "Wilmington",
+      "mhsScore": 1,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-10-01": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-01",
+      "opponent": "Wilmington",
+      "mhsScore": 0,
+      "oppScore": 0,
+      "result": "T",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
     }
   }
 }
