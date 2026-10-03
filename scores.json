@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-02T16:35:18.322495",
+  "lastUpdated": "2026-10-03T07:56:15.866387",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -559,6 +559,45 @@
       "status": "Final",
       "isHome": true,
       "source": "MaxPreps"
+    },
+    "Football|2026-10-02": {
+      "sport": "Football",
+      "date": "2026-10-02",
+      "opponent": "Winchester",
+      "mhsScore": 35,
+      "oppScore": 21,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2026-10-02": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-02",
+      "opponent": "Stoneham",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-14",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-4",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-18",
+          "win": true
+        }
+      ]
     }
   }
 }
