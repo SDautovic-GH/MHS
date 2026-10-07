@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07T08:30:44.036385",
+  "lastUpdated": "2026-10-07T17:45:03.941465",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -625,8 +625,8 @@
       "sport": "Golf",
       "date": "2026-10-06",
       "opponent": "Reading",
-      "mhsScore": 0,
-      "oppScore": 0,
+      "mhsScore": 34,
+      "oppScore": 38,
       "result": "LOSS",
       "status": "Final",
       "isHome": false,
@@ -659,6 +659,17 @@
           "win": false
         }
       ]
+    },
+    "Field Hockey|2026-10-06": {
+      "sport": "Field Hockey",
+      "date": "2026-10-06",
+      "opponent": "Westport",
+      "mhsScore": 3,
+      "oppScore": 5,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
     }
   }
 }
