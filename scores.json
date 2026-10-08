@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07T17:45:03.941465",
+  "lastUpdated": "2026-10-08T08:47:04.356826",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -669,6 +669,28 @@
       "result": "L",
       "status": "Final",
       "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-10-07": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-07",
+      "opponent": "Stoneham",
+      "mhsScore": 4,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-10-07": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-07",
+      "opponent": "Stoneham",
+      "mhsScore": 2,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
       "source": "MaxPreps"
     }
   }

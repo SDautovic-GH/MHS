@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07T17:45:17.792617",
+  "lastUpdated": "2026-10-08T08:47:19.263099",
   "schedule": {
     "Football|2026-09-10": {
       "sport": "Football",
@@ -503,13 +503,6 @@
       "date": "2026-10-22",
       "isHome": true,
       "venue": "Pine Banks",
-      "source": "ArbiterLive"
-    },
-    "Golf|2026-08-31": {
-      "sport": "Golf",
-      "date": "2026-08-31",
-      "isHome": true,
-      "venue": "Bellevue Golf Club",
       "source": "ArbiterLive"
     },
     "Golf|2026-09-01": {
