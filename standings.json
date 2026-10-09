@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-10-08T17:49:17.804372",
+  "lastUpdated": "2026-10-09T08:50:37.193314",
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-10-08 17:49:14",
+      "lastUpdated": "2026-10-09 08:50:29",
       "teams": [
         {
           "rank": "1",
@@ -77,7 +77,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-10-08 17:49:15",
+      "lastUpdated": "2026-10-09 08:50:29",
       "teams": [
         {
           "rank": "1",
@@ -216,7 +216,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-10-08 17:49:15",
+      "lastUpdated": "2026-10-09 08:50:33",
       "teams": [
         {
           "rank": "1",
@@ -344,16 +344,16 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-10-08 17:49:16",
+      "lastUpdated": "2026-10-09 08:50:34",
       "teams": [
         {
           "rank": "1",
           "school": "Winchester",
           "confRecord": "8-0",
           "confPct": "1.000",
-          "overallRecord": "11-1",
-          "overallPct": "0.917",
-          "streak": "2W",
+          "overallRecord": "12-1",
+          "overallPct": "0.923",
+          "streak": "3W",
           "mascot": "",
           "isMHS": false
         },
@@ -362,9 +362,9 @@
           "school": "Reading Memorial",
           "confRecord": "7-1",
           "confPct": "0.875",
-          "overallRecord": "9-1",
-          "overallPct": "0.900",
-          "streak": "1W",
+          "overallRecord": "10-1",
+          "overallPct": "0.909",
+          "streak": "2W",
           "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -439,9 +439,9 @@
           "school": "Wakefield Memorial",
           "confRecord": "3-5",
           "confPct": "0.375",
-          "overallRecord": "5-5",
-          "overallPct": "0.500",
-          "streak": "1L",
+          "overallRecord": "5-6",
+          "overallPct": "0.455",
+          "streak": "2L",
           "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -483,7 +483,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-10-08 17:49:17",
+      "lastUpdated": "2026-10-09 08:50:37",
       "teams": [
         {
           "rank": "1",
@@ -501,9 +501,9 @@
           "school": "Watertown",
           "confRecord": "5-1-1",
           "confPct": "0.786",
-          "overallRecord": "9-1-1",
-          "overallPct": "0.864",
-          "streak": "1W",
+          "overallRecord": "10-1-1",
+          "overallPct": "0.875",
+          "streak": "2W",
           "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -512,9 +512,9 @@
           "school": "Winchester",
           "confRecord": "7-2-1",
           "confPct": "0.750",
-          "overallRecord": "8-3-1",
-          "overallPct": "0.708",
-          "streak": "1W",
+          "overallRecord": "9-3-1",
+          "overallPct": "0.731",
+          "streak": "2W",
           "mascot": "",
           "isMHS": false
         },
@@ -556,9 +556,9 @@
           "school": "Melrose",
           "confRecord": "3-3-1",
           "confPct": "0.500",
-          "overallRecord": "3-5-1",
-          "overallPct": "0.389",
-          "streak": "1L",
+          "overallRecord": "3-5-2",
+          "overallPct": "0.400",
+          "streak": "1T",
           "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": true
         },
@@ -567,9 +567,9 @@
           "school": "Wilmington",
           "confRecord": "1-4-2",
           "confPct": "0.286",
-          "overallRecord": "2-5-2",
-          "overallPct": "0.333",
-          "streak": "1L",
+          "overallRecord": "2-5-3",
+          "overallPct": "0.350",
+          "streak": "1T",
           "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -578,9 +578,9 @@
           "school": "Stoneham",
           "confRecord": "1-6-1",
           "confPct": "0.188",
-          "overallRecord": "2-6-3",
-          "overallPct": "0.318",
-          "streak": "1L",
+          "overallRecord": "3-6-3",
+          "overallPct": "0.375",
+          "streak": "1W",
           "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -611,9 +611,9 @@
           "school": "Wakefield Memorial",
           "confRecord": "0-6-1",
           "confPct": "0.000",
-          "overallRecord": "0-9-1",
+          "overallRecord": "0-10-1",
           "overallPct": "0.000",
-          "streak": "5L",
+          "streak": "6L",
           "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         }
