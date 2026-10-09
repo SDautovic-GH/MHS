@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-10-09T09:54:32.010279",
+  "lastUpdated": "2026-10-09T17:24:33.412297",
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-10-09 09:54:29",
+      "lastUpdated": "2026-10-09 17:24:30",
       "teams": [
         {
           "rank": "1",
@@ -77,10 +77,21 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-10-09 09:54:30",
+      "lastUpdated": "2026-10-09 17:24:31",
       "teams": [
         {
           "rank": "1",
+          "school": "Arlington",
+          "confRecord": "5-0-1",
+          "confPct": "0.917",
+          "overallRecord": "7-0-1",
+          "overallPct": "0.938",
+          "streak": "6W",
+          "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "2",
           "school": "Reading Memorial",
           "confRecord": "5-0-1",
           "confPct": "0.917",
@@ -88,17 +99,6 @@
           "overallPct": "0.611",
           "streak": "4W",
           "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg",
-          "isMHS": false
-        },
-        {
-          "rank": "2",
-          "school": "Arlington",
-          "confRecord": "4-0-1",
-          "confPct": "0.900",
-          "overallRecord": "6-0-1",
-          "overallPct": "0.929",
-          "streak": "5W",
-          "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
         {
@@ -192,11 +192,11 @@
         {
           "rank": "11",
           "school": "Woburn Memorial",
-          "confRecord": "0-6-1",
+          "confRecord": "0-7-1",
           "confPct": "0.000",
-          "overallRecord": "1-7-1",
-          "overallPct": "0.167",
-          "streak": "4L",
+          "overallRecord": "1-8-1",
+          "overallPct": "0.150",
+          "streak": "5L",
           "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -216,7 +216,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-10-09 09:54:30",
+      "lastUpdated": "2026-10-09 17:24:31",
       "teams": [
         {
           "rank": "1",
@@ -344,7 +344,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-10-09 09:54:31",
+      "lastUpdated": "2026-10-09 17:24:32",
       "teams": [
         {
           "rank": "1",
@@ -483,7 +483,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-10-09 09:54:32",
+      "lastUpdated": "2026-10-09 17:24:33",
       "teams": [
         {
           "rank": "1",
