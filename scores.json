@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-09T17:24:29.413339",
+  "lastUpdated": "2026-10-10T08:22:25.454838",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -676,7 +676,7 @@
       "date": "2026-10-07",
       "opponent": "Stoneham",
       "mhsScore": 4,
-      "oppScore": 0,
+      "oppScore": 1,
       "result": "W",
       "status": "Final",
       "isHome": true,
@@ -702,6 +702,68 @@
       "result": "T",
       "status": "Final",
       "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Football|2026-10-09": {
+      "sport": "Football",
+      "date": "2026-10-09",
+      "opponent": "Burlington",
+      "mhsScore": 35,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-10-09": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-09",
+      "opponent": "Somerville",
+      "mhsScore": 1,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-10-09": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-09",
+      "opponent": "Marblehead",
+      "mhsScore": 1,
+      "oppScore": 1,
+      "result": "T",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2026-10-09": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-09",
+      "opponent": "Arlington Catholic",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "0-0",
+          "win": false
+        }
+      ]
+    },
+    "Field Hockey|2026-10-09": {
+      "sport": "Field Hockey",
+      "date": "2026-10-09",
+      "opponent": "Stoneham",
+      "mhsScore": 3,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
       "source": "MaxPreps"
     }
   }
