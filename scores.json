@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-12T09:01:51.314167",
+  "lastUpdated": "2026-10-12T20:13:23.031116",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -775,6 +775,28 @@
       "status": "Final",
       "isHome": false,
       "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-10-12": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-12",
+      "opponent": "Westport",
+      "mhsScore": 3,
+      "oppScore": 3,
+      "result": "T",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2026-10-12": {
+      "sport": "Field Hockey",
+      "date": "2026-10-12",
+      "opponent": "Watertown",
+      "mhsScore": 0,
+      "oppScore": 6,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
     }
   }
 }
