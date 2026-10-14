@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-14T07:26:48.218675",
+  "lastUpdated": "2026-10-14T15:47:18.130537",
   "schedule": {
     "Football|2026-09-10": {
       "sport": "Football",
@@ -538,13 +538,6 @@
       "date": "2026-09-24",
       "isHome": true,
       "venue": "Bellevue Golf Club",
-      "source": "ArbiterLive"
-    },
-    "Golf|2026-09-28": {
-      "sport": "Golf",
-      "date": "2026-09-28",
-      "isHome": false,
-      "venue": "Stoneham",
       "source": "ArbiterLive"
     },
     "Golf|2026-09-29": {
