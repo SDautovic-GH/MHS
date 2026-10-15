@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-15T15:33:44.206317",
+  "lastUpdated": "2026-10-15T19:49:26.133251",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -273,7 +273,7 @@
       "opponent": "Burlington",
       "mhsScore": 35,
       "oppScore": 37,
-      "result": "WIN",
+      "result": "LOSS",
       "status": "Final",
       "isHome": false,
       "source": "ArbiterLive"
@@ -858,6 +858,17 @@
       "status": "Final",
       "isHome": false,
       "source": "MaxPreps"
+    },
+    "Golf|2026-09-03": {
+      "sport": "Golf",
+      "date": "2026-09-03",
+      "opponent": "Woburn",
+      "mhsScore": 47.5,
+      "oppScore": 24.5,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
     }
   }
 }
