@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-15T19:49:26.133251",
+  "lastUpdated": "2026-10-16T07:00:40.723508",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -869,6 +869,24 @@
       "status": "Final",
       "isHome": true,
       "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-10-15": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-15",
+      "opponent": "Belmont",
+      "mhsScore": 3,
+      "oppScore": 2,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "0-0",
+          "win": false
+        }
+      ]
     }
   }
 }
