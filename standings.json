@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-10-16T07:00:45.185232",
+  "lastUpdated": "2026-10-16T15:20:21.857055",
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-10-16 07:00:41",
+      "lastUpdated": "2026-10-16 15:20:19",
       "teams": [
         {
           "rank": "1",
@@ -77,7 +77,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-10-16 07:00:42",
+      "lastUpdated": "2026-10-16 15:20:20",
       "teams": [
         {
           "rank": "1",
@@ -93,11 +93,11 @@
         {
           "rank": "2",
           "school": "Arlington",
-          "confRecord": "6-1-1",
-          "confPct": "0.812",
-          "overallRecord": "8-1-1",
-          "overallPct": "0.850",
-          "streak": "1W",
+          "confRecord": "7-1-1",
+          "confPct": "0.833",
+          "overallRecord": "9-1-1",
+          "overallPct": "0.864",
+          "streak": "2W",
           "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -137,11 +137,11 @@
         {
           "rank": "6",
           "school": "Lexington",
-          "confRecord": "4-2-2",
-          "confPct": "0.625",
-          "overallRecord": "7-3-2",
-          "overallPct": "0.667",
-          "streak": "2L",
+          "confRecord": "4-3-2",
+          "confPct": "0.556",
+          "overallRecord": "7-4-2",
+          "overallPct": "0.615",
+          "streak": "3L",
           "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -216,7 +216,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-10-16 07:00:43",
+      "lastUpdated": "2026-10-16 15:20:20",
       "teams": [
         {
           "rank": "1",
@@ -344,7 +344,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-10-16 07:00:44",
+      "lastUpdated": "2026-10-16 15:20:21",
       "teams": [
         {
           "rank": "1",
@@ -381,17 +381,6 @@
         },
         {
           "rank": "4",
-          "school": "Burlington",
-          "confRecord": "6-4",
-          "confPct": "0.600",
-          "overallRecord": "9-5",
-          "overallPct": "0.643",
-          "streak": "1L",
-          "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
-          "isMHS": false
-        },
-        {
-          "rank": "5",
           "school": "Belmont",
           "confRecord": "6-4",
           "confPct": "0.600",
@@ -402,14 +391,25 @@
           "isMHS": false
         },
         {
-          "rank": "6",
+          "rank": "5",
           "school": "Lexington",
-          "confRecord": "5-4",
-          "confPct": "0.556",
-          "overallRecord": "6-5",
-          "overallPct": "0.545",
-          "streak": "2W",
+          "confRecord": "6-4",
+          "confPct": "0.600",
+          "overallRecord": "7-5",
+          "overallPct": "0.583",
+          "streak": "3W",
           "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "6",
+          "school": "Burlington",
+          "confRecord": "6-4",
+          "confPct": "0.600",
+          "overallRecord": "9-5",
+          "overallPct": "0.643",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
         {
@@ -448,11 +448,11 @@
         {
           "rank": "10",
           "school": "Watertown",
-          "confRecord": "2-8",
-          "confPct": "0.200",
-          "overallRecord": "5-9",
-          "overallPct": "0.357",
-          "streak": "3L",
+          "confRecord": "2-9",
+          "confPct": "0.182",
+          "overallRecord": "5-10",
+          "overallPct": "0.333",
+          "streak": "4L",
           "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -483,7 +483,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-10-16 07:00:45",
+      "lastUpdated": "2026-10-16 15:20:21",
       "teams": [
         {
           "rank": "1",
@@ -499,11 +499,11 @@
         {
           "rank": "2",
           "school": "Watertown",
-          "confRecord": "6-1-1",
-          "confPct": "0.812",
-          "overallRecord": "12-1-1",
-          "overallPct": "0.893",
-          "streak": "4W",
+          "confRecord": "7-1-1",
+          "confPct": "0.833",
+          "overallRecord": "13-1-1",
+          "overallPct": "0.900",
+          "streak": "5W",
           "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -521,11 +521,11 @@
         {
           "rank": "4",
           "school": "Lexington",
-          "confRecord": "7-3",
-          "confPct": "0.700",
-          "overallRecord": "7-4-1",
-          "overallPct": "0.625",
-          "streak": "2W",
+          "confRecord": "7-4",
+          "confPct": "0.636",
+          "overallRecord": "7-5-1",
+          "overallPct": "0.577",
+          "streak": "1L",
           "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
