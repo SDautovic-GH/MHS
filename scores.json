@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-16T19:30:19.201293",
+  "lastUpdated": "2026-10-17T06:50:08.567661",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -907,6 +907,17 @@
           "win": true
         }
       ]
+    },
+    "Football|2026-10-16": {
+      "sport": "Football",
+      "date": "2026-10-16",
+      "opponent": "Watertown",
+      "mhsScore": 7,
+      "oppScore": 15,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
     }
   }
 }
