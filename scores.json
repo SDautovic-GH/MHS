@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-17T14:08:36.933651",
+  "lastUpdated": "2026-10-17T17:49:50.646314",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -914,6 +914,28 @@
       "opponent": "Watertown",
       "mhsScore": 7,
       "oppScore": 15,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-10-17": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-17",
+      "opponent": "Beverly",
+      "mhsScore": 2,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-10-17": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-17",
+      "opponent": "Bishop Feehan",
+      "mhsScore": 0,
+      "oppScore": 8,
       "result": "L",
       "status": "Final",
       "isHome": false,
