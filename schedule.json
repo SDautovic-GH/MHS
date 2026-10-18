@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-17T23:25:56.626616",
+  "lastUpdated": "2026-10-18T07:10:21.925800",
   "schedule": {
     "Football|2026-09-10": {
       "sport": "Football",
@@ -167,7 +167,7 @@
       "date": "2026-10-27",
       "isHome": true,
       "venue": "Knoll",
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     },
     "Boys' Soccer|2026-10-29": {
       "sport": "Boys' Soccer",
@@ -286,7 +286,7 @@
       "date": "2026-10-27",
       "isHome": true,
       "venue": "Pine Banks",
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     },
     "Girls' Soccer|2026-10-30": {
       "sport": "Girls' Soccer",
