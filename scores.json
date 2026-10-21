@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-20T19:57:22.931441",
+  "lastUpdated": "2026-10-21T07:25:38.859030",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -1000,6 +1000,17 @@
       "status": "Final",
       "isHome": true,
       "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2026-10-20": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-20",
+      "opponent": "Wakefield",
+      "mhsScore": 3,
+      "oppScore": 1,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
     }
   }
 }

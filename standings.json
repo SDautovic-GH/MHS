@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-10-20T19:57:26.423441",
+  "lastUpdated": "2026-10-21T07:25:42.319790",
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-10-20 19:57:23",
+      "lastUpdated": "2026-10-21 07:25:39",
       "teams": [
         {
           "rank": "1",
@@ -77,7 +77,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-10-20 19:57:24",
+      "lastUpdated": "2026-10-21 07:25:40",
       "teams": [
         {
           "rank": "1",
@@ -216,7 +216,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-10-20 19:57:25",
+      "lastUpdated": "2026-10-21 07:25:40",
       "teams": [
         {
           "rank": "1",
@@ -344,7 +344,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-10-20 19:57:25",
+      "lastUpdated": "2026-10-21 07:25:41",
       "teams": [
         {
           "rank": "1",
@@ -381,6 +381,17 @@
         },
         {
           "rank": "4",
+          "school": "Burlington",
+          "confRecord": "7-4",
+          "confPct": "0.636",
+          "overallRecord": "10-5",
+          "overallPct": "0.667",
+          "streak": "1W",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "5",
           "school": "Belmont",
           "confRecord": "6-4",
           "confPct": "0.600",
@@ -391,36 +402,25 @@
           "isMHS": false
         },
         {
-          "rank": "5",
-          "school": "Lexington",
-          "confRecord": "6-4",
-          "confPct": "0.600",
-          "overallRecord": "7-6",
-          "overallPct": "0.538",
-          "streak": "1L",
-          "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg",
-          "isMHS": false
-        },
-        {
           "rank": "6",
-          "school": "Burlington",
-          "confRecord": "6-4",
-          "confPct": "0.600",
-          "overallRecord": "9-5",
-          "overallPct": "0.643",
-          "streak": "1L",
-          "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
+          "school": "Woburn Memorial",
+          "confRecord": "6-5",
+          "confPct": "0.545",
+          "overallRecord": "12-5",
+          "overallPct": "0.706",
+          "streak": "4W",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
         {
           "rank": "7",
-          "school": "Woburn Memorial",
-          "confRecord": "5-5",
-          "confPct": "0.500",
-          "overallRecord": "10-5",
-          "overallPct": "0.667",
-          "streak": "2W",
-          "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg",
+          "school": "Lexington",
+          "confRecord": "6-5",
+          "confPct": "0.545",
+          "overallRecord": "7-7",
+          "overallPct": "0.500",
+          "streak": "2L",
+          "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
         {
@@ -459,11 +459,11 @@
         {
           "rank": "11",
           "school": "Watertown",
-          "confRecord": "2-9",
-          "confPct": "0.182",
-          "overallRecord": "5-10",
-          "overallPct": "0.333",
-          "streak": "4L",
+          "confRecord": "2-10",
+          "confPct": "0.167",
+          "overallRecord": "5-11",
+          "overallPct": "0.312",
+          "streak": "5L",
           "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -483,7 +483,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-10-20 19:57:26",
+      "lastUpdated": "2026-10-21 07:25:42",
       "teams": [
         {
           "rank": "1",
