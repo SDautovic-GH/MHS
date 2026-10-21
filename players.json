@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-21T07:25:46.450251",
+  "lastUpdated": "2026-10-21T15:54:52.973409",
   "sports": {
     "Girls' Volleyball": {
       "sport": "Girls' Volleyball",
@@ -42,10 +42,10 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/gen-overlan/?careerid=usbe9h773vmbb",
           "stats": {
-            "kills": 0,
+            "kills": 1,
             "aces": 0,
-            "digs": 79,
-            "assists": 8,
+            "digs": 84,
+            "assists": 10,
             "blocks": 0,
             "points": 57
           }
@@ -62,10 +62,10 @@
           "stats": {
             "kills": 1,
             "aces": 0,
-            "digs": 161,
-            "assists": 27,
+            "digs": 167,
+            "assists": 30,
             "blocks": 0,
-            "points": 136
+            "points": 140
           }
         },
         {
@@ -114,12 +114,12 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sadie-smith/?careerid=ou78uehu5deqa",
           "stats": {
-            "kills": 33,
+            "kills": 37,
             "aces": 0,
-            "digs": 95,
-            "assists": 383,
+            "digs": 105,
+            "assists": 419,
             "blocks": 0,
-            "points": 79
+            "points": 90
           }
         },
         {
@@ -134,10 +134,10 @@
           "stats": {
             "kills": 1,
             "aces": 0,
-            "digs": 119,
+            "digs": 129,
             "assists": 9,
             "blocks": 0,
-            "points": 115
+            "points": 126
           }
         },
         {
@@ -150,9 +150,9 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/amelie-johnson/?careerid=bc8l1ropafb88",
           "stats": {
-            "kills": 85,
+            "kills": 91,
             "aces": 0,
-            "digs": 10,
+            "digs": 11,
             "assists": 1,
             "blocks": 0,
             "points": 0
@@ -168,12 +168,12 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/adriana-santoriello/?careerid=suiogvkm8ch88",
           "stats": {
-            "kills": 119,
+            "kills": 136,
             "aces": 0,
-            "digs": 60,
+            "digs": 67,
             "assists": 1,
             "blocks": 0,
-            "points": 69
+            "points": 77
           }
         },
         {
@@ -186,12 +186,12 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/alisa-dautovic/?careerid=d9qh0va24ikee",
           "stats": {
-            "kills": 59,
+            "kills": 68,
             "aces": 0,
-            "digs": 54,
-            "assists": 4,
+            "digs": 59,
+            "assists": 6,
             "blocks": 0,
-            "points": 109
+            "points": 122
           }
         },
         {
@@ -204,7 +204,7 @@
           "year": "Sr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/maggie-shoemaker/?careerid=ns2h4v49c0s44",
           "stats": {
-            "kills": 23,
+            "kills": 24,
             "aces": 0,
             "digs": 4,
             "assists": 1,
@@ -240,7 +240,7 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sabrina-mcart/?careerid=ninaliut7fbue",
           "stats": {
-            "kills": 72,
+            "kills": 76,
             "aces": 0,
             "digs": 5,
             "assists": 1,
@@ -275,12 +275,12 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/elise-marchais/?careerid=d58qmr3ee55ee",
           "stats": {
-            "kills": 145,
+            "kills": 155,
             "aces": 0,
-            "digs": 22,
+            "digs": 23,
             "assists": 2,
             "blocks": 0,
-            "points": 78
+            "points": 88
           }
         },
         {
