@@ -5448,9 +5448,15 @@ function renderSeasonSheetList() {
 }
 
 function updateSeasonUI() {
+  const seasonData = (typeof SEASONS_DATA !== 'undefined' && SEASONS_DATA[currentSeason]) ? SEASONS_DATA[currentSeason] : {};
+  const seasonLabel = seasonData.label || ('Fall ' + currentSeason);
+
   const titleEl = document.getElementById('picker-season-title');
-  if (titleEl && typeof SEASONS_DATA !== 'undefined' && SEASONS_DATA[currentSeason]) {
-    titleEl.textContent = SEASONS_DATA[currentSeason].label || ('Fall ' + currentSeason);
+  if (titleEl) titleEl.textContent = seasonLabel;
+
+  const footerEl = document.querySelector('.footer-subtext');
+  if (footerEl) {
+    footerEl.innerHTML = `Melrose High School Athletics &bull; ${seasonLabel} Varsity &bull; Go Red Raiders!`;
   }
 }
 
@@ -5460,7 +5466,7 @@ function switchSeason(seasonKey) {
   SafeStorage.setItem('mhs_selected_season', currentSeason);
 
   const seasonData = SEASONS_DATA[currentSeason];
-  events = seasonData.events || [];
+  events = (seasonData.events || []).map(e => ({ ...e }));
   INITIAL_SCORES = seasonData.scores || {};
   INITIAL_STANDINGS = seasonData.standings || {};
   INITIAL_PLAYERS = seasonData.players || {};
@@ -5471,18 +5477,20 @@ function switchSeason(seasonKey) {
   updateSeasonUI();
   closeAllSheets();
 
-  // If historical season where games are finished, auto-switch to scores tab if on upcoming
-  if (currentSeason !== '2026' && appleTabState === 'upcoming') {
+  // If historical season where games are finished, auto-switch to scores tab if currently on upcoming/today
+  const currentTab = SafeStorage.getItem('mhs_active_apple_tab') || 'today';
+  if (currentSeason !== '2026' && (currentTab === 'today' || currentTab === 'upcoming')) {
     switchAppleTab('scores');
+  } else {
+    // Re-render views for current tab
+    renderDayStrip();
+    renderDailyView();
+    renderScoresView();
+    renderStandingsView();
+    renderPlayersView();
   }
-
-  // Re-render views
-  renderDayStrip();
-  renderDailyView();
-  renderScoresView();
-  renderStandingsView();
-  renderPlayersView();
   renderSportSheetList();
+  renderStandingsSportSheetList();
   if (window.updateNextGameTicker) window.updateNextGameTicker();
 
   showToast(`Switched to ${seasonData.label || seasonKey} 🍂`);
@@ -5698,11 +5706,13 @@ function renderDailyView() {
 
   const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
 
-  // Base filtered upcoming games matching sport, location, and search
+  // Base filtered games matching sport, location, and search
   const baseFiltered = sorted.filter(item => {
-    // Strict Temporal Separation: Schedule displays strictly upcoming & active games
-    const isCompleted = Boolean(item.result || item.mhsScore !== undefined || item.date < todayStr);
-    if (isCompleted) return false;
+    // For active season (2026), schedule displays upcoming & active games
+    if (currentSeason === '2026') {
+      const isCompleted = Boolean(item.result || item.mhsScore !== undefined || item.date < todayStr);
+      if (isCompleted) return false;
+    }
 
     if (currentSelectedSport !== 'all' && item.sport !== currentSelectedSport) return false;
     if (activeLocFilter === 'home' && !item.isHome) return false;
@@ -5723,7 +5733,7 @@ function renderDailyView() {
   });
 
   // Calculate live counts for scope buttons
-  const todayCount = baseFiltered.filter(item => item.date === todayStr).length;
+  const todayCount = (currentSeason === '2026') ? baseFiltered.filter(item => item.date === todayStr).length : 0;
   const upcomingCount = baseFiltered.length;
 
   const scopeUpcomingBadge = document.getElementById('scope-upcoming-count');
@@ -5737,7 +5747,7 @@ function renderDailyView() {
 
   // Filter based on selected schedule scope
   const filtered = baseFiltered.filter(item => {
-    if (scheduleScope === 'today') {
+    if (currentSeason === '2026' && scheduleScope === 'today') {
       return item.date === todayStr;
     }
     return true;
@@ -6185,7 +6195,7 @@ function renderStandingsView() {
         <div class="standings-card-header">
           <div class="standings-title-group">
             <h3>🏆 ${sportKey}</h3>
-            <div class="standings-subtitle">${data.leagueName || 'Middlesex League'} • 2026 Fall Season</div>
+            <div class="standings-subtitle">${data.leagueName || 'Middlesex League'} • ${(typeof SEASONS_DATA !== 'undefined' && SEASONS_DATA[currentSeason] && SEASONS_DATA[currentSeason].label) ? SEASONS_DATA[currentSeason].label : ('Fall ' + currentSeason)}</div>
           </div>
           ${extLink}
         </div>
@@ -6497,10 +6507,16 @@ async function loadDynamicScoresAndStandings() {
     if (scoresResp.ok) {
       const scoresJson = await scoresResp.json();
       if (scoresJson && scoresJson.scores) {
-        applyScores(scoresJson.scores);
-        renderDailyView();
-        populateSportsView();
-        renderScoresView();
+        if (typeof SEASONS_DATA !== 'undefined' && SEASONS_DATA['2026']) {
+          SEASONS_DATA['2026'].scores = scoresJson.scores;
+        }
+        if (currentSeason === '2026') {
+          INITIAL_SCORES = scoresJson.scores;
+          applyScores(scoresJson.scores);
+          renderDailyView();
+          populateSportsView();
+          renderScoresView();
+        }
       }
     }
   } catch (e) {}
@@ -6510,24 +6526,36 @@ async function loadDynamicScoresAndStandings() {
     if (schedResp.ok) {
       const schedJson = await schedResp.json();
       if (schedJson && schedJson.schedule) {
-        let updated = false;
-        events.forEach(e => {
-          const key = e.sport + '|' + e.date;
-          if (schedJson.schedule[key]) {
-            const sc = schedJson.schedule[key];
-            if (typeof sc.isHome === 'boolean' && e.isHome !== sc.isHome) {
-              e.isHome = sc.isHome;
-              updated = true;
+        if (typeof SEASONS_DATA !== 'undefined' && SEASONS_DATA['2026'] && SEASONS_DATA['2026'].events) {
+          SEASONS_DATA['2026'].events.forEach(e => {
+            const key = e.sport + '|' + e.date;
+            if (schedJson.schedule[key]) {
+              const sc = schedJson.schedule[key];
+              if (typeof sc.isHome === 'boolean') e.isHome = sc.isHome;
+              if (sc.venue) e.venue = sc.venue;
             }
-            if (sc.venue && e.venue !== sc.venue) {
-              e.venue = sc.venue;
-              updated = true;
+          });
+        }
+        if (currentSeason === '2026') {
+          let updated = false;
+          events.forEach(e => {
+            const key = e.sport + '|' + e.date;
+            if (schedJson.schedule[key]) {
+              const sc = schedJson.schedule[key];
+              if (typeof sc.isHome === 'boolean' && e.isHome !== sc.isHome) {
+                e.isHome = sc.isHome;
+                updated = true;
+              }
+              if (sc.venue && e.venue !== sc.venue) {
+                e.venue = sc.venue;
+                updated = true;
+              }
             }
+          });
+          if (updated) {
+            renderDailyView();
+            if (typeof window.updateNextGameTicker === 'function') window.updateNextGameTicker();
           }
-        });
-        if (updated) {
-          renderDailyView();
-          if (typeof window.updateNextGameTicker === 'function') window.updateNextGameTicker();
         }
       }
     }
@@ -6538,8 +6566,14 @@ async function loadDynamicScoresAndStandings() {
     if (stdResp.ok) {
       const stdJson = await stdResp.json();
       if (stdJson && stdJson.standings) {
-        currentStandingsData = stdJson.standings;
-        renderStandingsView();
+        if (typeof SEASONS_DATA !== 'undefined' && SEASONS_DATA['2026']) {
+          SEASONS_DATA['2026'].standings = stdJson.standings;
+        }
+        if (currentSeason === '2026') {
+          INITIAL_STANDINGS = stdJson.standings;
+          currentStandingsData = stdJson.standings;
+          renderStandingsView();
+        }
       }
     }
   } catch (e) {}
@@ -6550,9 +6584,15 @@ async function loadDynamicScoresAndStandings() {
       const plyJson = await plyResp.json();
       const pMap = plyJson && (plyJson.sports || plyJson.players || plyJson);
       if (pMap && (pMap["Girls' Volleyball"] || pMap["Football"])) {
-        currentPlayersData = pMap;
-        if (currentStandingsScope === 'players') {
-          renderPlayersView();
+        if (typeof SEASONS_DATA !== 'undefined' && SEASONS_DATA['2026']) {
+          SEASONS_DATA['2026'].players = pMap;
+        }
+        if (currentSeason === '2026') {
+          INITIAL_PLAYERS = pMap;
+          currentPlayersData = pMap;
+          if (currentStandingsScope === 'players') {
+            renderPlayersView();
+          }
         }
       }
     }
