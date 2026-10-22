@@ -170,7 +170,84 @@ def fetch_volleyball_set_scores(match_url):
                 return sets
     except Exception:
         pass
-    return None
+GIRLS_VOLLEYBALL_JERSEYS = {
+    "Gen Overlan": "1",
+    "Anna Burns": "2",
+    "Kayla Ton": "3",
+    "Leila Kiggundu": "4",
+    "Sadie Smith": "6",
+    "Dani DiGiorgio": "7",
+    "Daniella DiGiorgio": "7",
+    "Amelie Johnson": "8",
+    "Adriana Santoriello": "9",
+    "Alisa Dautovic": "10",
+    "Maggie Shoemaker": "11",
+    "Mia Sasso": "12",
+    "Sabrina McArt": "13",
+    "Ella Friedlaender": "14",
+    "Elise Marchais": "15",
+    "Sabine Wenzel": "16",
+    "Emme Boyer": "5",
+    "Adele Akland": "12",
+    "Juliet Chevalier": "18"
+}
+
+def fetch_volleyball_stats_2025():
+    url = "https://www.maxpreps.com/print/team_stats.aspx?admin=0&bygame=0&league=0&print=1&schoolid=59f88996-4098-48a1-84b5-eee8e5e833b9&ssid=758b6b67-5a8f-4d36-adbf-8a9d3ee48f81"
+    try:
+        html = fetch_url(url, timeout=10)
+        tables = re.findall(r"<table[^>]*>(.*?)</table>", html, re.DOTALL)
+        def clean(s): return re.sub(r"<[^>]+>", "", s).strip()
+
+        player_stats = {}
+        for idx, t in enumerate(tables):
+            ths = [clean(x) for x in re.findall(r"<th[^>]*>(.*?)</th>", t[:1500], re.DOTALL)]
+            rows = re.findall(r"<tr[^>]*>(.*?)</tr>", t, re.DOTALL)
+            for r in rows:
+                tds = [clean(c) for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", r, re.DOTALL)]
+                if not tds or tds[0] in ["Athlete Name", "Season Totals"]: continue
+                raw_name = tds[0]
+                m = re.match(r"^([A-Z])\.\s+([A-Za-z\'-]+)", raw_name)
+                if not m: continue
+                init, last = m.group(1).lower(), m.group(2).lower()
+                key = (init, last)
+                if key not in player_stats:
+                    player_stats[key] = {"kills": 0, "aces": 0, "digs": 0, "assists": 0, "blocks": 0, "points": 0}
+                
+                if idx == 0:
+                    if "K" in ths:
+                        k_idx = ths.index("K")
+                        if len(tds) > k_idx and tds[k_idx].isdigit():
+                            player_stats[key]["kills"] = int(tds[k_idx])
+                elif idx == 1:
+                    if "PTS" in ths:
+                        pts_idx = ths.index("PTS")
+                        if len(tds) > pts_idx and tds[pts_idx].isdigit():
+                            player_stats[key]["points"] = int(tds[pts_idx])
+                    if "A" in ths:
+                        a_idx = ths.index("A")
+                        if len(tds) > a_idx and tds[a_idx].isdigit():
+                            player_stats[key]["aces"] = int(tds[a_idx])
+                elif idx == 2:
+                    b_col = "Tot Blks" if "Tot Blks" in ths else ("BS" if "BS" in ths else None)
+                    if b_col and b_col in ths:
+                        b_idx = ths.index(b_col)
+                        if len(tds) > b_idx and tds[b_idx].isdigit():
+                            player_stats[key]["blocks"] = int(tds[b_idx])
+                elif idx == 3:
+                    if "D" in ths:
+                        d_idx = ths.index("D")
+                        if len(tds) > d_idx and tds[d_idx].isdigit():
+                            player_stats[key]["digs"] = int(tds[d_idx])
+                elif idx == 4:
+                    if "Ast" in ths:
+                        ast_idx = ths.index("Ast")
+                        if len(tds) > ast_idx and tds[ast_idx].isdigit():
+                            player_stats[key]["assists"] = int(tds[ast_idx])
+        return player_stats
+    except Exception as e:
+        print(f"  Error fetching volleyball stats: {e}")
+        return {}
 
 def extract_fall_2025():
     print("[*] Starting extraction of Fall 2025 data...")
@@ -178,6 +255,17 @@ def extract_fall_2025():
     scores = {}
     standings = {}
     players = {}
+    p2026_map = {}
+    if os.path.exists("players.json"):
+        try:
+            with open("players.json", "r", encoding="utf-8") as f:
+                p2026_data = json.load(f).get("sports", {})
+                for s_data in p2026_data.values():
+                    for p in s_data.get("roster", []):
+                        if p.get("fullName"):
+                            p2026_map[p["fullName"].strip().lower()] = p
+        except Exception:
+            pass
 
     # 1. Extract 5 MaxPreps Sports (Football, Boys Soccer, Girls Soccer, Volleyball, Field Hockey)
     for sport_label, cfg in SPORTS_CONFIG.items():
@@ -311,17 +399,48 @@ def extract_fall_2025():
             r_html = fetch_url(r_url)
             r_data = extract_next_data(r_html)
             roster = []
+            vb_stats_map = fetch_volleyball_stats_2025() if sport_label == "Girls' Volleyball" else {}
             if r_data:
                 athletes = r_data.get("props", {}).get("pageProps", {}).get("athleteData", [])
                 for a in athletes:
                     aid = a[4] if len(a) > 4 else ""
                     first = a[5] if len(a) > 5 else ""
                     last = a[6] if len(a) > 6 else ""
-                    jersey = str(a[7]) if len(a) > 7 and a[7] is not None and str(a[7]).strip() != "False" else ""
-                    pos = a[12] if len(a) > 12 and a[12] else ""
                     fullname = a[33] if len(a) > 33 and a[33] else f"{first} {last}".strip()
+
+                    # 1. Jersey number:
+                    # Index 8 is the true jersey on MaxPreps (index 7 is grade number like 11/12)
+                    jersey = ""
+                    raw_num = a[8] if len(a) > 8 and a[8] is not None and str(a[8]).strip() not in ["False", "None", ""] else ""
+                    if raw_num:
+                        jersey = str(raw_num).strip()
+
+                    if not jersey and sport_label == "Girls' Volleyball":
+                        jersey = GIRLS_VOLLEYBALL_JERSEYS.get(fullname, GIRLS_VOLLEYBALL_JERSEYS.get(f"{first} {last}", ""))
+
+                    if not jersey and fullname.lower() in p2026_map:
+                        jersey = p2026_map[fullname.lower()].get("jersey", "")
+
+                    pos = a[12] if len(a) > 12 and a[12] else ""
                     purl = a[31] if len(a) > 31 and a[31] else ""
                     yr = a[36] if len(a) > 36 and a[36] else ""
+
+                    # 2. Stats
+                    stats = {}
+                    if sport_label == "Girls' Volleyball" and vb_stats_map:
+                        init = first[0].lower() if first else ""
+                        key = (init, last.lower())
+                        if key in vb_stats_map:
+                            stats = vb_stats_map[key]
+                        else:
+                            matched_st = next((v for k, v in vb_stats_map.items() if k[1] == last.lower()), None)
+                            if matched_st:
+                                stats = matched_st
+
+                    if not stats:
+                        defaults = DEFAULT_CATEGORIES.get(sport_label, {"categories": []})
+                        stats = {cat["key"]: 0 for cat in defaults.get("categories", [])}
+
                     roster.append({
                         "id": aid,
                         "firstName": first,
@@ -331,7 +450,7 @@ def extract_fall_2025():
                         "position": pos,
                         "year": yr,
                         "profileUrl": purl,
-                        "stats": {}
+                        "stats": stats
                     })
 
             defaults = DEFAULT_CATEGORIES.get(sport_label, {"icon": "🏅", "categories": []})
@@ -342,7 +461,7 @@ def extract_fall_2025():
                     "categories": defaults["categories"],
                     "roster": roster
                 }
-                print(f"  Extracted roster: {len(roster)} players")
+                print(f"  Extracted roster: {len(roster)} players (stats mapped: {sum(1 for p in roster if any(v > 0 for v in p.get('stats', {}).values()))})")
         except Exception as e:
             print(f"  Error extracting roster: {e}")
 
