@@ -315,17 +315,18 @@ def extract_fall_2025():
                 athletes = r_data.get("props", {}).get("pageProps", {}).get("athleteData", [])
                 for a in athletes:
                     aid = a[4] if len(a) > 4 else ""
-                    first = a[0] if len(a) > 0 else ""
-                    last = a[1] if len(a) > 1 else ""
-                    jersey = str(a[2]) if len(a) > 2 and a[2] is not None else ""
-                    pos = a[3] if len(a) > 3 and a[3] else ""
-                    yr = a[6] if len(a) > 6 and a[6] else ""
-                    purl = a[10] if len(a) > 10 and a[10] else ""
+                    first = a[5] if len(a) > 5 else ""
+                    last = a[6] if len(a) > 6 else ""
+                    jersey = str(a[7]) if len(a) > 7 and a[7] is not None and str(a[7]).strip() != "False" else ""
+                    pos = a[12] if len(a) > 12 and a[12] else ""
+                    fullname = a[33] if len(a) > 33 and a[33] else f"{first} {last}".strip()
+                    purl = a[31] if len(a) > 31 and a[31] else ""
+                    yr = a[36] if len(a) > 36 and a[36] else ""
                     roster.append({
                         "id": aid,
                         "firstName": first,
                         "lastName": last,
-                        "fullName": f"{first} {last}".strip(),
+                        "fullName": fullname,
                         "jersey": jersey,
                         "position": pos,
                         "year": yr,
