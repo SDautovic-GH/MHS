@@ -10,6 +10,7 @@ A modern, standalone Progressive Web App (PWA) displaying the complete 2026 Fall
 - **Chronological & Sport Views**:
   - Master Date Schedule with quick search filter & Home/Away location pills.
   - Category view broken down by sport: Girls' Volleyball, Boys' Soccer, Girls' Soccer, Football, Field Hockey, Cross Country, and Golf.
+- **Multi-Season Architecture**: Seamlessly switch between Fall 2026 (Live) and Fall 2025 (Archive) schedules, game scores, set breakdowns, and league standings. Built to support Fall 2027, 2028, and beyond.
 - **100% Self-Contained**: Single-file architecture with zero external runtime dependencies.
 
 ## Live Website

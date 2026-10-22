@@ -1,0 +1,3594 @@
+{
+  "season": "2025",
+  "label": "Fall 2025",
+  "lastUpdated": "2026-10-22T11:59:21.627710",
+  "events": [
+    {
+      "date": "2025-08-20",
+      "time": "5:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Lynn Classical",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-08-20",
+      "time": "9:00 AM",
+      "sport": "Girls' Soccer",
+      "opp": "Waltham",
+      "isHome": false,
+      "venue": "Waltham"
+    },
+    {
+      "date": "2025-08-21",
+      "time": "1:00 PM",
+      "sport": "Field Hockey",
+      "opp": "Weston",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-08-21",
+      "time": "9:00 AM",
+      "sport": "Girls' Soccer",
+      "opp": "Waltham",
+      "isHome": false,
+      "venue": "Waltham"
+    },
+    {
+      "date": "2025-08-23",
+      "time": "10:00 AM",
+      "sport": "Football",
+      "opp": "Billerica",
+      "isHome": false,
+      "venue": "Billerica"
+    },
+    {
+      "date": "2025-08-26",
+      "time": "4:30 PM",
+      "sport": "Football",
+      "opp": "Masconomet Regional",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2025-08-26",
+      "time": "5:00 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Lynnfield",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-08-27",
+      "time": "5:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Beverly",
+      "isHome": false,
+      "venue": "Beverly"
+    },
+    {
+      "date": "2025-08-27",
+      "time": "6:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Billerica",
+      "isHome": false,
+      "venue": "Billerica"
+    },
+    {
+      "date": "2025-08-28",
+      "time": "5:00 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Marblehead",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-08-29",
+      "time": "11:00 AM",
+      "sport": "Boys' Soccer",
+      "opp": "Newton North",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-08-29",
+      "time": "4:00 PM",
+      "sport": "Football",
+      "opp": "Lynnfield",
+      "isHome": false,
+      "venue": "Lynnfield"
+    },
+    {
+      "date": "2025-08-30",
+      "time": "9:00 AM",
+      "sport": "Girls' Volleyball",
+      "opp": "Marblehead",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-09-01",
+      "time": "10:00 AM",
+      "sport": "Golf",
+      "opp": "Watertown",
+      "isHome": true,
+      "venue": "Bellevue Golf Club"
+    },
+    {
+      "date": "2025-09-02",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Belmont",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-02",
+      "time": "6:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Belmont",
+      "isHome": false,
+      "venue": "Belmont"
+    },
+    {
+      "date": "2025-09-03",
+      "time": "3:30 PM",
+      "sport": "Golf",
+      "opp": "Woburn",
+      "isHome": true,
+      "venue": "Bellevue Golf Club"
+    },
+    {
+      "date": "2025-09-03",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Belmont",
+      "isHome": false,
+      "venue": "Belmont"
+    },
+    {
+      "date": "2025-09-03",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Belmont",
+      "isHome": false,
+      "venue": "Belmont"
+    },
+    {
+      "date": "2025-09-04",
+      "time": "7:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-05",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-05",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-09-05",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Peabody",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2025-09-08",
+      "time": "6:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Reading",
+      "isHome": false,
+      "venue": "Reading"
+    },
+    {
+      "date": "2025-09-09",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Reading",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-09",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Reading",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-09-10",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2025-09-10",
+      "time": "6:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2025-09-11",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2025-09-11",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2025-09-12",
+      "time": "4:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Mansfield",
+      "isHome": false,
+      "venue": "Mansfield"
+    },
+    {
+      "date": "2025-09-12",
+      "time": "4:15 PM",
+      "sport": "Cross Country",
+      "opp": "@ TBA",
+      "isHome": false,
+      "venue": "@ TBA"
+    },
+    {
+      "date": "2025-09-12",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Reading",
+      "isHome": false,
+      "venue": "Reading"
+    },
+    {
+      "date": "2025-09-15",
+      "time": "2:06 PM",
+      "sport": "Golf",
+      "opp": "Winchester",
+      "isHome": false,
+      "venue": "Winchester"
+    },
+    {
+      "date": "2025-09-15",
+      "time": "4:00 PM",
+      "sport": "Cross Country",
+      "opp": "Arlington",
+      "isHome": false,
+      "venue": "Arlington"
+    },
+    {
+      "date": "2025-09-15",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Winchester",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-15",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Winchester",
+      "isHome": false,
+      "venue": "Winchester"
+    },
+    {
+      "date": "2025-09-16",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Winchester",
+      "isHome": false,
+      "venue": "Winchester"
+    },
+    {
+      "date": "2025-09-16",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Winchester",
+      "isHome": false,
+      "venue": "Winchester"
+    },
+    {
+      "date": "2025-09-18",
+      "time": "3:30 PM",
+      "sport": "Golf",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2025-09-18",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Wilmington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-19",
+      "time": "5:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Wilmington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-19",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Wilmington",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-09-19",
+      "time": "7:30 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Wilmington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-21",
+      "time": "6:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Peabody",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-22",
+      "time": "3:30 PM",
+      "sport": "Golf",
+      "opp": "Arlington",
+      "isHome": true,
+      "venue": "Bellevue Golf Club"
+    },
+    {
+      "date": "2025-09-22",
+      "time": "4:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Somerville",
+      "isHome": false,
+      "venue": "Somerville"
+    },
+    {
+      "date": "2025-09-22",
+      "time": "4:15 PM",
+      "sport": "Cross Country",
+      "opp": "Watertown",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-24",
+      "time": "3:30 PM",
+      "sport": "Golf",
+      "opp": "Belmont",
+      "isHome": true,
+      "venue": "Bellevue Golf Club"
+    },
+    {
+      "date": "2025-09-24",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Stoneham"
+    },
+    {
+      "date": "2025-09-24",
+      "time": "7:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Stoneham"
+    },
+    {
+      "date": "2025-09-25",
+      "time": "4:30 PM",
+      "sport": "Field Hockey",
+      "opp": "Stoneham",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-25",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Masconomet Regional",
+      "isHome": false,
+      "venue": "Masconomet Regional"
+    },
+    {
+      "date": "2025-09-25",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Stoneham",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-09-26",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Masconomet Regional",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-09-26",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Swampscott",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2025-09-27",
+      "time": "4:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Watertown",
+      "isHome": false,
+      "venue": "Watertown"
+    },
+    {
+      "date": "2025-09-27",
+      "time": "6:30 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Watertown",
+      "isHome": false,
+      "venue": "Watertown"
+    },
+    {
+      "date": "2025-09-29",
+      "time": "3:30 PM",
+      "sport": "Golf",
+      "opp": "Wilmington",
+      "isHome": true,
+      "venue": "Bellevue Golf Club"
+    },
+    {
+      "date": "2025-09-29",
+      "time": "4:00 PM",
+      "sport": "Cross Country",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Stoneham"
+    },
+    {
+      "date": "2025-09-29",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Watertown",
+      "isHome": false,
+      "venue": "Watertown"
+    },
+    {
+      "date": "2025-09-29",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Watertown",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-09-29",
+      "time": "6:30 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Lexington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-09-30",
+      "time": "3:45 PM",
+      "sport": "Golf",
+      "opp": "Lexington",
+      "isHome": false,
+      "venue": "Lexington"
+    },
+    {
+      "date": "2025-09-30",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Lexington",
+      "isHome": false,
+      "venue": "Lexington"
+    },
+    {
+      "date": "2025-09-30",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Ipswich",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-01",
+      "time": "8:00 AM",
+      "sport": "Golf",
+      "opp": "TBA",
+      "isHome": true,
+      "venue": "Bellevue Golf Club"
+    },
+    {
+      "date": "2025-10-03",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Lexington",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-03",
+      "time": "6:00 PM",
+      "sport": "Football",
+      "opp": "Woburn",
+      "isHome": false,
+      "venue": "Woburn"
+    },
+    {
+      "date": "2025-10-04",
+      "time": "2:00 PM",
+      "sport": "Field Hockey",
+      "opp": "Lexington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-06",
+      "time": "3:30 PM",
+      "sport": "Golf",
+      "opp": "Reading",
+      "isHome": false,
+      "venue": "Reading"
+    },
+    {
+      "date": "2025-10-06",
+      "time": "4:00 PM",
+      "sport": "Cross Country",
+      "opp": "Wilmington",
+      "isHome": false,
+      "venue": "Wilmington"
+    },
+    {
+      "date": "2025-10-06",
+      "time": "5:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Wilmington",
+      "isHome": false,
+      "venue": "Wilmington"
+    },
+    {
+      "date": "2025-10-06",
+      "time": "6:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Wilmington",
+      "isHome": false,
+      "venue": "Wilmington"
+    },
+    {
+      "date": "2025-10-07",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Wilmington",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-07",
+      "time": "6:00 PM",
+      "sport": "Field Hockey",
+      "opp": "Wilmington",
+      "isHome": false,
+      "venue": "Wilmington"
+    },
+    {
+      "date": "2025-10-08",
+      "time": "3:30 PM",
+      "sport": "Golf",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Bellevue Golf Club"
+    },
+    {
+      "date": "2025-10-08",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Arlington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-08",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Arlington",
+      "isHome": false,
+      "venue": "Arlington"
+    },
+    {
+      "date": "2025-10-09",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Arlington",
+      "isHome": false,
+      "venue": "Arlington"
+    },
+    {
+      "date": "2025-10-09",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Arlington",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-10",
+      "time": "4:00 PM",
+      "sport": "Field Hockey",
+      "opp": "Peabody",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-10",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Newburyport",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-10",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Burlington",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2025-10-11",
+      "time": "5:30 PM",
+      "sport": "Cross Country",
+      "opp": "TBA",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-13",
+      "time": "10:00 AM",
+      "sport": "Boys' Soccer",
+      "opp": "Wakefield",
+      "isHome": false,
+      "venue": "Wakefield"
+    },
+    {
+      "date": "2025-10-13",
+      "time": "10:00 AM",
+      "sport": "Field Hockey",
+      "opp": "Wakefield",
+      "isHome": false,
+      "venue": "Wakefield"
+    },
+    {
+      "date": "2025-10-13",
+      "time": "12:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Wakefield",
+      "isHome": false,
+      "venue": "Wakefield"
+    },
+    {
+      "date": "2025-10-13",
+      "time": "4:00 PM",
+      "sport": "Cross Country",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2025-10-14",
+      "time": "3:15 PM",
+      "sport": "Golf",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Stoneham"
+    },
+    {
+      "date": "2025-10-14",
+      "time": "6:00 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Wakefield",
+      "isHome": false,
+      "venue": "Wakefield"
+    },
+    {
+      "date": "2025-10-15",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Woburn",
+      "isHome": false,
+      "venue": "Woburn"
+    },
+    {
+      "date": "2025-10-15",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Westport",
+      "isHome": false,
+      "venue": "Westport"
+    },
+    {
+      "date": "2025-10-15",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Westport",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-16",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Woburn",
+      "isHome": false,
+      "venue": "Woburn"
+    },
+    {
+      "date": "2025-10-16",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Westport",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-16",
+      "time": "6:30 PM",
+      "sport": "Field Hockey",
+      "opp": "Westport",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-17",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Watertown",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2025-10-18",
+      "time": "2:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Duxbury",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-19",
+      "time": "7:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Burlington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-20",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Burlington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-20",
+      "time": "4:15 PM",
+      "sport": "Cross Country",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-20",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Burlington",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-20",
+      "time": "7:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Burlington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-20",
+      "time": "7:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Burlington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-22",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Stoneham",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-22",
+      "time": "6:00 PM",
+      "sport": "Field Hockey",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Stoneham"
+    },
+    {
+      "date": "2025-10-22",
+      "time": "7:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Stoneham"
+    },
+    {
+      "date": "2025-10-22",
+      "time": "7:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Stoneham"
+    },
+    {
+      "date": "2025-10-23",
+      "time": "10:00 AM",
+      "sport": "Football",
+      "opp": "Billerica",
+      "isHome": false,
+      "venue": "Billerica"
+    },
+    {
+      "date": "2025-10-23",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Watertown",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-23",
+      "time": "6:00 PM",
+      "sport": "Field Hockey",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Stoneham"
+    },
+    {
+      "date": "2025-10-24",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Watertown",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-24",
+      "time": "6:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Watertown",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-24",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Wilmington",
+      "isHome": false,
+      "venue": "Wilmington"
+    },
+    {
+      "date": "2025-10-26",
+      "time": "2:00 PM",
+      "sport": "Cross Country",
+      "opp": "TBA",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-27",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Watertown",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-27",
+      "time": "7:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Watertown",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-28",
+      "time": "12:00 AM",
+      "sport": "Girls' Volleyball",
+      "opp": "Arlington Catholic",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2025-10-29",
+      "time": "4:30 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Marblehead",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-10-30",
+      "time": "3:45 PM",
+      "sport": "Field Hockey",
+      "opp": "Canton",
+      "isHome": false,
+      "venue": "Canton"
+    },
+    {
+      "date": "2025-10-31",
+      "time": "5:00 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Hingham",
+      "isHome": false,
+      "venue": "Hingham"
+    },
+    {
+      "date": "2025-10-31",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Stoneham",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2025-11-03",
+      "time": "7:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Milton",
+      "isHome": false,
+      "venue": "Milton"
+    },
+    {
+      "date": "2025-11-04",
+      "time": "6:00 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Minnechaug Regional",
+      "isHome": false,
+      "venue": "Minnechaug Regional"
+    },
+    {
+      "date": "2025-11-07",
+      "time": "12:30 PM",
+      "sport": "Cross Country",
+      "opp": "TBA",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2025-11-07",
+      "time": "6:00 PM",
+      "sport": "Football",
+      "opp": "Masconomet Regional",
+      "isHome": false,
+      "venue": "Masconomet Regional"
+    },
+    {
+      "date": "2025-11-25",
+      "time": "4:00 PM",
+      "sport": "Football",
+      "opp": "Wakefield",
+      "isHome": false,
+      "venue": "Wakefield"
+    }
+  ],
+  "scores": {
+    "Football|2025-09-05": {
+      "sport": "Football",
+      "date": "2025-09-05",
+      "opponent": "Peabody Veterans Memorial",
+      "mhsScore": 21,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Football|2025-09-12": {
+      "sport": "Football",
+      "date": "2025-09-12",
+      "opponent": "Reading Memorial",
+      "mhsScore": 12,
+      "oppScore": 36,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Football|2025-09-26": {
+      "sport": "Football",
+      "date": "2025-09-26",
+      "opponent": "Swampscott",
+      "mhsScore": 20,
+      "oppScore": 6,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Football|2025-10-03": {
+      "sport": "Football",
+      "date": "2025-10-03",
+      "opponent": "Woburn Memorial",
+      "mhsScore": 21,
+      "oppScore": 7,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Football|2025-10-10": {
+      "sport": "Football",
+      "date": "2025-10-10",
+      "opponent": "Burlington",
+      "mhsScore": 21,
+      "oppScore": 28,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Football|2025-10-17": {
+      "sport": "Football",
+      "date": "2025-10-17",
+      "opponent": "Watertown",
+      "mhsScore": 21,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Football|2025-10-24": {
+      "sport": "Football",
+      "date": "2025-10-24",
+      "opponent": "Wilmington",
+      "mhsScore": 21,
+      "oppScore": 14,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Football|2025-10-31": {
+      "sport": "Football",
+      "date": "2025-10-31",
+      "opponent": "Stoneham",
+      "mhsScore": 7,
+      "oppScore": 12,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Football|2025-11-07": {
+      "sport": "Football",
+      "date": "2025-11-07",
+      "opponent": "Masconomet Regional",
+      "mhsScore": 14,
+      "oppScore": 34,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Football|2025-11-25": {
+      "sport": "Football",
+      "date": "2025-11-25",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 9,
+      "oppScore": 20,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-08-20": {
+      "sport": "Boys' Soccer",
+      "date": "2025-08-20",
+      "opponent": "Lynn Classical",
+      "mhsScore": 2,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-08-27": {
+      "sport": "Boys' Soccer",
+      "date": "2025-08-27",
+      "opponent": "Beverly",
+      "mhsScore": 0,
+      "oppScore": 1,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-09-02": {
+      "sport": "Boys' Soccer",
+      "date": "2025-09-02",
+      "opponent": "Belmont",
+      "mhsScore": 0,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-09-04": {
+      "sport": "Boys' Soccer",
+      "date": "2025-09-04",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 1,
+      "oppScore": 1,
+      "result": "T",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-09-08": {
+      "sport": "Boys' Soccer",
+      "date": "2025-09-08",
+      "opponent": "Reading Memorial",
+      "mhsScore": 1,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-09-10": {
+      "sport": "Boys' Soccer",
+      "date": "2025-09-10",
+      "opponent": "Burlington",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-09-15": {
+      "sport": "Boys' Soccer",
+      "date": "2025-09-15",
+      "opponent": "Winchester",
+      "mhsScore": 3,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-09-19": {
+      "sport": "Boys' Soccer",
+      "date": "2025-09-19",
+      "opponent": "Wilmington",
+      "mhsScore": 5,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-09-22": {
+      "sport": "Boys' Soccer",
+      "date": "2025-09-22",
+      "opponent": "Somerville",
+      "mhsScore": 0,
+      "oppScore": 0,
+      "result": "T",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-09-24": {
+      "sport": "Boys' Soccer",
+      "date": "2025-09-24",
+      "opponent": "Stoneham",
+      "mhsScore": 1,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-09-27": {
+      "sport": "Boys' Soccer",
+      "date": "2025-09-27",
+      "opponent": "Watertown",
+      "mhsScore": 2,
+      "oppScore": 4,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-09-30": {
+      "sport": "Boys' Soccer",
+      "date": "2025-09-30",
+      "opponent": "Lexington",
+      "mhsScore": 2,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-10-06": {
+      "sport": "Boys' Soccer",
+      "date": "2025-10-06",
+      "opponent": "Wilmington",
+      "mhsScore": 1,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-10-08": {
+      "sport": "Boys' Soccer",
+      "date": "2025-10-08",
+      "opponent": "Arlington",
+      "mhsScore": 0,
+      "oppScore": 2,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-10-13": {
+      "sport": "Boys' Soccer",
+      "date": "2025-10-13",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 1,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-10-15": {
+      "sport": "Boys' Soccer",
+      "date": "2025-10-15",
+      "opponent": "Woburn Memorial",
+      "mhsScore": 1,
+      "oppScore": 2,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-10-20": {
+      "sport": "Boys' Soccer",
+      "date": "2025-10-20",
+      "opponent": "Burlington",
+      "mhsScore": 3,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-10-22": {
+      "sport": "Boys' Soccer",
+      "date": "2025-10-22",
+      "opponent": "Stoneham",
+      "mhsScore": 2,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-10-27": {
+      "sport": "Boys' Soccer",
+      "date": "2025-10-27",
+      "opponent": "Watertown",
+      "mhsScore": 0,
+      "oppScore": 2,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-10-29": {
+      "sport": "Boys' Soccer",
+      "date": "2025-10-29",
+      "opponent": "Marblehead",
+      "mhsScore": 2,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2025-11-03": {
+      "sport": "Boys' Soccer",
+      "date": "2025-11-03",
+      "opponent": "Milton",
+      "mhsScore": 1,
+      "oppScore": 2,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2025-09-02": {
+      "sport": "Girls' Soccer",
+      "date": "2025-09-02",
+      "opponent": "Belmont",
+      "mhsScore": 0,
+      "oppScore": 2,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2025-09-10": {
+      "sport": "Girls' Soccer",
+      "date": "2025-09-10",
+      "opponent": "Burlington",
+      "mhsScore": 4,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2025-09-15": {
+      "sport": "Girls' Soccer",
+      "date": "2025-09-15",
+      "opponent": "Winchester",
+      "mhsScore": 0,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2025-10-06": {
+      "sport": "Girls' Soccer",
+      "date": "2025-10-06",
+      "opponent": "Wilmington",
+      "mhsScore": 0,
+      "oppScore": 1,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2025-11-04": {
+      "sport": "Girls' Soccer",
+      "date": "2025-11-04",
+      "opponent": "Minnechaug Regional",
+      "mhsScore": 1,
+      "oppScore": 2,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2025-09-03": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-09-03",
+      "opponent": "Belmont",
+      "mhsScore": 3,
+      "oppScore": 2,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "20-25",
+          "win": false
+        },
+        {
+          "label": "Set 2",
+          "score": "19-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "25-21",
+          "win": true
+        },
+        {
+          "label": "Set 4",
+          "score": "25-19",
+          "win": true
+        },
+        {
+          "label": "Set 5",
+          "score": "15-10",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-09-05": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-09-05",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-20",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-22",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-18",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-09-09": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-09-09",
+      "opponent": "Reading Memorial",
+      "mhsScore": 1,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-20",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "12-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "15-25",
+          "win": false
+        },
+        {
+          "label": "Set 4",
+          "score": "22-25",
+          "win": false
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-09-11": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-09-11",
+      "opponent": "Burlington",
+      "mhsScore": 1,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-22",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "19-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "19-25",
+          "win": false
+        },
+        {
+          "label": "Set 4",
+          "score": "16-25",
+          "win": false
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-09-16": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-09-16",
+      "opponent": "Winchester",
+      "mhsScore": 0,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "14-25",
+          "win": false
+        },
+        {
+          "label": "Set 2",
+          "score": "20-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "12-25",
+          "win": false
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-09-19": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-09-19",
+      "opponent": "Wilmington",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-17",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-9",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-11",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-09-25": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-09-25",
+      "opponent": "Stoneham",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-13",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-9",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-12",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-09-26": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-09-26",
+      "opponent": "Masconomet Regional",
+      "mhsScore": 3,
+      "oppScore": 2,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-16",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-19",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "16-25",
+          "win": false
+        },
+        {
+          "label": "Set 4",
+          "score": "22-25",
+          "win": false
+        },
+        {
+          "label": "Set 5",
+          "score": "15-13",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-09-29": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-09-29",
+      "opponent": "Watertown",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-8",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-12",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-10",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-09-30": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-09-30",
+      "opponent": "Ipswich",
+      "mhsScore": 3,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-23",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "21-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "25-15",
+          "win": true
+        },
+        {
+          "label": "Set 4",
+          "score": "25-10",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-10-03": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-10-03",
+      "opponent": "Lexington",
+      "mhsScore": 3,
+      "oppScore": 2,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-21",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "23-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "21-25",
+          "win": false
+        },
+        {
+          "label": "Set 4",
+          "score": "25-5",
+          "win": true
+        },
+        {
+          "label": "Set 5",
+          "score": "15-8",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-10-07": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-10-07",
+      "opponent": "Wilmington",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-10",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-11",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-8",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-10-09": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-10-09",
+      "opponent": "Arlington",
+      "mhsScore": 3,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-18",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "11-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "25-15",
+          "win": true
+        },
+        {
+          "label": "Set 4",
+          "score": "25-21",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-10-10": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-10-10",
+      "opponent": "Newburyport",
+      "mhsScore": 2,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-22",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-18",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "22-25",
+          "win": false
+        },
+        {
+          "label": "Set 4",
+          "score": "24-26",
+          "win": false
+        },
+        {
+          "label": "Set 5",
+          "score": "12-15",
+          "win": false
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-10-14": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-10-14",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 0,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "18-25",
+          "win": false
+        },
+        {
+          "label": "Set 2",
+          "score": "23-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "23-25",
+          "win": false
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-10-16": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-10-16",
+      "opponent": "Woburn Memorial",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-18",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-22",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-18",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-10-18": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-10-18",
+      "opponent": "Duxbury",
+      "mhsScore": 0,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "20-25",
+          "win": false
+        },
+        {
+          "label": "Set 2",
+          "score": "18-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "18-25",
+          "win": false
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-10-20": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-10-20",
+      "opponent": "Burlington",
+      "mhsScore": 2,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "17-25",
+          "win": false
+        },
+        {
+          "label": "Set 2",
+          "score": "25-19",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-13",
+          "win": true
+        },
+        {
+          "label": "Set 4",
+          "score": "15-25",
+          "win": false
+        },
+        {
+          "label": "Set 5",
+          "score": "13-15",
+          "win": false
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-10-22": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-10-22",
+      "opponent": "Stoneham",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-8",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-11",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-12",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-10-24": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-10-24",
+      "opponent": "Watertown",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-17",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-12",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-16",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2025-10-31": {
+      "sport": "Girls' Volleyball",
+      "date": "2025-10-31",
+      "opponent": "Hingham",
+      "mhsScore": 1,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "19-25",
+          "win": false
+        },
+        {
+          "label": "Set 2",
+          "score": "24-26",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "25-22",
+          "win": true
+        },
+        {
+          "label": "Set 4",
+          "score": "17-25",
+          "win": false
+        }
+      ]
+    },
+    "Field Hockey|2025-09-03": {
+      "sport": "Field Hockey",
+      "date": "2025-09-03",
+      "opponent": "Belmont",
+      "mhsScore": 0,
+      "oppScore": 9,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2025-09-05": {
+      "sport": "Field Hockey",
+      "date": "2025-09-05",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 6,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2025-09-09": {
+      "sport": "Field Hockey",
+      "date": "2025-09-09",
+      "opponent": "Reading Memorial",
+      "mhsScore": 0,
+      "oppScore": 4,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2025-09-11": {
+      "sport": "Field Hockey",
+      "date": "2025-09-11",
+      "opponent": "Burlington",
+      "mhsScore": 1,
+      "oppScore": 1,
+      "result": "T",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2025-09-16": {
+      "sport": "Field Hockey",
+      "date": "2025-09-16",
+      "opponent": "Winchester",
+      "mhsScore": 0,
+      "oppScore": 6,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Golf|2025-09-01": {
+      "sport": "Golf",
+      "date": "2025-09-01",
+      "opponent": "Watertown High School",
+      "mhsScore": 52.5,
+      "oppScore": 19.5,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    },
+    "Golf|2025-09-03": {
+      "sport": "Golf",
+      "date": "2025-09-03",
+      "opponent": "Woburn Memorial High School",
+      "mhsScore": 47.5,
+      "oppScore": 24.5,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    },
+    "Golf|2025-09-15": {
+      "sport": "Golf",
+      "date": "2025-09-15",
+      "opponent": "Winchester High School",
+      "mhsScore": 30.5,
+      "oppScore": 41.5,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Golf|2025-09-18": {
+      "sport": "Golf",
+      "date": "2025-09-18",
+      "opponent": "Burlington High School",
+      "mhsScore": 35,
+      "oppScore": 37,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Golf|2025-09-22": {
+      "sport": "Golf",
+      "date": "2025-09-22",
+      "opponent": "Arlington High School",
+      "mhsScore": 41,
+      "oppScore": 31,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    },
+    "Golf|2025-09-24": {
+      "sport": "Golf",
+      "date": "2025-09-24",
+      "opponent": "Belmont High School",
+      "mhsScore": 37,
+      "oppScore": 35,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    },
+    "Golf|2025-09-29": {
+      "sport": "Golf",
+      "date": "2025-09-29",
+      "opponent": "Wilmington High School",
+      "mhsScore": 47.5,
+      "oppScore": 24.5,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    },
+    "Golf|2025-09-30": {
+      "sport": "Golf",
+      "date": "2025-09-30",
+      "opponent": "Lexington High School",
+      "mhsScore": 31.5,
+      "oppScore": 40.5,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Golf|2025-10-06": {
+      "sport": "Golf",
+      "date": "2025-10-06",
+      "opponent": "Reading Memorial High School",
+      "mhsScore": 34,
+      "oppScore": 38,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Golf|2025-10-08": {
+      "sport": "Golf",
+      "date": "2025-10-08",
+      "opponent": "Wakefield Memorial High School",
+      "mhsScore": 33.5,
+      "oppScore": 38.5,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    },
+    "Golf|2025-10-14": {
+      "sport": "Golf",
+      "date": "2025-10-14",
+      "opponent": "Stoneham High School",
+      "mhsScore": 25,
+      "oppScore": 47,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2025-09-22": {
+      "sport": "Cross Country",
+      "date": "2025-09-22",
+      "opponent": "Watertown High School",
+      "mhsScore": 15,
+      "oppScore": 50,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2025-09-29": {
+      "sport": "Cross Country",
+      "date": "2025-09-29",
+      "opponent": "Stoneham High School",
+      "mhsScore": 15,
+      "oppScore": 50,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2025-10-06": {
+      "sport": "Cross Country",
+      "date": "2025-10-06",
+      "opponent": "Wilmington High School",
+      "mhsScore": 27,
+      "oppScore": 28,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2025-10-13": {
+      "sport": "Cross Country",
+      "date": "2025-10-13",
+      "opponent": "Burlington High School",
+      "mhsScore": 37,
+      "oppScore": 22,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2025-10-20": {
+      "sport": "Cross Country",
+      "date": "2025-10-20",
+      "opponent": "Wakefield Memorial High School",
+      "mhsScore": 30,
+      "oppScore": 28,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    }
+  },
+  "standings": {
+    "Football": {
+      "leagueName": "Middlesex - Freedom League",
+      "leagueUrl": "https://www.maxpreps.com/ma/football/25-26/league/middlesex--freedom/?leagueid=870dca9b-8c80-43b8-b54b-d0e08b34bc7f",
+      "lastUpdated": "2026-10-22 11:59:02",
+      "teams": [
+        {
+          "rank": "1",
+          "school": "Burlington",
+          "confRecord": "5-0",
+          "confPct": "1.000",
+          "overallRecord": "145",
+          "overallPct": "55",
+          "streak": "2L",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "2",
+          "school": "Wilmington",
+          "confRecord": "3-2",
+          "confPct": "0.600",
+          "overallRecord": "104",
+          "overallPct": "93",
+          "streak": "2L",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "3",
+          "school": "Stoneham",
+          "confRecord": "3-2",
+          "confPct": "0.600",
+          "overallRecord": "64",
+          "overallPct": "69",
+          "streak": "2L",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "4",
+          "school": "Wakefield Memorial",
+          "confRecord": "2-3",
+          "confPct": "0.400",
+          "overallRecord": "83",
+          "overallPct": "101",
+          "streak": "1W",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "5",
+          "school": "Melrose",
+          "confRecord": "2-3",
+          "confPct": "0.400",
+          "overallRecord": "79",
+          "overallPct": "74",
+          "streak": "3L",
+          "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": true
+        },
+        {
+          "rank": "6",
+          "school": "Watertown",
+          "confRecord": "0-5",
+          "confPct": "0.000",
+          "overallRecord": "46",
+          "overallPct": "129",
+          "streak": "1W",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        }
+      ]
+    },
+    "Boys' Soccer": {
+      "leagueName": "Middlesex League",
+      "leagueUrl": "https://www.maxpreps.com/ma/soccer/25-26/league/middlesex/?leagueid=df178533-4484-489d-be1c-24bdcdc341c3",
+      "lastUpdated": "2026-10-22 11:59:04",
+      "teams": [
+        {
+          "rank": "1",
+          "school": "Arlington",
+          "confRecord": "13-1-2",
+          "confPct": "0.875",
+          "overallRecord": "50",
+          "overallPct": "8",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "2",
+          "school": "Lexington",
+          "confRecord": "11-2-3",
+          "confPct": "0.781",
+          "overallRecord": "35",
+          "overallPct": "13",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "3",
+          "school": "WWinchester",
+          "confRecord": "9-3-4",
+          "confPct": "0.688",
+          "overallRecord": "35",
+          "overallPct": "14",
+          "streak": "1L",
+          "mascot": "",
+          "isMHS": false
+        },
+        {
+          "rank": "4",
+          "school": "Watertown",
+          "confRecord": "8-2-6",
+          "confPct": "0.688",
+          "overallRecord": "41",
+          "overallPct": "21",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "5",
+          "school": "Wakefield Memorial",
+          "confRecord": "9-5-3",
+          "confPct": "0.618",
+          "overallRecord": "35",
+          "overallPct": "21",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "6",
+          "school": "Reading Memorial",
+          "confRecord": "8-6-3",
+          "confPct": "0.559",
+          "overallRecord": "34",
+          "overallPct": "29",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "7",
+          "school": "Belmont",
+          "confRecord": "6-6-4",
+          "confPct": "0.500",
+          "overallRecord": "23",
+          "overallPct": "29",
+          "streak": "1T",
+          "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "8",
+          "school": "Melrose",
+          "confRecord": "7-8-1",
+          "confPct": "0.469",
+          "overallRecord": "26",
+          "overallPct": "25",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": true
+        },
+        {
+          "rank": "9",
+          "school": "Woburn Memorial",
+          "confRecord": "5-9-2",
+          "confPct": "0.375",
+          "overallRecord": "25",
+          "overallPct": "28",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "10",
+          "school": "Burlington",
+          "confRecord": "2-12-1",
+          "confPct": "0.167",
+          "overallRecord": "12",
+          "overallPct": "49",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "11",
+          "school": "Stoneham",
+          "confRecord": "1-12-2",
+          "confPct": "0.133",
+          "overallRecord": "13",
+          "overallPct": "54",
+          "streak": "3L",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "12",
+          "school": "Wilmington",
+          "confRecord": "0-13-3",
+          "confPct": "0.000",
+          "overallRecord": "8",
+          "overallPct": "46",
+          "streak": "4L",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        }
+      ]
+    },
+    "Girls' Soccer": {
+      "leagueName": "Middlesex League",
+      "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/25-26/league/middlesex/?leagueid=2085ad7c-d0cb-437a-922e-95990e56e5c7",
+      "lastUpdated": "2026-10-22 11:59:05",
+      "teams": [
+        {
+          "rank": "1",
+          "school": "WWinchester",
+          "confRecord": "10-1-1",
+          "confPct": "0.875",
+          "overallRecord": "35",
+          "overallPct": "6",
+          "streak": "1L",
+          "mascot": "",
+          "isMHS": false
+        },
+        {
+          "rank": "2",
+          "school": "Belmont",
+          "confRecord": "9-1-2",
+          "confPct": "0.833",
+          "overallRecord": "46",
+          "overallPct": "5",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "3",
+          "school": "Wilmington",
+          "confRecord": "4-2-1",
+          "confPct": "0.643",
+          "overallRecord": "9",
+          "overallPct": "6",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "4",
+          "school": "Lexington",
+          "confRecord": "4-3",
+          "confPct": "0.571",
+          "overallRecord": "11",
+          "overallPct": "5",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "5",
+          "school": "Burlington",
+          "confRecord": "3-4",
+          "confPct": "0.429",
+          "overallRecord": "15",
+          "overallPct": "18",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "6",
+          "school": "Wakefield Memorial",
+          "confRecord": "2-4",
+          "confPct": "0.333",
+          "overallRecord": "8",
+          "overallPct": "16",
+          "streak": "2L",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "7",
+          "school": "Melrose",
+          "confRecord": "1-3",
+          "confPct": "0.250",
+          "overallRecord": "4",
+          "overallPct": "6",
+          "streak": "3L",
+          "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": true
+        },
+        {
+          "rank": "8",
+          "school": "Watertown",
+          "confRecord": "1-6-1",
+          "confPct": "0.188",
+          "overallRecord": "7",
+          "overallPct": "32",
+          "streak": "5L",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "9",
+          "school": "Reading Memorial",
+          "confRecord": "0-5-1",
+          "confPct": "0.000",
+          "overallRecord": "2",
+          "overallPct": "20",
+          "streak": "4L",
+          "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "10",
+          "school": "Stoneham",
+          "confRecord": "0-5",
+          "confPct": "0.000",
+          "overallRecord": "2",
+          "overallPct": "25",
+          "streak": "7L",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "11",
+          "school": "Woburn Memorial",
+          "confRecord": "0-0",
+          "confPct": "0.000",
+          "overallRecord": "0",
+          "overallPct": "0",
+          "streak": "0",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        }
+      ]
+    },
+    "Girls' Volleyball": {
+      "leagueName": "Middlesex League",
+      "leagueUrl": "https://www.maxpreps.com/ma/volleyball/25-26/league/middlesex/?leagueid=f6a559a5-0aad-4446-a0bc-ab86dc2ba4c4",
+      "lastUpdated": "2026-10-22 11:59:19",
+      "teams": [
+        {
+          "rank": "1",
+          "school": "WWinchester",
+          "confRecord": "16-0",
+          "confPct": "1.000",
+          "overallRecord": "48",
+          "overallPct": "1",
+          "streak": "1L",
+          "mascot": "",
+          "isMHS": false
+        },
+        {
+          "rank": "2",
+          "school": "Wakefield Memorial",
+          "confRecord": "13-3",
+          "confPct": "0.812",
+          "overallRecord": "42",
+          "overallPct": "15",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "3",
+          "school": "Burlington",
+          "confRecord": "13-3",
+          "confPct": "0.812",
+          "overallRecord": "42",
+          "overallPct": "17",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "4",
+          "school": "Reading Memorial",
+          "confRecord": "12-4",
+          "confPct": "0.750",
+          "overallRecord": "39",
+          "overallPct": "22",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "5",
+          "school": "Melrose",
+          "confRecord": "11-5",
+          "confPct": "0.688",
+          "overallRecord": "37",
+          "overallPct": "20",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": true
+        },
+        {
+          "rank": "6",
+          "school": "Belmont",
+          "confRecord": "9-7",
+          "confPct": "0.562",
+          "overallRecord": "36",
+          "overallPct": "25",
+          "streak": "2L",
+          "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "7",
+          "school": "Woburn Memorial",
+          "confRecord": "8-8",
+          "confPct": "0.500",
+          "overallRecord": "26",
+          "overallPct": "31",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "8",
+          "school": "Lexington",
+          "confRecord": "5-11",
+          "confPct": "0.312",
+          "overallRecord": "24",
+          "overallPct": "35",
+          "streak": "1W",
+          "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "9",
+          "school": "Stoneham",
+          "confRecord": "5-11",
+          "confPct": "0.312",
+          "overallRecord": "18",
+          "overallPct": "36",
+          "streak": "5L",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "10",
+          "school": "Arlington",
+          "confRecord": "2-14",
+          "confPct": "0.125",
+          "overallRecord": "14",
+          "overallPct": "43",
+          "streak": "3L",
+          "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "11",
+          "school": "Watertown",
+          "confRecord": "2-14",
+          "confPct": "0.125",
+          "overallRecord": "6",
+          "overallPct": "44",
+          "streak": "3L",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "12",
+          "school": "Wilmington",
+          "confRecord": "0-16",
+          "confPct": "0.000",
+          "overallRecord": "5",
+          "overallPct": "48",
+          "streak": "20L",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        }
+      ]
+    },
+    "Field Hockey": {
+      "leagueName": "Middlesex League",
+      "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/25-26/league/middlesex/?leagueid=b9fa1f52-50b1-4a8f-a8d8-2b37fe684fb8",
+      "lastUpdated": "2026-10-22 11:59:20",
+      "teams": [
+        {
+          "rank": "1",
+          "school": "WWinchester",
+          "confRecord": "13-1-1",
+          "confPct": "0.900",
+          "overallRecord": "53",
+          "overallPct": "10",
+          "streak": "1L",
+          "mascot": "",
+          "isMHS": false
+        },
+        {
+          "rank": "2",
+          "school": "Belmont",
+          "confRecord": "9-1-1",
+          "confPct": "0.864",
+          "overallRecord": "47",
+          "overallPct": "7",
+          "streak": "1W",
+          "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "3",
+          "school": "Watertown",
+          "confRecord": "6-1",
+          "confPct": "0.857",
+          "overallRecord": "28",
+          "overallPct": "6",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "4",
+          "school": "Burlington",
+          "confRecord": "4-5-3",
+          "confPct": "0.458",
+          "overallRecord": "11",
+          "overallPct": "24",
+          "streak": "1T",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "5",
+          "school": "Reading Memorial",
+          "confRecord": "3-4-1",
+          "confPct": "0.438",
+          "overallRecord": "14",
+          "overallPct": "9",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "6",
+          "school": "Lexington",
+          "confRecord": "4-6-1",
+          "confPct": "0.409",
+          "overallRecord": "26",
+          "overallPct": "22",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "7",
+          "school": "Arlington",
+          "confRecord": "2-6-2",
+          "confPct": "0.300",
+          "overallRecord": "5",
+          "overallPct": "24",
+          "streak": "3L",
+          "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "8",
+          "school": "Melrose",
+          "confRecord": "1-3-1",
+          "confPct": "0.300",
+          "overallRecord": "7",
+          "overallPct": "21",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": true
+        },
+        {
+          "rank": "9",
+          "school": "Wilmington",
+          "confRecord": "1-5-2",
+          "confPct": "0.250",
+          "overallRecord": "6",
+          "overallPct": "31",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "10",
+          "school": "Woburn Memorial",
+          "confRecord": "0-1",
+          "confPct": "0.000",
+          "overallRecord": "1",
+          "overallPct": "5",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "11",
+          "school": "Stoneham",
+          "confRecord": "0-4-4",
+          "confPct": "0.000",
+          "overallRecord": "1",
+          "overallPct": "15",
+          "streak": "3T",
+          "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        },
+        {
+          "rank": "12",
+          "school": "Wakefield Memorial",
+          "confRecord": "0-6-2",
+          "confPct": "0.000",
+          "overallRecord": "4",
+          "overallPct": "29",
+          "streak": "2T",
+          "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&amp;width=32&amp;height=32&amp;auto=webp&amp;format=pjpg",
+          "isMHS": false
+        }
+      ]
+    }
+  },
+  "players": {
+    "Football": {
+      "sport": "Football",
+      "icon": "\ud83c\udfc8",
+      "categories": [
+        {
+          "key": "passYds",
+          "label": "Pass Yds",
+          "short": "PASS"
+        },
+        {
+          "key": "rushYds",
+          "label": "Rush Yds",
+          "short": "RUSH"
+        },
+        {
+          "key": "recYds",
+          "label": "Rec Yds",
+          "short": "REC"
+        },
+        {
+          "key": "totalTD",
+          "label": "Touchdowns",
+          "short": "TD"
+        },
+        {
+          "key": "tackles",
+          "label": "Tackles",
+          "short": "TCK"
+        }
+      ],
+      "roster": [
+        {
+          "id": "d67b1dc4-bfea-4ed8-9095-13f8c9204cdf",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Cinella",
+          "profileUrl": 5,
+          "stats": {}
+        },
+        {
+          "id": "2255bd31-45fb-4641-8251-84ce0c3a2be5",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Lanciani",
+          "profileUrl": 6,
+          "stats": {}
+        },
+        {
+          "id": "8ab1a964-2f71-43c8-87c8-5d4b749831eb",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Hoag",
+          "profileUrl": 5,
+          "stats": {}
+        },
+        {
+          "id": "5df63dc4-16e9-4e7d-a35c-9ae29dbc5983",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Feeney",
+          "profileUrl": 5,
+          "stats": {}
+        },
+        {
+          "id": "5ba0f2e0-3cf2-40fa-b7ce-0f94fd4adaf0",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Zarella",
+          "profileUrl": 5,
+          "stats": {}
+        },
+        {
+          "id": "79cb96cd-f1a2-45df-b19e-a1d87b18f1e4",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Mestjian",
+          "profileUrl": 5,
+          "stats": {}
+        },
+        {
+          "id": "5f8daf26-5139-4a12-84d2-dd4d1d5d356b",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Garipay",
+          "profileUrl": 5,
+          "stats": {}
+        },
+        {
+          "id": "3cc286b4-f7b2-4f10-a4a1-9c6bf040c14a",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Teixeira",
+          "profileUrl": 5,
+          "stats": {}
+        },
+        {
+          "id": "a2f08a3c-ee9f-4bd3-99dc-b193915dfe23",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Federico",
+          "profileUrl": 5,
+          "stats": {}
+        },
+        {
+          "id": "c974ec35-c26f-4f17-80a4-4f92e2689e51",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Harrison",
+          "profileUrl": 6,
+          "stats": {}
+        },
+        {
+          "id": "cd8a11b1-c0ed-4f79-b8aa-9c71b86c8fbf",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Clark",
+          "profileUrl": 5,
+          "stats": {}
+        },
+        {
+          "id": "09c13388-cf96-4c85-89af-4d9f7a5fde58",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Kanu",
+          "profileUrl": 5,
+          "stats": {}
+        },
+        {
+          "id": "5abf2baf-337f-4510-8744-bcee3154f970",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Barrington",
+          "profileUrl": 6,
+          "stats": {}
+        }
+      ]
+    },
+    "Boys' Soccer": {
+      "sport": "Boys' Soccer",
+      "icon": "\u26bd",
+      "categories": [
+        {
+          "key": "goals",
+          "label": "Goals",
+          "short": "G"
+        },
+        {
+          "key": "assists",
+          "label": "Assists",
+          "short": "A"
+        },
+        {
+          "key": "points",
+          "label": "Points",
+          "short": "PTS"
+        },
+        {
+          "key": "shots",
+          "label": "Shots",
+          "short": "SH"
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "short": "SV"
+        }
+      ],
+      "roster": [
+        {
+          "id": "fa6357eb-cdda-4241-b2fa-ef1ae6b8a560",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Brown",
+          "profileUrl": 6,
+          "stats": {}
+        },
+        {
+          "id": "e0329dd2-c67c-4b9a-a1af-9ece7d567f7d",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Dziedziack",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "29ea1a55-da66-46b4-8721-6e727807534a",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Abidi",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "5def9bc6-3dd9-4b83-bb62-4f3786b953cd",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Shea",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "e278ea5d-48d5-4b8e-809e-291d04e534b0",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Anderson",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "b8133dea-2f63-4f98-8489-97dea3d76575",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Sayegh",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "043907a4-db51-4317-877e-5dc71c95e6e8",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Bird",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "84eb0b96-a771-4a6c-88e8-fe241729168e",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Buggy",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "0ba519cd-c606-4b29-9328-409f95a7bde4",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Rahilly",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "08d39842-9d81-4b64-9c80-881e12dc32e3",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Murphy",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "0456a0ac-648e-4621-a199-b00b09f55c13",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Cantin",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "72822de6-879f-48a7-b6fe-13f103efd18c",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Barsotti",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "5feb4c10-b429-4678-9d98-f08334f2448c",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Broduer",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "76c8be55-3bba-4f93-b5ff-b81c017b6279",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Araia",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "e55c1f15-cf7d-4679-bf46-d9555adcf342",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Truesdale",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "a63a1718-773f-4b5f-85bb-f61fcb8c9f4f",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Drago",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "90f93226-af71-4c52-a495-59d8005918f3",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Rosnov",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "065a4eeb-9b8f-4ffb-bff6-3e8cfd32f667",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Heipler",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "2737e7de-ca15-4420-aadc-7d5cf3886922",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Jimenez",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "8ec9e4d0-0714-4dac-be29-6dae43019a0c",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "McGrath",
+          "profileUrl": "",
+          "stats": {}
+        }
+      ]
+    },
+    "Girls' Volleyball": {
+      "sport": "Girls' Volleyball",
+      "icon": "\ud83c\udfd0",
+      "categories": [
+        {
+          "key": "kills",
+          "label": "Kills",
+          "short": "K"
+        },
+        {
+          "key": "aces",
+          "label": "Aces",
+          "short": "ACE"
+        },
+        {
+          "key": "digs",
+          "label": "Digs",
+          "short": "DIG"
+        },
+        {
+          "key": "assists",
+          "label": "Assists",
+          "short": "AST"
+        },
+        {
+          "key": "blocks",
+          "label": "Blocks",
+          "short": "BLK"
+        }
+      ],
+      "roster": [
+        {
+          "id": "0d2e5231-9c8d-4a0c-ba15-8376c3b45ae7",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Ton",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "d1458fc1-5135-4d41-9718-1d4d911511f9",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Overlan",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "32d16910-d988-45af-8e89-f7c3fd5d23d8",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Chevalier",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "7c6179fa-9186-47a3-aa79-9a5f941b633b",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Johnson",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "872254c2-0663-4209-b01a-4e89f2f1cc67",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Kiggundu",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "ded2de35-f964-429d-a815-cfbf0b1d6912",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Burns",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "b143c1a6-c58f-4811-b084-81690b7cb0c4",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Akland",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "767f1d21-3e02-4fc4-aeb5-ff2292045201",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Marchais",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "f584c5bc-b215-4e6c-a385-500cac97dc31",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Shoemaker",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "ee3206fb-ff20-4ff3-8dd8-8d04e7929336",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Boyer",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "5b972d3e-ebff-44df-89f7-8c5be18fd968",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Wenzel",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "5735194c-8ad5-4473-bd96-7b9523619bf4",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Smith",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "208e8ace-430f-4883-9ddf-af41c272bb0b",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "McArt",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "50e2536b-d305-4cea-876b-d12a367da086",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Dautovic",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "a63329f7-3687-4e7a-ab28-f4bbed881ce5",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Santoriello",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "7cb95ee5-a835-47c1-a710-962228ba89cf",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "Friedlaender",
+          "profileUrl": "",
+          "stats": {}
+        },
+        {
+          "id": "9558a1be-0cee-47d8-ab27-651f86bc6546",
+          "firstName": null,
+          "lastName": null,
+          "fullName": "None None",
+          "jersey": "False",
+          "position": "",
+          "year": "DiGiorgio",
+          "profileUrl": "",
+          "stats": {}
+        }
+      ]
+    }
+  }
+}

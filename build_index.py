@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-MHS Index Standings Synchronizer
-Safely updates the embedded INITIAL_STANDINGS data inside index.html without touching markup or styles.
+MHS Index Standings & Multi-Season Synchronizer
+Synchronizes all seasons (seasons/*.json) into index.html
+while keeping individual season JSON files and 2026 live scores fresh.
 """
 import json
 import re
@@ -11,78 +12,92 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     os.chdir(script_dir)
 
-    if not os.path.exists("standings.json") or not os.path.exists("index.html"):
-        print("[-] Missing standings.json or index.html")
+    if not os.path.exists("index.html"):
+        print("[-] Missing index.html")
         return
 
-    with open("standings.json", "r", encoding="utf-8") as f:
-        standings_data = json.load(f)
+    os.makedirs("seasons", exist_ok=True)
 
-    with open("index.html", "r", encoding="utf-8") as f:
-        html = f.read()
+    # 1. Synchronize 2026 season file if scores.json, standings.json, players.json exist
+    season_2026_file = os.path.join("seasons", "2026.json")
+    if os.path.exists(season_2026_file):
+        with open(season_2026_file, "r", encoding="utf-8") as f:
+            s2026 = json.load(f)
+    else:
+        s2026 = {"season": "2026", "label": "Fall 2026", "events": [], "scores": {}, "standings": {}, "players": {}}
 
-    new_standings_json = json.dumps(standings_data.get("standings", {}))
-    updated_html, count = re.subn(
-        r"const INITIAL_STANDINGS = \{.*?\};",
-        lambda m: f"const INITIAL_STANDINGS = {new_standings_json};",
-        html
-    )
-
-    s_count = 0
     if os.path.exists("scores.json"):
         with open("scores.json", "r", encoding="utf-8") as f:
-            scores_data = json.load(f)
-        new_scores_json = json.dumps(scores_data.get("scores", {}))
-        updated_html, s_count = re.subn(
-            r"const INITIAL_SCORES = \{.*?\};",
-            lambda m: f"const INITIAL_SCORES = {new_scores_json};",
-            updated_html
-        )
-        if s_count > 0:
-            print(f"[✓] Successfully synchronized embedded INITIAL_SCORES in index.html")
+            s2026["scores"] = json.load(f).get("scores", {})
 
-    p_count = 0
+    if os.path.exists("standings.json"):
+        with open("standings.json", "r", encoding="utf-8") as f:
+            s2026["standings"] = json.load(f).get("standings", {})
+
     if os.path.exists("players.json"):
         with open("players.json", "r", encoding="utf-8") as f:
-            players_data = json.load(f)
-        new_players_json = json.dumps(players_data.get("sports", {}))
-        updated_html, p_count = re.subn(
-            r"const INITIAL_PLAYERS = \{.*?\};",
-            lambda m: f"const INITIAL_PLAYERS = {new_players_json};",
-            updated_html
-        )
-        if p_count > 0:
-            print(f"[✓] Successfully synchronized embedded INITIAL_PLAYERS in index.html")
+            s2026["players"] = json.load(f).get("sports", {})
 
-    loc_count = 0
     if os.path.exists("schedule.json"):
         with open("schedule.json", "r", encoding="utf-8") as f:
             sched_data = json.load(f).get("schedule", {})
-
-        def replacer(m):
-            d, t, s, opp, is_home, venue = m.groups()
-            key = f"{s}|{d}"
+        for ev in s2026.get("events", []):
+            key = f"{ev['sport']}|{ev['date']}"
             if key in sched_data:
-                upd = sched_data[key]
-                new_is_home = "true" if upd["isHome"] else "false"
-                new_venue = upd["venue"]
-                if is_home != new_is_home or venue != new_venue:
-                    nonlocal loc_count
-                    loc_count += 1
-                return f'{{ date: "{d}", time: "{t}", sport: "{s}", opp: "{opp}", isHome: {new_is_home}, venue: "{new_venue}" }}'
-            return m.group(0)
+                ev["isHome"] = sched_data[key]["isHome"]
+                ev["venue"] = sched_data[key]["venue"]
 
-        pattern = r'\{\s*date:\s*"([^"]+)",\s*time:\s*"([^"]+)",\s*sport:\s*"([^"]+)",\s*opp:\s*"([^"]+)",\s*isHome:\s*(true|false),\s*venue:\s*"([^"]+)"\s*\}'
-        updated_html = re.sub(pattern, replacer, updated_html)
-        if loc_count > 0:
-            print(f"[✓] Successfully synchronized {loc_count} game location(s) in events array")
+    with open(season_2026_file, "w", encoding="utf-8") as f:
+        json.dump(s2026, f, indent=2)
 
-    if count > 0 or s_count > 0 or p_count > 0 or loc_count > 0:
+    # 2. Gather all seasons from seasons/*.json
+    seasons_data = {}
+    for fn in sorted(os.listdir("seasons")):
+        if fn.endswith(".json"):
+            s_key = fn.replace(".json", "")
+            with open(os.path.join("seasons", fn), "r", encoding="utf-8") as f:
+                seasons_data[s_key] = json.load(f)
+
+    print(f"[*] Loaded {len(seasons_data)} season(s): {', '.join(seasons_data.keys())}")
+
+    # 3. Read index.html
+    with open("index.html", "r", encoding="utf-8") as f:
+        html = f.read()
+
+    seasons_json_str = json.dumps(seasons_data)
+
+    # Check if const SEASONS_DATA already exists
+    if "const SEASONS_DATA =" in html:
+        updated_html, count = re.subn(
+            r"const SEASONS_DATA = \{.*?\};\n",
+            lambda m: f"const SEASONS_DATA = {seasons_json_str};\n",
+            html
+        )
+    else:
+        # First time migration from flat variables to SEASONS_DATA
+        target_pattern = r"const events = \[[\s\S]*?let currentPlayersData = INITIAL_PLAYERS;\n"
+        replacement = (
+            f"const SEASONS_DATA = {seasons_json_str};\n\n"
+            "let currentSeason = SafeStorage.getItem('mhs_selected_season') || '2026';\n"
+            "if (!SEASONS_DATA[currentSeason]) {\n"
+            "  const available = Object.keys(SEASONS_DATA).sort();\n"
+            "  currentSeason = available.length > 0 ? available[available.length - 1] : '2026';\n"
+            "}\n\n"
+            "let events = (SEASONS_DATA[currentSeason] && SEASONS_DATA[currentSeason].events) || [];\n"
+            "let INITIAL_STANDINGS = (SEASONS_DATA[currentSeason] && SEASONS_DATA[currentSeason].standings) || {};\n"
+            "let currentStandingsData = INITIAL_STANDINGS;\n"
+            "let INITIAL_SCORES = (SEASONS_DATA[currentSeason] && SEASONS_DATA[currentSeason].scores) || {};\n"
+            "let INITIAL_PLAYERS = (SEASONS_DATA[currentSeason] && SEASONS_DATA[currentSeason].players) || {};\n"
+            "let currentPlayersData = INITIAL_PLAYERS;\n"
+        )
+        updated_html, count = re.subn(target_pattern, lambda m: replacement, html)
+
+    if count > 0:
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(updated_html)
-        print(f"[✓] Successfully updated index.html (standings: {count}, scores: {s_count}, players: {p_count}, locations: {loc_count})")
+        print(f"[✓] Successfully synchronized SEASONS_DATA in index.html ({count} replacement)")
     else:
-        print("[-] Warning: No embedded data patterns matched in index.html")
+        print("[-] Warning: Could not match SEASONS_DATA or flat variables in index.html")
 
 if __name__ == "__main__":
     main()

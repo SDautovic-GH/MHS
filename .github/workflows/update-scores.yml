@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add scores.json standings.json players.json schedule.json index.html
+          git add scores.json standings.json players.json schedule.json index.html seasons/
           if git diff --staged --quiet; then
             echo "No changes in scores, standings, player stats, or schedule locations."
           else
