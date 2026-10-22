@@ -4886,7 +4886,7 @@ function createIcsContent(eventsList) {
 
     const summary = `Melrose ${e.sport} ${e.isHome ? 'vs.' : '@'} ${e.opp}`;
     const location = e.isHome ? `${e.venue}, Melrose, MA` : `${e.opp} High School, MA`;
-    const desc = `Melrose High School Fall 2026 Athletics\\nSport: ${e.sport}\\nMatchup: ${summary}\\nVenue: ${e.venue}\\nTime: ${e.time}\\nSchedule: https://sdautovic-gh.github.io/MHS/`;
+    const desc = `Melrose High School Fall 2026 Athletics\\nSport: ${e.sport}\\nMatchup: ${summary}\\nVenue: ${e.venue}\\nTime: ${e.time}\\nSchedule: https://mhs.dautovic.com/`;
     const uid = `mhs-${e.sport.replace(/[^a-zA-Z0-9]/g, '')}-${e.date}-${hour}${min}@melroseathletics.org`;
 
     lines.push("BEGIN:VEVENT");
@@ -4943,13 +4943,13 @@ function exportCurrentSportIcs() {
 
 function shareGame(sport, opp, date, time, venue, isHome) {
   const prefix = isHome ? 'vs.' : '@';
-  const shareText = `🔴 Melrose High ${sport} ${prefix} ${opp}\n📅 ${formatDate(date)} at ${time}\n📍 Venue: ${venue}\n\nSchedule & Scores: https://sdautovic-gh.github.io/MHS/`;
+  const shareText = `🔴 Melrose High ${sport} ${prefix} ${opp}\n📅 ${formatDate(date)} at ${time}\n📍 Venue: ${venue}\n\nSchedule & Scores: https://mhs.dautovic.com/`;
   
   if (navigator.share) {
     navigator.share({
       title: `Melrose High ${sport} ${prefix} ${opp}`,
       text: shareText,
-      url: 'https://sdautovic-gh.github.io/MHS/'
+      url: 'https://mhs.dautovic.com/'
     }).catch(() => {});
   } else if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(shareText).then(() => {

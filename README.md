@@ -14,7 +14,10 @@ A modern, standalone Progressive Web App (PWA) displaying the complete 2026 Fall
 
 ## Live Website
 
-Published via GitHub Pages at:
+Primary edge deployment via Cloudflare Pages:
+👉 **[https://mhs.dautovic.com/](https://mhs.dautovic.com/)**
+
+Mirrored via GitHub Pages at:
 👉 **[https://sdautovic-gh.github.io/MHS/](https://sdautovic-gh.github.io/MHS/)**
 
 ## Syncing & Deployment
