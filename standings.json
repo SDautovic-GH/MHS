@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-10-27T07:39:10.707933",
+  "lastUpdated": "2026-10-27T16:23:30.214998",
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-10-27 07:39:07",
+      "lastUpdated": "2026-10-27 16:23:26",
       "teams": [
         {
           "rank": "1",
@@ -77,7 +77,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-10-27 07:39:08",
+      "lastUpdated": "2026-10-27 16:23:27",
       "teams": [
         {
           "rank": "1",
@@ -216,7 +216,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-10-27 07:39:09",
+      "lastUpdated": "2026-10-27 16:23:28",
       "teams": [
         {
           "rank": "1",
@@ -344,24 +344,24 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-10-27 07:39:09",
+      "lastUpdated": "2026-10-27 16:23:29",
       "teams": [
         {
           "rank": "1",
           "school": "Winchester",
           "confRecord": "11-0",
           "confPct": "1.000",
-          "overallRecord": "16-2",
-          "overallPct": "0.889",
-          "streak": "1W",
+          "overallRecord": "17-2",
+          "overallPct": "0.895",
+          "streak": "2W",
           "mascot": "",
           "isMHS": false
         },
         {
           "rank": "2",
           "school": "Reading Memorial",
-          "confRecord": "11-1",
-          "confPct": "0.917",
+          "confRecord": "10-1",
+          "confPct": "0.909",
           "overallRecord": "15-1",
           "overallPct": "0.938",
           "streak": "7W",
@@ -371,8 +371,8 @@
         {
           "rank": "3",
           "school": "Melrose",
-          "confRecord": "8-4",
-          "confPct": "0.667",
+          "confRecord": "8-3",
+          "confPct": "0.727",
           "overallRecord": "14-4",
           "overallPct": "0.778",
           "streak": "1L",
@@ -406,9 +406,9 @@
           "school": "Woburn Memorial",
           "confRecord": "6-5",
           "confPct": "0.545",
-          "overallRecord": "13-5",
-          "overallPct": "0.722",
-          "streak": "5W",
+          "overallRecord": "13-6",
+          "overallPct": "0.684",
+          "streak": "1L",
           "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -483,7 +483,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-10-27 07:39:10",
+      "lastUpdated": "2026-10-27 16:23:30",
       "teams": [
         {
           "rank": "1",
