@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-10-28T08:15:09.106995",
+  "lastUpdated": "2026-10-28T17:05:25.490542",
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-10-28 08:15:06",
+      "lastUpdated": "2026-10-28 17:05:21",
       "teams": [
         {
           "rank": "1",
@@ -77,7 +77,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-10-28 08:15:06",
+      "lastUpdated": "2026-10-28 17:05:22",
       "teams": [
         {
           "rank": "1",
@@ -137,11 +137,11 @@
         {
           "rank": "6",
           "school": "Lexington",
-          "confRecord": "6-3-2",
-          "confPct": "0.636",
-          "overallRecord": "9-4-3",
-          "overallPct": "0.656",
-          "streak": "1T",
+          "confRecord": "7-3-2",
+          "confPct": "0.667",
+          "overallRecord": "10-4-3",
+          "overallPct": "0.676",
+          "streak": "1W",
           "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -191,17 +191,6 @@
         },
         {
           "rank": "11",
-          "school": "Woburn Memorial",
-          "confRecord": "0-8-3",
-          "confPct": "0.000",
-          "overallRecord": "1-10-3",
-          "overallPct": "0.179",
-          "streak": "1T",
-          "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg",
-          "isMHS": false
-        },
-        {
-          "rank": "12",
           "school": "Stoneham",
           "confRecord": "0-9-2",
           "confPct": "0.000",
@@ -210,13 +199,24 @@
           "streak": "1T",
           "mascot": "https://image.maxpreps.io/school-mascot/2/9/0/290334c6-adb3-45f9-8b20-c20d519deb20.gif?version=635864813400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
+        },
+        {
+          "rank": "12",
+          "school": "Woburn Memorial",
+          "confRecord": "0-9-3",
+          "confPct": "0.000",
+          "overallRecord": "1-11-3",
+          "overallPct": "0.167",
+          "streak": "1L",
+          "mascot": "https://image.maxpreps.io/school-mascot/1/0/6/10646fa4-4195-4cf1-b388-4e1cff9d2845.gif?version=636903045600000000&width=32&height=32&auto=webp&format=pjpg",
+          "isMHS": false
         }
       ]
     },
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-10-28 08:15:07",
+      "lastUpdated": "2026-10-28 17:05:23",
       "teams": [
         {
           "rank": "1",
@@ -344,7 +344,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-10-28 08:15:08",
+      "lastUpdated": "2026-10-28 17:05:24",
       "teams": [
         {
           "rank": "1",
@@ -483,7 +483,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-10-28 08:15:09",
+      "lastUpdated": "2026-10-28 17:05:25",
       "teams": [
         {
           "rank": "1",
@@ -600,9 +600,9 @@
           "school": "Burlington",
           "confRecord": "0-8-1",
           "confPct": "0.000",
-          "overallRecord": "2-13-1",
-          "overallPct": "0.156",
-          "streak": "2L",
+          "overallRecord": "2-14-1",
+          "overallPct": "0.147",
+          "streak": "3L",
           "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
