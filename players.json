@@ -6,6 +6,16 @@
       "icon": "\ud83c\udfd0",
       "categories": [
         {
+          "key": "gamesPlayed",
+          "label": "Games Played",
+          "short": "GP"
+        },
+        {
+          "key": "setsPlayed",
+          "label": "Sets Played",
+          "short": "SP"
+        },
+        {
           "key": "kills",
           "label": "Kills",
           "short": "K"
@@ -47,7 +57,9 @@
             "digs": 97,
             "assists": 12,
             "blocks": 0,
-            "points": 57
+            "points": 57,
+            "gamesPlayed": 20,
+            "setsPlayed": 69
           }
         },
         {
@@ -65,7 +77,9 @@
             "digs": 202,
             "assists": 33,
             "blocks": 0,
-            "points": 176
+            "points": 176,
+            "gamesPlayed": 20,
+            "setsPlayed": 69
           }
         },
         {
@@ -83,7 +97,9 @@
             "digs": 4,
             "assists": 0,
             "blocks": 0,
-            "points": 5
+            "points": 5,
+            "gamesPlayed": 10,
+            "setsPlayed": 14
           }
         },
         {
@@ -101,7 +117,9 @@
             "digs": 5,
             "assists": 19,
             "blocks": 0,
-            "points": 11
+            "points": 11,
+            "gamesPlayed": 6,
+            "setsPlayed": 8
           }
         },
         {
@@ -119,7 +137,9 @@
             "digs": 137,
             "assists": 530,
             "blocks": 0,
-            "points": 115
+            "points": 115,
+            "gamesPlayed": 20,
+            "setsPlayed": 68
           }
         },
         {
@@ -137,7 +157,9 @@
             "digs": 152,
             "assists": 13,
             "blocks": 0,
-            "points": 152
+            "points": 152,
+            "gamesPlayed": 20,
+            "setsPlayed": 69
           }
         },
         {
@@ -155,7 +177,9 @@
             "digs": 14,
             "assists": 1,
             "blocks": 0,
-            "points": 0
+            "points": 0,
+            "gamesPlayed": 20,
+            "setsPlayed": 69
           }
         },
         {
@@ -173,7 +197,9 @@
             "digs": 88,
             "assists": 3,
             "blocks": 0,
-            "points": 109
+            "points": 109,
+            "gamesPlayed": 18,
+            "setsPlayed": 63
           }
         },
         {
@@ -191,7 +217,9 @@
             "digs": 72,
             "assists": 8,
             "blocks": 0,
-            "points": 141
+            "points": 141,
+            "gamesPlayed": 19,
+            "setsPlayed": 62
           }
         },
         {
@@ -209,7 +237,9 @@
             "digs": 4,
             "assists": 1,
             "blocks": 0,
-            "points": 10
+            "points": 10,
+            "gamesPlayed": 13,
+            "setsPlayed": 21
           }
         },
         {
@@ -227,7 +257,9 @@
             "digs": 3,
             "assists": 1,
             "blocks": 0,
-            "points": 8
+            "points": 8,
+            "gamesPlayed": 8,
+            "setsPlayed": 10
           }
         },
         {
@@ -245,7 +277,9 @@
             "digs": 5,
             "assists": 2,
             "blocks": 0,
-            "points": 7
+            "points": 7,
+            "gamesPlayed": 17,
+            "setsPlayed": 57
           }
         },
         {
@@ -262,7 +296,9 @@
             "aces": 0,
             "digs": 0,
             "assists": 0,
-            "blocks": 0
+            "blocks": 0,
+            "gamesPlayed": 5,
+            "setsPlayed": 7
           }
         },
         {
@@ -280,7 +316,9 @@
             "digs": 31,
             "assists": 2,
             "blocks": 0,
-            "points": 108
+            "points": 108,
+            "gamesPlayed": 19,
+            "setsPlayed": 68
           }
         },
         {
@@ -298,7 +336,9 @@
             "digs": 3,
             "assists": 0,
             "blocks": 0,
-            "points": 7
+            "points": 7,
+            "gamesPlayed": 10,
+            "setsPlayed": 24
           }
         }
       ]
@@ -307,6 +347,11 @@
       "sport": "Boys' Soccer",
       "icon": "\u26bd",
       "categories": [
+        {
+          "key": "gamesPlayed",
+          "label": "Games Played",
+          "short": "GP"
+        },
         {
           "key": "goals",
           "label": "Goals",
@@ -425,6 +470,11 @@
       "icon": "\u26bd",
       "categories": [
         {
+          "key": "gamesPlayed",
+          "label": "Games Played",
+          "short": "GP"
+        },
+        {
           "key": "goals",
           "label": "Goals",
           "short": "G"
@@ -528,6 +578,11 @@
       "icon": "\ud83c\udfc8",
       "categories": [
         {
+          "key": "gamesPlayed",
+          "label": "Games Played",
+          "short": "GP"
+        },
+        {
           "key": "passYds",
           "label": "Pass Yds",
           "short": "PASS"
@@ -630,6 +685,11 @@
       "sport": "Field Hockey",
       "icon": "\ud83c\udfd1",
       "categories": [
+        {
+          "key": "gamesPlayed",
+          "label": "Games Played",
+          "short": "GP"
+        },
         {
           "key": "goals",
           "label": "Goals",

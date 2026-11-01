@@ -615,6 +615,8 @@ DEFAULT_CATEGORIES = {
     "Girls' Volleyball": {
         "icon": "🏐",
         "categories": [
+            {"key": "gamesPlayed", "label": "Games Played", "short": "GP"},
+            {"key": "setsPlayed", "label": "Sets Played", "short": "SP"},
             {"key": "kills", "label": "Kills", "short": "K"},
             {"key": "aces", "label": "Aces", "short": "ACE"},
             {"key": "digs", "label": "Digs", "short": "DIG"},
@@ -625,6 +627,7 @@ DEFAULT_CATEGORIES = {
     "Boys' Soccer": {
         "icon": "⚽",
         "categories": [
+            {"key": "gamesPlayed", "label": "Games Played", "short": "GP"},
             {"key": "goals", "label": "Goals", "short": "G"},
             {"key": "assists", "label": "Assists", "short": "A"},
             {"key": "points", "label": "Points", "short": "PTS"},
@@ -635,6 +638,7 @@ DEFAULT_CATEGORIES = {
     "Girls' Soccer": {
         "icon": "⚽",
         "categories": [
+            {"key": "gamesPlayed", "label": "Games Played", "short": "GP"},
             {"key": "goals", "label": "Goals", "short": "G"},
             {"key": "assists", "label": "Assists", "short": "A"},
             {"key": "points", "label": "Points", "short": "PTS"},
@@ -645,6 +649,7 @@ DEFAULT_CATEGORIES = {
     "Football": {
         "icon": "🏈",
         "categories": [
+            {"key": "gamesPlayed", "label": "Games Played", "short": "GP"},
             {"key": "passYds", "label": "Pass Yds", "short": "PASS"},
             {"key": "rushYds", "label": "Rush Yds", "short": "RUSH"},
             {"key": "recYds", "label": "Rec Yds", "short": "REC"},
@@ -655,6 +660,7 @@ DEFAULT_CATEGORIES = {
     "Field Hockey": {
         "icon": "🏑",
         "categories": [
+            {"key": "gamesPlayed", "label": "Games Played", "short": "GP"},
             {"key": "goals", "label": "Goals", "short": "G"},
             {"key": "assists", "label": "Assists", "short": "A"},
             {"key": "points", "label": "Points", "short": "PTS"},
@@ -727,6 +733,9 @@ def fetch_sport_stats(sport_label, slug, roster):
 
             # Map column headers to categories
             col_map = {
+                'SP': 'setsPlayed',
+                'GP': 'gamesPlayed',
+                'Games': 'gamesPlayed',
                 'K': 'kills',
                 'A': 'aces',
                 'D': 'digs',
