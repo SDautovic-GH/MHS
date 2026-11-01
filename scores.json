@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-01T18:21:18.158270",
+  "lastUpdated": "2026-11-01T18:35:34.529914",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -1254,6 +1254,138 @@
       "result": "W",
       "status": "Final",
       "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Golf|2026-09-15": {
+      "sport": "Golf",
+      "date": "2026-09-15",
+      "opponent": "Winchester",
+      "mhsScore": 30.5,
+      "oppScore": 41.5,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-10-08": {
+      "sport": "Golf",
+      "date": "2026-10-08",
+      "opponent": "Wakefield",
+      "mhsScore": 33.5,
+      "oppScore": 38.5,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-10-14": {
+      "sport": "Golf",
+      "date": "2026-10-14",
+      "opponent": "Stoneham",
+      "mhsScore": 25,
+      "oppScore": 47,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-12": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-12",
+      "opponent": "Westport",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-10-26": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-26",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 1,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-10-26": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-26",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 2,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2026-09-15": {
+      "sport": "Field Hockey",
+      "date": "2026-09-15",
+      "opponent": "Winchester",
+      "mhsScore": 1,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2026-09-21": {
+      "sport": "Field Hockey",
+      "date": "2026-09-21",
+      "opponent": "Wilmington",
+      "mhsScore": 2,
+      "oppScore": 2,
+      "result": "T",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2026-10-01": {
+      "sport": "Field Hockey",
+      "date": "2026-10-01",
+      "opponent": "Stoneham",
+      "mhsScore": 3,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2026-10-19": {
+      "sport": "Field Hockey",
+      "date": "2026-10-19",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 4,
+      "oppScore": 3,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-08-27": {
+      "sport": "Boys' Soccer",
+      "date": "2026-08-27",
+      "opponent": "Lynn Classical",
+      "mhsScore": 1,
+      "oppScore": 2,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-09-02": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-02",
+      "opponent": "Newton North",
+      "mhsScore": 0,
+      "oppScore": 1,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
       "source": "MaxPreps"
     }
   }

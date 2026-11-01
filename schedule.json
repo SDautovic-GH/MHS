@@ -1,9 +1,26 @@
 {
-  "lastUpdated": "2026-11-01T18:21:41.934821",
+  "lastUpdated": "2026-11-01T18:35:51.523548",
   "schedule": {
+    "Football|2026-09-01": {
+      "sport": "Football",
+      "date": "2026-09-01",
+      "opponent": "Billerica Memorial",
+      "isHome": true,
+      "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Football|2026-09-04": {
+      "sport": "Football",
+      "date": "2026-09-04",
+      "opponent": "Lynnfield",
+      "isHome": true,
+      "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
     "Football|2026-09-10": {
       "sport": "Football",
       "date": "2026-09-10",
+      "opponent": "Reading",
       "isHome": true,
       "venue": "Fred Green Field",
       "source": "ArbiterLive"
@@ -11,6 +28,7 @@
     "Football|2026-09-18": {
       "sport": "Football",
       "date": "2026-09-18",
+      "opponent": "Danvers",
       "isHome": true,
       "venue": "Fred Green Field",
       "source": "ArbiterLive"
@@ -18,6 +36,7 @@
     "Football|2026-09-25": {
       "sport": "Football",
       "date": "2026-09-25",
+      "opponent": "Swampscott",
       "isHome": false,
       "venue": "Swampscott",
       "source": "ArbiterLive"
@@ -25,6 +44,7 @@
     "Football|2026-10-02": {
       "sport": "Football",
       "date": "2026-10-02",
+      "opponent": "Winchester",
       "isHome": true,
       "venue": "Fred Green Field",
       "source": "ArbiterLive"
@@ -32,6 +52,7 @@
     "Football|2026-10-09": {
       "sport": "Football",
       "date": "2026-10-09",
+      "opponent": "Burlington",
       "isHome": false,
       "venue": "Burlington",
       "source": "ArbiterLive"
@@ -39,6 +60,7 @@
     "Football|2026-10-16": {
       "sport": "Football",
       "date": "2026-10-16",
+      "opponent": "Watertown",
       "isHome": false,
       "venue": "Watertown",
       "source": "ArbiterLive"
@@ -46,6 +68,7 @@
     "Football|2026-10-23": {
       "sport": "Football",
       "date": "2026-10-23",
+      "opponent": "Wilmington",
       "isHome": true,
       "venue": "Fred Green Field",
       "source": "ArbiterLive"
@@ -53,20 +76,55 @@
     "Football|2026-10-30": {
       "sport": "Football",
       "date": "2026-10-30",
+      "opponent": "Stoneham",
       "isHome": false,
       "venue": "Stoneham",
+      "source": "ArbiterLive"
+    },
+    "Football|2026-11-06": {
+      "sport": "Football",
+      "date": "2026-11-06",
+      "opponent": "Doherty Memorial",
+      "isHome": true,
+      "venue": "Fred Green Field",
       "source": "ArbiterLive"
     },
     "Football|2026-11-26": {
       "sport": "Football",
       "date": "2026-11-26",
+      "opponent": "Wakefield",
       "isHome": true,
       "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-08-27": {
+      "sport": "Boys' Soccer",
+      "date": "2026-08-27",
+      "opponent": "Lynn Classical",
+      "isHome": false,
+      "venue": "LYNN-MANNING ( B ) #1",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-08-29": {
+      "sport": "Boys' Soccer",
+      "date": "2026-08-29",
+      "opponent": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-09-02": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-02",
+      "opponent": "Newton North",
+      "isHome": false,
+      "venue": "Newton North",
       "source": "ArbiterLive"
     },
     "Boys' Soccer|2026-09-09": {
       "sport": "Boys' Soccer",
       "date": "2026-09-09",
+      "opponent": "Reading",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -74,6 +132,7 @@
     "Boys' Soccer|2026-09-15": {
       "sport": "Boys' Soccer",
       "date": "2026-09-15",
+      "opponent": "Burlington",
       "isHome": false,
       "venue": "Burlington",
       "source": "ArbiterLive"
@@ -81,6 +140,7 @@
     "Boys' Soccer|2026-09-21": {
       "sport": "Boys' Soccer",
       "date": "2026-09-21",
+      "opponent": "Clinton",
       "isHome": false,
       "venue": "Clinton",
       "source": "ArbiterLive"
@@ -88,6 +148,7 @@
     "Boys' Soccer|2026-09-23": {
       "sport": "Boys' Soccer",
       "date": "2026-09-23",
+      "opponent": "Winchester",
       "isHome": false,
       "venue": "Winchester",
       "source": "ArbiterLive"
@@ -95,6 +156,7 @@
     "Boys' Soccer|2026-09-29": {
       "sport": "Boys' Soccer",
       "date": "2026-09-29",
+      "opponent": "Lexington",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -102,6 +164,7 @@
     "Boys' Soccer|2026-10-01": {
       "sport": "Boys' Soccer",
       "date": "2026-10-01",
+      "opponent": "Wilmington",
       "isHome": false,
       "venue": "Wilmington",
       "source": "ArbiterLive"
@@ -109,6 +172,7 @@
     "Boys' Soccer|2026-10-05": {
       "sport": "Boys' Soccer",
       "date": "2026-10-05",
+      "opponent": "Arlington",
       "isHome": false,
       "venue": "Arlington",
       "source": "ArbiterLive"
@@ -116,6 +180,7 @@
     "Boys' Soccer|2026-10-07": {
       "sport": "Boys' Soccer",
       "date": "2026-10-07",
+      "opponent": "Stoneham",
       "isHome": true,
       "venue": "Knoll",
       "source": "ArbiterLive"
@@ -123,13 +188,23 @@
     "Boys' Soccer|2026-10-09": {
       "sport": "Boys' Soccer",
       "date": "2026-10-09",
+      "opponent": "Somerville",
       "isHome": true,
       "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-12": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-12",
+      "opponent": "Woburn",
+      "isHome": true,
+      "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
     "Boys' Soccer|2026-10-14": {
       "sport": "Boys' Soccer",
       "date": "2026-10-14",
+      "opponent": "Watertown",
       "isHome": false,
       "venue": "Watertown",
       "source": "ArbiterLive"
@@ -137,6 +212,7 @@
     "Boys' Soccer|2026-10-17": {
       "sport": "Boys' Soccer",
       "date": "2026-10-17",
+      "opponent": "Beverly",
       "isHome": false,
       "venue": "Beverly",
       "source": "ArbiterLive"
@@ -144,6 +220,7 @@
     "Boys' Soccer|2026-10-19": {
       "sport": "Boys' Soccer",
       "date": "2026-10-19",
+      "opponent": "Greater Lawrence",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -151,6 +228,7 @@
     "Boys' Soccer|2026-10-21": {
       "sport": "Boys' Soccer",
       "date": "2026-10-21",
+      "opponent": "Belmont",
       "isHome": false,
       "venue": "Belmont",
       "source": "ArbiterLive"
@@ -158,13 +236,23 @@
     "Boys' Soccer|2026-10-24": {
       "sport": "Boys' Soccer",
       "date": "2026-10-24",
+      "opponent": "Excel Academy",
       "isHome": true,
       "venue": "Fred Green Field",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-26": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-26",
+      "opponent": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
     "Boys' Soccer|2026-10-27": {
       "sport": "Boys' Soccer",
       "date": "2026-10-27",
+      "opponent": "Wakefield",
       "isHome": true,
       "venue": "Knoll",
       "source": "MaxPreps"
@@ -172,13 +260,39 @@
     "Boys' Soccer|2026-10-29": {
       "sport": "Boys' Soccer",
       "date": "2026-10-29",
+      "opponent": "Methuen",
       "isHome": false,
       "venue": "Methuen",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-11-02": {
+      "sport": "Boys' Soccer",
+      "date": "2026-11-02",
+      "opponent": "Acton-Boxborough",
+      "isHome": false,
+      "venue": "Acton-Boxborough Regional",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-08-26": {
+      "sport": "Girls' Soccer",
+      "date": "2026-08-26",
+      "opponent": "Waltham",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-09-01": {
+      "sport": "Girls' Soccer",
+      "date": "2026-09-01",
+      "opponent": "Billerica Memorial",
+      "isHome": true,
+      "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
     "Girls' Soccer|2026-09-09": {
       "sport": "Girls' Soccer",
       "date": "2026-09-09",
+      "opponent": "Reading",
       "isHome": false,
       "venue": "Reading",
       "source": "ArbiterLive"
@@ -186,6 +300,7 @@
     "Girls' Soccer|2026-09-14": {
       "sport": "Girls' Soccer",
       "date": "2026-09-14",
+      "opponent": "Burlington",
       "isHome": false,
       "venue": "Burlington",
       "source": "ArbiterLive"
@@ -193,6 +308,7 @@
     "Girls' Soccer|2026-09-19": {
       "sport": "Girls' Soccer",
       "date": "2026-09-19",
+      "opponent": "Peabody",
       "isHome": true,
       "venue": "Fred Green Field",
       "source": "ArbiterLive"
@@ -200,6 +316,7 @@
     "Girls' Soccer|2026-09-23": {
       "sport": "Girls' Soccer",
       "date": "2026-09-23",
+      "opponent": "Winchester",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -207,6 +324,7 @@
     "Girls' Soccer|2026-09-25": {
       "sport": "Girls' Soccer",
       "date": "2026-09-25",
+      "opponent": "Danvers",
       "isHome": false,
       "venue": "Danvers",
       "source": "ArbiterLive"
@@ -214,6 +332,7 @@
     "Girls' Soccer|2026-09-29": {
       "sport": "Girls' Soccer",
       "date": "2026-09-29",
+      "opponent": "Lexington",
       "isHome": false,
       "venue": "Lexington",
       "source": "ArbiterLive"
@@ -221,6 +340,7 @@
     "Girls' Soccer|2026-10-01": {
       "sport": "Girls' Soccer",
       "date": "2026-10-01",
+      "opponent": "Wilmington",
       "isHome": false,
       "venue": "Wilmington",
       "source": "ArbiterLive"
@@ -228,6 +348,7 @@
     "Girls' Soccer|2026-10-05": {
       "sport": "Girls' Soccer",
       "date": "2026-10-05",
+      "opponent": "Arlington",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -235,6 +356,7 @@
     "Girls' Soccer|2026-10-07": {
       "sport": "Girls' Soccer",
       "date": "2026-10-07",
+      "opponent": "Stoneham",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -242,6 +364,7 @@
     "Girls' Soccer|2026-10-09": {
       "sport": "Girls' Soccer",
       "date": "2026-10-09",
+      "opponent": "Marblehead",
       "isHome": true,
       "venue": "Fred Green Field",
       "source": "ArbiterLive"
@@ -249,6 +372,7 @@
     "Girls' Soccer|2026-10-12": {
       "sport": "Girls' Soccer",
       "date": "2026-10-12",
+      "opponent": "Woburn",
       "isHome": false,
       "venue": "Woburn",
       "source": "ArbiterLive"
@@ -256,6 +380,7 @@
     "Girls' Soccer|2026-10-14": {
       "sport": "Girls' Soccer",
       "date": "2026-10-14",
+      "opponent": "Watertown",
       "isHome": false,
       "venue": "Watertown",
       "source": "ArbiterLive"
@@ -263,6 +388,7 @@
     "Girls' Soccer|2026-10-17": {
       "sport": "Girls' Soccer",
       "date": "2026-10-17",
+      "opponent": "Bishop Feehan",
       "isHome": false,
       "venue": "Bishop Feehan",
       "source": "ArbiterLive"
@@ -270,6 +396,7 @@
     "Girls' Soccer|2026-10-21": {
       "sport": "Girls' Soccer",
       "date": "2026-10-21",
+      "opponent": "Belmont",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -277,13 +404,23 @@
     "Girls' Soccer|2026-10-24": {
       "sport": "Girls' Soccer",
       "date": "2026-10-24",
+      "opponent": "Tewksbury",
       "isHome": false,
       "venue": "Tewksbury",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-10-26": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-26",
+      "opponent": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
     "Girls' Soccer|2026-10-27": {
       "sport": "Girls' Soccer",
       "date": "2026-10-27",
+      "opponent": "Wakefield",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "MaxPreps"
@@ -291,13 +428,23 @@
     "Girls' Soccer|2026-10-30": {
       "sport": "Girls' Soccer",
       "date": "2026-10-30",
+      "opponent": "Beverly",
       "isHome": false,
       "venue": "Beverly",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-09-02": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-02",
+      "opponent": "North Andover",
+      "isHome": true,
+      "venue": "MVMMS",
       "source": "ArbiterLive"
     },
     "Girls' Volleyball|2026-09-08": {
       "sport": "Girls' Volleyball",
       "date": "2026-09-08",
+      "opponent": "Reading",
       "isHome": false,
       "venue": "Reading",
       "source": "ArbiterLive"
@@ -305,6 +452,7 @@
     "Girls' Volleyball|2026-09-10": {
       "sport": "Girls' Volleyball",
       "date": "2026-09-10",
+      "opponent": "Burlington",
       "isHome": false,
       "venue": "Burlington",
       "source": "ArbiterLive"
@@ -312,6 +460,7 @@
     "Girls' Volleyball|2026-09-14": {
       "sport": "Girls' Volleyball",
       "date": "2026-09-14",
+      "opponent": "Winchester",
       "isHome": true,
       "venue": "MVMMS",
       "source": "ArbiterLive"
@@ -319,6 +468,7 @@
     "Girls' Volleyball|2026-09-16": {
       "sport": "Girls' Volleyball",
       "date": "2026-09-16",
+      "opponent": "Ipswich",
       "isHome": false,
       "venue": "Ipswich",
       "source": "ArbiterLive"
@@ -326,6 +476,7 @@
     "Girls' Volleyball|2026-09-18": {
       "sport": "Girls' Volleyball",
       "date": "2026-09-18",
+      "opponent": "Lexington",
       "isHome": false,
       "venue": "Lexington",
       "source": "ArbiterLive"
@@ -333,6 +484,7 @@
     "Girls' Volleyball|2026-09-22": {
       "sport": "Girls' Volleyball",
       "date": "2026-09-22",
+      "opponent": "Wilmington",
       "isHome": true,
       "venue": "MVMMS",
       "source": "ArbiterLive"
@@ -340,6 +492,7 @@
     "Girls' Volleyball|2026-09-24": {
       "sport": "Girls' Volleyball",
       "date": "2026-09-24",
+      "opponent": "Lynn Classical",
       "isHome": true,
       "venue": "MVMMS",
       "source": "ArbiterLive"
@@ -347,6 +500,7 @@
     "Girls' Volleyball|2026-09-28": {
       "sport": "Girls' Volleyball",
       "date": "2026-09-28",
+      "opponent": "Arlington",
       "isHome": true,
       "venue": "MVMMS",
       "source": "ArbiterLive"
@@ -354,6 +508,7 @@
     "Girls' Volleyball|2026-09-30": {
       "sport": "Girls' Volleyball",
       "date": "2026-09-30",
+      "opponent": "Newburyport",
       "isHome": false,
       "venue": "Newburyport",
       "source": "ArbiterLive"
@@ -361,6 +516,7 @@
     "Girls' Volleyball|2026-10-02": {
       "sport": "Girls' Volleyball",
       "date": "2026-10-02",
+      "opponent": "Stoneham",
       "isHome": true,
       "venue": "MVMMS",
       "source": "ArbiterLive"
@@ -368,6 +524,7 @@
     "Girls' Volleyball|2026-10-06": {
       "sport": "Girls' Volleyball",
       "date": "2026-10-06",
+      "opponent": "Woburn",
       "isHome": false,
       "venue": "Woburn",
       "source": "ArbiterLive"
@@ -375,6 +532,7 @@
     "Girls' Volleyball|2026-10-09": {
       "sport": "Girls' Volleyball",
       "date": "2026-10-09",
+      "opponent": "Arlington Catholic",
       "isHome": true,
       "venue": "MVMMS",
       "source": "ArbiterLive"
@@ -382,6 +540,7 @@
     "Girls' Volleyball|2026-10-13": {
       "sport": "Girls' Volleyball",
       "date": "2026-10-13",
+      "opponent": "Watertown",
       "isHome": false,
       "venue": "Watertown",
       "source": "ArbiterLive"
@@ -389,6 +548,7 @@
     "Girls' Volleyball|2026-10-15": {
       "sport": "Girls' Volleyball",
       "date": "2026-10-15",
+      "opponent": "Belmont",
       "isHome": true,
       "venue": "MVMMS",
       "source": "ArbiterLive"
@@ -396,6 +556,7 @@
     "Girls' Volleyball|2026-10-17": {
       "sport": "Girls' Volleyball",
       "date": "2026-10-17",
+      "opponent": "Duxbury",
       "isHome": false,
       "venue": "Duxbury",
       "source": "ArbiterLive"
@@ -403,6 +564,7 @@
     "Girls' Volleyball|2026-10-20": {
       "sport": "Girls' Volleyball",
       "date": "2026-10-20",
+      "opponent": "Wakefield",
       "isHome": true,
       "venue": "MVMMS",
       "source": "ArbiterLive"
@@ -410,6 +572,7 @@
     "Girls' Volleyball|2026-10-23": {
       "sport": "Girls' Volleyball",
       "date": "2026-10-23",
+      "opponent": "Marblehead",
       "isHome": true,
       "venue": "MVMMS",
       "source": "ArbiterLive"
@@ -417,27 +580,39 @@
     "Girls' Volleyball|2026-10-26": {
       "sport": "Girls' Volleyball",
       "date": "2026-10-26",
+      "opponent": "Reading",
       "isHome": false,
-      "venue": "TBA",
+      "venue": "Reading Memorial HS Hawkes Field House-Vaccaro Gymnasium",
       "source": "ArbiterLive"
     },
     "Girls' Volleyball|2026-10-28": {
       "sport": "Girls' Volleyball",
       "date": "2026-10-28",
+      "opponent": "Woburn",
       "isHome": false,
-      "venue": "TBA",
+      "venue": "Winchester",
       "source": "ArbiterLive"
     },
     "Girls' Volleyball|2026-10-30": {
       "sport": "Girls' Volleyball",
       "date": "2026-10-30",
+      "opponent": "Methuen",
       "isHome": false,
       "venue": "Methuen",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-08-29": {
+      "sport": "Field Hockey",
+      "date": "2026-08-29",
+      "opponent": "Marblehead",
+      "isHome": true,
+      "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
     "Field Hockey|2026-09-08": {
       "sport": "Field Hockey",
       "date": "2026-09-08",
+      "opponent": "Reading",
       "isHome": false,
       "venue": "Reading",
       "source": "ArbiterLive"
@@ -445,20 +620,39 @@
     "Field Hockey|2026-09-10": {
       "sport": "Field Hockey",
       "date": "2026-09-10",
+      "opponent": "Burlington",
       "isHome": false,
       "venue": "Burlington",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-09-15": {
+      "sport": "Field Hockey",
+      "date": "2026-09-15",
+      "opponent": "Winchester",
+      "isHome": true,
+      "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
     "Field Hockey|2026-09-18": {
       "sport": "Field Hockey",
       "date": "2026-09-18",
+      "opponent": "Lexington",
       "isHome": false,
       "venue": "Lexington",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-09-21": {
+      "sport": "Field Hockey",
+      "date": "2026-09-21",
+      "opponent": "Wilmington",
+      "isHome": true,
+      "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
     "Field Hockey|2026-09-28": {
       "sport": "Field Hockey",
       "date": "2026-09-28",
+      "opponent": "Arlington",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -466,13 +660,23 @@
     "Field Hockey|2026-09-29": {
       "sport": "Field Hockey",
       "date": "2026-09-29",
+      "opponent": "Beverly",
       "isHome": false,
       "venue": "Beverly",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-10-01": {
+      "sport": "Field Hockey",
+      "date": "2026-10-01",
+      "opponent": "Stoneham",
+      "isHome": true,
+      "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
     "Field Hockey|2026-10-06": {
       "sport": "Field Hockey",
       "date": "2026-10-06",
+      "opponent": "Woburn",
       "isHome": false,
       "venue": "Woburn",
       "source": "ArbiterLive"
@@ -480,6 +684,7 @@
     "Field Hockey|2026-10-08": {
       "sport": "Field Hockey",
       "date": "2026-10-08",
+      "opponent": "Weston",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -487,6 +692,7 @@
     "Field Hockey|2026-10-09": {
       "sport": "Field Hockey",
       "date": "2026-10-09",
+      "opponent": "Stoneham",
       "isHome": false,
       "venue": "Stoneham",
       "source": "ArbiterLive"
@@ -494,6 +700,7 @@
     "Field Hockey|2026-10-12": {
       "sport": "Field Hockey",
       "date": "2026-10-12",
+      "opponent": "Watertown",
       "isHome": false,
       "venue": "Watertown",
       "source": "ArbiterLive"
@@ -501,6 +708,7 @@
     "Field Hockey|2026-10-13": {
       "sport": "Field Hockey",
       "date": "2026-10-13",
+      "opponent": "Woburn",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -508,6 +716,15 @@
     "Field Hockey|2026-10-15": {
       "sport": "Field Hockey",
       "date": "2026-10-15",
+      "opponent": "Belmont",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-10-19": {
+      "sport": "Field Hockey",
+      "date": "2026-10-19",
+      "opponent": "Wakefield",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -515,6 +732,7 @@
     "Field Hockey|2026-10-22": {
       "sport": "Field Hockey",
       "date": "2026-10-22",
+      "opponent": "Reading",
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
@@ -522,6 +740,7 @@
     "Golf|2026-09-01": {
       "sport": "Golf",
       "date": "2026-09-01",
+      "opponent": "Watertown",
       "isHome": true,
       "venue": "Bellevue Golf Club",
       "source": "ArbiterLive"
@@ -529,13 +748,23 @@
     "Golf|2026-09-03": {
       "sport": "Golf",
       "date": "2026-09-03",
+      "opponent": "Woburn",
       "isHome": true,
       "venue": "Bellevue Golf Club",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-09-15": {
+      "sport": "Golf",
+      "date": "2026-09-15",
+      "opponent": "Winchester",
+      "isHome": false,
+      "venue": "Unicorn Golf Course Unicorn Golf Course",
       "source": "ArbiterLive"
     },
     "Golf|2026-09-18": {
       "sport": "Golf",
       "date": "2026-09-18",
+      "opponent": "Burlington",
       "isHome": false,
       "venue": "Burlington",
       "source": "ArbiterLive"
@@ -543,6 +772,7 @@
     "Golf|2026-09-22": {
       "sport": "Golf",
       "date": "2026-09-22",
+      "opponent": "Arlington",
       "isHome": true,
       "venue": "Bellevue Golf Club",
       "source": "ArbiterLive"
@@ -550,6 +780,7 @@
     "Golf|2026-09-24": {
       "sport": "Golf",
       "date": "2026-09-24",
+      "opponent": "Belmont",
       "isHome": true,
       "venue": "Bellevue Golf Club",
       "source": "ArbiterLive"
@@ -557,6 +788,7 @@
     "Golf|2026-09-29": {
       "sport": "Golf",
       "date": "2026-09-29",
+      "opponent": "Wilmington",
       "isHome": true,
       "venue": "Bellevue Golf Club",
       "source": "ArbiterLive"
@@ -564,6 +796,7 @@
     "Golf|2026-09-30": {
       "sport": "Golf",
       "date": "2026-09-30",
+      "opponent": "Lexington",
       "isHome": false,
       "venue": "Lexington",
       "source": "ArbiterLive"
@@ -571,6 +804,7 @@
     "Golf|2026-10-01": {
       "sport": "Golf",
       "date": "2026-10-01",
+      "opponent": "TBA",
       "isHome": true,
       "venue": "Bellevue Golf Club",
       "source": "ArbiterLive"
@@ -578,8 +812,97 @@
     "Golf|2026-10-06": {
       "sport": "Golf",
       "date": "2026-10-06",
+      "opponent": "Reading",
       "isHome": false,
       "venue": "Reading",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-10-08": {
+      "sport": "Golf",
+      "date": "2026-10-08",
+      "opponent": "Wakefield",
+      "isHome": true,
+      "venue": "Bellevue Golf Club",
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-10-14": {
+      "sport": "Golf",
+      "date": "2026-10-14",
+      "opponent": "Stoneham",
+      "isHome": false,
+      "venue": "Bear Hill Golf Course Bear Hill Golf Course",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-09-04": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-09-04",
+      "opponent": "Winchester",
+      "isHome": false,
+      "venue": "Winchester HS Gym",
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2026-12-12": {
+      "sport": "Cross Country",
+      "date": "2026-12-12",
+      "opponent": "Somerville",
+      "isHome": false,
+      "venue": "Veterans Memorial Rink Ice Rink",
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2026-12-16": {
+      "sport": "Cross Country",
+      "date": "2026-12-16",
+      "opponent": "Reading",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2026-12-19": {
+      "sport": "Cross Country",
+      "date": "2026-12-19",
+      "opponent": "Burlington",
+      "isHome": false,
+      "venue": "Burlington Ice Palace Hockey - Burlington Ice Palace",
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2026-12-23": {
+      "sport": "Cross Country",
+      "date": "2026-12-23",
+      "opponent": "Newton South",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2026-12-26": {
+      "sport": "Cross Country",
+      "date": "2026-12-26",
+      "opponent": "Beverly",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2026-12-29": {
+      "sport": "Cross Country",
+      "date": "2026-12-29",
+      "opponent": "Amesbury",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2026-12-05": {
+      "sport": "Cross Country",
+      "date": "2026-12-05",
+      "opponent": "Wakefield-Wilmington",
+      "isHome": false,
+      "venue": "Stoneham Arena Stoneham Arena",
+      "source": "ArbiterLive"
+    },
+    "Cross Country|2026-12-21": {
+      "sport": "Cross Country",
+      "date": "2026-12-21",
+      "opponent": "Marblehead",
+      "isHome": true,
+      "venue": "Pine Banks",
       "source": "ArbiterLive"
     }
   }

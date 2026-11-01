@@ -3,682 +3,34 @@
   "label": "Fall 2026",
   "events": [
     {
-      "date": "2026-09-10",
-      "time": "7:00 PM",
-      "sport": "Football",
-      "opp": "Reading",
-      "isHome": true,
-      "venue": "Fred Green Field"
-    },
-    {
-      "date": "2026-09-18",
-      "time": "7:00 PM",
-      "sport": "Football",
-      "opp": "Danvers",
-      "isHome": true,
-      "venue": "Fred Green Field"
-    },
-    {
-      "date": "2026-09-25",
-      "time": "7:00 PM",
-      "sport": "Football",
-      "opp": "Swampscott",
-      "isHome": false,
-      "venue": "Swampscott"
-    },
-    {
-      "date": "2026-10-02",
-      "time": "7:00 PM",
-      "sport": "Football",
-      "opp": "Winchester",
-      "isHome": true,
-      "venue": "Fred Green Field"
-    },
-    {
-      "date": "2026-10-09",
-      "time": "6:00 PM",
-      "sport": "Football",
-      "opp": "Burlington",
-      "isHome": false,
-      "venue": "Burlington"
-    },
-    {
-      "date": "2026-10-16",
-      "time": "7:00 PM",
-      "sport": "Football",
-      "opp": "Watertown",
-      "isHome": false,
-      "venue": "Watertown"
-    },
-    {
-      "date": "2026-10-23",
-      "time": "7:00 PM",
-      "sport": "Football",
-      "opp": "Wilmington",
-      "isHome": true,
-      "venue": "Fred Green Field"
-    },
-    {
-      "date": "2026-10-30",
-      "time": "6:30 PM",
-      "sport": "Football",
-      "opp": "Stoneham",
-      "isHome": false,
-      "venue": "Stoneham"
-    },
-    {
-      "date": "2026-11-26",
-      "time": "10:15 AM",
-      "sport": "Football",
-      "opp": "Wakefield",
-      "isHome": true,
-      "venue": "Fred Green Field"
-    },
-    {
-      "date": "2026-09-09",
-      "time": "4:15 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Reading",
+      "date": "2026-08-26",
+      "time": "9:00 AM",
+      "sport": "Girls' Soccer",
+      "opp": "Waltham",
       "isHome": true,
       "venue": "Pine Banks"
     },
     {
-      "date": "2026-09-15",
-      "time": "4:15 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Burlington",
-      "isHome": false,
-      "venue": "Burlington"
-    },
-    {
-      "date": "2026-09-21",
-      "time": "4:30 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Clinton",
-      "isHome": false,
-      "venue": "Clinton"
-    },
-    {
-      "date": "2026-09-23",
-      "time": "4:15 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Winchester",
-      "isHome": false,
-      "venue": "Winchester"
-    },
-    {
-      "date": "2026-09-29",
-      "time": "4:15 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Lexington",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-01",
-      "time": "4:15 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Wilmington",
-      "isHome": false,
-      "venue": "Wilmington"
-    },
-    {
-      "date": "2026-10-05",
-      "time": "4:30 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Arlington",
-      "isHome": false,
-      "venue": "Arlington"
-    },
-    {
-      "date": "2026-10-07",
-      "time": "4:15 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Stoneham",
-      "isHome": true,
-      "venue": "Knoll"
-    },
-    {
-      "date": "2026-10-09",
-      "time": "6:00 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Somerville",
-      "isHome": true,
-      "venue": "Fred Green Field"
-    },
-    {
-      "date": "2026-10-14",
-      "time": "6:30 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Watertown",
-      "isHome": false,
-      "venue": "Watertown"
-    },
-    {
-      "date": "2026-10-17",
-      "time": "10:00 AM",
-      "sport": "Boys' Soccer",
-      "opp": "Beverly",
-      "isHome": false,
-      "venue": "Beverly"
-    },
-    {
-      "date": "2026-10-19",
-      "time": "4:15 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Greater Lawrence",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-21",
-      "time": "6:00 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Belmont",
-      "isHome": false,
-      "venue": "Belmont"
-    },
-    {
-      "date": "2026-10-24",
-      "time": "10:00 AM",
-      "sport": "Boys' Soccer",
-      "opp": "Excel Academy",
-      "isHome": true,
-      "venue": "Fred Green Field"
-    },
-    {
-      "date": "2026-10-27",
-      "time": "4:15 PM",
-      "sport": "Boys' Soccer",
-      "opp": "Wakefield",
-      "isHome": true,
-      "venue": "Knoll"
-    },
-    {
-      "date": "2026-10-29",
+      "date": "2026-08-27",
       "time": "5:00 PM",
       "sport": "Boys' Soccer",
-      "opp": "Methuen",
-      "isHome": false,
-      "venue": "Methuen"
-    },
-    {
-      "date": "2026-09-09",
-      "time": "4:15 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Reading",
-      "isHome": false,
-      "venue": "Reading"
-    },
-    {
-      "date": "2026-09-14",
-      "time": "4:15 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Burlington",
-      "isHome": false,
-      "venue": "Burlington"
-    },
-    {
-      "date": "2026-09-19",
-      "time": "10:00 AM",
-      "sport": "Girls' Soccer",
-      "opp": "Peabody",
-      "isHome": true,
-      "venue": "Fred Green Field"
-    },
-    {
-      "date": "2026-09-23",
-      "time": "4:15 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Winchester",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-09-25",
-      "time": "5:30 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Danvers",
-      "isHome": false,
-      "venue": "Danvers"
-    },
-    {
-      "date": "2026-09-29",
-      "time": "4:15 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Lexington",
-      "isHome": false,
-      "venue": "Lexington"
-    },
-    {
-      "date": "2026-10-01",
-      "time": "4:15 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Wilmington",
-      "isHome": false,
-      "venue": "Wilmington"
-    },
-    {
-      "date": "2026-10-05",
-      "time": "4:15 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Arlington",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-07",
-      "time": "4:15 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Stoneham",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-09",
-      "time": "4:15 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Marblehead",
-      "isHome": true,
-      "venue": "Fred Green Field"
-    },
-    {
-      "date": "2026-10-12",
-      "time": "4:30 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Woburn",
-      "isHome": false,
-      "venue": "Woburn"
-    },
-    {
-      "date": "2026-10-14",
-      "time": "4:30 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Watertown",
-      "isHome": false,
-      "venue": "Watertown"
-    },
-    {
-      "date": "2026-10-17",
-      "time": "11:00 AM",
-      "sport": "Girls' Soccer",
-      "opp": "Bishop Feehan",
-      "isHome": false,
-      "venue": "Bishop Feehan"
-    },
-    {
-      "date": "2026-10-21",
-      "time": "4:15 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Belmont",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-24",
-      "time": "11:00 AM",
-      "sport": "Girls' Soccer",
-      "opp": "Tewksbury",
-      "isHome": false,
-      "venue": "Tewksbury"
-    },
-    {
-      "date": "2026-10-27",
-      "time": "4:15 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Wakefield",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-30",
-      "time": "4:30 PM",
-      "sport": "Girls' Soccer",
-      "opp": "Beverly",
-      "isHome": false,
-      "venue": "Beverly"
-    },
-    {
-      "date": "2026-09-08",
-      "time": "5:45 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Reading",
-      "isHome": false,
-      "venue": "Reading"
-    },
-    {
-      "date": "2026-09-10",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Burlington",
-      "isHome": false,
-      "venue": "Burlington"
-    },
-    {
-      "date": "2026-09-14",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Winchester",
-      "isHome": true,
-      "venue": "MVMMS"
-    },
-    {
-      "date": "2026-09-16",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Ipswich",
-      "isHome": false,
-      "venue": "Ipswich"
-    },
-    {
-      "date": "2026-09-18",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Lexington",
-      "isHome": false,
-      "venue": "Lexington"
-    },
-    {
-      "date": "2026-09-22",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Wilmington",
-      "isHome": true,
-      "venue": "MVMMS"
-    },
-    {
-      "date": "2026-09-24",
-      "time": "5:00 PM",
-      "sport": "Girls' Volleyball",
       "opp": "Lynn Classical",
-      "isHome": true,
-      "venue": "MVMMS"
-    },
-    {
-      "date": "2026-09-28",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Arlington",
-      "isHome": true,
-      "venue": "MVMMS"
-    },
-    {
-      "date": "2026-09-30",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Newburyport",
       "isHome": false,
-      "venue": "Newburyport"
+      "venue": "LYNN-MANNING ( B ) #1"
     },
     {
-      "date": "2026-10-02",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Stoneham",
-      "isHome": true,
-      "venue": "MVMMS"
-    },
-    {
-      "date": "2026-10-06",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Woburn",
-      "isHome": false,
-      "venue": "Woburn"
-    },
-    {
-      "date": "2026-10-09",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Arlington Catholic",
-      "isHome": true,
-      "venue": "MVMMS"
-    },
-    {
-      "date": "2026-10-13",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Watertown",
-      "isHome": false,
-      "venue": "Watertown"
-    },
-    {
-      "date": "2026-10-15",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Belmont",
-      "isHome": true,
-      "venue": "MVMMS"
-    },
-    {
-      "date": "2026-10-17",
-      "time": "1:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Duxbury",
-      "isHome": false,
-      "venue": "Duxbury"
-    },
-    {
-      "date": "2026-10-20",
-      "time": "6:30 PM",
-      "sport": "Girls' Volleyball",
+      "date": "2026-08-29",
+      "time": "1:00 PM",
+      "sport": "Boys' Soccer",
       "opp": "Wakefield",
       "isHome": true,
-      "venue": "MVMMS"
+      "venue": "Pine Banks"
     },
     {
-      "date": "2026-10-23",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
+      "date": "2026-08-29",
+      "time": "9:00 AM",
+      "sport": "Field Hockey",
       "opp": "Marblehead",
-      "isHome": true,
-      "venue": "MVMMS"
-    },
-    {
-      "date": "2026-10-26",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "TBA",
-      "isHome": false,
-      "venue": "TBA"
-    },
-    {
-      "date": "2026-10-28",
-      "time": "5:30 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "TBA",
-      "isHome": false,
-      "venue": "TBA"
-    },
-    {
-      "date": "2026-10-30",
-      "time": "5:00 PM",
-      "sport": "Girls' Volleyball",
-      "opp": "Methuen",
-      "isHome": false,
-      "venue": "Methuen"
-    },
-    {
-      "date": "2026-09-08",
-      "time": "4:00 PM",
-      "sport": "Field Hockey",
-      "opp": "Reading",
-      "isHome": false,
-      "venue": "Reading"
-    },
-    {
-      "date": "2026-09-10",
-      "time": "4:15 PM",
-      "sport": "Field Hockey",
-      "opp": "Burlington",
-      "isHome": false,
-      "venue": "Burlington"
-    },
-    {
-      "date": "2026-09-14",
-      "time": "4:15 PM",
-      "sport": "Field Hockey",
-      "opp": "Winchester",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-09-18",
-      "time": "4:15 PM",
-      "sport": "Field Hockey",
-      "opp": "Lexington",
-      "isHome": false,
-      "venue": "Lexington"
-    },
-    {
-      "date": "2026-09-22",
-      "time": "4:15 PM",
-      "sport": "Field Hockey",
-      "opp": "Wilmington",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-09-28",
-      "time": "4:15 PM",
-      "sport": "Field Hockey",
-      "opp": "Arlington",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-09-29",
-      "time": "4:30 PM",
-      "sport": "Field Hockey",
-      "opp": "Beverly",
-      "isHome": false,
-      "venue": "Beverly"
-    },
-    {
-      "date": "2026-10-02",
-      "time": "4:15 PM",
-      "sport": "Field Hockey",
-      "opp": "Stoneham",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-06",
-      "time": "4:00 PM",
-      "sport": "Field Hockey",
-      "opp": "Woburn",
-      "isHome": false,
-      "venue": "Woburn"
-    },
-    {
-      "date": "2026-10-08",
-      "time": "4:30 PM",
-      "sport": "Field Hockey",
-      "opp": "Weston",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-09",
-      "time": "6:00 PM",
-      "sport": "Field Hockey",
-      "opp": "Stoneham",
-      "isHome": false,
-      "venue": "Stoneham"
-    },
-    {
-      "date": "2026-10-12",
-      "time": "10:00 AM",
-      "sport": "Field Hockey",
-      "opp": "Watertown",
-      "isHome": false,
-      "venue": "Watertown"
-    },
-    {
-      "date": "2026-10-13",
-      "time": "4:15 PM",
-      "sport": "Field Hockey",
-      "opp": "Woburn",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-15",
-      "time": "4:15 PM",
-      "sport": "Field Hockey",
-      "opp": "Belmont",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-20",
-      "time": "4:15 PM",
-      "sport": "Field Hockey",
-      "opp": "Wakefield",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-22",
-      "time": "4:15 PM",
-      "sport": "Field Hockey",
-      "opp": "Reading",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-09-15",
-      "time": "4:00 PM",
-      "sport": "Cross Country",
-      "opp": "Arlington",
-      "isHome": false,
-      "venue": "Arlington"
-    },
-    {
-      "date": "2026-09-22",
-      "time": "4:15 PM",
-      "sport": "Cross Country",
-      "opp": "Watertown",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-09-29",
-      "time": "4:00 PM",
-      "sport": "Cross Country",
-      "opp": "Stoneham",
-      "isHome": false,
-      "venue": "Stoneham"
-    },
-    {
-      "date": "2026-10-06",
-      "time": "4:00 PM",
-      "sport": "Cross Country",
-      "opp": "Wilmington",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-13",
-      "time": "4:00 PM",
-      "sport": "Cross Country",
-      "opp": "Burlington",
-      "isHome": false,
-      "venue": "Burlington"
-    },
-    {
-      "date": "2026-10-20",
-      "time": "4:15 PM",
-      "sport": "Cross Country",
-      "opp": "Wakefield",
-      "isHome": true,
-      "venue": "Pine Banks"
-    },
-    {
-      "date": "2026-10-26",
-      "time": "2:00 PM",
-      "sport": "Cross Country",
-      "opp": "TBA",
       "isHome": true,
       "venue": "Pine Banks"
     },
@@ -699,12 +51,180 @@
       "venue": "Bellevue Golf Club"
     },
     {
+      "date": "2026-09-01",
+      "time": "4:30 PM",
+      "sport": "Football",
+      "opp": "Billerica Memorial",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2026-09-01",
+      "time": "4:30 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Billerica Memorial",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-09-02",
+      "time": "4:30 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Newton North",
+      "isHome": false,
+      "venue": "Newton North"
+    },
+    {
+      "date": "2026-09-02",
+      "time": "5:00 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "North Andover",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
       "date": "2026-09-03",
       "time": "3:30 PM",
       "sport": "Golf",
       "opp": "Woburn",
       "isHome": true,
       "venue": "Bellevue Golf Club"
+    },
+    {
+      "date": "2026-09-04",
+      "time": "4:15 PM",
+      "sport": "Football",
+      "opp": "Lynnfield",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2026-09-04",
+      "time": "8:00 AM",
+      "sport": "Girls' Volleyball",
+      "opp": "Winchester",
+      "isHome": false,
+      "venue": "Winchester HS Gym"
+    },
+    {
+      "date": "2026-09-08",
+      "time": "4:00 PM",
+      "sport": "Field Hockey",
+      "opp": "Reading",
+      "isHome": false,
+      "venue": "Reading"
+    },
+    {
+      "date": "2026-09-08",
+      "time": "5:45 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Reading",
+      "isHome": false,
+      "venue": "Reading"
+    },
+    {
+      "date": "2026-09-09",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Reading",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-09-09",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Reading",
+      "isHome": false,
+      "venue": "Reading"
+    },
+    {
+      "date": "2026-09-10",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2026-09-10",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2026-09-10",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Reading",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2026-09-14",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2026-09-14",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Winchester",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-09-14",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Winchester",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "2:06 PM",
+      "sport": "Golf",
+      "opp": "Winchester",
+      "isHome": false,
+      "venue": "Unicorn Golf Course Unicorn Golf Course"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "4:00 PM",
+      "sport": "Cross Country",
+      "opp": "Arlington",
+      "isHome": false,
+      "venue": "Arlington"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Winchester",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-09-16",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Ipswich",
+      "isHome": false,
+      "venue": "Ipswich"
     },
     {
       "date": "2026-09-18",
@@ -715,12 +235,100 @@
       "venue": "Burlington"
     },
     {
+      "date": "2026-09-18",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Lexington",
+      "isHome": false,
+      "venue": "Lexington"
+    },
+    {
+      "date": "2026-09-18",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Lexington",
+      "isHome": false,
+      "venue": "Lexington"
+    },
+    {
+      "date": "2026-09-18",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Danvers",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2026-09-19",
+      "time": "10:00 AM",
+      "sport": "Girls' Soccer",
+      "opp": "Peabody",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2026-09-21",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Wilmington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-09-21",
+      "time": "4:30 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Clinton",
+      "isHome": false,
+      "venue": "Clinton"
+    },
+    {
       "date": "2026-09-22",
       "time": "3:30 PM",
       "sport": "Golf",
       "opp": "Arlington",
       "isHome": true,
       "venue": "Bellevue Golf Club"
+    },
+    {
+      "date": "2026-09-22",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Wilmington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-09-22",
+      "time": "4:15 PM",
+      "sport": "Cross Country",
+      "opp": "Watertown",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-09-22",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Wilmington",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2026-09-23",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Winchester",
+      "isHome": false,
+      "venue": "Winchester"
+    },
+    {
+      "date": "2026-09-23",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Winchester",
+      "isHome": true,
+      "venue": "Pine Banks"
     },
     {
       "date": "2026-09-24",
@@ -731,12 +339,52 @@
       "venue": "Bellevue Golf Club"
     },
     {
+      "date": "2026-09-24",
+      "time": "5:00 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Lynn Classical",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2026-09-25",
+      "time": "5:30 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Danvers",
+      "isHome": false,
+      "venue": "Danvers"
+    },
+    {
+      "date": "2026-09-25",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Swampscott",
+      "isHome": false,
+      "venue": "Swampscott"
+    },
+    {
       "date": "2026-09-28",
       "time": "3:30 PM",
       "sport": "Golf",
       "opp": "Stoneham",
       "isHome": false,
       "venue": "Stoneham"
+    },
+    {
+      "date": "2026-09-28",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Arlington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-09-28",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Arlington",
+      "isHome": true,
+      "venue": "MVMMS"
     },
     {
       "date": "2026-09-29",
@@ -747,12 +395,76 @@
       "venue": "Bellevue Golf Club"
     },
     {
+      "date": "2026-09-29",
+      "time": "4:00 PM",
+      "sport": "Cross Country",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Stoneham"
+    },
+    {
+      "date": "2026-09-29",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Lexington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-09-29",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Lexington",
+      "isHome": false,
+      "venue": "Lexington"
+    },
+    {
+      "date": "2026-09-29",
+      "time": "4:30 PM",
+      "sport": "Field Hockey",
+      "opp": "Beverly",
+      "isHome": false,
+      "venue": "Beverly"
+    },
+    {
       "date": "2026-09-30",
       "time": "3:45 PM",
       "sport": "Golf",
       "opp": "Lexington",
       "isHome": false,
       "venue": "Lexington"
+    },
+    {
+      "date": "2026-09-30",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Newburyport",
+      "isHome": false,
+      "venue": "Newburyport"
+    },
+    {
+      "date": "2026-10-01",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Wilmington",
+      "isHome": false,
+      "venue": "Wilmington"
+    },
+    {
+      "date": "2026-10-01",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Wilmington",
+      "isHome": false,
+      "venue": "Wilmington"
+    },
+    {
+      "date": "2026-10-01",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Stoneham",
+      "isHome": true,
+      "venue": "Pine Banks"
     },
     {
       "date": "2026-10-01",
@@ -763,12 +475,476 @@
       "venue": "Bellevue Golf Club"
     },
     {
+      "date": "2026-10-02",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Stoneham",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-02",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Stoneham",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2026-10-02",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Winchester",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2026-10-05",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Arlington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-05",
+      "time": "4:30 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Arlington",
+      "isHome": false,
+      "venue": "Arlington"
+    },
+    {
       "date": "2026-10-06",
       "time": "3:30 PM",
       "sport": "Golf",
       "opp": "Reading",
       "isHome": false,
       "venue": "Reading"
+    },
+    {
+      "date": "2026-10-06",
+      "time": "4:00 PM",
+      "sport": "Field Hockey",
+      "opp": "Woburn",
+      "isHome": false,
+      "venue": "Woburn"
+    },
+    {
+      "date": "2026-10-06",
+      "time": "4:00 PM",
+      "sport": "Cross Country",
+      "opp": "Wilmington",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-06",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Woburn",
+      "isHome": false,
+      "venue": "Woburn"
+    },
+    {
+      "date": "2026-10-07",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Stoneham",
+      "isHome": true,
+      "venue": "Knoll"
+    },
+    {
+      "date": "2026-10-07",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Stoneham",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-08",
+      "time": "3:30 PM",
+      "sport": "Golf",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Bellevue Golf Club"
+    },
+    {
+      "date": "2026-10-08",
+      "time": "4:30 PM",
+      "sport": "Field Hockey",
+      "opp": "Weston",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-09",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Marblehead",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2026-10-09",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Arlington Catholic",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2026-10-09",
+      "time": "6:00 PM",
+      "sport": "Football",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2026-10-09",
+      "time": "6:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Somerville",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2026-10-09",
+      "time": "6:00 PM",
+      "sport": "Field Hockey",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Stoneham"
+    },
+    {
+      "date": "2026-10-12",
+      "time": "10:00 AM",
+      "sport": "Field Hockey",
+      "opp": "Watertown",
+      "isHome": false,
+      "venue": "Watertown"
+    },
+    {
+      "date": "2026-10-12",
+      "time": "4:30 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Woburn",
+      "isHome": false,
+      "venue": "Woburn"
+    },
+    {
+      "date": "2026-10-12",
+      "time": "6:30 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Woburn",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-13",
+      "time": "4:00 PM",
+      "sport": "Cross Country",
+      "opp": "Burlington",
+      "isHome": false,
+      "venue": "Burlington"
+    },
+    {
+      "date": "2026-10-13",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Woburn",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-13",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Watertown",
+      "isHome": false,
+      "venue": "Watertown"
+    },
+    {
+      "date": "2026-10-14",
+      "time": "3:15 PM",
+      "sport": "Golf",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Bear Hill Golf Course Bear Hill Golf Course"
+    },
+    {
+      "date": "2026-10-14",
+      "time": "4:30 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Watertown",
+      "isHome": false,
+      "venue": "Watertown"
+    },
+    {
+      "date": "2026-10-14",
+      "time": "6:30 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Watertown",
+      "isHome": false,
+      "venue": "Watertown"
+    },
+    {
+      "date": "2026-10-15",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Belmont",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-15",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Belmont",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2026-10-16",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Watertown",
+      "isHome": false,
+      "venue": "Watertown"
+    },
+    {
+      "date": "2026-10-17",
+      "time": "10:00 AM",
+      "sport": "Boys' Soccer",
+      "opp": "Beverly",
+      "isHome": false,
+      "venue": "Beverly"
+    },
+    {
+      "date": "2026-10-17",
+      "time": "11:00 AM",
+      "sport": "Girls' Soccer",
+      "opp": "Bishop Feehan",
+      "isHome": false,
+      "venue": "Bishop Feehan"
+    },
+    {
+      "date": "2026-10-17",
+      "time": "1:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Duxbury",
+      "isHome": false,
+      "venue": "Duxbury"
+    },
+    {
+      "date": "2026-10-19",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Greater Lawrence",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-19",
+      "time": "6:30 PM",
+      "sport": "Field Hockey",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "4:15 PM",
+      "sport": "Cross Country",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "6:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Belmont",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "6:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Belmont",
+      "isHome": false,
+      "venue": "Belmont"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "4:15 PM",
+      "sport": "Field Hockey",
+      "opp": "Reading",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-23",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Marblehead",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2026-10-23",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Wilmington",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2026-10-24",
+      "time": "10:00 AM",
+      "sport": "Boys' Soccer",
+      "opp": "Excel Academy",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2026-10-24",
+      "time": "11:00 AM",
+      "sport": "Girls' Soccer",
+      "opp": "Tewksbury",
+      "isHome": false,
+      "venue": "Tewksbury"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "2:00 PM",
+      "sport": "Cross Country",
+      "opp": "TBA",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Reading",
+      "isHome": false,
+      "venue": "Reading Memorial HS Hawkes Field House-Vaccaro Gymnasium"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "6:30 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "4:15 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Knoll"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "4:15 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "5:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Woburn",
+      "isHome": false,
+      "venue": "Winchester"
+    },
+    {
+      "date": "2026-10-29",
+      "time": "5:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Methuen",
+      "isHome": false,
+      "venue": "Methuen"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "4:30 PM",
+      "sport": "Girls' Soccer",
+      "opp": "Beverly",
+      "isHome": false,
+      "venue": "Beverly"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "5:00 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "Methuen",
+      "isHome": false,
+      "venue": "Methuen"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "6:30 PM",
+      "sport": "Football",
+      "opp": "Stoneham",
+      "isHome": false,
+      "venue": "Stoneham"
+    },
+    {
+      "date": "2026-11-02",
+      "time": "6:30 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Acton-Boxborough",
+      "isHome": false,
+      "venue": "Acton-Boxborough Regional"
+    },
+    {
+      "date": "2026-11-06",
+      "time": "7:00 PM",
+      "sport": "Football",
+      "opp": "Doherty Memorial",
+      "isHome": true,
+      "venue": "Fred Green Field"
+    },
+    {
+      "date": "2026-11-26",
+      "time": "10:15 AM",
+      "sport": "Football",
+      "opp": "Wakefield",
+      "isHome": true,
+      "venue": "Fred Green Field"
     }
   ],
   "scores": {
@@ -2026,13 +2202,145 @@
       "status": "Final",
       "isHome": true,
       "source": "MaxPreps"
+    },
+    "Golf|2026-09-15": {
+      "sport": "Golf",
+      "date": "2026-09-15",
+      "opponent": "Winchester",
+      "mhsScore": 30.5,
+      "oppScore": 41.5,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-10-08": {
+      "sport": "Golf",
+      "date": "2026-10-08",
+      "opponent": "Wakefield",
+      "mhsScore": 33.5,
+      "oppScore": 38.5,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
+    },
+    "Golf|2026-10-14": {
+      "sport": "Golf",
+      "date": "2026-10-14",
+      "opponent": "Stoneham",
+      "mhsScore": 25,
+      "oppScore": 47,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-10-12": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-12",
+      "opponent": "Westport",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-10-26": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-26",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 1,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-10-26": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-26",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 2,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2026-09-15": {
+      "sport": "Field Hockey",
+      "date": "2026-09-15",
+      "opponent": "Winchester",
+      "mhsScore": 1,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2026-09-21": {
+      "sport": "Field Hockey",
+      "date": "2026-09-21",
+      "opponent": "Wilmington",
+      "mhsScore": 2,
+      "oppScore": 2,
+      "result": "T",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2026-10-01": {
+      "sport": "Field Hockey",
+      "date": "2026-10-01",
+      "opponent": "Stoneham",
+      "mhsScore": 3,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Field Hockey|2026-10-19": {
+      "sport": "Field Hockey",
+      "date": "2026-10-19",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 4,
+      "oppScore": 3,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-08-27": {
+      "sport": "Boys' Soccer",
+      "date": "2026-08-27",
+      "opponent": "Lynn Classical",
+      "mhsScore": 1,
+      "oppScore": 2,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-09-02": {
+      "sport": "Boys' Soccer",
+      "date": "2026-09-02",
+      "opponent": "Newton North",
+      "mhsScore": 0,
+      "oppScore": 1,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
     }
   },
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-11-01 18:21:19",
+      "lastUpdated": "2026-11-01 18:35:36",
       "teams": [
         {
           "rank": "1",
@@ -2105,7 +2413,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-11-01 18:21:20",
+      "lastUpdated": "2026-11-01 18:35:37",
       "teams": [
         {
           "rank": "1",
@@ -2244,7 +2552,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-11-01 18:21:21",
+      "lastUpdated": "2026-11-01 18:35:38",
       "teams": [
         {
           "rank": "1",
@@ -2372,7 +2680,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-11-01 18:21:23",
+      "lastUpdated": "2026-11-01 18:35:40",
       "teams": [
         {
           "rank": "1",
@@ -2511,7 +2819,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-11-01 18:21:24",
+      "lastUpdated": "2026-11-01 18:35:41",
       "teams": [
         {
           "rank": "1",

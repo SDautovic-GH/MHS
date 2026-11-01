@@ -46,6 +46,16 @@ def main():
             if key in sched_data:
                 ev["isHome"] = sched_data[key]["isHome"]
                 ev["venue"] = sched_data[key]["venue"]
+                if sched_data[key].get("opponent") and ev.get("opp") in ["TBA", "", None]:
+                    ev["opp"] = sched_data[key]["opponent"]
+            if key in s2026.get("scores", {}):
+                sc = s2026["scores"][key]
+                if sc.get("opponent") and ev.get("opp") in ["TBA", "", None]:
+                    opp = sc["opponent"]
+                    if opp == "Reading Memorial": opp = "Reading"
+                    elif opp == "Woburn Memorial": opp = "Woburn"
+                    elif opp == "Wakefield Memorial": opp = "Wakefield"
+                    ev["opp"] = opp
 
     with open(season_2026_file, "w", encoding="utf-8") as f:
         json.dump(s2026, f, indent=2)

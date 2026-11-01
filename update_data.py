@@ -50,10 +50,7 @@ ARBITER_TEAMS = {
     "Boys' Soccer": "5616965",
     "Girls' Soccer": "5616968",
     "Girls' Volleyball": "4044277",
-    "Field Hockey": "4285421",
-    "Boys' Cross Country": "7773306",
-    "Girls' Cross Country": "7928429",
-    "Girls' Swimming": "4332482"
+    "Field Hockey": "4285421"
 }
 
 def fetch_url(url, timeout=12):
@@ -70,61 +67,183 @@ def extract_next_data(html):
             print(f"Error parsing JSON: {e}")
     return None
 
-def load_scheduled_events():
-    """Load official 2026 schedule events (keyed by sport|date) from seasons/2026.json or index.html"""
-    events = {}
+def normalize_opponent(opp_str):
+    if not opp_str or opp_str.strip().upper() == 'TBA':
+        return 'TBA'
+    clean = opp_str.strip()
+    clean = re.sub(r'\s+(Regional\s+)?High\s+School.*$', '', clean, flags=re.IGNORECASE).strip()
+    clean = re.sub(r'\s+High\s*$', '', clean, flags=re.IGNORECASE).strip()
+    clean = re.sub(r'\s+Memorial\s+HS.*$', '', clean, flags=re.IGNORECASE).strip()
+    if clean.lower() == 'reading memorial': return 'Reading'
+    if clean.lower() == 'woburn memorial': return 'Woburn'
+    if clean.lower() == 'wakefield memorial': return 'Wakefield'
+    if clean.lower() == 'doherty memorial': return 'Doherty Memorial'
+    return clean
+
+def normalize_venue(venue_str, is_home, sport_label, opp_name):
+    if is_home:
+        if sport_label == "Girls' Volleyball": return "MVMMS"
+        if sport_label == "Football": return "Fred Green Field"
+        if sport_label == "Golf": return "Bellevue Golf Club"
+        return "Pine Banks"
+    if not venue_str or venue_str.strip().upper() == 'TBA':
+        return opp_name
+    clean = re.sub(r'\s+High\s+School.*$', '', venue_str, flags=re.IGNORECASE).strip()
+    return clean if clean else opp_name
+
+def sync_and_load_scheduled_events():
+    """
+    Synchronizes scheduled events for 2026:
+    1. Resolves any TBA opponents and venues from official ArbiterLive and MaxPreps schedules.
+    2. Auto-discovers upcoming varsity playoff contests (MIAA Tournament) and adds them to seasons/2026.json.
+    3. Returns a dictionary of all scheduled events keyed by sport|date.
+    """
     season_2026_file = os.path.join("seasons", "2026.json")
+    s2026 = {"season": "2026", "label": "Fall 2026", "events": []}
     if os.path.exists(season_2026_file):
         try:
             with open(season_2026_file, "r", encoding="utf-8") as f:
                 s2026 = json.load(f)
-            for ev in s2026.get("events", []):
-                events[f"{ev['sport']}|{ev['date']}"] = {
-                    "sport": ev["sport"],
-                    "date": ev["date"],
-                    "opponent": ev.get("opp") or ev.get("opponent", ""),
-                    "isHome": ev.get("isHome", True),
-                    "venue": ev.get("venue", "")
-                }
-            if events:
-                return events
         except Exception as e:
-            print(f"[-] Error loading from {season_2026_file}: {e}")
+            print(f"[-] Error loading {season_2026_file}: {e}")
 
-    if os.path.exists("index.html"):
-        with open("index.html", "r", encoding="utf-8") as f:
-            content = f.read()
+    events_list = s2026.get("events", [])
+    events_map = {f"{e['sport']}|{e['date']}": e for e in events_list}
+    updated_or_added = 0
 
-        m_json = re.search(r'const SEASONS_DATA = ({.*?});', content)
-        if m_json:
-            try:
-                s_data = json.loads(m_json.group(1))
-                for ev in s_data.get("2026", {}).get("events", []):
-                    events[f"{ev['sport']}|{ev['date']}"] = {
-                        "sport": ev["sport"],
-                        "date": ev["date"],
-                        "opponent": ev.get("opp") or ev.get("opponent", ""),
-                        "isHome": ev.get("isHome", True),
-                        "venue": ev.get("venue", "")
+    months = {
+        'Jan':'01','Feb':'02','Mar':'03','Apr':'04','May':'05','Jun':'06',
+        'Jul':'07','Aug':'08','Sep':'09','Oct':'10','Nov':'11','Dec':'12'
+    }
+
+    print("[*] Scanning ArbiterLive & MaxPreps for playoff matchups and TBA schedule resolution...")
+
+    # 1. Scan ArbiterLive for all varsity sports (MIAA official schedule)
+    for sport_label, team_id in ARBITER_TEAMS.items():
+        url = f"https://www.arbiterlive.com/Teams/Schedule/{team_id}?activeEntityId=14381"
+        try:
+            html = fetch_url(url, timeout=10)
+            rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
+            for r in rows:
+                tds = re.findall(r'<td[^>]*>(.*?)</td>', r, re.DOTALL)
+                if len(tds) < 4:
+                    continue
+                cleaned = [' '.join(re.sub(r'<[^>]+>', ' ', td).split()) for td in tds]
+                d_m = re.search(r'\b(Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})\b', cleaned[0])
+                if not d_m:
+                    continue
+                iso_date = f"2026-{months[d_m.group(1)]}-{d_m.group(2).zfill(2)}"
+                s_key = "Cross Country" if "Cross Country" in sport_label else sport_label
+                key = f"{s_key}|{iso_date}"
+                is_home = (cleaned[1].strip() == 'vs')
+                opp_raw = cleaned[2].strip()
+                venue_raw = cleaned[3].strip() if len(cleaned) > 3 else ''
+                time_m = re.search(r'\b\d{1,2}:\d{2}\s*(?:AM|PM)\b', cleaned[0], re.IGNORECASE)
+                time_str = time_m.group(0) if time_m else 'TBD'
+
+                norm_opp = normalize_opponent(opp_raw)
+                norm_venue = normalize_venue(venue_raw, is_home, s_key, norm_opp)
+
+                if key in events_map:
+                    ev = events_map[key]
+                    if ev.get("opp") in ["TBA", "", None] and norm_opp != "TBA":
+                        ev["opp"] = norm_opp
+                        updated_or_added += 1
+                        print(f"  [✓] Updated opponent for {key}: {norm_opp}")
+                    if ev.get("venue") in ["TBA", "", None] and norm_venue != "TBA":
+                        ev["venue"] = norm_venue
+                        updated_or_added += 1
+                    if ev.get("time") in ["TBD", "TBA", "", None] and time_str != "TBD":
+                        ev["time"] = time_str
+                else:
+                    # New playoff / scheduled game in Fall 2026 (Aug - Nov)
+                    if "2026-08-01" <= iso_date <= "2026-11-30":
+                        new_ev = {
+                            "date": iso_date,
+                            "time": time_str,
+                            "sport": s_key,
+                            "opp": norm_opp,
+                            "isHome": is_home,
+                            "venue": norm_venue
+                        }
+                        events_list.append(new_ev)
+                        events_map[key] = new_ev
+                        updated_or_added += 1
+                        print(f"  [+] Discovered new playoff/scheduled contest: {s_key} on {iso_date} vs {norm_opp}")
+        except Exception as e:
+            print(f"  [x] Error scanning ArbiterLive schedule for {sport_label}: {e}")
+
+    # 2. Scan MaxPreps contests
+    for sport_label, cfg in SPORTS_CONFIG.items():
+        slug = cfg["slug"]
+        url = f"https://www.maxpreps.com/ma/melrose/melrose-red-hawks/{slug}/schedule/"
+        try:
+            html = fetch_url(url)
+            data = extract_next_data(html)
+            if not data:
+                continue
+            contests = data.get("props", {}).get("pageProps", {}).get("contests", [])
+            for c in contests:
+                teams = c[0]
+                if len(teams) < 2:
+                    continue
+                mhs = next((t for t in teams if "melrose" in t[14].lower()), None)
+                opp = next((t for t in teams if "melrose" not in t[14].lower()), None)
+                if not mhs or not opp:
+                    continue
+                iso_date = c[11][:10] if len(c) > 11 and c[11] else ""
+                if not iso_date or not ("2026-08-01" <= iso_date <= "2026-11-30"):
+                    continue
+                key = f"{sport_label}|{iso_date}"
+                is_home = (mhs[4] == 1)
+                norm_opp = normalize_opponent(opp[14])
+                norm_venue = normalize_venue("", is_home, sport_label, norm_opp)
+
+                if key in events_map:
+                    ev = events_map[key]
+                    if ev.get("opp") in ["TBA", "", None] and norm_opp != "TBA":
+                        ev["opp"] = norm_opp
+                        updated_or_added += 1
+                        print(f"  [✓] Updated opponent from MaxPreps for {key}: {norm_opp}")
+                else:
+                    new_ev = {
+                        "date": iso_date,
+                        "time": "TBD",
+                        "sport": sport_label,
+                        "opp": norm_opp,
+                        "isHome": is_home,
+                        "venue": norm_venue
                     }
-                if events:
-                    return events
-            except Exception:
-                pass
+                    events_list.append(new_ev)
+                    events_map[key] = new_ev
+                    updated_or_added += 1
+                    print(f"  [+] Discovered new MaxPreps playoff/contest: {sport_label} on {iso_date} vs {norm_opp}")
+        except Exception:
+            pass
 
-        matches = re.findall(
-            r'date:\s*"([^"]+)",\s*time:\s*"[^"]+",\s*sport:\s*"([^"]+)",\s*opp:\s*"([^"]+)",\s*isHome:\s*(true|false),\s*venue:\s*"([^"]+)"',
-            content
-        )
-        for d, s, opp, is_home, venue in matches:
-            events[f"{s}|{d}"] = {
-                "sport": s,
-                "date": d,
-                "opponent": opp,
-                "isHome": is_home == "true",
-                "venue": venue
-            }
-    return events
+    # Sort events chronologically
+    events_list.sort(key=lambda x: (x["date"], x.get("time", "")))
+    s2026["events"] = events_list
+
+    # Save seasons/2026.json if updated
+    if updated_or_added > 0:
+        with open(season_2026_file, "w", encoding="utf-8") as f:
+            json.dump(s2026, f, indent=2)
+        print(f"[✓] Saved updated seasons/2026.json ({len(events_list)} total events, {updated_or_added} changes/additions)")
+
+    scheduled_events = {}
+    for ev in events_list:
+        scheduled_events[f"{ev['sport']}|{ev['date']}"] = {
+            "sport": ev["sport"],
+            "date": ev["date"],
+            "opponent": ev.get("opp", ""),
+            "isHome": ev.get("isHome", True),
+            "venue": ev.get("venue", "")
+        }
+    return scheduled_events
+
+def load_scheduled_events():
+    return sync_and_load_scheduled_events()
 
 def fetch_arbiter_scores(scheduled_events):
     print("[*] Checking for completed game scores on ArbiterLive (MIAA)...")
@@ -352,10 +471,12 @@ def fetch_schedule_locations(scheduled_events):
 
                 is_home = (mhs[4] == 1)
                 ev = scheduled_events[key]
-                venue = get_home_venue(sport_label, ev.get("venue")) if is_home else ev.get("opponent", get_away_venue(opp[14]))
+                opp_name = ev.get("opponent") or normalize_opponent(opp[14])
+                venue = get_home_venue(sport_label, ev.get("venue")) if is_home else (ev.get("venue") if ev.get("venue") not in ["TBA", "", None] else get_away_venue(opp[14]))
                 locations[key] = {
                     "sport": sport_label,
                     "date": iso_date,
+                    "opponent": opp_name,
                     "isHome": is_home,
                     "venue": venue,
                     "source": "MaxPreps"
@@ -390,10 +511,12 @@ def fetch_schedule_locations(scheduled_events):
                 home_away = cleaned[1] # 'vs' or '@'
                 is_home = (home_away == 'vs')
                 ev = scheduled_events[key]
-                venue = get_home_venue(s_key, ev.get("venue")) if is_home else ev.get("opponent", get_away_venue(cleaned[2]))
+                opp_name = ev.get("opponent") or normalize_opponent(cleaned[2])
+                venue = get_home_venue(s_key, ev.get("venue")) if is_home else (ev.get("venue") if ev.get("venue") not in ["TBA", "", None] else get_away_venue(cleaned[2]))
                 locations[key] = {
                     "sport": s_key,
                     "date": iso_date,
+                    "opponent": opp_name,
                     "isHome": is_home,
                     "venue": venue,
                     "source": "ArbiterLive"
