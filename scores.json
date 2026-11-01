@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-01T17:04:10.788051",
+  "lastUpdated": "2026-11-01T18:21:18.158270",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -1054,6 +1054,206 @@
       "result": "W",
       "status": "Final",
       "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Football|2026-10-23": {
+      "sport": "Football",
+      "date": "2026-10-23",
+      "opponent": "Wilmington",
+      "mhsScore": 34,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Football|2026-10-30": {
+      "sport": "Football",
+      "date": "2026-10-30",
+      "opponent": "Stoneham",
+      "mhsScore": 30,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-10-24": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-24",
+      "opponent": "Excel Academy Charter",
+      "mhsScore": 4,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-10-29": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-29",
+      "opponent": "Methuen",
+      "mhsScore": 1,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-10-24": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-24",
+      "opponent": "Tewksbury Memorial",
+      "mhsScore": 1,
+      "oppScore": 2,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-10-30": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-30",
+      "opponent": "Beverly",
+      "mhsScore": 2,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2026-10-23": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-23",
+      "opponent": "Marblehead",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-16",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-18",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-20",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2026-10-26": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-26",
+      "opponent": "Reading Memorial",
+      "mhsScore": 0,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "0-0",
+          "win": false
+        }
+      ]
+    },
+    "Girls' Volleyball|2026-10-28": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-28",
+      "opponent": "Woburn Memorial",
+      "mhsScore": 3,
+      "oppScore": 2,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "20-25",
+          "win": false
+        },
+        {
+          "label": "Set 2",
+          "score": "22-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "25-19",
+          "win": true
+        },
+        {
+          "label": "Set 4",
+          "score": "25-21",
+          "win": true
+        },
+        {
+          "label": "Set 5",
+          "score": "15-10",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2026-10-30": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-30",
+      "opponent": "Methuen",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-21",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-15",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-22",
+          "win": true
+        }
+      ]
+    },
+    "Field Hockey|2026-10-22": {
+      "sport": "Field Hockey",
+      "date": "2026-10-22",
+      "opponent": "Reading Memorial",
+      "mhsScore": 0,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-10-27": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-27",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 2,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
       "source": "MaxPreps"
     }
   }

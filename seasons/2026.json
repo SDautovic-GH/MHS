@@ -479,16 +479,16 @@
       "time": "5:30 PM",
       "sport": "Girls' Volleyball",
       "opp": "TBA",
-      "isHome": true,
-      "venue": "MVMMS"
+      "isHome": false,
+      "venue": "TBA"
     },
     {
       "date": "2026-10-28",
       "time": "5:30 PM",
       "sport": "Girls' Volleyball",
       "opp": "TBA",
-      "isHome": true,
-      "venue": "MVMMS"
+      "isHome": false,
+      "venue": "TBA"
     },
     {
       "date": "2026-10-30",
@@ -1826,13 +1826,213 @@
       "status": "Final",
       "isHome": false,
       "source": "MaxPreps"
+    },
+    "Football|2026-10-23": {
+      "sport": "Football",
+      "date": "2026-10-23",
+      "opponent": "Wilmington",
+      "mhsScore": 34,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Football|2026-10-30": {
+      "sport": "Football",
+      "date": "2026-10-30",
+      "opponent": "Stoneham",
+      "mhsScore": 30,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-10-24": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-24",
+      "opponent": "Excel Academy Charter",
+      "mhsScore": 4,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-10-29": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-29",
+      "opponent": "Methuen",
+      "mhsScore": 1,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-10-24": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-24",
+      "opponent": "Tewksbury Memorial",
+      "mhsScore": 1,
+      "oppScore": 2,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Soccer|2026-10-30": {
+      "sport": "Girls' Soccer",
+      "date": "2026-10-30",
+      "opponent": "Beverly",
+      "mhsScore": 2,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2026-10-23": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-23",
+      "opponent": "Marblehead",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-16",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-18",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-20",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2026-10-26": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-26",
+      "opponent": "Reading Memorial",
+      "mhsScore": 0,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "0-0",
+          "win": false
+        }
+      ]
+    },
+    "Girls' Volleyball|2026-10-28": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-28",
+      "opponent": "Woburn Memorial",
+      "mhsScore": 3,
+      "oppScore": 2,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "20-25",
+          "win": false
+        },
+        {
+          "label": "Set 2",
+          "score": "22-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "25-19",
+          "win": true
+        },
+        {
+          "label": "Set 4",
+          "score": "25-21",
+          "win": true
+        },
+        {
+          "label": "Set 5",
+          "score": "15-10",
+          "win": true
+        }
+      ]
+    },
+    "Girls' Volleyball|2026-10-30": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-10-30",
+      "opponent": "Methuen",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "25-21",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "25-15",
+          "win": true
+        },
+        {
+          "label": "Set 3",
+          "score": "25-22",
+          "win": true
+        }
+      ]
+    },
+    "Field Hockey|2026-10-22": {
+      "sport": "Field Hockey",
+      "date": "2026-10-22",
+      "opponent": "Reading Memorial",
+      "mhsScore": 0,
+      "oppScore": 3,
+      "result": "L",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-10-27": {
+      "sport": "Boys' Soccer",
+      "date": "2026-10-27",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 2,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
     }
   },
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-11-01 17:04:11",
+      "lastUpdated": "2026-11-01 18:21:19",
       "teams": [
         {
           "rank": "1",
@@ -1905,7 +2105,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-11-01 17:04:12",
+      "lastUpdated": "2026-11-01 18:21:20",
       "teams": [
         {
           "rank": "1",
@@ -2044,7 +2244,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-11-01 17:04:13",
+      "lastUpdated": "2026-11-01 18:21:21",
       "teams": [
         {
           "rank": "1",
@@ -2172,7 +2372,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-11-01 17:04:13",
+      "lastUpdated": "2026-11-01 18:21:23",
       "teams": [
         {
           "rank": "1",
@@ -2311,7 +2511,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-11-01 17:04:14",
+      "lastUpdated": "2026-11-01 18:21:24",
       "teams": [
         {
           "rank": "1",

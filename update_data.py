@@ -71,11 +71,47 @@ def extract_next_data(html):
     return None
 
 def load_scheduled_events():
-    """Load official 2026 schedule events (keyed by sport|date) from index.html"""
+    """Load official 2026 schedule events (keyed by sport|date) from seasons/2026.json or index.html"""
     events = {}
+    season_2026_file = os.path.join("seasons", "2026.json")
+    if os.path.exists(season_2026_file):
+        try:
+            with open(season_2026_file, "r", encoding="utf-8") as f:
+                s2026 = json.load(f)
+            for ev in s2026.get("events", []):
+                events[f"{ev['sport']}|{ev['date']}"] = {
+                    "sport": ev["sport"],
+                    "date": ev["date"],
+                    "opponent": ev.get("opp") or ev.get("opponent", ""),
+                    "isHome": ev.get("isHome", True),
+                    "venue": ev.get("venue", "")
+                }
+            if events:
+                return events
+        except Exception as e:
+            print(f"[-] Error loading from {season_2026_file}: {e}")
+
     if os.path.exists("index.html"):
         with open("index.html", "r", encoding="utf-8") as f:
             content = f.read()
+
+        m_json = re.search(r'const SEASONS_DATA = ({.*?});', content)
+        if m_json:
+            try:
+                s_data = json.loads(m_json.group(1))
+                for ev in s_data.get("2026", {}).get("events", []):
+                    events[f"{ev['sport']}|{ev['date']}"] = {
+                        "sport": ev["sport"],
+                        "date": ev["date"],
+                        "opponent": ev.get("opp") or ev.get("opponent", ""),
+                        "isHome": ev.get("isHome", True),
+                        "venue": ev.get("venue", "")
+                    }
+                if events:
+                    return events
+            except Exception:
+                pass
+
         matches = re.findall(
             r'date:\s*"([^"]+)",\s*time:\s*"[^"]+",\s*sport:\s*"([^"]+)",\s*opp:\s*"([^"]+)",\s*isHome:\s*(true|false),\s*venue:\s*"([^"]+)"',
             content
