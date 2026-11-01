@@ -3011,14 +3011,10 @@
     .score-card:hover {
       border-color: var(--border-highlight);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
     }
-    .score-card-win {
-      border-color: rgba(16, 185, 129, 0.4);
-      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.08);
-    }
-    .score-card-loss {
-      border-color: rgba(239, 68, 68, 0.25);
+    .score-card-win, .score-card-loss {
+      border-color: var(--border-subtle);
     }
     .score-card-header {
       display: flex;
@@ -3102,13 +3098,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.4rem 0.55rem;
-      border-radius: 8px;
-      transition: background-color 0.15s ease;
+      padding: 0.35rem 0.45rem;
+      border-radius: 6px;
+      transition: opacity 0.15s ease;
     }
-    .score-team-row.winner {
-      background-color: rgba(16, 185, 129, 0.09);
-      font-weight: 700;
+    .score-team-row.winner .score-team-name {
+      font-weight: 750;
+      color: var(--text-primary);
+    }
+    .score-team-row.loser {
+      opacity: 0.55;
+    }
+    .score-team-row.loser .score-team-name {
+      color: var(--text-muted);
+      font-weight: 500;
     }
     .score-team-info {
       display: flex;
@@ -3137,20 +3140,50 @@
     }
     .score-team-name {
       font-size: 0.9rem;
+      font-weight: 600;
       color: var(--text-primary);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    .score-num-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .winner-caret, .winner-caret-spacer {
+      display: inline-block;
+      width: 0.75rem;
+      text-align: center;
+      font-size: 0.65rem;
+      line-height: 1;
+      user-select: none;
+    }
+    .winner-caret {
+      color: var(--text-primary);
+      opacity: 0.9;
+    }
+    .winner-caret-spacer {
+      visibility: hidden;
+    }
     .score-team-num {
       font-size: 1.15rem;
-      font-weight: 800;
+      font-weight: 700;
       font-variant-numeric: tabular-nums;
       color: var(--text-secondary);
-      margin-left: 0.5rem;
+      min-width: 1.25rem;
+      text-align: right;
     }
     .score-team-row.winner .score-team-num {
       color: var(--text-primary);
+      font-weight: 850;
+      font-size: 1.25rem;
+    }
+    .score-team-row.loser .score-team-num {
+      color: var(--text-muted);
+      font-weight: 500;
     }
     .score-card-footer {
       display: flex;
@@ -6554,6 +6587,8 @@ function renderScoresView() {
     const cardClass = isWin ? 'score-card score-card-win' : (isLoss ? 'score-card score-card-loss' : 'score-card');
     const mhsRowWinner = isWin || (hasScore && mhsScoreNum > oppScoreNum);
     const oppRowWinner = isLoss || (hasScore && oppScoreNum > mhsScoreNum);
+    const mhsRowLoser = hasScore && oppRowWinner;
+    const oppRowLoser = hasScore && mhsRowWinner;
 
     const mhsDisplay = hasScore ? item.mhsScore : '--';
     const oppDisplay = hasScore ? item.oppScore : '--';
@@ -6572,19 +6607,25 @@ function renderScoresView() {
         </div>
 
         <div class="score-card-body">
-          <div class="score-team-row ${mhsRowWinner ? 'winner' : ''}">
+          <div class="score-team-row ${mhsRowWinner ? 'winner' : (mhsRowLoser ? 'loser' : '')}">
             <div class="score-team-info">
               <span class="score-team-badge">MHS</span>
               <span class="score-team-name">Melrose High</span>
             </div>
-            <span class="score-team-num">${mhsDisplay}</span>
+            <div class="score-num-wrap">
+              ${mhsRowWinner ? '<span class="winner-caret" aria-label="Winner" title="Winner">◀</span>' : '<span class="winner-caret-spacer"></span>'}
+              <span class="score-team-num">${mhsDisplay}</span>
+            </div>
           </div>
-          <div class="score-team-row ${oppRowWinner ? 'winner' : ''}">
+          <div class="score-team-row ${oppRowWinner ? 'winner' : (oppRowLoser ? 'loser' : '')}">
             <div class="score-team-info">
               <span class="score-opp-badge">OPP</span>
               <span class="score-team-name">${item.opp}</span>
             </div>
-            <span class="score-team-num">${oppDisplay}</span>
+            <div class="score-num-wrap">
+              ${oppRowWinner ? '<span class="winner-caret" aria-label="Winner" title="Winner">◀</span>' : '<span class="winner-caret-spacer"></span>'}
+              <span class="score-team-num">${oppDisplay}</span>
+            </div>
           </div>
         </div>
 
