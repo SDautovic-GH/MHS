@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-01T18:35:51.523548",
+  "lastUpdated": "2026-11-02T09:17:54.775360",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -839,70 +839,6 @@
       "opponent": "Winchester",
       "isHome": false,
       "venue": "Winchester HS Gym",
-      "source": "ArbiterLive"
-    },
-    "Cross Country|2026-12-12": {
-      "sport": "Cross Country",
-      "date": "2026-12-12",
-      "opponent": "Somerville",
-      "isHome": false,
-      "venue": "Veterans Memorial Rink Ice Rink",
-      "source": "ArbiterLive"
-    },
-    "Cross Country|2026-12-16": {
-      "sport": "Cross Country",
-      "date": "2026-12-16",
-      "opponent": "Reading",
-      "isHome": true,
-      "venue": "Pine Banks",
-      "source": "ArbiterLive"
-    },
-    "Cross Country|2026-12-19": {
-      "sport": "Cross Country",
-      "date": "2026-12-19",
-      "opponent": "Burlington",
-      "isHome": false,
-      "venue": "Burlington Ice Palace Hockey - Burlington Ice Palace",
-      "source": "ArbiterLive"
-    },
-    "Cross Country|2026-12-23": {
-      "sport": "Cross Country",
-      "date": "2026-12-23",
-      "opponent": "Newton South",
-      "isHome": true,
-      "venue": "Pine Banks",
-      "source": "ArbiterLive"
-    },
-    "Cross Country|2026-12-26": {
-      "sport": "Cross Country",
-      "date": "2026-12-26",
-      "opponent": "Beverly",
-      "isHome": true,
-      "venue": "Pine Banks",
-      "source": "ArbiterLive"
-    },
-    "Cross Country|2026-12-29": {
-      "sport": "Cross Country",
-      "date": "2026-12-29",
-      "opponent": "Amesbury",
-      "isHome": true,
-      "venue": "Pine Banks",
-      "source": "ArbiterLive"
-    },
-    "Cross Country|2026-12-05": {
-      "sport": "Cross Country",
-      "date": "2026-12-05",
-      "opponent": "Wakefield-Wilmington",
-      "isHome": false,
-      "venue": "Stoneham Arena Stoneham Arena",
-      "source": "ArbiterLive"
-    },
-    "Cross Country|2026-12-21": {
-      "sport": "Cross Country",
-      "date": "2026-12-21",
-      "opponent": "Marblehead",
-      "isHome": true,
-      "venue": "Pine Banks",
       "source": "ArbiterLive"
     }
   }
