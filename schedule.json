@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-03T09:23:12.640121",
+  "lastUpdated": "2026-11-03T18:21:25.383629",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -735,6 +735,14 @@
       "opponent": "Reading",
       "isHome": true,
       "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Field Hockey|2026-11-07": {
+      "sport": "Field Hockey",
+      "date": "2026-11-07",
+      "opponent": "Hingham",
+      "isHome": false,
+      "venue": "Hingham",
       "source": "ArbiterLive"
     },
     "Golf|2026-09-01": {
