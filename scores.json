@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-02T20:43:46.395227",
+  "lastUpdated": "2026-11-03T09:22:56.756438",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -1387,6 +1387,17 @@
       "status": "Final",
       "isHome": false,
       "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-11-02": {
+      "sport": "Boys' Soccer",
+      "date": "2026-11-02",
+      "opponent": "Acton-Boxborough",
+      "mhsScore": 1,
+      "oppScore": 2,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
     }
   }
 }
