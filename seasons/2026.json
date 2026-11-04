@@ -932,6 +932,14 @@
     },
     {
       "date": "2026-11-06",
+      "time": "4:30 PM",
+      "sport": "Girls' Volleyball",
+      "opp": "TBA",
+      "isHome": true,
+      "venue": "MVMMS"
+    },
+    {
+      "date": "2026-11-06",
       "time": "7:00 PM",
       "sport": "Football",
       "opp": "Doherty Memorial",
@@ -2359,7 +2367,7 @@
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-11-04 08:56:22",
+      "lastUpdated": "2026-11-04 18:33:57",
       "teams": [
         {
           "rank": "1",
@@ -2432,7 +2440,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-11-04 08:56:23",
+      "lastUpdated": "2026-11-04 18:33:58",
       "teams": [
         {
           "rank": "1",
@@ -2571,7 +2579,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-11-04 08:56:24",
+      "lastUpdated": "2026-11-04 18:33:59",
       "teams": [
         {
           "rank": "1",
@@ -2699,7 +2707,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-11-04 08:56:25",
+      "lastUpdated": "2026-11-04 18:33:59",
       "teams": [
         {
           "rank": "1",
@@ -2838,7 +2846,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-11-04 08:56:27",
+      "lastUpdated": "2026-11-04 18:34:00",
       "teams": [
         {
           "rank": "1",

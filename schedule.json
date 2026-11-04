@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-04T08:56:36.376011",
+  "lastUpdated": "2026-11-04T18:34:12.504183",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -847,6 +847,14 @@
       "opponent": "Winchester",
       "isHome": false,
       "venue": "Winchester HS Gym",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-11-06": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-11-06",
+      "opponent": "TBA",
+      "isHome": true,
+      "venue": "MVMMS",
       "source": "ArbiterLive"
     }
   }
