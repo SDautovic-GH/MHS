@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-11-04T18:34:00.613292",
+  "lastUpdated": "2026-11-05T09:20:08.078911",
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-11-04 18:33:57",
+      "lastUpdated": "2026-11-05 09:20:04",
       "teams": [
         {
           "rank": "1",
@@ -77,7 +77,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-11-04 18:33:58",
+      "lastUpdated": "2026-11-05 09:20:05",
       "teams": [
         {
           "rank": "1",
@@ -216,7 +216,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-11-04 18:33:59",
+      "lastUpdated": "2026-11-05 09:20:06",
       "teams": [
         {
           "rank": "1",
@@ -234,9 +234,9 @@
           "school": "Belmont",
           "confRecord": "8-2",
           "confPct": "0.800",
-          "overallRecord": "16-5-1",
-          "overallPct": "0.750",
-          "streak": "4W",
+          "overallRecord": "17-5-1",
+          "overallPct": "0.761",
+          "streak": "5W",
           "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -344,7 +344,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-11-04 18:33:59",
+      "lastUpdated": "2026-11-05 09:20:07",
       "teams": [
         {
           "rank": "1",
@@ -483,7 +483,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-11-04 18:34:00",
+      "lastUpdated": "2026-11-05 09:20:08",
       "teams": [
         {
           "rank": "1",
@@ -567,9 +567,9 @@
           "school": "Wilmington",
           "confRecord": "3-6-2",
           "confPct": "0.364",
-          "overallRecord": "5-7-5",
-          "overallPct": "0.441",
-          "streak": "1L",
+          "overallRecord": "6-7-5",
+          "overallPct": "0.472",
+          "streak": "1W",
           "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },

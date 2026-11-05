@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-04T18:34:12.504183",
+  "lastUpdated": "2026-11-05T09:20:14.095535",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -601,6 +601,14 @@
       "venue": "Methuen",
       "source": "ArbiterLive"
     },
+    "Girls' Volleyball|2026-11-06": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-11-06",
+      "opponent": "Westwood",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
     "Field Hockey|2026-08-29": {
       "sport": "Field Hockey",
       "date": "2026-08-29",
@@ -847,14 +855,6 @@
       "opponent": "Winchester",
       "isHome": false,
       "venue": "Winchester HS Gym",
-      "source": "ArbiterLive"
-    },
-    "Girls' Volleyball|2026-11-06": {
-      "sport": "Girls' Volleyball",
-      "date": "2026-11-06",
-      "opponent": "TBA",
-      "isHome": true,
-      "venue": "MVMMS",
       "source": "ArbiterLive"
     }
   }
