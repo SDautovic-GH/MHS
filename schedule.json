@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-05T18:39:27.690544",
+  "lastUpdated": "2026-11-05T21:50:26.521103",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -273,6 +273,14 @@
       "venue": "Acton-Boxborough Regional",
       "source": "ArbiterLive"
     },
+    "Boys' Soccer|2026-11-07": {
+      "sport": "Boys' Soccer",
+      "date": "2026-11-07",
+      "opponent": "Bristol Plymouth Regional Technical School",
+      "isHome": true,
+      "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
     "Girls' Soccer|2026-08-26": {
       "sport": "Girls' Soccer",
       "date": "2026-08-26",
@@ -431,6 +439,14 @@
       "opponent": "Beverly",
       "isHome": false,
       "venue": "Beverly",
+      "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-11-07": {
+      "sport": "Girls' Soccer",
+      "date": "2026-11-07",
+      "opponent": "Malden",
+      "isHome": true,
+      "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
     "Girls' Volleyball|2026-09-02": {
