@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-06T17:53:24.726177",
+  "lastUpdated": "2026-11-07T08:38:44.531634",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -88,6 +88,14 @@
       "isHome": true,
       "venue": "Fred Green Field",
       "source": "ArbiterLive"
+    },
+    "Football|2026-11-13": {
+      "sport": "Football",
+      "date": "2026-11-13",
+      "opponent": "King Philip Regional",
+      "isHome": false,
+      "venue": "King Philip Regional",
+      "source": "MaxPreps"
     },
     "Football|2026-11-26": {
       "sport": "Football",

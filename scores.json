@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-06T17:53:12.686249",
+  "lastUpdated": "2026-11-07T08:38:35.364928",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -1398,6 +1398,35 @@
       "status": "Final",
       "isHome": false,
       "source": "ArbiterLive"
+    },
+    "Football|2026-11-06": {
+      "sport": "Football",
+      "date": "2026-11-06",
+      "opponent": "Doherty Memorial",
+      "mhsScore": 14,
+      "oppScore": 7,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2026-11-06": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-11-06",
+      "opponent": "Westwood",
+      "mhsScore": 3,
+      "oppScore": 0,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "0-0",
+          "win": false
+        }
+      ]
     }
   }
 }
