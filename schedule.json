@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-07T08:38:44.531634",
+  "lastUpdated": "2026-11-07T16:48:07.372074",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -95,7 +95,7 @@
       "opponent": "King Philip Regional",
       "isHome": false,
       "venue": "King Philip Regional",
-      "source": "MaxPreps"
+      "source": "ArbiterLive"
     },
     "Football|2026-11-26": {
       "sport": "Football",
@@ -629,6 +629,14 @@
       "sport": "Girls' Volleyball",
       "date": "2026-11-06",
       "opponent": "Westwood",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-11-10": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-11-10",
+      "opponent": "Dartmouth",
       "isHome": true,
       "venue": "MVMMS",
       "source": "ArbiterLive"
