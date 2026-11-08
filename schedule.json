@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-07T18:48:24.497862",
+  "lastUpdated": "2026-11-08T08:51:41.999055",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -289,6 +289,14 @@
       "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
+    "Boys' Soccer|2026-11-10": {
+      "sport": "Boys' Soccer",
+      "date": "2026-11-10",
+      "opponent": "Agawam",
+      "isHome": false,
+      "venue": "Agawam",
+      "source": "MaxPreps"
+    },
     "Girls' Soccer|2026-08-26": {
       "sport": "Girls' Soccer",
       "date": "2026-08-26",
@@ -456,6 +464,14 @@
       "isHome": true,
       "venue": "Pine Banks",
       "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-11-10": {
+      "sport": "Girls' Soccer",
+      "date": "2026-11-10",
+      "opponent": "Whitman-Hanson Regional",
+      "isHome": false,
+      "venue": "Whitman-Hanson Regional",
+      "source": "MaxPreps"
     },
     "Girls' Volleyball|2026-09-02": {
       "sport": "Girls' Volleyball",
@@ -879,6 +895,14 @@
       "opponent": "Stoneham",
       "isHome": false,
       "venue": "Bear Hill Golf Course Bear Hill Golf Course",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-11-09": {
+      "sport": "Boys' Soccer",
+      "date": "2026-11-09",
+      "opponent": "Agawam",
+      "isHome": false,
+      "venue": "Agawam",
       "source": "ArbiterLive"
     },
     "Girls' Volleyball|2026-09-04": {
