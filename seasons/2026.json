@@ -2495,7 +2495,7 @@
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-11-08 08:51:32",
+      "lastUpdated": "2026-11-08 16:59:27",
       "teams": [
         {
           "rank": "1",
@@ -2568,7 +2568,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-11-08 08:51:33",
+      "lastUpdated": "2026-11-08 16:59:28",
       "teams": [
         {
           "rank": "1",
@@ -2707,7 +2707,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-11-08 08:51:33",
+      "lastUpdated": "2026-11-08 16:59:29",
       "teams": [
         {
           "rank": "1",
@@ -2835,7 +2835,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-11-08 08:51:34",
+      "lastUpdated": "2026-11-08 16:59:29",
       "teams": [
         {
           "rank": "1",
@@ -2897,9 +2897,9 @@
           "school": "Lexington",
           "confRecord": "7-6",
           "confPct": "0.538",
-          "overallRecord": "10-8",
-          "overallPct": "0.556",
-          "streak": "2W",
+          "overallRecord": "10-9",
+          "overallPct": "0.526",
+          "streak": "1L",
           "mascot": "https://image.maxpreps.io/school-mascot/6/9/6/696b9404-637a-43cd-b68d-b2ae2cf1a447.gif?version=636420940800000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -2974,7 +2974,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-11-08 08:51:35",
+      "lastUpdated": "2026-11-08 16:59:30",
       "teams": [
         {
           "rank": "1",
