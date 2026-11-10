@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T09:36:44.638610",
+  "lastUpdated": "2026-11-10T18:35:14.800422",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -1481,6 +1481,17 @@
       "status": "Final",
       "isHome": false,
       "source": "ArbiterLive"
+    },
+    "Girls' Soccer|2026-11-09": {
+      "sport": "Girls' Soccer",
+      "date": "2026-11-09",
+      "opponent": "Whitman-Hanson Regional",
+      "mhsScore": 1,
+      "oppScore": 2,
+      "result": "L",
+      "status": "Final",
+      "isHome": false,
+      "source": "MaxPreps"
     }
   }
 }

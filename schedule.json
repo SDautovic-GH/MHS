@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T09:36:57.290745",
+  "lastUpdated": "2026-11-10T18:35:27.774132",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -465,9 +465,9 @@
       "venue": "Pine Banks",
       "source": "ArbiterLive"
     },
-    "Girls' Soccer|2026-11-10": {
+    "Girls' Soccer|2026-11-09": {
       "sport": "Girls' Soccer",
-      "date": "2026-11-10",
+      "date": "2026-11-09",
       "opponent": "Whitman-Hanson Regional",
       "isHome": false,
       "venue": "Whitman-Hanson Regional",
