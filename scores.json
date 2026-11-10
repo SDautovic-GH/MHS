@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T21:23:19.165706",
+  "lastUpdated": "2026-11-10T09:36:44.638610",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -1470,6 +1470,17 @@
       "status": "Final",
       "isHome": false,
       "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-11-09": {
+      "sport": "Boys' Soccer",
+      "date": "2026-11-09",
+      "opponent": "Agawam",
+      "mhsScore": 1,
+      "oppScore": 0,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
     }
   }
 }
