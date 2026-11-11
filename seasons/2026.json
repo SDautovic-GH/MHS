@@ -1011,6 +1011,14 @@
       "venue": "Whitman-Hanson Regional"
     },
     {
+      "date": "2026-11-11",
+      "time": "6:00 PM",
+      "sport": "Boys' Soccer",
+      "opp": "Duxbury",
+      "isHome": true,
+      "venue": "Pine Banks"
+    },
+    {
       "date": "2026-11-13",
       "time": "6:00 PM",
       "sport": "Football",
@@ -2519,13 +2527,46 @@
       "status": "Final",
       "isHome": false,
       "source": "MaxPreps"
+    },
+    "Girls' Volleyball|2026-11-10": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-11-10",
+      "opponent": "Dartmouth",
+      "mhsScore": 3,
+      "oppScore": 1,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps",
+      "setScores": [
+        {
+          "label": "Set 1",
+          "score": "27-25",
+          "win": true
+        },
+        {
+          "label": "Set 2",
+          "score": "23-25",
+          "win": false
+        },
+        {
+          "label": "Set 3",
+          "score": "25-21",
+          "win": true
+        },
+        {
+          "label": "Set 4",
+          "score": "25-23",
+          "win": true
+        }
+      ]
     }
   },
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-11-10 18:35:15",
+      "lastUpdated": "2026-11-11 09:12:12",
       "teams": [
         {
           "rank": "1",
@@ -2598,7 +2639,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-11-10 18:35:16",
+      "lastUpdated": "2026-11-11 09:12:13",
       "teams": [
         {
           "rank": "1",
@@ -2616,9 +2657,9 @@
           "school": "Arlington",
           "confRecord": "8-1-4",
           "confPct": "0.769",
-          "overallRecord": "11-3-4",
-          "overallPct": "0.722",
-          "streak": "1W",
+          "overallRecord": "12-3-4",
+          "overallPct": "0.737",
+          "streak": "2W",
           "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -2682,9 +2723,9 @@
           "school": "Watertown",
           "confRecord": "3-6-3",
           "confPct": "0.375",
-          "overallRecord": "6-12-5",
-          "overallPct": "0.370",
-          "streak": "1W",
+          "overallRecord": "6-13-5",
+          "overallPct": "0.354",
+          "streak": "1L",
           "mascot": "https://image.maxpreps.io/school-mascot/2/a/e/2aefc75d-c102-4185-961f-7a71321a4d82.gif?version=636903194400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -2737,7 +2778,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-11-10 18:35:17",
+      "lastUpdated": "2026-11-11 09:12:14",
       "teams": [
         {
           "rank": "1",
@@ -2755,9 +2796,9 @@
           "school": "Belmont",
           "confRecord": "8-2",
           "confPct": "0.800",
-          "overallRecord": "17-5-1",
-          "overallPct": "0.761",
-          "streak": "5W",
+          "overallRecord": "17-6-1",
+          "overallPct": "0.729",
+          "streak": "1L",
           "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -2799,9 +2840,9 @@
           "school": "Wilmington",
           "confRecord": "3-3-3",
           "confPct": "0.500",
-          "overallRecord": "7-6-5",
-          "overallPct": "0.528",
-          "streak": "1W",
+          "overallRecord": "8-6-5",
+          "overallPct": "0.553",
+          "streak": "2W",
           "mascot": "https://image.maxpreps.io/school-mascot/b/1/9/b1936730-5ade-4aec-ae7d-b37d8410f1b2.gif?version=635642544000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -2865,16 +2906,16 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-11-10 18:35:18",
+      "lastUpdated": "2026-11-11 09:12:15",
       "teams": [
         {
           "rank": "1",
           "school": "Winchester",
           "confRecord": "12-0",
           "confPct": "1.000",
-          "overallRecord": "18-3",
-          "overallPct": "0.857",
-          "streak": "1W",
+          "overallRecord": "19-3",
+          "overallPct": "0.864",
+          "streak": "2W",
           "mascot": "",
           "isMHS": false
         },
@@ -2894,9 +2935,9 @@
           "school": "Melrose",
           "confRecord": "8-3",
           "confPct": "0.727",
-          "overallRecord": "17-4",
-          "overallPct": "0.810",
-          "streak": "3W",
+          "overallRecord": "18-4",
+          "overallPct": "0.818",
+          "streak": "4W",
           "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": true
         },
@@ -2949,9 +2990,9 @@
           "school": "Burlington",
           "confRecord": "7-6",
           "confPct": "0.538",
-          "overallRecord": "13-8",
-          "overallPct": "0.619",
-          "streak": "2W",
+          "overallRecord": "13-9",
+          "overallPct": "0.591",
+          "streak": "1L",
           "mascot": "https://image.maxpreps.io/school-mascot/1/f/6/1f6b93c5-739d-4612-a4bf-bee21631ba07.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -3004,15 +3045,15 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-11-10 18:35:19",
+      "lastUpdated": "2026-11-11 09:12:17",
       "teams": [
         {
           "rank": "1",
           "school": "Belmont",
-          "confRecord": "11-1",
-          "confPct": "0.917",
-          "overallRecord": "17-1-1",
-          "overallPct": "0.921",
+          "confRecord": "12-1",
+          "confPct": "0.923",
+          "overallRecord": "18-1-1",
+          "overallPct": "0.925",
           "streak": "5W",
           "mascot": "https://image.maxpreps.io/school-mascot/5/a/0/5a03515f-34b3-474d-b9b3-a1de7d447ad2.gif?version=636407144400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
@@ -3030,17 +3071,6 @@
         },
         {
           "rank": "3",
-          "school": "Reading Memorial",
-          "confRecord": "8-4-1",
-          "confPct": "0.654",
-          "overallRecord": "12-5-2",
-          "overallPct": "0.684",
-          "streak": "2W",
-          "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg",
-          "isMHS": false
-        },
-        {
-          "rank": "4",
           "school": "Winchester",
           "confRecord": "8-4-2",
           "confPct": "0.643",
@@ -3048,6 +3078,17 @@
           "overallPct": "0.650",
           "streak": "2W",
           "mascot": "",
+          "isMHS": false
+        },
+        {
+          "rank": "4",
+          "school": "Reading Memorial",
+          "confRecord": "8-5-1",
+          "confPct": "0.607",
+          "overallRecord": "12-6-2",
+          "overallPct": "0.650",
+          "streak": "2W",
+          "mascot": "https://image.maxpreps.io/school-mascot/8/5/6/8569b22d-03e4-43d8-ade3-554d4ab50fba.gif?version=635677988400000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
         {
@@ -3195,12 +3236,12 @@
           "stats": {
             "kills": 1,
             "aces": 0,
-            "digs": 104,
-            "assists": 13,
+            "digs": 107,
+            "assists": 14,
             "blocks": 0,
             "points": 57,
             "gamesPlayed": 20,
-            "setsPlayed": 72
+            "setsPlayed": 76
           }
         },
         {
@@ -3215,12 +3256,12 @@
           "stats": {
             "kills": 1,
             "aces": 0,
-            "digs": 207,
-            "assists": 36,
+            "digs": 216,
+            "assists": 37,
             "blocks": 0,
-            "points": 181,
+            "points": 185,
             "gamesPlayed": 20,
-            "setsPlayed": 72
+            "setsPlayed": 76
           }
         },
         {
@@ -3273,14 +3314,14 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sadie-smith/?careerid=ou78uehu5deqa",
           "stats": {
-            "kills": 59,
+            "kills": 60,
             "aces": 0,
-            "digs": 147,
-            "assists": 551,
+            "digs": 152,
+            "assists": 583,
             "blocks": 0,
-            "points": 117,
+            "points": 126,
             "gamesPlayed": 20,
-            "setsPlayed": 71
+            "setsPlayed": 75
           }
         },
         {
@@ -3293,14 +3334,14 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/dani-digiorgio/?careerid=k58rnbnp8gh55",
           "stats": {
-            "kills": 1,
+            "kills": 6,
             "aces": 0,
-            "digs": 161,
+            "digs": 165,
             "assists": 16,
             "blocks": 0,
-            "points": 161,
+            "points": 169,
             "gamesPlayed": 20,
-            "setsPlayed": 72
+            "setsPlayed": 76
           }
         },
         {
@@ -3313,14 +3354,14 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/amelie-johnson/?careerid=bc8l1ropafb88",
           "stats": {
-            "kills": 114,
+            "kills": 122,
             "aces": 0,
             "digs": 14,
             "assists": 2,
             "blocks": 0,
             "points": 0,
             "gamesPlayed": 20,
-            "setsPlayed": 72
+            "setsPlayed": 76
           }
         },
         {
@@ -3333,14 +3374,14 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/adriana-santoriello/?careerid=suiogvkm8ch88",
           "stats": {
-            "kills": 196,
+            "kills": 208,
             "aces": 0,
             "digs": 93,
             "assists": 5,
             "blocks": 0,
-            "points": 121,
+            "points": 126,
             "gamesPlayed": 18,
-            "setsPlayed": 66
+            "setsPlayed": 70
           }
         },
         {
@@ -3353,14 +3394,14 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/alisa-dautovic/?careerid=d9qh0va24ikee",
           "stats": {
-            "kills": 108,
+            "kills": 120,
             "aces": 0,
-            "digs": 80,
+            "digs": 84,
             "assists": 8,
             "blocks": 0,
-            "points": 147,
+            "points": 160,
             "gamesPlayed": 19,
-            "setsPlayed": 65
+            "setsPlayed": 69
           }
         },
         {
@@ -3413,14 +3454,14 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sabrina-mcart/?careerid=ninaliut7fbue",
           "stats": {
-            "kills": 82,
+            "kills": 86,
             "aces": 0,
             "digs": 6,
             "assists": 2,
             "blocks": 0,
             "points": 7,
             "gamesPlayed": 17,
-            "setsPlayed": 60
+            "setsPlayed": 64
           }
         },
         {
@@ -3452,14 +3493,14 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/elise-marchais/?careerid=d58qmr3ee55ee",
           "stats": {
-            "kills": 196,
+            "kills": 203,
             "aces": 0,
-            "digs": 33,
-            "assists": 2,
+            "digs": 34,
+            "assists": 4,
             "blocks": 0,
-            "points": 112,
+            "points": 125,
             "gamesPlayed": 19,
-            "setsPlayed": 71
+            "setsPlayed": 75
           }
         },
         {

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T18:35:24.397068",
+  "lastUpdated": "2026-11-11T09:12:23.172119",
   "sports": {
     "Girls' Volleyball": {
       "sport": "Girls' Volleyball",
@@ -54,12 +54,12 @@
           "stats": {
             "kills": 1,
             "aces": 0,
-            "digs": 104,
-            "assists": 13,
+            "digs": 107,
+            "assists": 14,
             "blocks": 0,
             "points": 57,
             "gamesPlayed": 20,
-            "setsPlayed": 72
+            "setsPlayed": 76
           }
         },
         {
@@ -74,12 +74,12 @@
           "stats": {
             "kills": 1,
             "aces": 0,
-            "digs": 207,
-            "assists": 36,
+            "digs": 216,
+            "assists": 37,
             "blocks": 0,
-            "points": 181,
+            "points": 185,
             "gamesPlayed": 20,
-            "setsPlayed": 72
+            "setsPlayed": 76
           }
         },
         {
@@ -132,14 +132,14 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sadie-smith/?careerid=ou78uehu5deqa",
           "stats": {
-            "kills": 59,
+            "kills": 60,
             "aces": 0,
-            "digs": 147,
-            "assists": 551,
+            "digs": 152,
+            "assists": 583,
             "blocks": 0,
-            "points": 117,
+            "points": 126,
             "gamesPlayed": 20,
-            "setsPlayed": 71
+            "setsPlayed": 75
           }
         },
         {
@@ -152,14 +152,14 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/dani-digiorgio/?careerid=k58rnbnp8gh55",
           "stats": {
-            "kills": 1,
+            "kills": 6,
             "aces": 0,
-            "digs": 161,
+            "digs": 165,
             "assists": 16,
             "blocks": 0,
-            "points": 161,
+            "points": 169,
             "gamesPlayed": 20,
-            "setsPlayed": 72
+            "setsPlayed": 76
           }
         },
         {
@@ -172,14 +172,14 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/amelie-johnson/?careerid=bc8l1ropafb88",
           "stats": {
-            "kills": 114,
+            "kills": 122,
             "aces": 0,
             "digs": 14,
             "assists": 2,
             "blocks": 0,
             "points": 0,
             "gamesPlayed": 20,
-            "setsPlayed": 72
+            "setsPlayed": 76
           }
         },
         {
@@ -192,14 +192,14 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/adriana-santoriello/?careerid=suiogvkm8ch88",
           "stats": {
-            "kills": 196,
+            "kills": 208,
             "aces": 0,
             "digs": 93,
             "assists": 5,
             "blocks": 0,
-            "points": 121,
+            "points": 126,
             "gamesPlayed": 18,
-            "setsPlayed": 66
+            "setsPlayed": 70
           }
         },
         {
@@ -212,14 +212,14 @@
           "year": "So.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/alisa-dautovic/?careerid=d9qh0va24ikee",
           "stats": {
-            "kills": 108,
+            "kills": 120,
             "aces": 0,
-            "digs": 80,
+            "digs": 84,
             "assists": 8,
             "blocks": 0,
-            "points": 147,
+            "points": 160,
             "gamesPlayed": 19,
-            "setsPlayed": 65
+            "setsPlayed": 69
           }
         },
         {
@@ -272,14 +272,14 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/sabrina-mcart/?careerid=ninaliut7fbue",
           "stats": {
-            "kills": 82,
+            "kills": 86,
             "aces": 0,
             "digs": 6,
             "assists": 2,
             "blocks": 0,
             "points": 7,
             "gamesPlayed": 17,
-            "setsPlayed": 60
+            "setsPlayed": 64
           }
         },
         {
@@ -311,14 +311,14 @@
           "year": "Jr.",
           "profileUrl": "https://www.maxpreps.com/ma/melrose/melrose-red-hawks/athletes/elise-marchais/?careerid=d58qmr3ee55ee",
           "stats": {
-            "kills": 196,
+            "kills": 203,
             "aces": 0,
-            "digs": 33,
-            "assists": 2,
+            "digs": 34,
+            "assists": 4,
             "blocks": 0,
-            "points": 112,
+            "points": 125,
             "gamesPlayed": 19,
-            "setsPlayed": 71
+            "setsPlayed": 75
           }
         },
         {
