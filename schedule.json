@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T09:12:26.498641",
+  "lastUpdated": "2026-11-11T18:34:00.461394",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -295,6 +295,14 @@
       "opponent": "Agawam",
       "isHome": false,
       "venue": "Agawam",
+      "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-11-13": {
+      "sport": "Boys' Soccer",
+      "date": "2026-11-13",
+      "opponent": "Duxbury",
+      "isHome": false,
+      "venue": "Duxbury",
       "source": "MaxPreps"
     },
     "Girls' Soccer|2026-08-26": {
@@ -656,6 +664,14 @@
       "isHome": true,
       "venue": "MVMMS",
       "source": "ArbiterLive"
+    },
+    "Girls' Volleyball|2026-11-13": {
+      "sport": "Girls' Volleyball",
+      "date": "2026-11-13",
+      "opponent": "Canton",
+      "isHome": true,
+      "venue": "MVMMS",
+      "source": "MaxPreps"
     },
     "Field Hockey|2026-08-29": {
       "sport": "Field Hockey",
