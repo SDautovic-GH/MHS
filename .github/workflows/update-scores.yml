@@ -34,6 +34,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes in scores, standings, player stats, or schedule locations."
           else
-            git commit -m "Auto-update scores, standings, player stats & schedule locations from MaxPreps [skip ci]"
+            git commit -m "Auto-update scores, standings, player stats & schedule locations from MaxPreps"
             git push
           fi
