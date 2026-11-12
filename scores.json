@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T18:33:44.823241",
+  "lastUpdated": "2026-11-12T09:40:31.947564",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -1536,6 +1536,17 @@
       "status": "Final",
       "isHome": false,
       "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-11-11": {
+      "sport": "Boys' Soccer",
+      "date": "2026-11-11",
+      "opponent": "Duxbury",
+      "mhsScore": 5,
+      "oppScore": 3,
+      "result": "WIN",
+      "status": "Final",
+      "isHome": true,
+      "source": "ArbiterLive"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T18:34:00.461394",
+  "lastUpdated": "2026-11-12T09:40:43.458250",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -671,7 +671,7 @@
       "opponent": "Canton",
       "isHome": true,
       "venue": "MVMMS",
-      "source": "MaxPreps"
+      "source": "ArbiterLive"
     },
     "Field Hockey|2026-08-29": {
       "sport": "Field Hockey",
