@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T09:40:43.458250",
+  "lastUpdated": "2026-11-12T18:47:05.136054",
   "schedule": {
     "Football|2026-09-01": {
       "sport": "Football",
@@ -927,6 +927,14 @@
       "opponent": "Duxbury",
       "isHome": true,
       "venue": "Pine Banks",
+      "source": "ArbiterLive"
+    },
+    "Boys' Soccer|2026-11-14": {
+      "sport": "Boys' Soccer",
+      "date": "2026-11-14",
+      "opponent": "Oliver Ames",
+      "isHome": false,
+      "venue": "Oliver Ames",
       "source": "ArbiterLive"
     },
     "Girls' Volleyball|2026-09-04": {
