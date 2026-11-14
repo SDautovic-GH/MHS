@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T18:28:35.031570",
+  "lastUpdated": "2026-11-14T04:24:50.653367",
   "sports": {
     "Girls' Volleyball": {
       "sport": "Girls' Volleyball",
@@ -54,12 +54,12 @@
           "stats": {
             "kills": 1,
             "aces": 0,
-            "digs": 107,
+            "digs": 111,
             "assists": 14,
             "blocks": 0,
             "points": 57,
             "gamesPlayed": 20,
-            "setsPlayed": 76
+            "setsPlayed": 79
           }
         },
         {
@@ -74,12 +74,12 @@
           "stats": {
             "kills": 1,
             "aces": 0,
-            "digs": 216,
-            "assists": 37,
+            "digs": 219,
+            "assists": 38,
             "blocks": 0,
-            "points": 185,
+            "points": 187,
             "gamesPlayed": 20,
-            "setsPlayed": 76
+            "setsPlayed": 79
           }
         },
         {
@@ -117,9 +117,9 @@
             "digs": 5,
             "assists": 19,
             "blocks": 0,
-            "points": 11,
+            "points": 15,
             "gamesPlayed": 6,
-            "setsPlayed": 8
+            "setsPlayed": 10
           }
         },
         {
@@ -132,14 +132,14 @@
           "year": "",
           "profileUrl": "2026-06-29T15:54:04",
           "stats": {
-            "kills": 60,
+            "kills": 61,
             "aces": 0,
-            "digs": 152,
-            "assists": 583,
+            "digs": 155,
+            "assists": 608,
             "blocks": 0,
-            "points": 126,
+            "points": 128,
             "gamesPlayed": 20,
-            "setsPlayed": 75
+            "setsPlayed": 78
           }
         },
         {
@@ -157,9 +157,9 @@
             "digs": 165,
             "assists": 16,
             "blocks": 0,
-            "points": 169,
+            "points": 173,
             "gamesPlayed": 20,
-            "setsPlayed": 76
+            "setsPlayed": 79
           }
         },
         {
@@ -172,14 +172,14 @@
           "year": "",
           "profileUrl": "2026-06-29T15:57:09",
           "stats": {
-            "kills": 122,
+            "kills": 126,
             "aces": 0,
             "digs": 14,
             "assists": 2,
             "blocks": 0,
             "points": 0,
             "gamesPlayed": 20,
-            "setsPlayed": 76
+            "setsPlayed": 79
           }
         },
         {
@@ -192,14 +192,14 @@
           "year": "",
           "profileUrl": "2026-06-29T15:56:04",
           "stats": {
-            "kills": 208,
+            "kills": 214,
             "aces": 0,
-            "digs": 93,
+            "digs": 95,
             "assists": 5,
             "blocks": 0,
             "points": 126,
             "gamesPlayed": 18,
-            "setsPlayed": 70
+            "setsPlayed": 73
           }
         },
         {
@@ -212,14 +212,14 @@
           "year": "",
           "profileUrl": "2026-06-29T15:55:45",
           "stats": {
-            "kills": 120,
+            "kills": 126,
             "aces": 0,
-            "digs": 84,
-            "assists": 8,
+            "digs": 86,
+            "assists": 9,
             "blocks": 0,
-            "points": 160,
+            "points": 166,
             "gamesPlayed": 19,
-            "setsPlayed": 69
+            "setsPlayed": 72
           }
         },
         {
@@ -272,14 +272,14 @@
           "year": "",
           "profileUrl": "2026-06-29T15:56:48",
           "stats": {
-            "kills": 86,
+            "kills": 90,
             "aces": 0,
             "digs": 6,
             "assists": 2,
             "blocks": 0,
             "points": 7,
             "gamesPlayed": 17,
-            "setsPlayed": 64
+            "setsPlayed": 67
           }
         },
         {
@@ -311,14 +311,14 @@
           "year": "",
           "profileUrl": "2026-06-29T15:54:31",
           "stats": {
-            "kills": 203,
+            "kills": 211,
             "aces": 0,
             "digs": 34,
             "assists": 4,
             "blocks": 0,
-            "points": 125,
+            "points": 126,
             "gamesPlayed": 19,
-            "setsPlayed": 75
+            "setsPlayed": 78
           }
         },
         {
