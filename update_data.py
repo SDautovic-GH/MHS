@@ -816,20 +816,24 @@ def fetch_maxpreps_rosters():
 
                 for a in athletes:
                     aid = a[4] if len(a) > 4 else ""
-                    fname = a[5] if len(a) > 5 else ""
-                    lname = a[6] if len(a) > 6 else ""
-                    fullname = a[33] if len(a) > 33 and a[33] else f"{fname} {lname}"
+                    fname = (a[5] if len(a) > 5 and a[5] else "").strip()
+                    lname = (a[6] if len(a) > 6 and a[6] else "").strip()
+                    # MaxPreps shifts trailing tuple indices (e.g. a[31..37]); derive fullName from a[5]/a[6]
+                    # and match profileUrl/year by value shape rather than fixed trailing offsets.
+                    fullname = f"{fname} {lname}".strip()
 
                     jersey = ""
                     if sport_label == "Girls' Volleyball":
-                        jersey = GIRLS_VOLLEYBALL_JERSEYS.get(fullname, GIRLS_VOLLEYBALL_JERSEYS.get(f"{fname} {lname}", ""))
+                        jersey = GIRLS_VOLLEYBALL_JERSEYS.get(fullname, "")
                     if not jersey:
                         existing_p = current_roster_map.get(aid, {})
                         jersey = existing_p.get("jersey", "")
 
                     pos = a[12] if len(a) > 12 and a[12] else ""
-                    yr = a[36] if len(a) > 36 and a[36] else ""
-                    purl = a[31] if len(a) > 31 and a[31] else ""
+                    yr = next((x for x in a[35:] if isinstance(x, str) and x in ("Fr.", "So.", "Jr.", "Sr.")), "")
+                    if not yr and len(a) > 7 and a[7] in (9, 10, 11, 12):
+                        yr = {9: "Fr.", 10: "So.", 11: "Jr.", 12: "Sr."}[a[7]]
+                    purl = next((x for x in a[30:] if isinstance(x, str) and x.startswith("http")), "")
 
                     existing_p = current_roster_map.get(aid, {})
                     stats = existing_p.get("stats", {})
