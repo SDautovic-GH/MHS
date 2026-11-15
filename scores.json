@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T12:49:15.266492",
+  "lastUpdated": "2026-11-15T09:08:19.384827",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -1597,6 +1597,17 @@
       "status": "Final",
       "isHome": false,
       "source": "MaxPreps"
+    },
+    "Boys' Soccer|2026-11-14": {
+      "sport": "Boys' Soccer",
+      "date": "2026-11-14",
+      "opponent": "Oliver Ames",
+      "mhsScore": 0,
+      "oppScore": 2,
+      "result": "LOSS",
+      "status": "Final",
+      "isHome": false,
+      "source": "ArbiterLive"
     }
   }
 }
