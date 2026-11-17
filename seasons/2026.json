@@ -2671,17 +2671,17 @@
       "opponent": "Oliver Ames",
       "mhsScore": 0,
       "oppScore": 2,
-      "result": "LOSS",
+      "result": "L",
       "status": "Final",
       "isHome": false,
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     }
   },
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-11-17 10:29:58",
+      "lastUpdated": "2026-11-17 19:44:11",
       "teams": [
         {
           "rank": "1",
@@ -2754,7 +2754,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-11-17 10:29:59",
+      "lastUpdated": "2026-11-17 19:44:13",
       "teams": [
         {
           "rank": "1",
@@ -2772,9 +2772,9 @@
           "school": "Arlington",
           "confRecord": "8-1-4",
           "confPct": "0.769",
-          "overallRecord": "14-3-4",
-          "overallPct": "0.762",
-          "streak": "4W",
+          "overallRecord": "15-3-4",
+          "overallPct": "0.773",
+          "streak": "5W",
           "mascot": "https://image.maxpreps.io/school-mascot/7/6/7/767533f2-79fa-4312-92ab-d5693b2136fd.gif?version=637066515600000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -2827,9 +2827,9 @@
           "school": "Melrose",
           "confRecord": "5-7",
           "confPct": "0.417",
-          "overallRecord": "14-9",
-          "overallPct": "0.609",
-          "streak": "5W",
+          "overallRecord": "14-10",
+          "overallPct": "0.583",
+          "streak": "1L",
           "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": true
         },
@@ -2893,7 +2893,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-11-17 10:29:59",
+      "lastUpdated": "2026-11-17 19:44:15",
       "teams": [
         {
           "rank": "1",
@@ -3021,7 +3021,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-11-17 10:30:00",
+      "lastUpdated": "2026-11-17 19:44:17",
       "teams": [
         {
           "rank": "1",
@@ -3160,7 +3160,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-11-17 10:30:03",
+      "lastUpdated": "2026-11-17 19:44:19",
       "teams": [
         {
           "rank": "1",

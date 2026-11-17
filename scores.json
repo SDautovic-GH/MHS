@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T10:29:57.762590",
+  "lastUpdated": "2026-11-17T19:44:10.376640",
   "scores": {
     "Golf|2026-09-01": {
       "sport": "Golf",
@@ -1604,10 +1604,10 @@
       "opponent": "Oliver Ames",
       "mhsScore": 0,
       "oppScore": 2,
-      "result": "LOSS",
+      "result": "L",
       "status": "Final",
       "isHome": false,
-      "source": "ArbiterLive"
+      "source": "MaxPreps"
     }
   }
 }
