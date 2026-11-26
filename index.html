@@ -2061,12 +2061,124 @@
       border-radius: 12px;
     }
 
+    /* Mobile Floating Liquid Glass Capsule Bottom Bar (hidden on desktop) */
+    .mobile-bottom-nav {
+      display: none;
+    }
+
     @media (max-width: 640px) {
       :root {
-        --header-height: 104px;
+        --header-height: 62px;
       }
       body {
         padding-top: 0 !important;
+        padding-bottom: calc(74px + env(safe-area-inset-bottom, 0px));
+      }
+      .mobile-bottom-nav {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 950;
+        padding: 0 16px max(8px, calc(env(safe-area-inset-bottom, 0px) - 10px));
+        justify-content: center;
+        pointer-events: none;
+      }
+      .mobile-bottom-capsule {
+        pointer-events: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+        height: 46px;
+        width: 100%;
+        max-width: 320px;
+        padding: 3px 4px;
+        border-radius: 9999px;
+        background: rgba(20, 26, 42, 0.72);
+        border: 0.5px solid rgba(255, 255, 255, 0.22);
+        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.55), inset 0 0.5px 0 0 rgba(255, 255, 255, 0.16);
+        -webkit-backdrop-filter: blur(24px) saturate(180%) brightness(1.06);
+        backdrop-filter: blur(24px) saturate(180%) brightness(1.06);
+      }
+      :root[data-theme="light"] .mobile-bottom-capsule {
+        background: rgba(255, 255, 255, 0.84);
+        border: 0.5px solid rgba(15, 23, 42, 0.12);
+        box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14), inset 0 0.5px 0 0 rgba(255, 255, 255, 0.85);
+      }
+      .mobile-bottom-btn {
+        flex: 1;
+        min-width: 0;
+        height: 100%;
+        border-radius: 9999px;
+        border: 0.5px solid transparent;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.88);
+        transition: transform 0.12s ease, color 0.15s ease, background 0.15s ease;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        padding: 0;
+      }
+      .mobile-bottom-btn:active {
+        transform: scale(0.95);
+      }
+      .mobile-bottom-btn.active {
+        background: rgba(59, 130, 246, 0.20);
+        border-color: rgba(96, 165, 250, 0.35);
+        box-shadow: inset 0 0.5px 0 rgba(255, 255, 255, 0.12);
+        color: #60a5fa;
+      }
+      :root[data-theme="light"] .mobile-bottom-btn {
+        color: rgba(15, 23, 42, 0.68);
+      }
+      :root[data-theme="light"] .mobile-bottom-btn.active {
+        background: rgba(37, 99, 235, 0.12);
+        border-color: rgba(37, 99, 235, 0.28);
+        box-shadow: none;
+        color: #2563eb;
+      }
+      .mobile-bottom-icon-wrap {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .mobile-bottom-icon-wrap svg {
+        width: 20px;
+        height: 20px;
+      }
+      .mobile-bottom-badge {
+        position: absolute;
+        top: -5px;
+        right: -8px;
+        padding: 0 4px;
+        min-width: 15px;
+        height: 15px;
+        border-radius: 9999px;
+        font-size: 9px;
+        font-weight: 700;
+        line-height: 15px;
+        text-align: center;
+        font-variant-numeric: tabular-nums;
+        background: #334155;
+        color: #f1f5f9;
+        box-shadow: 0 0 0 1.5px rgba(18, 18, 20, 0.95);
+      }
+      .mobile-bottom-badge.is-today {
+        background: #2563eb;
+        color: #ffffff;
+      }
+      .mobile-bottom-badge.is-zero {
+        display: none;
+      }
+      :root[data-theme="light"] .mobile-bottom-badge {
+        box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.95);
       }
       .app-header {
         padding-top: calc(env(safe-area-inset-top, 0px) + 0.70rem);
@@ -2153,8 +2265,7 @@
         flex-shrink: 0;
       }
       .nav-tabs-wrapper {
-        width: 100%;
-        padding: 0.1rem 0 0;
+        display: none;
       }
       .nav-tabs {
         width: 100%;
@@ -3978,6 +4089,58 @@
     <p class="footer-subtext">Melrose High School Athletics &bull; Fall 2026 Varsity &bull; Go Red Raiders!</p>
   </div>
 </footer>
+
+<!-- Mobile Floating Liquid Glass Capsule Bottom Bar -->
+<nav class="mobile-bottom-nav" aria-label="Primary navigation">
+  <div class="mobile-bottom-capsule">
+    <button type="button" class="mobile-bottom-btn active" id="mobile-tab-today" onclick="switchAppleTab('today')" title="Today" aria-label="Today" aria-current="page">
+      <span class="mobile-bottom-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+          <circle cx="12" cy="15.5" r="1.5" fill="currentColor" stroke="none"></circle>
+        </svg>
+        <span class="mobile-bottom-badge is-today is-zero" id="mobile-today-count">0</span>
+      </span>
+    </button>
+    <button type="button" class="mobile-bottom-btn" id="mobile-tab-upcoming" onclick="switchAppleTab('upcoming')" title="Upcoming" aria-label="Upcoming">
+      <span class="mobile-bottom-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+          <path d="M8 15h8"></path>
+          <path d="M13 12.5L16 15l-3 2.5"></path>
+        </svg>
+        <span class="mobile-bottom-badge is-zero" id="mobile-upcoming-count">0</span>
+      </span>
+    </button>
+    <button type="button" class="mobile-bottom-btn" id="mobile-tab-scores" onclick="switchAppleTab('scores')" title="Scores" aria-label="Scores">
+      <span class="mobile-bottom-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+          <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+          <path d="M4 22h16"></path>
+          <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+          <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+          <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+        </svg>
+      </span>
+    </button>
+    <button type="button" class="mobile-bottom-btn" id="mobile-tab-standings" onclick="switchAppleTab('standings')" title="Standings" aria-label="Standings">
+      <span class="mobile-bottom-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="20" x2="18" y2="10"></line>
+          <line x1="12" y1="20" x2="12" y2="4"></line>
+          <line x1="6" y1="20" x2="6" y2="14"></line>
+        </svg>
+      </span>
+    </button>
+  </div>
+</nav>
 
 <!-- Floating Quick-Action Button ("📍 Next Game") -->
 <button id="floating-jump-btn" class="floating-jump-btn" onclick="onFloatingJumpClick()" title="Jump to Today / Next Game" aria-label="Jump to Today or Next Game">
@@ -5902,13 +6065,7 @@ function renderDailyView() {
 
   // If viewing a historical season (such as Fall 2025), all games have concluded.
   if (currentSeason !== '2026') {
-    const scopeUpcomingBadge = document.getElementById('scope-upcoming-count');
-    const scopeTodayBadge = document.getElementById('scope-today-count');
-    if (scopeUpcomingBadge) scopeUpcomingBadge.textContent = '0';
-    if (scopeTodayBadge) {
-      scopeTodayBadge.textContent = '0';
-      scopeTodayBadge.classList.add('is-zero');
-    }
+    updateScopeBadges(0, 0);
     updateTodayCalendarIcon();
 
     const seasonData = (typeof SEASONS_DATA !== 'undefined' && SEASONS_DATA[currentSeason]) ? SEASONS_DATA[currentSeason] : {};
@@ -5962,13 +6119,7 @@ function renderDailyView() {
   const todayCount = baseFiltered.filter(item => item.date === todayStr).length;
   const upcomingCount = baseFiltered.length;
 
-  const scopeUpcomingBadge = document.getElementById('scope-upcoming-count');
-  const scopeTodayBadge = document.getElementById('scope-today-count');
-  if (scopeUpcomingBadge) scopeUpcomingBadge.textContent = upcomingCount;
-  if (scopeTodayBadge) {
-    scopeTodayBadge.textContent = todayCount;
-    scopeTodayBadge.classList.toggle('is-zero', todayCount === 0);
-  }
+  updateScopeBadges(todayCount, upcomingCount);
   updateTodayCalendarIcon();
 
   // Filter based on selected schedule scope
@@ -6738,6 +6889,27 @@ function formatScoresDate(dateStr) {
   return dateStr;
 }
 
+function updateScopeBadges(todayCount, upcomingCount) {
+  const scopeUpcomingBadge = document.getElementById('scope-upcoming-count');
+  const scopeTodayBadge = document.getElementById('scope-today-count');
+  const mobileUpcomingBadge = document.getElementById('mobile-upcoming-count');
+  const mobileTodayBadge = document.getElementById('mobile-today-count');
+
+  if (scopeUpcomingBadge) scopeUpcomingBadge.textContent = upcomingCount;
+  if (scopeTodayBadge) {
+    scopeTodayBadge.textContent = todayCount;
+    scopeTodayBadge.classList.toggle('is-zero', todayCount === 0);
+  }
+  if (mobileUpcomingBadge) {
+    mobileUpcomingBadge.textContent = upcomingCount;
+    mobileUpcomingBadge.classList.toggle('is-zero', upcomingCount === 0);
+  }
+  if (mobileTodayBadge) {
+    mobileTodayBadge.textContent = todayCount;
+    mobileTodayBadge.classList.toggle('is-zero', todayCount === 0);
+  }
+}
+
 function switchAppleTab(tab, updateHistory = true) {
   const validTabs = ['today', 'upcoming', 'scores', 'standings'];
   if (!validTabs.includes(tab)) {
@@ -6750,10 +6922,14 @@ function switchAppleTab(tab, updateHistory = true) {
     return;
   }
 
-  // Deactivate all tab buttons
+  // Deactivate all tab buttons (top nav + mobile bottom bar)
   document.querySelectorAll('.apple-sports-nav .tab-button').forEach(b => {
     b.classList.remove('active');
     b.setAttribute('aria-selected', 'false');
+  });
+  document.querySelectorAll('.mobile-bottom-btn').forEach(b => {
+    b.classList.remove('active');
+    b.removeAttribute('aria-current');
   });
 
   // Activate selected tab button
@@ -6761,6 +6937,11 @@ function switchAppleTab(tab, updateHistory = true) {
   if (tabBtn) {
     tabBtn.classList.add('active');
     tabBtn.setAttribute('aria-selected', 'true');
+  }
+  const mobileTabBtn = document.getElementById('mobile-tab-' + tab);
+  if (mobileTabBtn) {
+    mobileTabBtn.classList.add('active');
+    mobileTabBtn.setAttribute('aria-current', 'page');
   }
 
   // Deactivate all view panels
