@@ -2675,13 +2675,24 @@
       "status": "Final",
       "isHome": false,
       "source": "MaxPreps"
+    },
+    "Football|2026-11-26": {
+      "sport": "Football",
+      "date": "2026-11-26",
+      "opponent": "Wakefield Memorial",
+      "mhsScore": 49,
+      "oppScore": 6,
+      "result": "W",
+      "status": "Final",
+      "isHome": true,
+      "source": "MaxPreps"
     }
   },
   "standings": {
     "Football": {
       "leagueName": "Middlesex - Freedom League",
       "leagueUrl": "https://www.maxpreps.com/ma/football/26-27/league/middlesex--freedom/?leagueid=3357521c-397f-474c-9601-c197a7d1053b",
-      "lastUpdated": "2026-11-26 20:04:16",
+      "lastUpdated": "2026-11-27 10:44:35",
       "teams": [
         {
           "rank": "1",
@@ -2697,11 +2708,11 @@
         {
           "rank": "2",
           "school": "Melrose",
-          "confRecord": "3-1",
-          "confPct": "0.750",
-          "overallRecord": "7-3",
-          "overallPct": "0.700",
-          "streak": "1L",
+          "confRecord": "4-1",
+          "confPct": "0.800",
+          "overallRecord": "8-3",
+          "overallPct": "0.727",
+          "streak": "1W",
           "mascot": "https://image.maxpreps.io/school-mascot/5/9/f/59f88996-4098-48a1-84b5-eee8e5e833b9.gif?version=636274152000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": true
         },
@@ -2719,11 +2730,11 @@
         {
           "rank": "4",
           "school": "Wakefield Memorial",
-          "confRecord": "2-2",
-          "confPct": "0.500",
-          "overallRecord": "5-4",
-          "overallPct": "0.556",
-          "streak": "1L",
+          "confRecord": "2-3",
+          "confPct": "0.400",
+          "overallRecord": "5-5",
+          "overallPct": "0.500",
+          "streak": "2L",
           "mascot": "https://image.maxpreps.io/school-mascot/b/6/c/b6c0b114-4bff-4e88-a6ef-05a5986fa35c.gif?version=635678880000000000&width=32&height=32&auto=webp&format=pjpg",
           "isMHS": false
         },
@@ -2754,7 +2765,7 @@
     "Boys' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/26-27/league/middlesex/?leagueid=8e20548b-52a6-4695-aa57-37bfa3e65581",
-      "lastUpdated": "2026-11-26 20:04:17",
+      "lastUpdated": "2026-11-27 10:44:36",
       "teams": [
         {
           "rank": "1",
@@ -2893,7 +2904,7 @@
     "Girls' Soccer": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/soccer/girls/26-27/league/middlesex/?leagueid=1f641372-a812-4004-8c35-f536376aeb3a",
-      "lastUpdated": "2026-11-26 20:04:17",
+      "lastUpdated": "2026-11-27 10:44:37",
       "teams": [
         {
           "rank": "1",
@@ -3021,7 +3032,7 @@
     "Girls' Volleyball": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/volleyball/26-27/league/middlesex/?leagueid=0472c99d-e95b-4cf6-9110-237f41ea0928",
-      "lastUpdated": "2026-11-26 20:04:18",
+      "lastUpdated": "2026-11-27 10:44:38",
       "teams": [
         {
           "rank": "1",
@@ -3160,7 +3171,7 @@
     "Field Hockey": {
       "leagueName": "Middlesex League",
       "leagueUrl": "https://www.maxpreps.com/ma/field-hockey/26-27/league/middlesex/?leagueid=cbeaa904-1b8e-42c5-afb9-347de9a0007e",
-      "lastUpdated": "2026-11-26 20:04:19",
+      "lastUpdated": "2026-11-27 10:44:39",
       "teams": [
         {
           "rank": "1",
