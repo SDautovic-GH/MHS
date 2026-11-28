@@ -11,6 +11,7 @@ Always consult the project documentation and sync utilities before modifying any
 
 | Document / Tool | Purpose |
 | :--- | :--- |
+| **[Documentation/MHS-PRD-v1.0.md](Documentation/MHS-PRD-v1.0.md)** | Product Requirements Document: architecture decisions, UI/mobile navigation spec, data pipeline, and guardrails. |
 | **[README.md](README.md)** | Core project overview, feature catalog, domain endpoints, and synchronization commands. |
 | **[index.html](index.html)** | The standalone Progressive Web App (monolithic, self-contained client UI, styling, and embedded runtime state). |
 | **[build_index.py](build_index.py)** | Central season synchronizer: bundles `seasons/*.json` into `index.html` under `SEASONS_DATA`. |
@@ -37,7 +38,9 @@ Always consult the project documentation and sync utilities before modifying any
 
 | Pitfall / Hazard | Root Cause & Mandate |
 | :--- | :--- |
-| **MaxPreps Athlete Schema Traps** | In the Next.js `athleteData` JSON tuple, index `a[7]` is the **class year / grade code** (e.g. `11` for Jr, `12` for Sr). The **actual jersey number is at index `a[8]`**. Using `a[7]` causes all athletes to falsely display grade numbers as jerseys. Name fields are `a[5]` (first), `a[6]` (last), and `a[33]` (full name). |
+| **MaxPreps Athlete Schema Traps** | In the Next.js `athleteData` JSON tuple, `a[7]` is grade code (`9`–`12`), while jersey is `a[8]`. Trailing indices (`a[31..37]`) shift across MaxPreps deploys (e.g., `a[33]` became position `DS`/`S`, `profileUrl` moved to `a[32]`, `year` to `a[37]`). Always derive `fullName` from `a[5]` + `a[6]` and match `profileUrl` (`http*`) and `year` (`Fr.`/`So.`/`Jr.`/`Sr.`) by value. |
+| **Cloudflare Pages `[skip ci]` Trap** | Never include `[skip ci]` in `.github/workflows/update-scores.yml` commit messages. Cloudflare Pages honors `[skip ci]` and skips building/deploying, silently freezing `mhs.dautovic.com` on stale data (`GITHUB_TOKEN` commits do not trigger recursive GitHub Actions runs anyway). |
+| **Mobile Bottom Bar & Un-Boxed Scores (`<= 640px`)** | On mobile (`<= 640px`), `.nav-tabs-wrapper` is hidden and replaced by the floating Liquid Glass capsule `.mobile-bottom-nav` (`46px` tall, `max-width: 320px`). Tab/badge changes must keep `switchAppleTab()` and `updateScopeBadges()` in sync. `.scores-sport-group-card` and `.scores-sport-group-header` stay transparent/borderless on mobile (`padding: 0` on `.scores-sport-grid`, `0.55rem` side padding on `.container`) to avoid nested boxy cards. |
 | **Background Fetch Clobbering Archive State** | `loadDynamicScoresAndStandings()` runs asynchronously in the background. It must **only** update active global UI state if `currentSeason === '2026'`. For archived seasons (e.g. `2025`), dynamic fetches update in-memory `SEASONS_DATA['2026']` without clobbering the selected historical season. |
 | **Temporal Dead Zone (TDZ) Crash** | `index.html` runs as a monolithic script block. `SafeStorage` must be declared before `currentSeason` and any state initialization. Any top-level code executing before `SafeStorage` or helper declarations will throw a TDZ `ReferenceError`, silently blanking the app. |
 | **Mobile Header Width & Button Clipping** | On mobile screens ($\le 480\text{px}$, including iPhone Air, 15, and SE at 375px–390px):<br>1. `.header-brand-text` (`Melrose SPORTS`) is hidden to preserve horizontal clearance for action pills.<br>2. `.brand-badge` is sized at `48px × 34px` with font size `0.85rem`.<br>3. `#season-picker-btn` uses compact year tags (`'26`, `'25`).<br>4. `#sport-picker-btn` must maintain `width: auto; max-width: 125px; flex-shrink: 0;`—**never** use `flex: 1` or unrestrained `min-width`, which over-stretches the button and pushes the rightmost `🔍` search button off-screen. |
@@ -50,7 +53,7 @@ Always consult the project documentation and sync utilities before modifying any
 Before declaring any task, bugfix, or refactoring complete:
 
 1. **Syntax & AST Validation:**
-   Run automated JavaScript syntax checks on `index.html` via `node -c` (extracting the script block if needed) and verify Python scripts with `python3 -m py_compile <script>.py`.
+   Run automated JavaScript syntax checks on `index.html` via `node -c` (extracting the script block if needed), verify balanced `{`/`}` braces in `<style>`, and verify Python scripts with `python3 -m py_compile <script>.py`.
 2. **Season Data Synchronization:**
    Whenever season JSON or score schemas change, execute `python3 build_index.py` and confirm that `SEASONS_DATA` is populated and synchronized.
 3. **Multi-Viewport Measurement:**
